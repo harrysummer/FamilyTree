@@ -1,0 +1,67 @@
+Family:
+  Title: 安徽巢湖洪家疃洪氏洪廷瑄一支谱系表
+  Comment: ※ 安徽巢湖五分洪洪氏字辈：允恭克让 世德作求 伦理益景 家道来昌
+  Members:
+  - { Id: 0 , Name: "洪廷瑄" , Gender: 'M' , Dead: true , Married: true , Spouse: ~        , Parent: ~ , Order: 1 }
+  - { Id: 1 , Name: "洪作宾" , Gender: 'M' , Dead: true , Married: true , Spouse: "陈素华" , Parent: 0 , Order: 1   , Comment: "重庆" }
+  - { Id: 2 , Name: "洪作弼" , Gender: 'M' , Dead: true , Married: true , Spouse: "张祖青" , Parent: 0 , Order: 2 }
+
+  - { Id: 3 , Name: "洪孝生" , Gender: 'M' , Married: true , Spouse: "田琪蓉" , Parent: 1  , Order: 1   , Note: "生母：赵志英" , Desc: "长子" }
+  - { Id: 4 , Name: "洪枢生" , Gender: 'M' , Married: true , Spouse: "刘传碧" , Parent: 1  , Order: 2   , Comment: "次子" }
+  - { Id: 5 , Name: "洪栋生" , Gender: 'M' , Dead: true    , Parent: 1        , Order: 3 }
+  - { Id: 6 , Name: "洪寅生" , Gender: 'M' , Married: true , Spouse: "李忠英" , Parent: 1  , Order: 4 }
+  - { Id: 7 , Name: "洪春生" , Gender: 'M' , Married: true , Spouse: "陈静"   , Parent: 1  , Order: 5 }
+  - { Id: 8 , Name: "洪玺燕" , Gender: 'F' , Married: true , Spouse: "郭兴茂" , Parent: 1  , Order: 6 }
+
+  - { Id: 9  , Name: "洪志成" , Gender: 'M' , Married: true  , Spouse: "吴志银" , Parent: 2        , Order: 1 }
+  - { Id: 10 , Name: "洪志胜" , Gender: 'F' , Dead: true     , Married: true    , Spouse: "徐良可" , Parent: 2  , Order: 2  }
+  - { Id: 11 , Name: "洪志华" , Gender: 'M' , Married: false , Parent: 2        , Order: 3 }
+  - { Id: 12 , Name: "洪志明" , Gender: 'F' , Married: true  , Spouse: "殷代荣" , Parent: 2        , Order: 4   , Comment: "北京" }
+  - { Id: 13 , Name: "洪志珍" , Gender: 'F' , Married: true  , Spouse: "刘先根" , Parent: 2        , Order: 5 }
+  - { Id: 14 , Name: "洪志和" , Gender: 'M' , Married: false , Parent: 2        , Order: 6 }
+
+  - { Id: 15 , Name: "洪斌"   , Gender: 'M' , Married: true  , Spouse: "李梅"   , Parent: 3  , Order: 1 }
+  - { Id: 16 , Name: "洪梅"   , Gender: 'F' , Married: true  , Spouse: "补忠华" , Parent: 3  , Order: 2 }
+  - { Id: 17 , Name: "洪俊"   , Gender: 'F' , Married: true  , Spouse: "段德辉" , Parent: 4  , Order: 1 }
+  - { Id: 18 , Name: "洪星"   , Gender: 'M' , Married: true  , Spouse: "张黎"   , Parent: 4  , Order: 2 }
+  - { Id: 19 , Name: "洪强"   , Gender: 'M' , Married: true  , Spouse: "周迎卫" , Parent: 4  , Order: 3 }
+  - { Id: 20 , Name: "洪峰"   , Gender: 'M' , Married: true  , Spouse: "吴小青" , Parent: 6  , Order: 1 }
+  - { Id: 21 , Name: "洪雪"   , Gender: 'F' , Married: false , Parent: 6        , Order: 2 }
+  - { Id: 22 , Name: "洪诚"   , Gender: 'M' , Married: ~  , Spouse: ~     , Parent: 7  , Order: 1 }
+  - { Id: 23 , Name: "郭全真" , Gender: 'F' , Married: true  , Spouse: "袁世龙" , Parent: 8  , Order: 1 }
+
+  - { Id: 24 , Name: "洪玉霞" , Gender: 'F' , Married: true , Spouse: "夏清龙" , Parent: 9  , Order: 1   , Comment: "长女" }
+  - { Id: 25 , Name: "洪玉兰" , Gender: 'F' , Married: true , Spouse: "罗齐斌" , Parent: 9  , Order: 2   , Comment: "次女" }
+  - { Id: 26 , Name: "洪明生" , Gender: 'M' , Married: true , Spouse: "梅占芳" , Parent: 9  , Order: 3   , Comment: "三子" }
+  - { Id: 27 , Name: "洪振生" , Gender: 'M' , Married: true , Spouse: "张菊圣" , Parent: 9  , Order: 4   , Comment: "四子" }
+  - { Id: 28 , Name: "徐敏华" , Gender: 'F' , Married: true , Spouse: "张宗友" , Parent: 10 , Order: 1 }
+  - { Id: 29 , Name: "徐延松" , Gender: 'M' , Married: true , Spouse: "张晓梅" , Parent: 10 , Order: 2 }
+  - { Id: 30 , Name: "徐宏霞" , Gender: 'F' , Married: true , Spouse: "刘天杰" , Parent: 10 , Order: 3 }
+  - { Id: 31 , Name: "殷洪"   , Gender: 'M' , Married: true , Spouse: "孙莉丹" , Parent: 12 , Order: 1 }
+  - { Id: 32 , Name: "洪胜森" , Gender: 'M' , Married: true , Spouse: "蒲冬梅" , Parent: 12 , Order: 2 }
+  - { Id: 33 , Name: "刘凤云" , Gender: 'F' , Married: true , Spouse: "王华才" , Parent: 13 , Order: 1 }
+  - { Id: 34 , Name: "刘凤平" , Gender: 'M' , Married: true , Spouse: "花艳梅" , Parent: 13 , Order: 2 }
+
+  - { Id: 35 , Name: "洪路航" , Gender: 'M' , Married: false , Parent: 15 }
+  - { Id: 36 , Name: "洪子懿" , Gender: ~   , Married: false , Parent: 16 }
+  - { Id: 37 , Name: "段禹彤" , Gender: ~   , Married: false , Parent: 17 }
+  - { Id: 38 , Name: "洪皓晨" , Gender: ~   , Married: false , Parent: 18 }
+  - { Id: 39 , Name: "洪子蕊" , Gender: ~   , Married: false , Parent: 19 }
+  - { Id: 40 , Name: "洪思琪" , Gender: ~   , Married: false , Parent: 20 }
+  - { Id: 41 , Name: "袁启尧" , Gender: ~   , Married: false , Parent: 23 }
+
+  - { Id: 42 , Name: "夏睿"   , Gender: 'M' , Married: false , Parent: 24 }
+  - { Id: 43 , Name: "罗卫"   , Gender: 'M' , Married: false , Parent: 25 }
+  - { Id: 44 , Name: "洪妍"   , Gender: 'F' , Married: false , Parent: 26 }
+  - { Id: 45 , Name: "洪永阳" , Gender: 'M' , Married: false , Parent: 26 }
+  - { Id: 46 , Name: "洪子玥" , Gender: 'M' , Married: false , Parent: 27 }
+  - { Id: 47 , Name: "洪子璐" , Gender: 'M' , Married: false , Parent: 27 }
+  - { Id: 48 , Name: "张轶君" , Gender: 'F' , Married: false , Parent: 28 }
+  - { Id: 49 , Name: "张文轩" , Gender: 'M' , Married: false , Parent: 28 }
+  - { Id: 50 , Name: "徐健"   , Gender: 'M' , Married: false , Parent: 29 }
+  - { Id: 51 , Name: "刘滢滢" , Gender: 'F' , Married: false , Parent: 30 }
+  - { Id: 52 , Name: "殷泳文" , Gender: ~   , Married: false , Parent: 31 }
+  - { Id: 53 , Name: "洪天宇" , Gender: ~   , Married: false , Parent: 32 }
+  - { Id: 54 , Name: "王雨欣" , Gender: 'F' , Married: false , Parent: 33 }
+  - { Id: 55 , Name: "王可君" , Gender: 'F' , Married: false , Parent: 33 }
+  - { Id: 56 , Name: "刘元玺" , Gender: 'F' , Married: false , Parent: 34 }

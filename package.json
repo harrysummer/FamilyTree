@@ -1,0 +1,29 @@
+{
+  "name": "jiazu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.14.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-watch": "^4.3.9",
+    "gulp-webpack": "^1.5.0"
+  },
+  "dependencies": {
+    "d3": "^4.2.2",
+    "express": "^4.14.0",
+    "js-yaml": "^3.6.1",
+    "jsdom": "^9.5.0",
+    "pug": "^2.0.0-beta6"
+  },
+  "browserDependencies": {
+    "han-css": "^3.3.0"
+  }
+}
