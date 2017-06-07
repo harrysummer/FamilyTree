@@ -2,12 +2,107 @@ doctype html
 html(lang='zh-Hans')
   head
     meta(charset='utf-8')
-    title= Title
+    meta(name='viewport' content='width=device-width')
+    title= title
     style.
-      .link {
-        fill: none;
-        stroke: #333;
-        stroke-width: 1px;
+      svg text {
+        font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "SimHei", "Microsoft YaHei";
+        -webkit-font-smoothing: subpixel-antialiased;
+        font-smoothing: subpixel-antialiased;
+        text-anchor: middle;
+        dominant-baseline: text-before-edge;
+      }
+      svg .title-text {
+        font-family: "Noto Serif CJK SC", "Source Han Serif SC", "LiSong Pro", "SimSun";
+        font-weight: bold;
+        font-size: 72pt;
+      }
+      svg .title-comment {
+        font-size: 24pt;
+      }
+      svg .node-name {
+        font-size: 14pt;
+      }
+      svg .node-spouse {
+        font-size: 10pt;
+      }
+      svg .node-note {
+        font-size: 10pt;
+      }
+      svg .text-generation {
+        font-size: 10pt;
+      }
+      svg .link {
+        stroke: #000;
+        stroke-width: 1;
+      }
+      svg .dash-link {
+        stroke: #000;
+        stroke-width: 1;
+        stroke-dasharray: 5, 5;
+      }
+      svg .line-generation {
+        stroke: #000;
+        stroke-width: 1;
+        stroke-dasharray: 2, 8;
+      }
+      svg .node-border {
+        stroke: #000;
+        stroke-width: 2;
       }
   body
-    div !{HTML}
+    div#main
+      svg#canvas
+
+    script!= 'var familyData = ' + JSON.stringify(family) + ', titleData = "' + title + '", commentData = "' + comment + '";'
+    script(src='/snap.svg-min.js')
+    script(src='/main.js')
+    script.
+      var treeInfo = nodesToTree(familyData, undefined, undefined, function(d) {
+        if (d.Id >= 100 && d.Name && d.Name.length == 2)
+          return d.Name[0] + '\u3000' + d.Name[1];
+        return d.Name;
+      }, function(d) {
+        if (d.Spouse) {
+          var prefix = '偶：';
+          if (d.Gender && d.Gender === 'M') prefix = '妻：';
+          else if (d.Gender && d.Gender === 'F') prefix = '夫：';
+          console.log(prefix);
+          return prefix + d.Spouse;
+          }
+        return d.Spouse;
+      });
+      var root = treeInfo.root;
+      var id2Index = treeInfo.id2Index;
+      var members = treeInfo.members;
+
+      var layoutInfo = layoutTree(members, id2Index);
+      var generationOffset = layoutInfo.generationOffset;
+      var size = layoutInfo.size;
+
+      var paper = Snap("#canvas");
+      var titleBar = paper.g();
+      var title = paper
+        .text(size.width / 2, 0, titleData)
+        .addClass('title-text')
+        .attr('dx', '0' + ' 24'.repeat(titleData.length - 1))
+        .transform('s1.4 1');
+      var titleComment = paper
+        .text(size.width / 2, title.getBBox().height + 20, commentData)
+        .addClass('title-comment');
+      titleBar.add(title, titleComment);
+
+      var content = paper.g().transform(Snap.format("t{x} {y}", {
+        x: 0,
+        y: titleBar.getBBox().height + 20
+      }));
+
+      for (var i = 0; i < members.length; i++) {
+        drawNode(paper, content, members[i]);
+        drawChildrenLink(paper, content, members[i], treeInfo, layoutInfo);
+      }
+      drawGeneration(paper, content, layoutInfo);
+
+      paper.attr("width", size.width);
+      paper.attr("height", titleBar.getBBox().height + content.getBBox().height + 40);
+

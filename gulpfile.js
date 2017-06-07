@@ -10,7 +10,7 @@ gulp.task('babel', () =>
 );
 
 gulp.task('serve', () =>
-    exec('node app',))
+    exec('node app'))
 
 gulp.task('default', () =>
         gulp.watch('src/*.js', ['babel']));
