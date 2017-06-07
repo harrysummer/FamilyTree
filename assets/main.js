@@ -240,18 +240,27 @@ var drawNode = function(paper, content, node) {
     if (node.name) {
         var text = paper.text(node.size.width / 2, curY, node.name);
         text.addClass('node-name');
+        if (is.ie() || is.edge()) {
+            text.attr('y', curY + text.getBBox().height * 0.8);
+        }
         curY += text.getBBox().height;
         g.add(text);
     }
     if (node.spouse) {
         var text = paper.text(node.size.width / 2, curY, node.spouse);
         text.addClass('node-spouse');
+        if (is.ie() || is.edge()) {
+            text.attr('y', curY + text.getBBox().height * 0.8);
+        }
         curY += text.getBBox().height;
         g.add(text);
     }
     if (node.note) {
         var text = paper.text(node.size.width / 2, curY, node.note);
         text.addClass('node-note');
+        if (is.ie() || is.edge()) {
+            text.attr('y', curY + text.getBBox().height * 0.8);
+        }
         curY += text.getBBox().height;
         g.add(text);
     }
@@ -306,9 +315,13 @@ var drawGeneration = function(paper, content, layoutInfo) {
         var x = 0.5 * (offset[i] + offset[i + 1]);
         var y = lastNode.y + lastNode.size.height + 15;
         var yEnd = layoutInfo.size.height + 100;
+        var text = paper.text(x, yEnd, (i==0 ? "始祖" : numberToChinese(i+1) + "世")).addClass('text-generation');
+        if (is.ie() || is.edge()) {
+            text.attr('y', yEnd + text.getBBox().height * 0.8);
+        }
         content.add(
             paper.line(x, y, x, yEnd).addClass('line-generation'),
-            paper.text(x, yEnd, (i==0 ? "始祖" : numberToChinese(i+1) + "世")).addClass('text-generation')
+            text
         );
     }
 }

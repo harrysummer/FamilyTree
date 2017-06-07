@@ -64,6 +64,7 @@ html(lang='zh-Hans')
     script(src='/vex.combined.min.js')
     script vex.defaultOptions.className='vex-theme-os'
     script(src='/snap.svg-min.js')
+    script(src='/is.min.js')
     script(src='/main.js')
     script.
       var treeInfo = nodesToTree(familyData, undefined, undefined, function(d) {
@@ -87,16 +88,28 @@ html(lang='zh-Hans')
       var generationOffset = layoutInfo.generationOffset;
       var size = layoutInfo.size;
 
+      var repeat = function(str, n) {
+        var ret = "";
+        for (var i = 0; i < n; i++)
+          ret = ret + str;
+        return ret;
+      };
       var paper = Snap("#canvas");
       var titleBar = paper.g();
       var title = paper
         .text(size.width / 2, 0, titleData)
         .addClass('title-text')
-        .attr('dx', '0' + ' 24'.repeat(titleData.length - 1))
+        .attr('dx', '0' + repeat(' 24', titleData.length - 1))
         .transform('s1.4 1');
+      if (is.ie() || is.edge()) {
+        title.attr('y', title.getBBox().height * 0.8);
+      }
       var titleComment = paper
         .text(size.width / 2, title.getBBox().height + 20, commentData)
         .addClass('title-comment');
+      if (is.ie() || is.edge()) {
+        titleComment.attr('y', title.getBBox().height + 20 + titleComment.getBBox().height * 0.8);
+      }
       titleBar.add(title, titleComment);
 
       var content = paper.g().transform(Snap.format("t{x} {y}", {
