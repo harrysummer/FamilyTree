@@ -30,7 +30,8 @@ vis.renderTreeFromConfig(data.Family.Members).then((html) => {
             title: data.Family.Title,
             comment: data.Family.Comment,
             ancestry: undefined,
-            family: fullFamily
+            family: fullFamily,
+            detail: data.Family.Details
         });
     });
 

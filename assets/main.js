@@ -298,6 +298,7 @@ var numberToChinese = function(number) {
         return base[Math.floor(number / 10)] + numberToChinese(10 + number % 10);
     } else return "ERR";
 };
+
 var drawGeneration = function(paper, content, layoutInfo) {
     var offset = layoutInfo.generationOffset;
     for (var i = 0; i < offset.length - 1; i++) {
@@ -307,7 +308,26 @@ var drawGeneration = function(paper, content, layoutInfo) {
         var yEnd = layoutInfo.size.height + 100;
         content.add(
             paper.line(x, y, x, yEnd).addClass('line-generation'),
-            paper.text(x, yEnd, "第" + numberToChinese(i+1) + "世").addClass('text-generation')
+            paper.text(x, yEnd, numberToChinese(i+1) + "世").addClass('text-generation')
+        );
+    }
+}
+
+var setupDetailButton = function(paper, content, detail, treeInfo) {
+    for (var i = 0; i < detail.length; i++) {
+        var id = detail[i].Id;
+        var desc = detail[i].Desc;
+        var node = treeInfo.members[treeInfo.id2Index[id]];
+        content.add(paper
+            .rect(node.x, node.y, node.size.width, node.size.height)
+            .addClass('detail-button')
+            .click(function() {
+                vex.dialog.buttons.YES.text = "关闭";
+                vex.dialog.alert({
+                    unsafeMessage: desc.replace(/\n/g, '<br/>'),
+                    showCloseButton: false
+                });
+            })
         );
     }
 }

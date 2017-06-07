@@ -4,6 +4,8 @@ html(lang='zh-Hans')
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width')
     title= title
+    link(rel='stylesheet' href='vex.css')
+    link(rel='stylesheet' href='vex-theme-os.css')
     style.
       svg text {
         font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "SimHei", "Microsoft YaHei";
@@ -50,11 +52,16 @@ html(lang='zh-Hans')
         stroke: #000;
         stroke-width: 2;
       }
+      svg .detail-button {
+        fill-opacity: 0.15;
+      }
   body
     div#main
       svg#canvas
 
-    script!= 'var familyData = ' + JSON.stringify(family) + ', titleData = "' + title + '", commentData = "' + comment + '";'
+    script!= 'var familyData = ' + JSON.stringify(family) + ', titleData = "' + title + '", commentData = "' + comment + '", detailData = ' + JSON.stringify(detail) + ';'
+    script(src='/vex.combined.min.js')
+    script vex.defaultOptions.className='vex-theme-os'
     script(src='/snap.svg-min.js')
     script(src='/main.js')
     script.
@@ -102,6 +109,7 @@ html(lang='zh-Hans')
         drawChildrenLink(paper, content, members[i], treeInfo, layoutInfo);
       }
       drawGeneration(paper, content, layoutInfo);
+      setupDetailButton(paper, content, detailData, treeInfo);
 
       paper.attr("width", size.width);
       paper.attr("height", titleBar.getBBox().height + content.getBBox().height + 40);
