@@ -308,7 +308,7 @@ var drawGeneration = function(paper, content, layoutInfo) {
         var yEnd = layoutInfo.size.height + 100;
         content.add(
             paper.line(x, y, x, yEnd).addClass('line-generation'),
-            paper.text(x, yEnd, numberToChinese(i+1) + "世").addClass('text-generation')
+            paper.text(x, yEnd, (i==0 ? "始祖" : numberToChinese(i+1) + "世")).addClass('text-generation')
         );
     }
 }
