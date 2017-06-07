@@ -315,19 +315,21 @@ var drawGeneration = function(paper, content, layoutInfo) {
 
 var setupDetailButton = function(paper, content, detail, treeInfo) {
     for (var i = 0; i < detail.length; i++) {
-        var id = detail[i].Id;
-        var desc = detail[i].Desc;
-        var node = treeInfo.members[treeInfo.id2Index[id]];
-        content.add(paper
-            .rect(node.x, node.y, node.size.width, node.size.height)
-            .addClass('detail-button')
-            .click(function() {
-                vex.dialog.buttons.YES.text = "关闭";
-                vex.dialog.alert({
-                    unsafeMessage: desc.replace(/\n/g, '<br/>'),
-                    showCloseButton: false
-                });
-            })
-        );
+        (function(i) {
+            var id = detail[i].Id;
+            var desc = detail[i].Desc;
+            var node = treeInfo.members[treeInfo.id2Index[id]];
+            content.add(paper
+                .rect(node.x, node.y, node.size.width, node.size.height)
+                .addClass('detail-button')
+                .click(function() {
+                    vex.dialog.buttons.YES.text = "关闭";
+                    vex.dialog.alert({
+                        unsafeMessage: desc.replace(/\n/g, '<br/>'),
+                        showCloseButton: false
+                    });
+                })
+            );
+        })(i);
     }
 }
