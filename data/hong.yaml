@@ -102,10 +102,10 @@ Family:
   #- { Id: 100 , Name: "洪廷瑄" , Gender: 'M' , Dead: true , Married: true , Spouse: ~        , Parent: ~   , Order: 1 , Note: "下有三女" }
   Members:
   - { Id: 76  , Name: "廷瑞"   , Gender: 'M' , Dead: true , Married: true , Spouse: ~ ,      , Parent: ~, Note: "下另有一女" }
-  - { Id: 101 , Name: "洪作宾" , Gender: 'M' , Dead: true , Married: true , Spouse: "陈素华" , Parent: 76  , Order: 1 , Comment: "重庆" }
+  - { Id: 101 , Name: "洪作宾" , Gender: 'M' , Dead: true , Married: true , Spouse: ["赵志英", "陈素华"] , Parent: 76  , Order: 1 , Comment: "重庆" }
   - { Id: 102 , Name: "洪作弼" , Gender: 'M' , Dead: true , Married: true , Spouse: "张祖青" , Parent: 76  , Order: 2 }
 
-  - { Id: 103 , Name: "洪孝生" , Gender: 'M' , Married: true , Spouse: "田琪蓉" , Parent: 101  , Order: 1   , Note: "生母：赵志英" , Desc: "长子" }
+  - { Id: 103 , Name: "洪孝生" , Gender: 'M' , Married: true , Spouse: "田琪蓉" , Parent: 101  , Order: 1   , Comment: "长子" }
   - { Id: 104 , Name: "洪枢生" , Gender: 'M' , Married: true , Spouse: "刘传碧" , Parent: 101  , Order: 2   , Comment: "次子" }
   - { Id: 105 , Name: "洪栋生" , Gender: 'M' , Dead: true    , Parent: 101        , Order: 3 }
   - { Id: 106 , Name: "洪寅生" , Gender: 'M' , Married: true , Spouse: "李忠英" , Parent: 101  , Order: 4 }

@@ -71,11 +71,21 @@ var measureNode = function(node) {
         result.height += bbox.height;
     }
     if (node.spouse) {
-        var text = paper.text(0, 0, node.spouse).addClass('node-spouse');
-        var bbox = text.getBBox();
-        text.remove();
-        result.width = Math.max(result.width, bbox.width);
-        result.height += bbox.height;
+        if (is.array(node.spouse)) {
+            for (var i = 0; i < node.spouse.length; i++) {
+                var text = paper.text(0, 0, node.spouse[i]).addClass('node-spouse');
+                var bbox = text.getBBox();
+                text.remove();
+                result.width = Math.max(result.width, bbox.width);
+                result.height += bbox.height;
+            }
+        } else {
+            var text = paper.text(0, 0, node.spouse).addClass('node-spouse');
+            var bbox = text.getBBox();
+            text.remove();
+            result.width = Math.max(result.width, bbox.width);
+            result.height += bbox.height;
+        }
     }
     if (node.note) {
         var text = paper.text(0, 0, node.note).addClass('node-note');
@@ -247,13 +257,25 @@ var drawNode = function(paper, content, node) {
         g.add(text);
     }
     if (node.spouse) {
-        var text = paper.text(node.size.width / 2, curY, node.spouse);
-        text.addClass('node-spouse');
-        if (is.ie() || is.edge()) {
-            text.attr('y', curY + text.getBBox().height * 0.8);
+        if (is.array(node.spouse)) {
+            for (var i = 0; i < node.spouse.length; i++) {
+                var text = paper.text(node.size.width / 2, curY, node.spouse[i]);
+                text.addClass('node-spouse');
+                if (is.ie() || is.edge()) {
+                    text.attr('y', curY + text.getBBox().height * 0.8);
+                }
+                curY += text.getBBox().height;
+                g.add(text);
+            }
+        } else {
+            var text = paper.text(node.size.width / 2, curY, node.spouse);
+            text.addClass('node-spouse');
+            if (is.ie() || is.edge()) {
+                text.attr('y', curY + text.getBBox().height * 0.8);
+            }
+            curY += text.getBBox().height;
+            g.add(text);
         }
-        curY += text.getBBox().height;
-        g.add(text);
     }
     if (node.note) {
         var text = paper.text(node.size.width / 2, curY, node.note);

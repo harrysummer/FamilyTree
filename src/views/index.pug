@@ -73,11 +73,18 @@ html(lang='zh-Hans')
         return d.Name;
       }, function(d) {
         if (d.Spouse) {
-          var prefix = '偶：';
-          if (d.Gender && d.Gender === 'M') prefix = '妻：';
-          else if (d.Gender && d.Gender === 'F') prefix = '夫：';
-          return prefix + d.Spouse;
+          if (is.array(d.Spouse)) {
+            var ret = [];
+            ret.push('原：' + d.Spouse[0]); 
+            ret.push('继：' + d.Spouse[1]);
+            return ret;
+          } else {
+            var prefix = '偶：';
+            if (d.Gender && d.Gender === 'M') prefix = '妻：';
+            else if (d.Gender && d.Gender === 'F') prefix = '夫：';
+            return prefix + d.Spouse;
           }
+        }
         return d.Spouse;
       });
       var root = treeInfo.root;
