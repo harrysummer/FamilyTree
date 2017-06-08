@@ -134,12 +134,13 @@ var layoutTree = function(members, id2Index) {
         }
     };
 
-    var lastNodePerLevel = {};
+
+    var nodePerLevel = {};
     var traversePostfix = function(node) {
         if (node.children.length == 0) {
             node.x = (generationOffset[node.depth] + generationOffset[node.depth + 1] - node.size.width) / 2;
-            if (lastNodePerLevel[node.depth]) {
-                var lastNode = lastNodePerLevel[node.depth];
+            if (nodePerLevel[node.depth]) {
+                var lastNode = nodePerLevel[node.depth][nodePerLevel[node.depth].length - 1];
                 node.y = lastNode.descendantRange[0].bottom;
                 if (node.parentId == lastNode.parentId)
                     node.y += siblingGap;
@@ -147,6 +148,7 @@ var layoutTree = function(members, id2Index) {
                     node.y += cousinGap;
             } else {
                 node.y = 0;
+                nodePerLevel[node.depth] = [];
             }
             curHeight += node.size.height;
             node.descendantRange = [{
@@ -156,7 +158,7 @@ var layoutTree = function(members, id2Index) {
                 top: node.y,
                 bottom: node.y + node.size.height
             }];
-            lastNodePerLevel[node.depth] = node;
+            nodePerLevel[node.depth].push(node);
             return;
         }
 
@@ -200,23 +202,26 @@ var layoutTree = function(members, id2Index) {
         }
 
         var dy = -node.y;
-        if (lastNodePerLevel[node.depth]) {
-            var lastRange = lastNodePerLevel[node.depth].descendantRange;
+        if (nodePerLevel[node.depth]) {
+            var lastNode = nodePerLevel[node.depth][nodePerLevel[node.depth].length - 1];
+            var lastRange = lastNode.descendantRange;
             var thisRange = node.descendantRange;
             var minLength = Math.min(lastRange.length, thisRange.length);
             for (var i = 0; i < minLength; i++) {
                 var minTop = lastRange[i].bottom;
-                if (node.parentId == lastNodePerLevel[node.depth].parentId)
+                if (node.parentId == lastNode.parentId)
                     minTop += siblingGap;
                 else
                     minTop += cousinGap;
                 dy = Math.max(dy, minTop - thisRange[i].top);
             }
+        } else {
+            nodePerLevel[node.depth] = [];
         }
         if (dy > 0) {
             translateTree(node, dy);
         }
-        lastNodePerLevel[node.depth] = node;
+        nodePerLevel[node.depth].push(node);
     };
     traversePostfix(root);
 
@@ -232,7 +237,7 @@ var layoutTree = function(members, id2Index) {
             width: generationOffset[generationOffset.length - 1],
             height: totalHeight
         },
-        lastNodePerLevel: lastNodePerLevel
+        nodePerLevel: nodePerLevel
     };
 };
 
@@ -333,7 +338,7 @@ var numberToChinese = function(number) {
 var drawGeneration = function(paper, content, layoutInfo) {
     var offset = layoutInfo.generationOffset;
     for (var i = 0; i < offset.length - 1; i++) {
-        var lastNode = layoutInfo.lastNodePerLevel[i];
+        var lastNode = layoutInfo.nodePerLevel[i][layoutInfo.nodePerLevel[i].length - 1];
         var x = 0.5 * (offset[i] + offset[i + 1]);
         var y = lastNode.y + lastNode.size.height + 15;
         var yEnd = layoutInfo.size.height + 100;
