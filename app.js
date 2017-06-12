@@ -18,7 +18,7 @@ app.set('view engine', 'pug');
 app.get('/', function(req, res) {
     res.render('index', {
         title: data.Family.Title,
-        comment: data.Family.Comment,
+        comment: data.Family.Subtitle,
         ancestry: undefined,
         family: data.Family.Members,
         detail: data.Family.Details
