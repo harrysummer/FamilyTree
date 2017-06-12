@@ -1,7 +1,7 @@
 Family:
   Title: 安徽巢湖洪家疃洪氏谱系表
   Comment: ※ 安徽巢湖五分洪洪氏字辈：允恭克让 世德作求 伦理益景 家道来昌
-  Ancestry:
+  Members:
   - { Id: 0   , Name: "宽公"   , Parent: ~ }
 
   - { Id: 1   , Name: "宗"     , Parent: 0 }
@@ -98,10 +98,8 @@ Family:
   - { Id: 74  , Name: "惠石"   , Parent: 60 }
 
   - { Id: 75  , Name: "廷瑄"   , Parent: 42, Note: "下有三女" }
+  - { Id: 76  , Name: "廷瑞"   , Gender: 'M' , Dead: true , Married: true , Spouse: ~ ,      , Parent: 42, Note: "下另有一女" }
 
-  #- { Id: 100 , Name: "洪廷瑄" , Gender: 'M' , Dead: true , Married: true , Spouse: ~        , Parent: ~   , Order: 1 , Note: "下有三女" }
-  Members:
-  - { Id: 76  , Name: "廷瑞"   , Gender: 'M' , Dead: true , Married: true , Spouse: ~ ,      , Parent: ~, Note: "下另有一女" }
   - { Id: 101 , Name: "洪作宾" , Gender: 'M' , Dead: true , Married: true , Spouse: ["赵志英", "陈素华"] , Parent: 76  , Order: 1 , Comment: "重庆" }
   - { Id: 102 , Name: "洪作弼" , Gender: 'M' , Dead: true , Married: true , Spouse: "张祖青" , Parent: 76  , Order: 2 }
 
@@ -189,7 +187,7 @@ Family:
       配合邑吴名存殿女，生于
       光绪丙戌年十二月初三日未时。
       生子二：作宾，作弼。
-      女一，字徐，名乃发，次子名吉人。
+      女一字徐名乃发次子名吉人。
       公卒于癸丑年（1913），
       妣卒于丙午（1966）年正月十八日午时。
       公妣合葬于老人院新茔南向。

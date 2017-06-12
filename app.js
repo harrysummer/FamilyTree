@@ -15,17 +15,12 @@ var app = express();
 app.set('views', __dirname + '/src/views');
 app.set('view engine', 'pug');
 
-var fullFamily = data.Family.Ancestry.slice();
-var nearFamily = data.Family.Members.slice();
-nearFamily[0].Parent = 42;
-fullFamily = fullFamily.concat(nearFamily);
-
 app.get('/', function(req, res) {
     res.render('index', {
         title: data.Family.Title,
         comment: data.Family.Comment,
         ancestry: undefined,
-        family: fullFamily,
+        family: data.Family.Members,
         detail: data.Family.Details
     });
 });
