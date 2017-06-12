@@ -20,8 +20,15 @@ html(lang='zh-Hans')
         font-weight: bold;
         font-size: 72pt;
       }
-      svg .title-comment {
+      svg .subtitle {
         font-size: 24pt;
+      }
+      svg .comment {
+        font-size: 18pt;
+        text-anchor: start;
+      }
+      svg .comment-border {
+        fill: #DDD;
       }
       svg .node-name {
         font-size: 14pt;
@@ -60,11 +67,17 @@ html(lang='zh-Hans')
     div#main
       svg#canvas
 
-    script!= 'var familyData = ' + JSON.stringify(family) + ', titleData = "' + title + '", commentData = "' + comment + '", detailData = ' + JSON.stringify(detail) + ';'
+    script!= 'var familyData = ' + JSON.stringify(family) + ', titleData = "' + title + '", subtitleData = "' + subtitle + '", commentData = "' + comment + '", detailData = ' + JSON.stringify(detail) + ';'
     script(src='/vex.combined.min.js')
     script vex.defaultOptions.className='vex-theme-os'
     script(src='/snap.svg-min.js')
     script(src='/is.min.js')
+    script(src='//res.wx.qq.com/open/js/jweixin-1.2.0.js')
+    //script.
+      //wx.config({
+      //  debug: true,
+      //  appId: "wxd7e5a256e4b5bc94"
+      //});
     script(src='/main.js')
     script.
       var treeInfo = nodesToTree(familyData, undefined, undefined, function(d) {
@@ -111,13 +124,13 @@ html(lang='zh-Hans')
       if (is.ie() || is.edge()) {
         title.attr('y', title.getBBox().height * 0.8);
       }
-      var titleComment = paper
-        .text(size.width / 2, title.getBBox().height + 20, commentData)
-        .addClass('title-comment');
+      var subtitle = paper
+        .text(size.width / 2, title.getBBox().height + 20, subtitleData)
+        .addClass('subtitle');
       if (is.ie() || is.edge()) {
-        titleComment.attr('y', title.getBBox().height + 20 + titleComment.getBBox().height * 0.8);
+        subtitle.attr('y', title.getBBox().height + 20 + subtitle.getBBox().height * 0.8);
       }
-      titleBar.add(title, titleComment);
+      titleBar.add(title, subtitle);
 
       var content = paper.g().transform(Snap.format("t{x} {y}", {
         x: 0,
@@ -130,6 +143,19 @@ html(lang='zh-Hans')
       }
       drawGeneration(paper, content, layoutInfo);
       setupDetailButton(paper, content, detailData, treeInfo);
+
+      var commentText = paper
+        .text(100, 20, commentData.split("\n"))
+        .addClass('comment');
+        commentText.selectAll('tspan:nth-child(n+2)')
+        .attr({ dy: "1.2em" , x: 100 });
+      var commentScale = Math.min(180.0 / commentText.getBBox().height, 850.0 / commentText.getBBox().width);
+      commentText.transform(Snap.format('s{x} {y}', { x: commentScale, y: commentScale }));
+      var commentBBox = commentText.getBBox();
+      var commentRect = paper
+        .rect(commentBBox.x - 20, commentBBox.y - 20, commentBBox.width + 40, commentBBox.height + 40)
+        .addClass('comment-border');
+      content.add(commentRect, commentText);
 
       paper.attr("width", size.width);
       paper.attr("height", titleBar.getBBox().height + content.getBBox().height + 40);

@@ -18,8 +18,8 @@ app.set('view engine', 'pug');
 app.get('/', function(req, res) {
     res.render('index', {
         title: data.Family.Title,
-        comment: data.Family.Subtitle,
-        ancestry: undefined,
+        subtitle: data.Family.Subtitle,
+	      comment: data.Family.Comment.replace(/\n/g, "\\n"),
         family: data.Family.Members,
         detail: data.Family.Details
     });
