@@ -137,18 +137,14 @@ var layoutTree = function(members, id2Index) {
 
     var nodePerLevel = {};
     var traversePostfix = function(node) {
+        node.x = (generationOffset[node.depth] + generationOffset[node.depth + 1] - node.size.width) / 2;
+
         if (node.children.length == 0) {
-            node.x = (generationOffset[node.depth] + generationOffset[node.depth + 1] - node.size.width) / 2;
             if (nodePerLevel[node.depth]) {
                 var lastNode = nodePerLevel[node.depth][nodePerLevel[node.depth].length - 1];
                 node.y = lastNode.descendantRange[0].bottom;
-                if (node.parentId == lastNode.parentId)
-                    node.y += siblingGap;
-                else
-                    node.y += cousinGap;
             } else {
                 node.y = 0;
-                nodePerLevel[node.depth] = [];
             }
             curHeight += node.size.height;
             node.descendantRange = [{
@@ -158,48 +154,45 @@ var layoutTree = function(members, id2Index) {
                 top: node.y,
                 bottom: node.y + node.size.height
             }];
-            nodePerLevel[node.depth].push(node);
-            return;
-        }
+        } else {
+            var maxDescendantDepth = 0;
+            for (var i = 0; i < node.children.length; i++) {
+                var child = members[id2Index[node.children[i]]];
+                traversePostfix(child);
+                maxDescendantDepth = Math.max(maxDescendantDepth, child.descendantRange.length);
+            }
 
-        var maxDescendantDepth = 0;
-        for (var i = 0; i < node.children.length; i++) {
-            var child = members[id2Index[node.children[i]]];
-            traversePostfix(child);
-            maxDescendantDepth = Math.max(maxDescendantDepth, child.descendantRange.length);
-        }
-        node.x = (generationOffset[node.depth] + generationOffset[node.depth + 1] - node.size.width) / 2;
+            var firstChild = members[id2Index[node.children[0]]];
+            var lastChild = members[id2Index[node.children[node.children.length - 1]]];
+            node.y = 0.5 * (firstChild.y + lastChild.y + lastChild.size.height - node.size.height);
 
-        var firstChild = members[id2Index[node.children[0]]];
-        var lastChild = members[id2Index[node.children[node.children.length - 1]]];
-        node.y = 0.5 * (firstChild.y + lastChild.y + lastChild.size.height - node.size.height);
-
-        node.descendantRange = [{
-            top: node.y,
-            bottom: node.y + node.size.height
-        }];
-
-        for (var i = 0; i < maxDescendantDepth; i++) {
-            var range = {
+            node.descendantRange = [{
                 top: node.y,
                 bottom: node.y + node.size.height
-            };
-            for (var j = 0; j < node.children.length; j++) {
-                var child = members[id2Index[node.children[j]]];
-                if (child.descendantRange.length > i) {
-                    range.top = child.descendantRange[i].top;
-                    break;
+            }];
+
+            for (var i = 0; i < maxDescendantDepth; i++) {
+                var range = {
+                    top: node.y,
+                    bottom: node.y + node.size.height
+                };
+                for (var j = 0; j < node.children.length; j++) {
+                    var child = members[id2Index[node.children[j]]];
+                    if (child.descendantRange.length > i) {
+                        range.top = child.descendantRange[i].top;
+                        break;
+                    }
                 }
-            }
-            for (var j = node.children.length - 1; j >= 0; j--) {
-                var child = members[id2Index[node.children[j]]];
-                if (child.descendantRange.length > i) {
-                    range.bottom = child.descendantRange[i].bottom;
-                    break;
+                for (var j = node.children.length - 1; j >= 0; j--) {
+                    var child = members[id2Index[node.children[j]]];
+                    if (child.descendantRange.length > i) {
+                        range.bottom = child.descendantRange[i].bottom;
+                        break;
+                    }
                 }
+                node.descendantRange.push(range);
             }
-            node.descendantRange.push(range);
-        }
+	}
 
         var dy = -node.y;
         if (nodePerLevel[node.depth]) {
