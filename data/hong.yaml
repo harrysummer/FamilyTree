@@ -59,7 +59,7 @@ Family:
 
   - { Id: 32  , Name: "宗适"   , Parent: 31 }
   - { Id: 33  , Name: "绍遵"   , Parent: 31 }
-  - { Id: 34  , Name: "希迈"   , Parent: 31 }
+  - { Id: 34  , Name: "希迈"   , Parent: 31, Note: "下有五女" }
   - { Id: 35  , Name: "炳暹"   , Parent: 31 }
 
   - { Id: 36  , Name: "恩荫"   , Parent: 32 }
@@ -68,28 +68,48 @@ Family:
   - { Id: 39  , Name: "立基"   , Parent: 33 }
   - { Id: 40  , Name: "立功"   , Parent: 33 }
   - { Id: 41  , Name: "立言"   , Parent: 33 }
-  - { Id: 42  , Name: "恩荣"   , Parent: 34, Note: "下另有三女" }
-  - { Id: 43  , Name: "恩铭"   , Parent: 34 }
-  - { Id: 44  , Name: "恩湛"   , Parent: 34 }
-  - { Id: 45  , Name: "恩隆"   , Parent: 34 }
+  - { Id: 42  , Name: "恩荣"   , Parent: 34, Note: "下有三女" }
+  - { Id: 43  , Name: "恩铭"   , Parent: 34, Note: "下有二女" }
+  - { Id: 44  , Name: "恩湛"   , Parent: 34, Note: "下有三女" }
+  - { Id: 45  , Name: "恩隆"   , Parent: 34, Note: "下有一女" }
   - { Id: 46  , Name: "恩渥"   , Parent: 35 }
   - { Id: 47  , Name: "恩承"   , Parent: 35 }
   - { Id: 48  , Name: "恩沛"   , Parent: 35 }
   - { Id: 49  , Name: "恩锡"   , Parent: 35 }
 
-  - { Id: 50  , Name: "廷琪"   , Parent: 43 }
-  - { Id: 51  , Name: "廷玑"   , Parent: 43 }
-  - { Id: 52  , Name: "廷璜"   , Parent: 43 }
-  - { Id: 53  , Name: "廷珩"   , Parent: 43 }
-  - { Id: 54  , Name: "廷瑗"   , Parent: 43 }
+  - { Id: 50  , Name: "廷琪"   , Parent: 43, Note: "下有一女" }
+  - { Id: 51  , Name: "廷玑"   , Parent: 43, Note: "下有一女" }
+  - { Id: 52  , Name: "廷璜"   , Parent: 43, Note: "下有二女" }
+  - { Id: 53  , Name: "廷珩"   , Parent: 43, Note: "下有一女" }
+  - { Id: 54  , Name: "廷瑗"   , Parent: 43, Note: "下有二女" }
   - { Id: 55  , Name: "廷琳"   , Parent: 43 }
   - { Id: 56  , Name: "廷琎"   , Parent: 43 }
+
+  - { Id: 87  , Name: "廷藩"   , Parent: 44, Note: "下有一女" }
+  - { Id: 88  , Name: "廷瑾"   , Parent: 44 }
+  - { Id: 89  , Name: "廷玠"   , Parent: 44 }
+  - { Id: 90  , Name: "廷玖"   , Parent: 45, Note: "下有一女" }
 
   - { Id: 57  , Name: "作江"   , Parent: 50 }
   - { Id: 58  , Name: "作山"   , Parent: 50 }
   - { Id: 59  , Name: "作海"   , Parent: 50 }
   - { Id: 60  , Name: "作和"   , Parent: 50 }
   - { Id: 61  , Name: "作平"   , Parent: 50 }
+
+  - { Id: 77  , Name: "作文"   , Parent: 51 }
+  - { Id: 78  , Name: "作武"   , Parent: 51 }
+  - { Id: 79  , Name: "作仁"   , Parent: 52 }
+  - { Id: 80  , Name: "作法"   , Parent: 52 }
+  - { Id: 81  , Name: "作鑫"   , Parent: 52 }
+  - { Id: 82  , Name: "作梅"   , Parent: 53 }
+  - { Id: 83  , Name: "作相"   , Parent: 53 }
+  - { Id: 84  , Name: "作清"   , Parent: 54 }
+  - { Id: 85  , Name: "作延"   , Parent: 55 }
+  - { Id: 86  , Name: "作胜"   , Parent: 56 }
+  - { Id: 91  , Name: "作刚"   , Parent: 87 }
+  - { Id: 92  , Name: "作和(湖)"   , Parent: 87 }
+  - { Id: 93  , Name: "作云"   , Parent: 90 }
+  - { Id: 94  , Name: "松"   , Parent: 90 }
 
   - { Id: 62  , Name: "惠民"   , Parent: 58 }
   - { Id: 63  , Name: "惠中"   , Parent: 58 }
@@ -106,7 +126,7 @@ Family:
   - { Id: 74  , Name: "惠石"   , Parent: 60 }
 
   - { Id: 75  , Name: "廷瑄"   , Parent: 42, Note: "下有三女" }
-  - { Id: 76  , Name: "廷瑞"   , Gender: 'M' , Dead: true , Married: true , Spouse: ~ ,      , Parent: 42, Note: "下另有一女" }
+  - { Id: 76  , Name: "廷瑞"   , Gender: 'M' , Dead: true , Married: true , Spouse: ~ ,      , Parent: 42, Note: "下有一女" }
 
   - { Id: 101 , Name: "洪作宾" , Gender: 'M' , Dead: true , Married: true , Spouse: ["赵志英", "陈素华"] , Parent: 76  , Order: 1 , Comment: "重庆" }
   - { Id: 102 , Name: "洪作弼" , Gender: 'M' , Dead: true , Married: true , Spouse: "张祖青" , Parent: 76  , Order: 2 }
