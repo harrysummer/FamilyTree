@@ -19,9 +19,10 @@ app.get('/', function(req, res) {
     res.render('index', {
         title: data.Family.Title,
         subtitle: data.Family.Subtitle,
-	      comment: data.Family.Comment.replace(/\n/g, "\\n"),
+	comment: data.Family.Comment.replace(/\n/g, "\\n"),
         family: data.Family.Members,
-        detail: data.Family.Details
+        detail: data.Family.Details,
+	changelog: data.Family.Changelog.replace(/\n/g, "\\n")
     });
 });
 

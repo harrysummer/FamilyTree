@@ -4,7 +4,8 @@ html(lang='zh-Hans')
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width')
     title= title
-    link(rel='icon' href='/favicon.ico')
+    link(rel='icon' type='image/x-icon' href='/favicon.ico')
+    link(rel='icon' type='image/png' href='/assets/hong.png')
     link(rel='stylesheet' href='vex.css')
     link(rel='stylesheet' href='vex-theme-os.css')
     style.
@@ -67,17 +68,11 @@ html(lang='zh-Hans')
     div#main
       svg#canvas
 
-    script!= 'var familyData = ' + JSON.stringify(family) + ', titleData = "' + title + '", subtitleData = "' + subtitle + '", commentData = "' + comment + '", detailData = ' + JSON.stringify(detail) + ';'
+    script!= 'var familyData = ' + JSON.stringify(family) + ', titleData = "' + title + '", subtitleData = "' + subtitle + '", commentData = "' + comment + '", detailData = ' + JSON.stringify(detail) + ', changelog = "' + changelog + '";'
     script(src='/vex.combined.min.js')
     script vex.defaultOptions.className='vex-theme-os'
     script(src='/snap.svg-min.js')
     script(src='/is.min.js')
-    script(src='//res.wx.qq.com/open/js/jweixin-1.2.0.js')
-    //script.
-      //wx.config({
-      //  debug: true,
-      //  appId: "wxd7e5a256e4b5bc94"
-      //});
     script(src='/main.js')
     script.
       var treeInfo = nodesToTree(familyData, undefined, undefined, function(d) {
@@ -156,6 +151,17 @@ html(lang='zh-Hans')
         .rect(commentBBox.x - 20, commentBBox.y - 20, commentBBox.width + 40, commentBBox.height + 40)
         .addClass('comment-border');
       content.add(commentRect, commentText);
+
+      var changelogText = paper
+        .text(100, 2000, changelog.split("\n"))
+        .addClass('comment');
+        changelogText.selectAll('tspan:nth-child(n+2)')
+        .attr({ dy: "1.2em" , x: 100 });
+      var changelogBBox = changelogText.getBBox();
+      var changelogRect = paper
+        .rect(changelogBBox.x - 20, changelogBBox.y - 20, changelogBBox.width + 40, changelogBBox.height + 40)
+        .addClass('comment-border');
+      content.add(changelogRect, changelogText);
 
       paper.attr("width", size.width);
       paper.attr("height", titleBar.getBBox().height + content.getBBox().height + 40);
