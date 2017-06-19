@@ -22,7 +22,7 @@ Family:
   - { Id: 3   , Name: "祥"     , Parent: 0 }
 
   - { Id: 4   , Name: "诏"     , Parent: 1 }
-  - { Id: 5   , Name: "撰"     , Parent: 1 }
+  - { Id: 5   , Name: "譔"     , Parent: 1 }
   - { Id: 6   , Name: "论"     , Parent: 1 }
   - { Id: 7   , Name: "诲"     , Parent: 1 }
   - { Id: 8   , Name: "示"     , Parent: 1 }
