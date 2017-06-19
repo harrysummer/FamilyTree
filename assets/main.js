@@ -6,7 +6,7 @@ var nodePaddingRight = 12;
 var nodePaddingTop = 2;
 var nodePaddingBottom = 2;
 
-var nodesToTree = function(arr, id_, parentId_, name_, spouse_, note_) {
+var nodesToTree = function(arr, id_, parentId_, name_, spouse_, note_, adopted_) {
     if (id_ === undefined)
         id_ = function(d) { return d.Id; }
     if (parentId_ === undefined)
@@ -17,6 +17,8 @@ var nodesToTree = function(arr, id_, parentId_, name_, spouse_, note_) {
         spouse_ = function(d) { return d.Spouse; }
     if (note_ === undefined)
         note_ = function(d) { return d.Note; }
+    if (adopted_ === undefined)
+        adopted_ = function(d) { return d.Adopted == true; }
 
     var id2Index = {};
     var members = [];
@@ -35,6 +37,7 @@ var nodesToTree = function(arr, id_, parentId_, name_, spouse_, note_) {
             name: name_(d),
             spouse: spouse_(d),
             note: note_(d),
+            specialLink: adopted_(d),
             children: []
         });
     }
@@ -304,14 +307,31 @@ var drawChildrenLink = function(paper, content, node, treeInfo, layoutInfo) {
     var firstChild = treeInfo.members[id2Index[node.children[0]]];
     var lastChild = treeInfo.members[id2Index[node.children[node.children.length - 1]]];
 
-    content.add(paper.line(midX, firstChild.y + firstChild.size.height / 2,
-        midX, lastChild.y + lastChild.size.height / 2).addClass('link'));
-    content.add(paper.line(node.x + node.size.width, node.y + node.size.height / 2,
-        midX, node.y + node.size.height / 2).addClass('link'));
+    if (node.children.length == 1 && firstChild.specialLink) {
+        content.add(paper.line(node.x + node.size.width, node.y + node.size.height / 2 - 2,
+            midX, node.y + node.size.height / 2 - 2).addClass('link'));
+    } else {
+        content.add(paper.line(midX, firstChild.y + firstChild.size.height / 2,
+            midX, lastChild.y + lastChild.size.height / 2).addClass('link'));
+        content.add(paper.line(node.x + node.size.width, node.y + node.size.height / 2,
+            midX, node.y + node.size.height / 2).addClass('link'));
+    }
     for (var i = 0; i < node.children.length; i++) {
         var child = treeInfo.members[id2Index[node.children[i]]];
-        content.add(paper.line(midX, child.y + child.size.height / 2,
-            child.x, child.y + child.size.height / 2).addClass('link'));
+        if (child.specialLink) {
+            content.add(paper.line(midX, child.y + child.size.height / 2 - 2,
+                child.x, child.y + child.size.height / 2 - 2).addClass('link'));
+            if (node.children.length == 1) {
+                content.add(paper.line(node.x + node.size.width, child.y + child.size.height / 2 + 2,
+                    child.x, child.y + child.size.height / 2 + 2).addClass('special-link'));
+            } else {
+                content.add(paper.line(midX, child.y + child.size.height / 2 + 2,
+                    child.x, child.y + child.size.height / 2 + 2).addClass('special-link'));
+            }
+        } else {
+            content.add(paper.line(midX, child.y + child.size.height / 2,
+                child.x, child.y + child.size.height / 2).addClass('link'));
+        }
     }
 };
 

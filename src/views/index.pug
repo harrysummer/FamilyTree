@@ -52,6 +52,11 @@ html(lang='zh-Hans')
         stroke-width: 1;
         stroke-dasharray: 5, 5;
       }
+      svg .special-link {
+        stroke: #000;
+        stroke-width: 1;
+        stroke-dasharray: 5, 2;
+      }
       svg .line-generation {
         stroke: #000;
         stroke-width: 1;
@@ -76,7 +81,7 @@ html(lang='zh-Hans')
     script(src='/main.js')
     script.
       var treeInfo = nodesToTree(familyData, undefined, undefined, function(d) {
-        if (d.Id >= 100 && d.Name && d.Name.length == 2)
+        if (d.Id >= 200 && d.Name && d.Name.length == 2)
           return d.Name[0] + '\u3000' + d.Name[1];
         return d.Name;
       }, function(d) {
