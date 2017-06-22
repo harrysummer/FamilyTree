@@ -11,6 +11,7 @@ Family:
     6. 如您可以提供更多支系信息，请邮件联系 harrysummer@163.com
   Changelog: |
     更新记录：
+    2017.06.22: 添加老四房（绍遵公后嗣）至十九世
     2017.06.19: 补全宗适公后世至十九世谱
     2017.06.18: 补全小四房（希迈公后世）至十九世谱
     2017.06.08: 据家谱将亲族祖先由廷瑄公改正为廷瑞公，并加入自迁巢始祖起的世系
@@ -64,16 +65,16 @@ Family:
   - { Id: 31  , Name: "业"     , Parent: 30 }
 
   - { Id: 32  , Name: "宗适"   , Parent: 31, Note: "下有二女" }
-  - { Id: 33  , Name: "绍遵"   , Parent: 31 }
+  - { Id: 33  , Name: "绍遵"   , Parent: 31, Note: "下有二女" }
   - { Id: 34  , Name: "希迈"   , Parent: 31, Note: "下有五女" }
   - { Id: 35  , Name: "炳暹"   , Parent: 31 }
 
   - { Id: 36  , Name: "恩荫"   , Parent: 32, Note: "下有三女" }
   - { Id: 37  , Name: "恩穆"   , Parent: 32, Note: "下有一女" }
-  - { Id: 38  , Name: "立德"   , Parent: 33 }
-  - { Id: 39  , Name: "立基"   , Parent: 33 }
-  - { Id: 40  , Name: "立功"   , Parent: 33 }
-  - { Id: 41  , Name: "立言"   , Parent: 33 }
+  - { Id: 38  , Name: "立德"   , Parent: 33, Note: "下有二女" }
+  - { Id: 39  , Name: "立基"   , Parent: 33, Note: "下有一女" }
+  - { Id: 40  , Name: "立功"   , Parent: 33, Note: "下有四女" }
+  - { Id: 41  , Name: "立言"   , Parent: 33, Note: "下有二女" }
   - { Id: 42  , Name: "恩荣"   , Parent: 34, Note: "下有三女" }
   - { Id: 43  , Name: "恩铭"   , Parent: 34, Note: "下有二女" }
   - { Id: 44  , Name: "恩湛"   , Parent: 34, Note: "下有三女" }
@@ -104,6 +105,33 @@ Family:
   - { Id: 100 , Name: "廷璧"   , Parent: 36 }
   - { Id: 101 , Name: "松清"   , Parent: 37, Note: "下有一女" }
   - { Id: 102 , Name: "松云"   , Parent: 37 }
+
+  - { Id: 118 , Name: "廷璪"   , Parent: 38 }
+  - { Id: 119 , Name: "廷珮"   , Parent: 38, Note: "下有一女" }
+  - { Id: 120 , Name: "廷玙"   , Parent: 38 }
+  - { Id: 121 , Name: "廷球"   , Parent: 38, Note: "下有一女" }
+  - { Id: 122 , Name: "廷琮"   , Parent: 38 }
+  - { Id: 123 , Name: "廷璋"   , Parent: 39, Note: "下有四女" }
+  - { Id: 124 , Name: "廷瑯"   , Parent: 40 }
+  - { Id: 125 , Name: "廷玕"   , Parent: 40 }
+  - { Id: 126 , Name: "廷珊"   , Parent: 41, Note: "下有一女" }
+  - { Id: 127 , Name: "廷珖"   , Parent: 41 }
+  - { Id: 128 , Name: "廷珂"   , Parent: 41 }
+  - { Id: 129 , Name: "廷瓒"   , Parent: 41 }
+  - { Id: 130 , Name: "廷璈"   , Parent: 41 }
+
+  - { Id: 131 , Name: "毓麟"   , Parent: 118, Adopted: True }
+  - { Id: 132 , Name: "毓骥"   , Parent: 118, Adopted: True }
+  - { Id: 133 , Name: "毓骥"   , Parent: 119 }
+  - { Id: 134 , Name: "毓龙"   , Parent: 119 }
+  - { Id: 135 , Name: "毓凤"   , Parent: 119 }
+  - { Id: 136 , Name: "毓麟"   , Parent: 120 }
+  - { Id: 137 , Name: "毓秀"   , Parent: 121 }
+  - { Id: 138 , Name: "毓钟"   , Parent: 121 }
+  - { Id: 139 , Name: "毓兰"   , Parent: 122 }
+  - { Id: 140 , Name: "毓驹"   , Parent: 123 }
+  - { Id: 141 , Name: "毓骅"   , Parent: 123 }
+  - { Id: 142 , Name: "毓刚"   , Parent: 127 }
 
   - { Id: 57  , Name: "作江"   , Parent: 50 }
   - { Id: 58  , Name: "作山"   , Parent: 50 }
