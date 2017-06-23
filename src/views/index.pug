@@ -137,7 +137,7 @@ html(lang='zh-Hans')
         title.attr('y', title.getBBox().height * 0.8);
       }
       var titleHeight = title.getBBox().height;
-      if (is.chrome() && !is.mobile())
+      if (is.chrome() && is.windows())
         titleHeight -= 0.3 * title.getBBox().height;
       var subtitle = paper
         .text(size.width / 2, titleHeight + 40, subtitleData)
