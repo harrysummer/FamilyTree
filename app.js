@@ -26,6 +26,7 @@ app.get('/', function(req, res) {
     });
 });
 
+app.use('/fonts/', express.static(__dirname + '/dist/fonts'));
 app.use('/', express.static(__dirname + '/assets'));
 
 app.listen(3333, "127.0.0.1", function() {

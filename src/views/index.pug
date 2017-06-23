@@ -5,10 +5,16 @@ html(lang='zh-Hans')
     meta(name='viewport' content='width=device-width')
     title= title
     link(rel='icon' type='image/x-icon' href='/favicon.ico')
-    link(rel='icon' type='image/png' href='/assets/hong.png')
+    link(rel='icon' type='image/png' href='/hong.png')
     link(rel='stylesheet' href='vex.css')
     link(rel='stylesheet' href='vex-theme-os.css')
     style.
+      @font-face {
+        font-family: 'Song';
+        src: url('/fonts/SourceHanSerifCN-Bold.woff2') format('woff2'),
+             url('/fonts/SourceHanSerifCN-Bold.woff') format('woff'),
+             url('/fonts/SourceHanSerifCN-Bold.otf') format('opentype');
+      }
       svg text {
         font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "SimHei", "Microsoft YaHei";
         -webkit-font-smoothing: subpixel-antialiased;
@@ -17,8 +23,7 @@ html(lang='zh-Hans')
         dominant-baseline: text-before-edge;
       }
       svg .title-text {
-        font-family: "Noto Serif CJK SC", "Source Han Serif SC", "LiSong Pro", "SimSun";
-        font-weight: bold;
+        font-family: "Song";
         font-size: 72pt;
       }
       svg .subtitle {
@@ -125,10 +130,10 @@ html(lang='zh-Hans')
         title.attr('y', title.getBBox().height * 0.8);
       }
       var subtitle = paper
-        .text(size.width / 2, title.getBBox().height + 20, subtitleData)
+        .text(size.width / 2, title.getBBox().height + 40, subtitleData)
         .addClass('subtitle');
       if (is.ie() || is.edge()) {
-        subtitle.attr('y', title.getBBox().height + 20 + subtitle.getBBox().height * 0.8);
+        subtitle.attr('y', title.getBBox().height + 40 + subtitle.getBBox().height * 0.8);
       }
       titleBar.add(title, subtitle);
 
