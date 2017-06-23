@@ -72,6 +72,10 @@ var measureNode = function(node) {
         text.remove();
         result.width = Math.max(result.width, bbox.width);
         result.height += bbox.height;
+        if (is.chrome() && !is.mobile())
+            result.height -= bbox.height * 0.3;
+        else if (is.firefox() && !is.mobile())
+            result.height -= bbox.height * 0.1;
     }
     if (node.spouse) {
         if (is.array(node.spouse)) {
@@ -255,6 +259,10 @@ var drawNode = function(paper, content, node) {
             text.attr('y', curY + text.getBBox().height * 0.8);
         }
         curY += text.getBBox().height;
+        if (is.chrome() && !is.mobile())
+            curY -= text.getBBox().height * 0.3;
+        else if (is.firefox() && !is.mobile())
+            curY -= text.getBBox().height * 0.1;
         g.add(text);
     }
     if (node.spouse) {

@@ -13,7 +13,13 @@ html(lang='zh-Hans')
         font-family: 'Song';
         src: url('/fonts/SourceHanSerifCN-Bold.woff2') format('woff2'),
              url('/fonts/SourceHanSerifCN-Bold.woff') format('woff'),
-             url('/fonts/SourceHanSerifCN-Bold.otf') format('opentype');
+             url('/fonts/SourceHanSerifCN-Bold.ttf') format('truetype');
+      }
+      @font-face {
+        font-family: 'Kai';
+        src: url('/fonts/FZKTK.woff2') format('woff2'),
+             url('/fonts/FZKTK.woff') format('woff'),
+             url('/fonts/FZKTK.ttf') format('truetype');
       }
       svg text {
         font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "SimHei", "Microsoft YaHei";
@@ -23,7 +29,7 @@ html(lang='zh-Hans')
         dominant-baseline: text-before-edge;
       }
       svg .title-text {
-        font-family: "Song";
+        font-family: Song, serif;
         font-size: 72pt;
       }
       svg .subtitle {
@@ -37,7 +43,8 @@ html(lang='zh-Hans')
         fill: #DDD;
       }
       svg .node-name {
-        font-size: 14pt;
+        font-family: Kai, sans-serif;
+        font-size: 20pt;
       }
       svg .node-spouse {
         font-size: 10pt;
@@ -93,7 +100,7 @@ html(lang='zh-Hans')
         if (d.Spouse) {
           if (is.array(d.Spouse)) {
             var ret = [];
-            ret.push('原：' + d.Spouse[0]); 
+            ret.push('元：' + d.Spouse[0]); 
             ret.push('继：' + d.Spouse[1]);
             return ret;
           } else {
@@ -129,11 +136,14 @@ html(lang='zh-Hans')
       if (is.ie() || is.edge()) {
         title.attr('y', title.getBBox().height * 0.8);
       }
+      var titleHeight = title.getBBox().height;
+      if (is.chrome() && !is.mobile())
+        titleHeight -= 0.3 * title.getBBox().height;
       var subtitle = paper
-        .text(size.width / 2, title.getBBox().height + 40, subtitleData)
+        .text(size.width / 2, titleHeight + 40, subtitleData)
         .addClass('subtitle');
       if (is.ie() || is.edge()) {
-        subtitle.attr('y', title.getBBox().height + 40 + subtitle.getBBox().height * 0.8);
+        subtitle.attr('y', titleHeight + 40 + subtitle.getBBox().height * 0.8);
       }
       titleBar.add(title, subtitle);
 
