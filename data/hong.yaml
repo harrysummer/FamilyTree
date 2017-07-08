@@ -11,6 +11,7 @@ Family:
     6. 如您可以提供更多支系信息，请邮件联系 harrysummer@163.com
   Changelog: |
     更新记录：
+    2017.07.08: 添加老四房四子门炳暹公支下
     2017.06.22: 添加老四房（绍遵公后嗣）至十九世
     2017.06.19: 补全宗适公后世至十九世谱
     2017.06.18: 补全小四房（希迈公后世）至十九世谱
@@ -67,7 +68,7 @@ Family:
   - { Id: 32  , Name: "宗适"   , Parent: 31, Note: "下有二女" }
   - { Id: 33  , Name: "绍遵"   , Parent: 31, Note: "下有二女" }
   - { Id: 34  , Name: "希迈"   , Parent: 31, Note: "下有五女" }
-  - { Id: 35  , Name: "炳暹"   , Parent: 31 }
+  - { Id: 35  , Name: "炳暹"   , Parent: 31, Note: "下有三女" }
 
   - { Id: 36  , Name: "恩荫"   , Parent: 32, Note: "下有三女" }
   - { Id: 37  , Name: "恩穆"   , Parent: 32, Note: "下有一女" }
@@ -80,9 +81,9 @@ Family:
   - { Id: 44  , Name: "恩湛"   , Parent: 34, Note: "下有三女" }
   - { Id: 45  , Name: "恩隆"   , Parent: 34, Note: "下有一女" }
   - { Id: 46  , Name: "恩渥"   , Parent: 35 }
-  - { Id: 47  , Name: "恩承"   , Parent: 35 }
-  - { Id: 48  , Name: "恩沛"   , Parent: 35 }
-  - { Id: 49  , Name: "恩锡"   , Parent: 35 }
+  - { Id: 47  , Name: "恩承"   , Parent: 35, Note: "下有四女" }
+  - { Id: 48  , Name: "恩沛"   , Parent: 35, Note: "下有一女" }
+  - { Id: 49  , Name: "恩锡"   , Parent: 35, Note: "下有二女" }
 
   - { Id: 50  , Name: "廷琪"   , Parent: 43, Note: "下有一女" }
   - { Id: 51  , Name: "廷玑"   , Parent: 43, Note: "下有一女" }
@@ -132,6 +133,17 @@ Family:
   - { Id: 140 , Name: "毓驹"   , Parent: 123 }
   - { Id: 141 , Name: "毓骅"   , Parent: 123 }
   - { Id: 142 , Name: "毓刚"   , Parent: 127 }
+
+  - { Id: 143 , Name: "廷琨"   , Parent: 46, Adopted: True }
+  - { Id: 144 , Name: "廷琨"   , Parent: 47 }
+  - { Id: 145 , Name: "廷瑚"   , Parent: 47 }
+  - { Id: 146 , Name: "廷琇"   , Parent: 48 }
+  - { Id: 147 , Name: "廷璩"   , Parent: 48 }
+  - { Id: 148 , Name: "廷玹"   , Parent: 48 }
+  - { Id: 149 , Name: "廷瓖"   , Parent: 49 }
+  - { Id: 150 , Name: "廷琏"   , Parent: 49 }
+  - { Id: 151 , Name: "廷理"   , Parent: 49 }
+  - { Id: 152 , Name: "廷？"   , Parent: 49 }
 
   - { Id: 57  , Name: "作江"   , Parent: 50 }
   - { Id: 58  , Name: "作山"   , Parent: 50 }
