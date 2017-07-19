@@ -105,20 +105,23 @@ html(lang='zh-Hans')
           return d.Name;
         }
       }, function(d) {
+        ret = [];
+        if (d.Alias) {
+          ret.push('又名：' + d.Alias);
+        }
         if (d.Spouse) {
           if (is.array(d.Spouse)) {
             var ret = [];
             ret.push('元：' + d.Spouse[0]); 
             ret.push('继：' + d.Spouse[1]);
-            return ret;
           } else {
             var prefix = '偶：';
             if (d.Gender && d.Gender === 'M') prefix = '妻：';
             else if (d.Gender && d.Gender === 'F') prefix = '夫：';
-            return prefix + d.Spouse;
+            ret.push(prefix + d.Spouse);
           }
         }
-        return d.Spouse;
+        return ret;
       });
       var root = treeInfo.root;
       var id2Index = treeInfo.id2Index;

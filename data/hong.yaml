@@ -146,11 +146,11 @@ Family:
   - { Id: 151 , Name: "廷理"   , Parent: 49 }
   - { Id: 152 , Name: "廷？"   , Parent: 49 }
 
-  - { Id: 57  , Name: "作江"   , Parent: 50 }
+  - { Id: 57  , Name: "作江"   , Parent: 50, Terminal: True }
   - { Id: 58  , Name: "作山"   , Gender: 'M', Married: True, Spouse: '陈根弟', Parent: 50 }
   - { Id: 59  , Name: "作海"   , Gender: 'M', Married: True, Spouse: '徐明霞', Parent: 50 }
   - { Id: 60  , Name: "作和"   , Gender: 'M', Married: True, Spouse: '顾学勤', Parent: 50 }
-  - { Id: 61  , Name: "作平"   , Parent: 50 }
+  - { Id: 61  , Name: "作平"   , Parent: 50, Terminal: True }
   - { Id: 153 , Name: "秀文"   , Gender: 'F', Married: True, Spouse: '梅国勋', Parent: 50 }
 
   - { Id: 77  , Name: "作文"   , Parent: 51 }
@@ -187,7 +187,7 @@ Family:
   - { Id: 62  , Name: "惠民"   , Gender: 'M', Married: True, Spouse: '陈孝英', Parent: 58 }
   - { Id: 63  , Name: "惠中"   , Gender: 'M', Married: True, Spouse: '金竞雄', Parent: 58 }
   - { Id: 64  , Name: "惠宝"   , Gender: 'M', Married: True, Spouse: '叶世皓', Parent: 58 }
-  - { Id: 65  , Name: "惠庆"   , Parent: 58 }
+  - { Id: 65  , Name: "惠庆"   , Parent: 58, Terminal: True }
   - { Id: 66  , Name: "惠余"   , Gender: 'M', Married: True, Spouse: '于万云', Parent: 58 }
   - { Id: 67  , Name: "惠政"   , Parent: 59 }
   - { Id: 68  , Name: "惠敏"   , Gender: 'M', Married: True, Spouse: '刘琼花', Parent: 59 }
@@ -196,10 +196,10 @@ Family:
   - { Id: 71  , Name: "惠芳"   , Gender: 'F', Married: True, Spouse: '丁之忠', Parent: 59 }
   - { Id: 72  , Name: "惠艳"   , Gender: 'F', Married: True, Spouse: '崔传海', Parent: 59 }
   - { Id: 73  , Name: "惠石"   , Gender: 'M', Married: True, Spouse: '王金娣', Parent: 60 }
-  - { Id: 74  , Name: "惠山"   , Gender: 'M', Married: True, Spouse: '许复根', Parent: 60 }
-  - { Id: 154 , Name: "梅洪安" , Parent: 153 }
-  - { Id: 155 , Name: "梅洪平" , Parent: 153 }
-  - { Id: 156 , Name: "梅洪全" , Parent: 153 }
+  - { Id: 74  , Name: "惠山"   , Gender: 'M', Married: True, Spouse: '许复根', Parent: 60, Terminal: True }
+  - { Id: 154 , Name: "梅洪安" , Parent: 153, Terminal: True }
+  - { Id: 155 , Name: "梅洪平" , Parent: 153, Terminal: True }
+  - { Id: 156 , Name: "梅洪全" , Parent: 153, Terminal: True }
 
   - { Id: 300 , Name: "昱"     , Parent: 62 }
   - { Id: 301 , Name: "燕君"   , Parent: 63 }
@@ -207,7 +207,7 @@ Family:
   - { Id: 303 , Name: "源源"   , Parent: 66 }
   - { Id: 304 , Name: "雪云"   , Gender: 'F', Married: True, Spouse: '黄然'  , Parent: 67, Adopted: True }
   - { Id: 305 , Name: "雪勇"   , Parent: 68 }
-  - { Id: 306 , Name: "雪刚"   , Gender: 'M', Married: True, Spouse: '刘晓威', Parent: 68 }
+  - { Id: 306 , Name: "雪刚"   , Gender: 'M', Married: True, Alias: '刘晓威', Parent: 68 }
   - { Id: 307 , Name: "雪飞"   , Parent: 68 }
   - { Id: 308 , Name: "晓菊"   , Gender: 'F', Married: True, Spouse: '宁蒙'  , Parent: 68 }
   - { Id: 309 , Name: "雪智"   , Parent: 69 }
