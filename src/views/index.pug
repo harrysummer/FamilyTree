@@ -93,9 +93,17 @@ html(lang='zh-Hans')
     script(src='/main.js')
     script.
       var treeInfo = nodesToTree(familyData, undefined, undefined, function(d) {
-        if (d.Id >= 200 && d.Name && d.Name.length == 2)
-          return d.Name[0] + '\u3000' + d.Name[1];
-        return d.Name;
+        if (d.Id >= 200) {
+          if (d.Name && d.Name.length == 2) {
+            return d.Name[0] + '\u3000' + d.Name[1];
+          } else if (d.Name && d.Name.length == 1) {
+            return '\u3000' + d.Name + '\u3000';
+          } else {
+            return d.Name;
+          }
+        } else {
+          return d.Name;
+        }
       }, function(d) {
         if (d.Spouse) {
           if (is.array(d.Spouse)) {

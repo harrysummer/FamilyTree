@@ -11,6 +11,7 @@ Family:
     6. 如您可以提供更多支系信息，请邮件联系 harrysummer@163.com
   Changelog: |
     更新记录：
+    2017.07.19: 补完廷琪公一支信息
     2017.07.08: 添加老四房四子门炳暹公支下
     2017.06.22: 添加老四房（绍遵公后嗣）至十九世
     2017.06.19: 补全宗适公后世至十九世谱
@@ -85,7 +86,7 @@ Family:
   - { Id: 48  , Name: "恩沛"   , Parent: 35, Note: "下有一女" }
   - { Id: 49  , Name: "恩锡"   , Parent: 35, Note: "下有二女" }
 
-  - { Id: 50  , Name: "廷琪"   , Parent: 43, Note: "下有一女" }
+  - { Id: 50  , Name: "廷琪"   , Parent: 43, Gender: 'M', Married: True, Spouse: [ '金氏', '吴氏' ] }
   - { Id: 51  , Name: "廷玑"   , Parent: 43, Note: "下有一女" }
   - { Id: 52  , Name: "廷璜"   , Parent: 43, Note: "下有二女" }
   - { Id: 53  , Name: "廷珩"   , Parent: 43, Note: "下有一女" }
@@ -146,10 +147,11 @@ Family:
   - { Id: 152 , Name: "廷？"   , Parent: 49 }
 
   - { Id: 57  , Name: "作江"   , Parent: 50 }
-  - { Id: 58  , Name: "作山"   , Parent: 50 }
-  - { Id: 59  , Name: "作海"   , Parent: 50 }
-  - { Id: 60  , Name: "作和"   , Parent: 50 }
+  - { Id: 58  , Name: "作山"   , Gender: 'M', Married: True, Spouse: '陈根弟', Parent: 50 }
+  - { Id: 59  , Name: "作海"   , Gender: 'M', Married: True, Spouse: '徐明霞', Parent: 50 }
+  - { Id: 60  , Name: "作和"   , Gender: 'M', Married: True, Spouse: '顾学勤', Parent: 50 }
   - { Id: 61  , Name: "作平"   , Parent: 50 }
+  - { Id: 153 , Name: "秀文"   , Gender: 'F', Married: True, Spouse: '梅国勋', Parent: 50 }
 
   - { Id: 77  , Name: "作文"   , Parent: 51 }
   - { Id: 78  , Name: "作武"   , Parent: 51 }
@@ -182,82 +184,109 @@ Family:
   - { Id: 116 , Name: "作哲"     , Parent: 101 }
   - { Id: 117 , Name: "作贵"     , Parent: 101 }
 
-  - { Id: 62  , Name: "惠民"   , Parent: 58 }
-  - { Id: 63  , Name: "惠中"   , Parent: 58 }
-  - { Id: 64  , Name: "惠宝"   , Parent: 58 }
+  - { Id: 62  , Name: "惠民"   , Gender: 'M', Married: True, Spouse: '陈孝英', Parent: 58 }
+  - { Id: 63  , Name: "惠中"   , Gender: 'M', Married: True, Spouse: '金竞雄', Parent: 58 }
+  - { Id: 64  , Name: "惠宝"   , Gender: 'M', Married: True, Spouse: '叶世皓', Parent: 58 }
   - { Id: 65  , Name: "惠庆"   , Parent: 58 }
-  - { Id: 66  , Name: "惠余"   , Parent: 58 }
+  - { Id: 66  , Name: "惠余"   , Gender: 'M', Married: True, Spouse: '于万云', Parent: 58 }
   - { Id: 67  , Name: "惠政"   , Parent: 59 }
-  - { Id: 68  , Name: "惠敏"   , Parent: 59 }
-  - { Id: 69  , Name: "惠胜"   , Parent: 59 }
-  - { Id: 70  , Name: "惠兰"   , Parent: 59 }
-  - { Id: 71  , Name: "惠芳"   , Parent: 59 }
-  - { Id: 72  , Name: "惠艳"   , Parent: 59 }
-  - { Id: 73  , Name: "惠山"   , Parent: 60 }
-  - { Id: 74  , Name: "惠石"   , Parent: 60 }
+  - { Id: 68  , Name: "惠敏"   , Gender: 'M', Married: True, Spouse: '刘琼花', Parent: 59 }
+  - { Id: 69  , Name: "惠胜"   , Gender: 'M', Married: True, Spouse: '宣晓兰', Parent: 59 }
+  - { Id: 70  , Name: "惠兰"   , Gender: 'F', Married: True, Spouse: '洪财信', Parent: 59 }
+  - { Id: 71  , Name: "惠芳"   , Gender: 'F', Married: True, Spouse: '丁之忠', Parent: 59 }
+  - { Id: 72  , Name: "惠艳"   , Gender: 'F', Married: True, Spouse: '崔传海', Parent: 59 }
+  - { Id: 73  , Name: "惠石"   , Gender: 'M', Married: True, Spouse: '王金娣', Parent: 60 }
+  - { Id: 74  , Name: "惠山"   , Gender: 'M', Married: True, Spouse: '许复根', Parent: 60 }
+  - { Id: 154 , Name: "梅洪安" , Parent: 153 }
+  - { Id: 155 , Name: "梅洪平" , Parent: 153 }
+  - { Id: 156 , Name: "梅洪全" , Parent: 153 }
+
+  - { Id: 300 , Name: "昱"     , Parent: 62 }
+  - { Id: 301 , Name: "燕君"   , Parent: 63 }
+  - { Id: 302 , Name: "滢"     , Parent: 64 }
+  - { Id: 303 , Name: "源源"   , Parent: 66 }
+  - { Id: 304 , Name: "雪云"   , Gender: 'F', Married: True, Spouse: '黄然'  , Parent: 67, Adopted: True }
+  - { Id: 305 , Name: "雪勇"   , Parent: 68 }
+  - { Id: 306 , Name: "雪刚"   , Gender: 'M', Married: True, Spouse: '刘晓威', Parent: 68 }
+  - { Id: 307 , Name: "雪飞"   , Parent: 68 }
+  - { Id: 308 , Name: "晓菊"   , Gender: 'F', Married: True, Spouse: '宁蒙'  , Parent: 68 }
+  - { Id: 309 , Name: "雪智"   , Parent: 69 }
+  - { Id: 310 , Name: "和平"   , Gender: 'M', Married: True, Spouse: '李青禾', Parent: 70 }
+  - { Id: 311 , Name: "俊"     , Gender: 'M', Married: True, Spouse: '黄培香', Parent: 70 }
+  - { Id: 312 , Name: "丁洪杰" , Parent: 71 }
+  - { Id: 313 , Name: "丁蓉蓉" , Parent: 71 }
+  - { Id: 314 , Name: "崔献英" , Parent: 72 }
+  - { Id: 315 , Name: "崔雪勤" , Parent: 72 }
+  - { Id: 316 , Name: "王雪春" , Parent: 73 }
+  - { Id: 317 , Name: "王莉莉" , Parent: 73 }
+
+  - { Id: 318 , Name: "黄俊祺" , Parent: 304 }
+  - { Id: 319 , Name: "松果"   , Parent: 310 }
+  - { Id: 320 , Name: "健君"   , Parent: 311 }
+  - { Id: 321 , Name: "雨婷"   , Parent: 311 }
 
   - { Id: 75  , Name: "廷瑄"   , Parent: 42, Note: "下有三女" }
   - { Id: 76  , Name: "廷瑞"   , Gender: 'M' , Dead: true , Married: true , Spouse: ~ ,      , Parent: 42, Note: "下有一女" }
 
-  - { Id: 201 , Name: "洪作宾" , Gender: 'M' , Dead: true , Married: true , Spouse: ["赵志英", "陈素华"] , Parent: 76  , Order: 1 , Comment: "重庆" }
-  - { Id: 202 , Name: "洪作弼" , Gender: 'M' , Dead: true , Married: true , Spouse: "张祖青" , Parent: 76  , Order: 2 }
+  - { Id: 201 , Name: "作宾" , Gender: 'M' , Dead: true , Married: true , Spouse: ["赵志英", "陈素华"] , Parent: 76  , Order: 1 , Comment: "重庆" }
+  - { Id: 202 , Name: "作弼" , Gender: 'M' , Dead: true , Married: true , Spouse: "张祖青" , Parent: 76  , Order: 2 }
 
-  - { Id: 203 , Name: "洪孝生" , Gender: 'M' , Married: true , Spouse: "田琪蓉" , Parent: 201  , Order: 1   , Comment: "长子" }
-  - { Id: 204 , Name: "洪枢生" , Gender: 'M' , Married: true , Spouse: "刘传碧" , Parent: 201  , Order: 2   , Comment: "次子" }
-  - { Id: 205 , Name: "洪栋生" , Gender: 'M' , Dead: true    , Parent: 201        , Order: 3 }
-  - { Id: 206 , Name: "洪寅生" , Gender: 'M' , Married: true , Spouse: "李忠英" , Parent: 201  , Order: 4 }
-  - { Id: 207 , Name: "洪春生" , Gender: 'M' , Married: true , Spouse: "陈静"   , Parent: 201  , Order: 5 }
-  - { Id: 208 , Name: "洪玺燕" , Gender: 'F' , Married: true , Spouse: "郭兴茂" , Parent: 201  , Order: 6 }
+  - { Id: 203 , Name: "孝生" , Gender: 'M' , Married: true , Spouse: "田琪蓉" , Parent: 201  , Order: 1   , Comment: "长子" }
+  - { Id: 204 , Name: "枢生" , Gender: 'M' , Married: true , Spouse: "刘传碧" , Parent: 201  , Order: 2   , Comment: "次子" }
+  - { Id: 205 , Name: "栋生" , Gender: 'M' , Dead: true    , Parent: 201        , Order: 3 }
+  - { Id: 206 , Name: "寅生" , Gender: 'M' , Married: true , Spouse: "李忠英" , Parent: 201  , Order: 4 }
+  - { Id: 207 , Name: "春生" , Gender: 'M' , Married: true , Spouse: "陈静"   , Parent: 201  , Order: 5 }
+  - { Id: 208 , Name: "玺燕" , Gender: 'F' , Married: true , Spouse: "郭兴茂" , Parent: 201  , Order: 6 }
 
-  - { Id: 209 , Name: "洪志成" , Gender: 'M' , Married: true  , Spouse: "吴志银" , Parent: 202        , Order: 1 }
-  - { Id: 210 , Name: "洪志胜" , Gender: 'F' , Dead: true     , Married: true    , Spouse: "徐良可" , Parent: 202  , Order: 2  }
-  - { Id: 211 , Name: "洪志华" , Gender: 'M' , Married: false , Parent: 202        , Order: 3 }
-  - { Id: 212 , Name: "洪志明" , Gender: 'F' , Married: true  , Spouse: "殷代荣" , Parent: 202        , Order: 4   , Comment: "北京" }
-  - { Id: 213 , Name: "洪志珍" , Gender: 'F' , Married: true  , Spouse: "刘先根" , Parent: 202        , Order: 5 }
-  - { Id: 214 , Name: "洪志和" , Gender: 'M' , Married: false , Parent: 202        , Order: 6 }
+  - { Id: 209 , Name: "志成" , Gender: 'M' , Married: true  , Spouse: "吴志银" , Parent: 202        , Order: 1 }
+  - { Id: 210 , Name: "志胜" , Gender: 'F' , Dead: true     , Married: true    , Spouse: "徐良可" , Parent: 202  , Order: 2  }
+  - { Id: 211 , Name: "志华" , Gender: 'M' , Married: false , Parent: 202        , Order: 3 }
+  - { Id: 212 , Name: "志明" , Gender: 'F' , Married: true  , Spouse: "殷代荣" , Parent: 202        , Order: 4   , Comment: "北京" }
+  - { Id: 213 , Name: "志珍" , Gender: 'F' , Married: true  , Spouse: "刘先根" , Parent: 202        , Order: 5 }
+  - { Id: 214 , Name: "志和" , Gender: 'M' , Married: false , Parent: 202        , Order: 6 }
 
-  - { Id: 215 , Name: "洪斌"   , Gender: 'M' , Married: true  , Spouse: "李梅"   , Parent: 203  , Order: 1 }
-  - { Id: 216 , Name: "洪梅"   , Gender: 'F' , Married: true  , Spouse: "补忠华" , Parent: 203  , Order: 2 }
-  - { Id: 217 , Name: "洪俊"   , Gender: 'F' , Married: true  , Spouse: "段德辉" , Parent: 204  , Order: 1 }
-  - { Id: 218 , Name: "洪星"   , Gender: 'M' , Married: true  , Spouse: "张黎"   , Parent: 204  , Order: 2 }
-  - { Id: 219 , Name: "洪强"   , Gender: 'M' , Married: true  , Spouse: "周迎卫" , Parent: 204  , Order: 3 }
-  - { Id: 220 , Name: "洪峰"   , Gender: 'M' , Married: true  , Spouse: "吴小青" , Parent: 206  , Order: 1 }
-  - { Id: 221 , Name: "洪雪"   , Gender: 'F' , Married: false , Parent: 206        , Order: 2 }
-  - { Id: 222 , Name: "洪诚"   , Gender: 'M' , Married: ~  , Spouse: ~     , Parent: 207  , Order: 1 }
+  - { Id: 215 , Name: "斌"   , Gender: 'M' , Married: true  , Spouse: "李梅"   , Parent: 203  , Order: 1 }
+  - { Id: 216 , Name: "梅"   , Gender: 'F' , Married: true  , Spouse: "补忠华" , Parent: 203  , Order: 2 }
+  - { Id: 217 , Name: "俊"   , Gender: 'F' , Married: true  , Spouse: "段德辉" , Parent: 204  , Order: 1 }
+  - { Id: 218 , Name: "星"   , Gender: 'M' , Married: true  , Spouse: "张黎"   , Parent: 204  , Order: 2 }
+  - { Id: 219 , Name: "强"   , Gender: 'M' , Married: true  , Spouse: "周迎卫" , Parent: 204  , Order: 3 }
+  - { Id: 220 , Name: "峰"   , Gender: 'M' , Married: true  , Spouse: "吴小青" , Parent: 206  , Order: 1 }
+  - { Id: 221 , Name: "雪"   , Gender: 'F' , Married: false , Parent: 206        , Order: 2 }
+  - { Id: 222 , Name: "诚"   , Gender: 'M' , Married: ~  , Spouse: ~     , Parent: 207  , Order: 1 }
   - { Id: 223 , Name: "郭全真" , Gender: 'F' , Married: true  , Spouse: "袁世龙" , Parent: 208  , Order: 1 }
 
-  - { Id: 224 , Name: "洪玉霞" , Gender: 'F' , Married: true , Spouse: "夏清龙" , Parent: 209  , Order: 1   , Comment: "长女" }
-  - { Id: 225 , Name: "洪玉兰" , Gender: 'F' , Married: true , Spouse: "罗齐斌" , Parent: 209  , Order: 2   , Comment: "次女" }
-  - { Id: 226 , Name: "洪明生" , Gender: 'M' , Married: true , Spouse: "梅占芳" , Parent: 209  , Order: 3   , Comment: "三子" }
-  - { Id: 227 , Name: "洪振生" , Gender: 'M' , Married: true , Spouse: "张菊圣" , Parent: 209  , Order: 4   , Comment: "四子" }
+  - { Id: 224 , Name: "玉霞" , Gender: 'F' , Married: true , Spouse: "夏清龙" , Parent: 209  , Order: 1   , Comment: "长女" }
+  - { Id: 225 , Name: "玉兰" , Gender: 'F' , Married: true , Spouse: "罗齐斌" , Parent: 209  , Order: 2   , Comment: "次女" }
+  - { Id: 226 , Name: "明生" , Gender: 'M' , Married: true , Spouse: "梅占芳" , Parent: 209  , Order: 3   , Comment: "三子" }
+  - { Id: 227 , Name: "振生" , Gender: 'M' , Married: true , Spouse: "张菊圣" , Parent: 209  , Order: 4   , Comment: "四子" }
   - { Id: 228 , Name: "徐敏华" , Gender: 'F' , Married: true , Spouse: "张宗友" , Parent: 210 , Order: 1 }
   - { Id: 229 , Name: "徐延松" , Gender: 'M' , Married: true , Spouse: "张晓梅" , Parent: 210 , Order: 2 }
   - { Id: 230 , Name: "徐宏霞" , Gender: 'F' , Married: true , Spouse: "刘天杰" , Parent: 210 , Order: 3 }
   - { Id: 231 , Name: "殷洪"   , Gender: 'M' , Married: true , Spouse: "孙莉丹" , Parent: 212 , Order: 1 }
-  - { Id: 232 , Name: "洪胜森" , Gender: 'M' , Married: true , Spouse: "蒲冬梅" , Parent: 212 , Order: 2 }
+  - { Id: 232 , Name: "胜森" , Gender: 'M' , Married: true , Spouse: "蒲冬梅" , Parent: 212 , Order: 2 }
   - { Id: 233 , Name: "刘凤云" , Gender: 'F' , Married: true , Spouse: "王华才" , Parent: 213 , Order: 1 }
   - { Id: 234 , Name: "刘凤平" , Gender: 'M' , Married: true , Spouse: "花艳梅" , Parent: 213 , Order: 2 }
 
-  - { Id: 235 , Name: "洪路航" , Gender: 'M' , Married: false , Parent: 215 }
-  - { Id: 236 , Name: "洪子懿" , Gender: ~   , Married: false , Parent: 216 }
+  - { Id: 235 , Name: "路航" , Gender: 'M' , Married: false , Parent: 215 }
+  - { Id: 236 , Name: "子懿" , Gender: ~   , Married: false , Parent: 216 }
   - { Id: 237 , Name: "段禹彤" , Gender: ~   , Married: false , Parent: 217 }
-  - { Id: 238 , Name: "洪皓晨" , Gender: ~   , Married: false , Parent: 218 }
-  - { Id: 239 , Name: "洪子蕊" , Gender: ~   , Married: false , Parent: 219 }
-  - { Id: 240 , Name: "洪思琪" , Gender: ~   , Married: false , Parent: 220 }
+  - { Id: 238 , Name: "皓晨" , Gender: ~   , Married: false , Parent: 218 }
+  - { Id: 239 , Name: "子蕊" , Gender: ~   , Married: false , Parent: 219 }
+  - { Id: 240 , Name: "思琪" , Gender: ~   , Married: false , Parent: 220 }
   - { Id: 241 , Name: "袁启尧" , Gender: ~   , Married: false , Parent: 223 }
 
   - { Id: 242 , Name: "夏睿"   , Gender: 'M' , Married: false , Parent: 224 }
   - { Id: 243 , Name: "罗卫"   , Gender: 'M' , Married: false , Parent: 225 }
-  - { Id: 244 , Name: "洪妍"   , Gender: 'F' , Married: false , Parent: 226 }
-  - { Id: 245 , Name: "洪永阳" , Gender: 'M' , Married: false , Parent: 226 }
-  - { Id: 246 , Name: "洪子玥" , Gender: 'M' , Married: false , Parent: 227 }
-  - { Id: 247 , Name: "洪子璐" , Gender: 'M' , Married: false , Parent: 227 }
+  - { Id: 244 , Name: "妍"   , Gender: 'F' , Married: false , Parent: 226 }
+  - { Id: 245 , Name: "永阳" , Gender: 'M' , Married: false , Parent: 226 }
+  - { Id: 246 , Name: "子玥" , Gender: 'M' , Married: false , Parent: 227 }
+  - { Id: 247 , Name: "子璐" , Gender: 'M' , Married: false , Parent: 227 }
   - { Id: 248 , Name: "张轶君" , Gender: 'F' , Married: false , Parent: 228 }
   - { Id: 249 , Name: "张文轩" , Gender: 'M' , Married: false , Parent: 228 }
   - { Id: 250 , Name: "徐健"   , Gender: 'M' , Married: false , Parent: 229 }
   - { Id: 251 , Name: "刘滢滢" , Gender: 'F' , Married: false , Parent: 230 }
   - { Id: 252 , Name: "殷泳文" , Gender: ~   , Married: false , Parent: 231 }
-  - { Id: 253 , Name: "洪天宇" , Gender: ~   , Married: false , Parent: 232 }
+  - { Id: 253 , Name: "天宇" , Gender: ~   , Married: false , Parent: 232 }
   - { Id: 254 , Name: "王雨欣" , Gender: 'F' , Married: false , Parent: 233 }
   - { Id: 255 , Name: "王可君" , Gender: 'F' , Married: false , Parent: 233 }
   - { Id: 256 , Name: "刘元玺" , Gender: 'F' , Married: false , Parent: 234 }
