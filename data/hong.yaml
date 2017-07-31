@@ -275,7 +275,7 @@ Family:
   - { Id: 240 , Name: "思琪" , Gender: ~   , Married: false , Parent: 220 }
   - { Id: 241 , Name: "袁启尧" , Gender: ~   , Married: false , Parent: 223 }
 
-  - { Id: 242 , Name: "夏睿"   , Gender: 'M' , Married: false , Parent: 224 }
+  - { Id: 242 , Name: "夏睿"   , Gender: 'M' , Married: true, Spouse: "张萌", Parent: 224 }
   - { Id: 243 , Name: "罗卫"   , Gender: 'M' , Married: false , Parent: 225 }
   - { Id: 244 , Name: "妍"   , Gender: 'F' , Married: false , Parent: 226 }
   - { Id: 245 , Name: "永阳" , Gender: 'M' , Married: false , Parent: 226 }
