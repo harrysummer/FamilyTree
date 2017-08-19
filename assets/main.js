@@ -360,14 +360,14 @@ var numberToChinese = function(number) {
 var drawGeneration = function(paper, content, layoutInfo) {
     var offset = layoutInfo.generationOffset;
     for (var i = 0; i < offset.length - 1; i++) {
-        var lastNode = layoutInfo.nodePerLevel[i][layoutInfo.nodePerLevel[i].length - 1];
+        var firstNode = layoutInfo.nodePerLevel[i][0];
         var x = 0.5 * (offset[i] + offset[i + 1]);
-        var y = lastNode.y + lastNode.size.height + 15;
-        var yEnd = layoutInfo.size.height + 100;
-        var text = paper.text(x, yEnd, (i==0 ? "始祖" : numberToChinese(i+1) + "世")).addClass('text-generation');
+        var y = firstNode.y - 15;
+        var text = paper.text(x, -50, (i==0 ? "始祖" : numberToChinese(i+1) + "世")).addClass('text-generation');
         if (is.ie() || is.edge()) {
-            text.attr('y', yEnd + text.getBBox().height * 0.8);
+            text.attr('y', -50 + text.getBBox().height * 0.8);
         }
+        var yEnd = text.getBBox().height * 1.2 - 50;
         content.add(
             paper.line(x, y, x, yEnd).addClass('line-generation'),
             text

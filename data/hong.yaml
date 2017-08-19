@@ -11,6 +11,7 @@ Family:
     6. 如您可以提供更多支系信息，请邮件联系 harrysummer@163.com
   Changelog: |
     更新记录：
+    2017.08.19: 补全北份老四房作权公一支信息
     2017.07.19: 补完廷琪公一支信息
     2017.07.08: 添加老四房四子门炳暹公支下
     2017.06.22: 添加老四房（绍遵公后嗣）至十九世
@@ -290,6 +291,40 @@ Family:
   - { Id: 254 , Name: "王雨欣" , Gender: 'F' , Married: false , Parent: 233 }
   - { Id: 255 , Name: "王可君" , Gender: 'F' , Married: false , Parent: 233 }
   - { Id: 256 , Name: "刘元玺" , Gender: 'F' , Married: false , Parent: 234 }
+
+  - { Id: 322 , Name: "铸新", Gender: 'M', Spouse: "吴允芳", Parent: 103 }
+  - { Id: 323 , Name: "铸铭", Gender: 'M', Spouse: "丁之珍", Parent: 103 }
+  - { Id: 324 , Name: "铸华", Gender: 'F', Spouse: "戴荫桐", Parent: 103 }
+  - { Id: 325 , Name: "铸珍", Gender: 'F', Spouse: "武庆元", Parent: 103 }
+  - { Id: 326 , Name: "铸央", Gender: 'F', Spouse: "吴华新", Parent: 103 }
+  - { Id: 327 , Name: "建", Gender: 'M', Spouse: "王永煜", Parent: 323 }
+  - { Id: 328 , Name: "平", Gender: 'M', Spouse: "高金莲", Parent: 323 }
+  - { Id: 329 , Name: "源", Gender: 'F', Spouse: "钱兴隆", Parent: 323 }
+  - { Id: 330 , Name: "智", Gender: 'F', Spouse: "徐志清", Parent: 323 }
+  - { Id: 331 , Name: "蓉", Gender: 'F', Spouse: "汪裕明", Parent: 323 }
+  - { Id: 332 , Name: "戴祖福", Gender: ~, Parent: 324 }
+  - { Id: 333 , Name: "戴洪", Gender: ~, Parent: 324 }
+  - { Id: 334 , Name: "杨春辉", Gender: ~, Parent: 324 }
+  - { Id: 335 , Name: "戴鸣放", Gender: ~, Parent: 324 }
+  - { Id: 336 , Name: "武迎建", Gender: ~, Parent: 325 }
+  - { Id: 337 , Name: "武胜建", Gender: ~, Parent: 325 }
+  - { Id: 338 , Name: "武洪建", Gender: ~, Parent: 325 }
+  - { Id: 339 , Name: "孙明忠", Gender: ~, Parent: 326 }
+  - { Id: 340 , Name: "吴明庆", Gender: ~, Parent: 326 }
+  - { Id: 341 , Name: "吴荣信", Gender: ~, Parent: 326 }
+  - { Id: 342 , Name: "吴本信", Gender: ~, Parent: 326 }
+  - { Id: 343 , Name: "吴玉信", Gender: ~, Parent: 326 }
+  - { Id: 344 , Name: "吴玉红", Gender: ~, Parent: 326 }
+  - { Id: 345 , Name: "伟", Gender: 'M', Spouse: "唐敏", Parent: 327 }
+  - { Id: 346 , Name: "扬", Gender: 'M', Spouse: "马煜善", Parent: 328 }
+  - { Id: 347 , Name: "钱锋", Gender: 'M', Parent: 329 }
+  - { Id: 348 , Name: "钱锐", Gender: 'M', Parent: 329 }
+  - { Id: 349 , Name: "徐建东", Gender: 'M', Parent: 330 }
+  - { Id: 350 , Name: "汪超", Gender: 'M', Parent: 331 }
+  - { Id: 351 , Name: "汪雯", Gender: 'F', Parent: 331 }
+  - { Id: 352 , Name: "洪依诺", Gender: ~, Parent: 345 }
+  - { Id: 353 , Name: "洪梓天", Gender: 'M', Parent: 346 }
+  - { Id: 354 , Name: "马梓洪", Gender: 'F', Parent: 346 }
 
   Details:
   - Id: 42
