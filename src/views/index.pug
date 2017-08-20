@@ -169,7 +169,7 @@ html(lang='zh-Hans')
       setupDetailButton(paper, content, detailData, treeInfo);
 
       var commentText = paper
-        .text(100, 2500, commentData.split("\n"))
+        .text(100, layoutInfo.nodePerLevel[4][layoutInfo.nodePerLevel[4].length-1].y + 200, commentData.split("\n"))
         .addClass('comment');
         commentText.selectAll('tspan:nth-child(n+2)')
         .attr({ dy: "1.2em" , x: 100 });
@@ -180,7 +180,7 @@ html(lang='zh-Hans')
       content.add(commentRect, commentText);
 
       var changelogText = paper
-        .text(100, 2500 + commentBBox.height + 100, changelog.split("\n"))
+        .text(100, layoutInfo.nodePerLevel[4][layoutInfo.nodePerLevel[4].length-1].y + 200 + commentBBox.height + 100, changelog.split("\n"))
         .addClass('comment');
         changelogText.selectAll('tspan:nth-child(n+2)')
         .attr({ dy: "1.2em" , x: 100 });
