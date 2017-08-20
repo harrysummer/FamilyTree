@@ -109,6 +109,16 @@ Family:
   - { Id: 459 , Name: "时相"   , Parent: 393 }
   - { Id: 460 , Name: "时桥"   , Parent: 393 }
   - { Id: 461 , Name: "时松"   , Parent: 393 }
+  - { Id: 481 , Name: "时吉"   , Parent: 394 }
+  - { Id: 482 , Name: "时喜"   , Parent: 394 }
+  - { Id: 483 , Name: "时振"   , Parent: 394 }
+  - { Id: 484 , Name: "时有"   , Parent: 395 }
+  - { Id: 485 , Name: "时德"   , Parent: 395 }
+  - { Id: 486 , Name: "时泰"   , Parent: 395 }
+  - { Id: 518 , Name: "时凤"   , Parent: 400 }
+  - { Id: 519 , Name: "时会"   , Parent: 400 }
+  - { Id: 520 , Name: "时龙"   , Parent: 401 }
+  - { Id: 521 , Name: "时虎"   , Parent: 401 }
 
   # 七世
   - { Id: 15  , Name: "本钦"   , Parent: 14 }
@@ -131,6 +141,18 @@ Family:
   - { Id: 466 , Name: "本迁"   , Parent: 459 }
   - { Id: 467 , Name: "本见"   , Parent: 459 }
   - { Id: 468 , Name: "本润"   , Parent: 461 }
+  - { Id: 487 , Name: "本齐"   , Parent: 481 }
+  - { Id: 488 , Name: "本法"   , Parent: 482 }
+  - { Id: 489 , Name: "本济"   , Parent: 482 }
+  - { Id: 490 , Name: "本霍"   , Parent: 484 }
+  - { Id: 491 , Name: "本良"   , Parent: 485 }
+  - { Id: 492 , Name: "本乐"   , Parent: 486 }
+  - { Id: 522 , Name: "本宝"   , Parent: 518 }
+  - { Id: 523 , Name: "本钰"   , Parent: 519 }
+  - { Id: 524 , Name: "本金"   , Parent: 519 }
+  - { Id: 525 , Name: "本银"   , Parent: 520 }
+  - { Id: 526 , Name: "本财"   , Parent: 520 }
+  - { Id: 527 , Name: "本富"   , Parent: 521 }
 
   # 八世
   - { Id: 16  , Name: "得时"   , Parent: 15 }
@@ -154,6 +176,28 @@ Family:
   - { Id: 472 , Name: "得仁"   , Parent: 464 }
   - { Id: 473 , Name: "得泽"   , Parent: 465 }
   - { Id: 474 , Name: "元通"   , Parent: 468 }
+  - { Id: 493 , Name: "元杰"   , Parent: 487 }
+  - { Id: 494 , Name: "元祯"   , Parent: 487 }
+  - { Id: 495 , Name: "元舜"   , Parent: 487 }
+  - { Id: 496 , Name: "元旭"   , Parent: 487 }
+  - { Id: 497 , Name: "元鸣"   , Parent: 487 }
+  - { Id: 498 , Name: "元槚"   , Parent: 488 }
+  - { Id: 499 , Name: "元梧"   , Parent: 488 }
+  - { Id: 500 , Name: "元尧"   , Parent: 489 }
+  - { Id: 501 , Name: "得寿"   , Parent: 491 }
+  - { Id: 502 , Name: "得显"   , Parent: 491 }
+  - { Id: 503 , Name: "得保"   , Parent: 492 }
+  - { Id: 528 , Name: "元潮"   , Parent: 522 }
+  - { Id: 529 , Name: "元海"   , Parent: 522 }
+  - { Id: 530 , Name: "元洲"   , Parent: 523 }
+  - { Id: 531 , Name: "得喜"   , Parent: 524 }
+  - { Id: 532 , Name: "得聘"   , Parent: 525 }
+  - { Id: 533 , Name: "元济"   , Parent: 525 }
+  - { Id: 534 , Name: "元淮"   , Parent: 526 }
+  - { Id: 535 , Name: "元胜"   , Parent: 526 }
+  - { Id: 536 , Name: "元江"   , Parent: 527 }
+  - { Id: 537 , Name: "元仲"   , Parent: 527 }
+  - { Id: 538 , Name: "元绅"   , Parent: 527 }
 
   # 九世
   - { Id: 422 , Name: "明科"   , Parent: 16 }
@@ -185,6 +229,33 @@ Family:
   - { Id: 478 , Name: "必延"   , Parent: 473 }
   - { Id: 479 , Name: "明信"   , Parent: 474 }
   - { Id: 480 , Name: "明秀"   , Parent: 474 }
+  - { Id: 504 , Name: "明奇"   , Parent: 493 }
+  - { Id: 505 , Name: "明彦"   , Parent: 493 }
+  - { Id: 506 , Name: "明章"   , Parent: 494 }
+  - { Id: 507 , Name: "明连"   , Parent: 496 }
+  - { Id: 508 , Name: "明良"   , Parent: 497 }
+  - { Id: 509 , Name: "明伟"   , Parent: 498 }
+  - { Id: 510 , Name: "明仲"   , Parent: 499 }
+  - { Id: 511 , Name: "明远"   , Parent: 500 }
+  - { Id: 512 , Name: "明达"   , Parent: 500 }
+  - { Id: 513 , Name: "明学"   , Parent: 501 }
+  - { Id: 514 , Name: "明富"   , Parent: 502 }
+  - { Id: 515 , Name: "明轩"   , Parent: 502 }
+  - { Id: 516 , Name: "明玉"   , Parent: 503 }
+  - { Id: 517 , Name: "明元"   , Parent: 503 }
+  - { Id: 539 , Name: "明孝"   , Parent: 528 }
+  - { Id: 540 , Name: "明兆"   , Parent: 530 }
+  - { Id: 541 , Name: "明枢"   , Parent: 530 }
+  - { Id: 542 , Name: "明彬"   , Parent: 530 }
+  - { Id: 543 , Name: "明玄"   , Parent: 530 }
+  - { Id: 544 , Name: "明全"   , Parent: 530 }
+  - { Id: 545 , Name: "明隆"   , Parent: 531 }
+  - { Id: 546 , Name: "明盛"   , Parent: 531 }
+  - { Id: 547 , Name: "明腾"   , Parent: 532 }
+  - { Id: 548 , Name: "明显"   , Parent: 534 }
+  - { Id: 549 , Name: "明昇"   , Parent: 534 }
+  - { Id: 550 , Name: "明豹"   , Parent: 536 }
+  - { Id: 551 , Name: "明鹏"   , Parent: 536 }
 
   - { Id: 21  , Name: "三省"   , Parent: 20 }
   - { Id: 22  , Name: "三义"   , Parent: 20 }
