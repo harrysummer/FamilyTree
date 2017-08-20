@@ -54,9 +54,9 @@ Family:
   - { Id: 373 , Name: "⿰王巳"     , Parent: 358 }
   - { Id: 374 , Name: "玮"     , Parent: 358 }
   - { Id: 375 , Name: "铣"     , Parent: 359 }
-  - { Id: 376 , Name: "仲瑛"   , Parent: 4 }
-  - { Id: 377 , Name: "仲训"   , Parent: 4 }
-  - { Id: 378 , Name: "仲瑞"   , Parent: 5 }
+  - { Id: 376 , Name: "仲瑛"   , Parent: 10 }
+  - { Id: 377 , Name: "仲训"   , Parent: 10 }
+  - { Id: 378 , Name: "仲瑞"   , Parent: 11 }
   - { Id: 379 , Name: "仲琛"   , Parent: 360 }
   - { Id: 380 , Name: "仲珂"   , Parent: 360 }
   - { Id: 381 , Name: "成"     , Parent: 361 }
