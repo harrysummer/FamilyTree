@@ -21,12 +21,15 @@ Family:
     2017.06.08: 据家谱将亲族祖先由廷瑄公改正为廷瑞公，并加入自迁巢始祖起的世系
     2016.09.25: 根据近亲信息完成廷瑄公一支谱系
   Members:
+  # 迁巢始祖
   - { Id: 0   , Name: "宽公"   , Parent: ~ }
 
+  # 二世
   - { Id: 1   , Name: "宗"     , Parent: 0 }
   - { Id: 2   , Name: "海祖"   , Parent: 0 }
   - { Id: 3   , Name: "祥"     , Parent: 0 }
 
+  # 三世
   - { Id: 4   , Name: "诏"     , Parent: 1 }
   - { Id: 5   , Name: "譔"     , Parent: 1 }
   - { Id: 6   , Name: "论"     , Parent: 1 }
@@ -38,6 +41,7 @@ Family:
   - { Id: 358 , Name: "政"     , Parent: 3 }
   - { Id: 359 , Name: "暹"     , Parent: 3 }
 
+  # 四世
   - { Id: 9   , Name: "钺"     , Parent: 4 }
   - { Id: 10  , Name: "富"     , Parent: 4 }
   - { Id: 11  , Name: "俵"     , Parent: 4 }
@@ -58,6 +62,7 @@ Family:
   - { Id: 374 , Name: "玮"     , Parent: 358 }
   - { Id: 375 , Name: "铣"     , Parent: 359 }
 
+  # 五世
   - { Id: 12  , Name: "仲详"   , Parent: 9 }
   - { Id: 13  , Name: "仲玄"   , Parent: 9 }
   - { Id: 376 , Name: "仲瑛"   , Parent: 10 }
@@ -87,6 +92,7 @@ Family:
   - { Id: 400 , Name: "仲瑾"   , Parent: 375 }
   - { Id: 401 , Name: "仲华"   , Parent: 375 }
 
+  # 六世
   - { Id: 14  , Name: "时保"   , Parent: 12 }
   - { Id: 402 , Name: "时宪"   , Parent: 13 }
   - { Id: 403 , Name: "时彦"   , Parent: 376 }
@@ -97,7 +103,14 @@ Family:
   - { Id: 439 , Name: "时恩"   , Parent: 385 }
   - { Id: 440 , Name: "时学"   , Parent: 385 }
   - { Id: 441 , Name: "时成"   , Parent: 385 }
+  - { Id: 456 , Name: "时海"   , Parent: 391 }
+  - { Id: 457 , Name: "时明"   , Parent: 392 }
+  - { Id: 458 , Name: "时贵"   , Parent: 392 }
+  - { Id: 459 , Name: "时相"   , Parent: 393 }
+  - { Id: 460 , Name: "时桥"   , Parent: 393 }
+  - { Id: 461 , Name: "时松"   , Parent: 393 }
 
+  # 七世
   - { Id: 15  , Name: "本钦"   , Parent: 14 }
   - { Id: 408 , Name: "本资"   , Parent: 402 }
   - { Id: 409 , Name: "本森"   , Parent: 403 }
@@ -111,7 +124,15 @@ Family:
   - { Id: 445 , Name: "本铅"   , Parent: 440, Adopted: True }
   - { Id: 446 , Name: "本锐"   , Parent: 441 }
   - { Id: 447 , Name: "本铅"   , Parent: 441 }
+  - { Id: 462 , Name: "本龙"   , Parent: 456 }
+  - { Id: 463 , Name: "本然"   , Parent: 457 }
+  - { Id: 464 , Name: "本勋"   , Parent: 457 }
+  - { Id: 465 , Name: "本成"   , Parent: 458 }
+  - { Id: 466 , Name: "本迁"   , Parent: 459 }
+  - { Id: 467 , Name: "本见"   , Parent: 459 }
+  - { Id: 468 , Name: "本润"   , Parent: 461 }
 
+  # 八世
   - { Id: 16  , Name: "得时"   , Parent: 15 }
   - { Id: 17  , Name: "得映"   , Parent: 15 }
   - { Id: 18  , Name: "得晓"   , Parent: 15 }
@@ -127,7 +148,14 @@ Family:
   - { Id: 449 , Name: "元标"   , Parent: 443 }
   - { Id: 450 , Name: "元凤"   , Parent: 443 }
   - { Id: 451 , Name: "元功"   , Parent: 444 }
+  - { Id: 469 , Name: "正良"   , Parent: 462 }
+  - { Id: 470 , Name: "得榜"   , Parent: 463 }
+  - { Id: 471 , Name: "得厚"   , Parent: 463 }
+  - { Id: 472 , Name: "得仁"   , Parent: 464 }
+  - { Id: 473 , Name: "得泽"   , Parent: 465 }
+  - { Id: 474 , Name: "元通"   , Parent: 468 }
 
+  # 九世
   - { Id: 422 , Name: "明科"   , Parent: 16 }
   - { Id: 423 , Name: "明⿰王巳"   , Parent: 16 }
   - { Id: 424 , Name: "明纯"   , Parent: 17 }
@@ -151,6 +179,12 @@ Family:
   - { Id: 453 , Name: "明语"   , Parent: 448 }
   - { Id: 454 , Name: "明通"   , Parent: 450 }
   - { Id: 455 , Name: "明俊"   , Parent: 451 }
+  - { Id: 475 , Name: "谟"   , Parent: 469 }
+  - { Id: 476 , Name: "必恭"   , Parent: 472 }
+  - { Id: 477 , Name: "必进"   , Parent: 473 }
+  - { Id: 478 , Name: "必延"   , Parent: 473 }
+  - { Id: 479 , Name: "明信"   , Parent: 474 }
+  - { Id: 480 , Name: "明秀"   , Parent: 474 }
 
   - { Id: 21  , Name: "三省"   , Parent: 20 }
   - { Id: 22  , Name: "三义"   , Parent: 20 }
