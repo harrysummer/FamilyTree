@@ -94,6 +94,9 @@ Family:
   - { Id: 405 , Name: "时赛"   , Parent: 376 }
   - { Id: 406 , Name: "时宙"   , Parent: 378 }
   - { Id: 407 , Name: "时朋"   , Parent: 378 }
+  - { Id: 439 , Name: "时恩"   , Parent: 385 }
+  - { Id: 440 , Name: "时学"   , Parent: 385 }
+  - { Id: 441 , Name: "时成"   , Parent: 385 }
 
   - { Id: 15  , Name: "本钦"   , Parent: 14 }
   - { Id: 408 , Name: "本资"   , Parent: 402 }
@@ -102,6 +105,12 @@ Family:
   - { Id: 411 , Name: "本权"   , Parent: 403 }
   - { Id: 412 , Name: "本枝"   , Parent: 406 }
   - { Id: 413 , Name: "本从"   , Parent: 407 }
+  - { Id: 442 , Name: "本逵"   , Parent: 439 }
+  - { Id: 443 , Name: "本进"   , Parent: 439 }
+  - { Id: 444 , Name: "本文"   , Parent: 440 }
+  - { Id: 445 , Name: "本铅"   , Parent: 440, Adopted: True }
+  - { Id: 446 , Name: "本锐"   , Parent: 441 }
+  - { Id: 447 , Name: "本铅"   , Parent: 441 }
 
   - { Id: 16  , Name: "得时"   , Parent: 15 }
   - { Id: 17  , Name: "得映"   , Parent: 15 }
@@ -114,6 +123,10 @@ Family:
   - { Id: 419 , Name: "元举"   , Parent: 412 }
   - { Id: 420 , Name: "元监"   , Parent: 412 }
   - { Id: 421 , Name: "元贡"   , Parent: 413 }
+  - { Id: 448 , Name: "元开"   , Parent: 442 }
+  - { Id: 449 , Name: "元标"   , Parent: 443 }
+  - { Id: 450 , Name: "元凤"   , Parent: 443 }
+  - { Id: 451 , Name: "元功"   , Parent: 444 }
 
   - { Id: 422 , Name: "明科"   , Parent: 16 }
   - { Id: 423 , Name: "明⿰王巳"   , Parent: 16 }
@@ -134,6 +147,10 @@ Family:
   - { Id: 436 , Name: "明道"   , Parent: 420 }
   - { Id: 437 , Name: "明德"   , Parent: 420 }
   - { Id: 438 , Name: "明乾"   , Parent: 421 }
+  - { Id: 452 , Name: "明哲"   , Parent: 448 }
+  - { Id: 453 , Name: "明语"   , Parent: 448 }
+  - { Id: 454 , Name: "明通"   , Parent: 450 }
+  - { Id: 455 , Name: "明俊"   , Parent: 451 }
 
   - { Id: 21  , Name: "三省"   , Parent: 20 }
   - { Id: 22  , Name: "三义"   , Parent: 20 }
