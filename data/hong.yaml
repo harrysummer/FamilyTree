@@ -312,7 +312,7 @@ Family:
   - { Id: 339 , Name: "孙明忠", Gender: ~, Parent: 326 }
   - { Id: 340 , Name: "吴明庆", Gender: ~, Parent: 326 }
   - { Id: 341 , Name: "吴荣信", Gender: ~, Parent: 326 }
-  - { Id: 342 , Name: "吴本信", Gender: ~, Parent: 326 }
+  - { Id: 342 , Name: "吴平信", Gender: ~, Parent: 326 }
   - { Id: 343 , Name: "吴玉信", Gender: ~, Parent: 326 }
   - { Id: 344 , Name: "吴玉红", Gender: ~, Parent: 326 }
   - { Id: 345 , Name: "伟", Gender: 'M', Spouse: "唐敏", Parent: 327 }
@@ -322,7 +322,7 @@ Family:
   - { Id: 349 , Name: "徐建东", Gender: 'M', Parent: 330 }
   - { Id: 350 , Name: "汪超", Gender: 'M', Parent: 331 }
   - { Id: 351 , Name: "汪雯", Gender: 'F', Parent: 331 }
-  - { Id: 352 , Name: "洪依诺", Gender: ~, Parent: 345 }
+  - { Id: 352 , Name: "洪伊诺", Gender: ~, Parent: 345 }
   - { Id: 353 , Name: "洪梓天", Gender: 'M', Parent: 346 }
   - { Id: 354 , Name: "马梓洪", Gender: 'F', Parent: 346 }
 
