@@ -11,6 +11,7 @@ Family:
     6. 如您可以提供更多支系信息，请邮件联系 harrysummer@163.com
   Changelog: |
     更新记录：
+    2017.08.20: 根据民国旧谱完善前五代信息
     2017.08.19: 补全北份老四房作权公一支信息
     2017.07.19: 补完廷琪公一支信息
     2017.07.08: 添加老四房四子门炳暹公支下
@@ -31,6 +32,54 @@ Family:
   - { Id: 6   , Name: "论"     , Parent: 1 }
   - { Id: 7   , Name: "诲"     , Parent: 1 }
   - { Id: 8   , Name: "示"     , Parent: 1 }
+  - { Id: 355 , Name: "谏"     , Parent: 2 }
+  - { Id: 356 , Name: "註"     , Parent: 2 }
+  - { Id: 357 , Name: "容"     , Parent: 2 }
+  - { Id: 358 , Name: "政"     , Parent: 3 }
+  - { Id: 359 , Name: "暹"     , Parent: 3 }
+
+  - { Id: 360 , Name: "铎"     , Parent: 5 }
+  - { Id: 361 , Name: "纯"     , Parent: 6 }
+  - { Id: 362 , Name: "仕政"   , Parent: 6 }
+  - { Id: 363 , Name: "宿"     , Parent: 7 }
+  - { Id: 364 , Name: "贤"     , Parent: 8 }
+  - { Id: 365 , Name: "客"     , Parent: 8 }
+  - { Id: 366 , Name: "会"     , Parent: 8 }
+  - { Id: 367 , Name: "安"     , Parent: 355 }
+  - { Id: 368 , Name: "定"     , Parent: 355 }
+  - { Id: 369 , Name: "宥"     , Parent: 355 }
+  - { Id: 370 , Name: "⿱宁皿"     , Parent: 355 }
+  - { Id: 371 , Name: "完华"   , Parent: 357 }
+  - { Id: 372 , Name: "清"     , Parent: 358 }
+  - { Id: 373 , Name: "⿰王巳"     , Parent: 358 }
+  - { Id: 374 , Name: "玮"     , Parent: 358 }
+  - { Id: 375 , Name: "铣"     , Parent: 359 }
+  - { Id: 376 , Name: "仲瑛"   , Parent: 4 }
+  - { Id: 377 , Name: "仲训"   , Parent: 4 }
+  - { Id: 378 , Name: "仲瑞"   , Parent: 5 }
+  - { Id: 379 , Name: "仲琛"   , Parent: 360 }
+  - { Id: 380 , Name: "仲珂"   , Parent: 360 }
+  - { Id: 381 , Name: "成"     , Parent: 361 }
+  - { Id: 382 , Name: "恩"     , Parent: 361 }
+  - { Id: 383 , Name: "恕"     , Parent: 362 }
+  - { Id: 384 , Name: "朝兴"   , Parent: 363 }
+  - { Id: 385 , Name: "朝用"   , Parent: 363 }
+  - { Id: 386 , Name: "仲表"   , Parent: 364 }
+  - { Id: 387 , Name: "仲详"   , Parent: 365 }
+  - { Id: 388 , Name: "仲文"   , Parent: 365 }
+  - { Id: 389 , Name: "仲武"   , Parent: 365 }
+  - { Id: 390 , Name: "仲义"   , Parent: 366 }
+  - { Id: 391 , Name: "瑞"     , Parent: 367 }
+  - { Id: 392 , Name: "璋"     , Parent: 368 }
+  - { Id: 393 , Name: "继组"   , Parent: 369 }
+  - { Id: 394 , Name: "瑜"     , Parent: 371 }
+  - { Id: 395 , Name: "璇"     , Parent: 371 }
+  - { Id: 396 , Name: "景高"   , Parent: 372 }
+  - { Id: 397 , Name: "景明"   , Parent: 372 }
+  - { Id: 398 , Name: "仲和"   , Parent: 373 }
+  - { Id: 399 , Name: "仲成"   , Parent: 374 }
+  - { Id: 400 , Name: "仲瑾"   , Parent: 375 }
+  - { Id: 401 , Name: "仲华"   , Parent: 375 }
 
   - { Id: 9   , Name: "钺"     , Parent: 4 }
   - { Id: 10  , Name: "富"     , Parent: 4 }

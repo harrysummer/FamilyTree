@@ -169,26 +169,24 @@ html(lang='zh-Hans')
       setupDetailButton(paper, content, detailData, treeInfo);
 
       var commentText = paper
-        .text(100, 20, commentData.split("\n"))
+        .text(100, 2500, commentData.split("\n"))
         .addClass('comment');
         commentText.selectAll('tspan:nth-child(n+2)')
         .attr({ dy: "1.2em" , x: 100 });
-      var commentScale = Math.min(180.0 / commentText.getBBox().height, 850.0 / commentText.getBBox().width);
-      commentText.transform(Snap.format('s{x} {y}', { x: commentScale, y: commentScale }));
       var commentBBox = commentText.getBBox();
       var commentRect = paper
-        .rect(commentBBox.x - 20, commentBBox.y - 20, commentBBox.width + 40, commentBBox.height + 40)
+        .rect(commentBBox.x - 40, commentBBox.y - 40, commentBBox.width + 80, commentBBox.height + 80)
         .addClass('comment-border');
       content.add(commentRect, commentText);
 
       var changelogText = paper
-        .text(100, 2000, changelog.split("\n"))
+        .text(100, 2500 + commentBBox.height + 100, changelog.split("\n"))
         .addClass('comment');
         changelogText.selectAll('tspan:nth-child(n+2)')
         .attr({ dy: "1.2em" , x: 100 });
       var changelogBBox = changelogText.getBBox();
       var changelogRect = paper
-        .rect(changelogBBox.x - 20, changelogBBox.y - 20, changelogBBox.width + 40, changelogBBox.height + 40)
+        .rect(changelogBBox.x - 40, changelogBBox.y - 40, changelogBBox.width + 80, changelogBBox.height + 80)
         .addClass('comment-border');
       content.add(changelogRect, changelogText);
 
