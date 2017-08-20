@@ -38,6 +38,9 @@ Family:
   - { Id: 358 , Name: "政"     , Parent: 3 }
   - { Id: 359 , Name: "暹"     , Parent: 3 }
 
+  - { Id: 9   , Name: "钺"     , Parent: 4 }
+  - { Id: 10  , Name: "富"     , Parent: 4 }
+  - { Id: 11  , Name: "俵"     , Parent: 4 }
   - { Id: 360 , Name: "铎"     , Parent: 5 }
   - { Id: 361 , Name: "纯"     , Parent: 6 }
   - { Id: 362 , Name: "仕政"   , Parent: 6 }
@@ -54,6 +57,9 @@ Family:
   - { Id: 373 , Name: "⿰王巳"     , Parent: 358 }
   - { Id: 374 , Name: "玮"     , Parent: 358 }
   - { Id: 375 , Name: "铣"     , Parent: 359 }
+
+  - { Id: 12  , Name: "仲详"   , Parent: 9 }
+  - { Id: 13  , Name: "仲玄"   , Parent: 9 }
   - { Id: 376 , Name: "仲瑛"   , Parent: 10 }
   - { Id: 377 , Name: "仲训"   , Parent: 10 }
   - { Id: 378 , Name: "仲瑞"   , Parent: 11 }
@@ -81,23 +87,53 @@ Family:
   - { Id: 400 , Name: "仲瑾"   , Parent: 375 }
   - { Id: 401 , Name: "仲华"   , Parent: 375 }
 
-  - { Id: 9   , Name: "钺"     , Parent: 4 }
-  - { Id: 10  , Name: "富"     , Parent: 4 }
-  - { Id: 11  , Name: "俵"     , Parent: 4 }
-
-  - { Id: 12  , Name: "仲详"   , Parent: 9 }
-  - { Id: 13  , Name: "仲玄"   , Parent: 9 }
-
   - { Id: 14  , Name: "时保"   , Parent: 12 }
+  - { Id: 402 , Name: "时宪"   , Parent: 13 }
+  - { Id: 403 , Name: "时彦"   , Parent: 376 }
+  - { Id: 404 , Name: "时家"   , Parent: 376 }
+  - { Id: 405 , Name: "时赛"   , Parent: 376 }
+  - { Id: 406 , Name: "时宙"   , Parent: 378 }
+  - { Id: 407 , Name: "时朋"   , Parent: 378 }
 
   - { Id: 15  , Name: "本钦"   , Parent: 14 }
+  - { Id: 408 , Name: "本资"   , Parent: 402 }
+  - { Id: 409 , Name: "本森"   , Parent: 403 }
+  - { Id: 410 , Name: "本坤"   , Parent: 403 }
+  - { Id: 411 , Name: "本权"   , Parent: 403 }
+  - { Id: 412 , Name: "本枝"   , Parent: 406 }
+  - { Id: 413 , Name: "本从"   , Parent: 407 }
 
   - { Id: 16  , Name: "得时"   , Parent: 15 }
   - { Id: 17  , Name: "得映"   , Parent: 15 }
   - { Id: 18  , Name: "得晓"   , Parent: 15 }
+  - { Id: 414 , Name: "得云"   , Parent: 408 }
+  - { Id: 415 , Name: "元林"   , Parent: 410 }
+  - { Id: 416 , Name: "元昌"   , Parent: 410 }
+  - { Id: 417 , Name: "元周"   , Parent: 410 }
+  - { Id: 418 , Name: "得秀"   , Parent: 411 }
+  - { Id: 419 , Name: "元举"   , Parent: 412 }
+  - { Id: 420 , Name: "元监"   , Parent: 412 }
+  - { Id: 421 , Name: "元贡"   , Parent: 413 }
 
-  - { Id: 19  , Name: "明磅"   , Parent: 18 }
+  - { Id: 422 , Name: "明科"   , Parent: 16 }
+  - { Id: 423 , Name: "明⿰王巳"   , Parent: 16 }
+  - { Id: 424 , Name: "明纯"   , Parent: 17 }
+  - { Id: 425 , Name: "明良"   , Parent: 17 }
+  - { Id: 19  , Name: "明榜"   , Parent: 18 }
   - { Id: 20  , Name: "明惠"   , Parent: 18 }
+  - { Id: 426 , Name: "明约"   , Parent: 414 }
+  - { Id: 427 , Name: "明动"   , Parent: 414 }
+  - { Id: 428 , Name: "明孔"   , Parent: 414 }
+  - { Id: 429 , Name: "明朝"   , Parent: 415 }
+  - { Id: 430 , Name: "明照"   , Parent: 416 }
+  - { Id: 431 , Name: "明诚"   , Parent: 416 }
+  - { Id: 432 , Name: "明晓"   , Parent: 416 }
+  - { Id: 433 , Name: "明曙"   , Parent: 416 }
+  - { Id: 434 , Name: "明先"   , Parent: 417 }
+  - { Id: 435 , Name: "明益"   , Parent: 419 }
+  - { Id: 436 , Name: "明道"   , Parent: 420 }
+  - { Id: 437 , Name: "明德"   , Parent: 420 }
+  - { Id: 438 , Name: "明乾"   , Parent: 421 }
 
   - { Id: 21  , Name: "三省"   , Parent: 20 }
   - { Id: 22  , Name: "三义"   , Parent: 20 }
