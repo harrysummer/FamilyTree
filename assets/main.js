@@ -158,9 +158,6 @@ var layoutTree = function(members, id2Index) {
             node.descendantRange = [{
                 top: node.y,
                 bottom: node.y + node.size.height
-            }, {
-                top: node.y,
-                bottom: node.y + node.size.height
             }];
         } else {
             var maxDescendantDepth = 0;
