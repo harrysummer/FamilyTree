@@ -126,12 +126,12 @@ Family:
   - { Id: 484 , Name: "时有"   , Parent: 395 }
   - { Id: 485 , Name: "时德"   , Parent: 395 }
   - { Id: 486 , Name: "时泰"   , Parent: 395 }
-  - { Id: 706 , Name: "子芝"   , Parent: 396, Adopted: True }
-  - { Id: 707 , Name: "子兰"   , Parent: 396, Adopted: True }
+  - { Id: 706 , Name: "子芝"   , Parent: 396, Adopted: True, Note: "景明三子" }
+  - { Id: 707 , Name: "子兰"   , Parent: 396, Adopted: True, Note: "景明四子" }
   - { Id: 708 , Name: "子芳"   , Parent: 397 }
   - { Id: 709 , Name: "子茂"   , Parent: 397 }
-  - { Id: 710 , Name: "子芝"   , Parent: 397 }
-  - { Id: 711 , Name: "子兰"   , Parent: 397 }
+  - { Id: 710 , Name: "子芝"   , Parent: 397, Note: "过继景高" }
+  - { Id: 711 , Name: "子兰"   , Parent: 397, Note: "过继景高" }
   - { Id: 712 , Name: "子桂"   , Parent: 398 }
   - { Id: 713 , Name: "子金"   , Parent: 399 }
   - { Id: 714 , Name: "子银"   , Parent: 399 }
@@ -298,7 +298,7 @@ Family:
   - { Id: 733 , Name: "得元"   , Parent: 719 }
   - { Id: 734 , Name: "得进"   , Parent: 719 }
   - { Id: 735 , Name: "得寿"   , Parent: 719 }
-  - { Id: 736 , Name: "得昌"   , Parent: 719, Adopted: True }
+  - { Id: 736 , Name: "得昌"   , Parent: 719, Adopted: True, Note: "过继本荣" }
   - { Id: 737 , Name: "得昌"   , Parent: 720 }
   - { Id: 738 , Name: "得雄"   , Parent: 721 }
   - { Id: 739 , Name: "得节"   , Parent: 721 }
