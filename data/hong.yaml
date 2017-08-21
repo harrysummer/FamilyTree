@@ -55,7 +55,7 @@ Family:
   - { Id: 367 , Name: "安"     , Parent: 355 }
   - { Id: 368 , Name: "定"     , Parent: 355 }
   - { Id: 369 , Name: "宥"     , Parent: 355 }
-  - { Id: 370 , Name: "⿱宁皿"     , Parent: 355 }
+  - { Id: 370 , Name: "寧"     , Parent: 355 }
   - { Id: 371 , Name: "完华"   , Parent: 357 }
   - { Id: 372 , Name: "清"     , Parent: 358 }
   - { Id: 373 , Name: "⿰王巳"     , Parent: 358 }
@@ -298,8 +298,8 @@ Family:
   - { Id: 733 , Name: "得元"   , Parent: 719 }
   - { Id: 734 , Name: "得进"   , Parent: 719 }
   - { Id: 735 , Name: "得寿"   , Parent: 719 }
-  - { Id: 736 , Name: "得昌"   , Parent: 719, Adopted: True, Note: "过继本荣" }
-  - { Id: 737 , Name: "得昌"   , Parent: 720 }
+  - { Id: 736 , Name: "得昌"   , Parent: 719, Note: "过继本荣" }
+  - { Id: 737 , Name: "得昌"   , Parent: 720, Adopted: True }
   - { Id: 738 , Name: "得雄"   , Parent: 721 }
   - { Id: 739 , Name: "得节"   , Parent: 721 }
   - { Id: 740 , Name: "得华"   , Parent: 721 }
