@@ -104,6 +104,13 @@ Family:
   - { Id: 553 , Name: "时安"   , Parent: 379 }
   - { Id: 554 , Name: "时拱"   , Parent: 380 }
   - { Id: 555 , Name: "时朗"   , Parent: 380 }
+  - { Id: 611 , Name: "时纶"   , Parent: 381 }
+  - { Id: 612 , Name: "时聚"   , Parent: 382 }
+  - { Id: 613 , Name: "时秀"   , Parent: 382 }
+  - { Id: 614 , Name: "时进"   , Parent: 382 }
+  - { Id: 615 , Name: "时能"   , Parent: 382 }
+  - { Id: 616 , Name: "时雍"   , Parent: 383 }
+  - { Id: 617 , Name: "时遐"   , Parent: 384 }
   - { Id: 439 , Name: "时恩"   , Parent: 385 }
   - { Id: 440 , Name: "时学"   , Parent: 385 }
   - { Id: 441 , Name: "时成"   , Parent: 385 }
@@ -119,6 +126,15 @@ Family:
   - { Id: 484 , Name: "时有"   , Parent: 395 }
   - { Id: 485 , Name: "时德"   , Parent: 395 }
   - { Id: 486 , Name: "时泰"   , Parent: 395 }
+  - { Id: 706 , Name: "子芝"   , Parent: 396, Adopted: True }
+  - { Id: 707 , Name: "子兰"   , Parent: 396, Adopted: True }
+  - { Id: 708 , Name: "子芳"   , Parent: 397 }
+  - { Id: 709 , Name: "子茂"   , Parent: 397 }
+  - { Id: 710 , Name: "子芝"   , Parent: 397 }
+  - { Id: 711 , Name: "子兰"   , Parent: 397 }
+  - { Id: 712 , Name: "子桂"   , Parent: 398 }
+  - { Id: 713 , Name: "子金"   , Parent: 399 }
+  - { Id: 714 , Name: "子银"   , Parent: 399 }
   - { Id: 518 , Name: "时凤"   , Parent: 400 }
   - { Id: 519 , Name: "时会"   , Parent: 400 }
   - { Id: 520 , Name: "时龙"   , Parent: 401 }
@@ -140,6 +156,23 @@ Family:
   - { Id: 561 , Name: "本东"   , Parent: 554 }
   - { Id: 562 , Name: "本淮"   , Parent: 555 }
   - { Id: 563 , Name: "本锐"   , Parent: 555 }
+  - { Id: 618 , Name: "本昂"   , Parent: 611 }
+  - { Id: 619 , Name: "本善"   , Parent: 611 }
+  - { Id: 620 , Name: "本随"   , Parent: 611 }
+  - { Id: 621 , Name: "本星"   , Parent: 611 }
+  - { Id: 622 , Name: "本柏"   , Parent: 612 }
+  - { Id: 623 , Name: "本柳"   , Parent: 612 }
+  - { Id: 624 , Name: "本标"   , Parent: 613 }
+  - { Id: 625 , Name: "本仁"   , Parent: 614 }
+  - { Id: 626 , Name: "本辰"   , Parent: 615 }
+  - { Id: 627 , Name: "筹"   , Parent: 616 }
+  - { Id: 628 , Name: "范"   , Parent: 616 }
+  - { Id: 629 , Name: "策"   , Parent: 616 }
+  - { Id: 630 , Name: "本清"   , Parent: 617 }
+  - { Id: 631 , Name: "本镐"   , Parent: 617 }
+  - { Id: 632 , Name: "本冠"   , Parent: 617 }
+  - { Id: 633 , Name: "本武"   , Parent: 617 }
+  - { Id: 634 , Name: "本仲"   , Parent: 617 }
   - { Id: 442 , Name: "本逵"   , Parent: 439 }
   - { Id: 443 , Name: "本进"   , Parent: 439 }
   - { Id: 444 , Name: "本文"   , Parent: 440 }
@@ -159,6 +192,20 @@ Family:
   - { Id: 490 , Name: "本霍"   , Parent: 484 }
   - { Id: 491 , Name: "本良"   , Parent: 485 }
   - { Id: 492 , Name: "本乐"   , Parent: 486 }
+  - { Id: 715 , Name: "本筹"   , Parent: 706 }
+  - { Id: 716 , Name: "本忠"   , Parent: 706 }
+  - { Id: 717 , Name: "本支"   , Parent: 706 }
+  - { Id: 718 , Name: "本厚"   , Parent: 707 }
+  - { Id: 719 , Name: "本振"   , Parent: 708 }
+  - { Id: 720 , Name: "本荣"   , Parent: 708 }
+  - { Id: 721 , Name: "本槐"   , Parent: 708 }
+  - { Id: 722 , Name: "本恩"   , Parent: 708 }
+  - { Id: 723 , Name: "本德"   , Parent: 709 }
+  - { Id: 724 , Name: "本源"   , Parent: 712 }
+  - { Id: 725 , Name: "本朱"   , Parent: 713 }
+  - { Id: 726 , Name: "本泰"   , Parent: 713 }
+  - { Id: 727 , Name: "本从"   , Parent: 713 }
+  - { Id: 728 , Name: "本陆"   , Parent: 714 }
   - { Id: 522 , Name: "本宝"   , Parent: 518 }
   - { Id: 523 , Name: "本钰"   , Parent: 519 }
   - { Id: 524 , Name: "本金"   , Parent: 519 }
@@ -194,6 +241,35 @@ Family:
   - { Id: 577 , Name: "得胜"   , Parent: 562 }
   - { Id: 578 , Name: "得香"   , Parent: 563 }
   - { Id: 579 , Name: "得寿"   , Parent: 563 }
+  - { Id: 635 , Name: "元良"   , Parent: 618 }
+  - { Id: 636 , Name: "元德"   , Parent: 619 }
+  - { Id: 637 , Name: "元富"   , Parent: 620 }
+  - { Id: 638 , Name: "元盛"   , Parent: 621 }
+  - { Id: 639 , Name: "得年"   , Parent: 622 }
+  - { Id: 640 , Name: "得本"   , Parent: 622 }
+  - { Id: 641 , Name: "得春"   , Parent: 622 }
+  - { Id: 642 , Name: "得裕"   , Parent: 622 }
+  - { Id: 643 , Name: "得化"   , Parent: 624 }
+  - { Id: 644 , Name: "得纲"   , Parent: 625 }
+  - { Id: 645 , Name: "得给"   , Parent: 625 }
+  - { Id: 646 , Name: "得经"   , Parent: 625 }
+  - { Id: 647 , Name: "得绅"   , Parent: 625 }
+  - { Id: 648 , Name: "元承"   , Parent: 626 }
+  - { Id: 649 , Name: "元宠"   , Parent: 626 }
+  - { Id: 650 , Name: "元初"   , Parent: 627 }
+  - { Id: 651 , Name: "元伯"   , Parent: 627 }
+  - { Id: 652 , Name: "元信"   , Parent: 628 }
+  - { Id: 653 , Name: "元宜"   , Parent: 628 }
+  - { Id: 654 , Name: "元夔"   , Parent: 628 }
+  - { Id: 655 , Name: "元仁"   , Parent: 630 }
+  - { Id: 656 , Name: "元礼"   , Parent: 630 }
+  - { Id: 657 , Name: "元银"   , Parent: 631 }
+  - { Id: 658 , Name: "元宾"   , Parent: 631 }
+  - { Id: 659 , Name: "元⿰王巳"   , Parent: 632 }
+  - { Id: 660 , Name: "元金"   , Parent: 632 }
+  - { Id: 661 , Name: "元玉"   , Parent: 632 }
+  - { Id: 662 , Name: "元时"   , Parent: 633 }
+  - { Id: 663 , Name: "元椿"   , Parent: 633 }
   - { Id: 448 , Name: "元开"   , Parent: 442 }
   - { Id: 449 , Name: "元标"   , Parent: 443 }
   - { Id: 450 , Name: "元凤"   , Parent: 443 }
@@ -215,6 +291,32 @@ Family:
   - { Id: 501 , Name: "得寿"   , Parent: 491 }
   - { Id: 502 , Name: "得显"   , Parent: 491 }
   - { Id: 503 , Name: "得保"   , Parent: 492 }
+  - { Id: 729 , Name: "得先"   , Parent: 715 }
+  - { Id: 730 , Name: "得效"   , Parent: 716 }
+  - { Id: 731 , Name: "得给"   , Parent: 717 }
+  - { Id: 732 , Name: "得用"   , Parent: 718 }
+  - { Id: 733 , Name: "得元"   , Parent: 719 }
+  - { Id: 734 , Name: "得进"   , Parent: 719 }
+  - { Id: 735 , Name: "得寿"   , Parent: 719 }
+  - { Id: 736 , Name: "得昌"   , Parent: 719, Adopted: True }
+  - { Id: 737 , Name: "得昌"   , Parent: 720 }
+  - { Id: 738 , Name: "得雄"   , Parent: 721 }
+  - { Id: 739 , Name: "得节"   , Parent: 721 }
+  - { Id: 740 , Name: "得华"   , Parent: 721 }
+  - { Id: 741 , Name: "得裕"   , Parent: 722 }
+  - { Id: 742 , Name: "得科"   , Parent: 722 }
+  - { Id: 743 , Name: "得福"   , Parent: 722 }
+  - { Id: 744 , Name: "得申"   , Parent: 723 }
+  - { Id: 745 , Name: "得所"   , Parent: 724 }
+  - { Id: 746 , Name: "得化"   , Parent: 724 }
+  - { Id: 747 , Name: "得夏"   , Parent: 725 }
+  - { Id: 748 , Name: "得照"   , Parent: 725 }
+  - { Id: 749 , Name: "得纲"   , Parent: 725 }
+  - { Id: 750 , Name: "得朋"   , Parent: 726 }
+  - { Id: 751 , Name: "得经"   , Parent: 727 }
+  - { Id: 752 , Name: "元兆"   , Parent: 728 }
+  - { Id: 753 , Name: "元启"   , Parent: 728 }
+  - { Id: 754 , Name: "成所"   , Parent: 728 }
   - { Id: 528 , Name: "元潮"   , Parent: 522 }
   - { Id: 529 , Name: "元海"   , Parent: 522 }
   - { Id: 530 , Name: "元洲"   , Parent: 523 }
@@ -278,11 +380,53 @@ Family:
   - { Id: 608 , Name: "明心"   , Parent: 578 }
   - { Id: 609 , Name: "明月"   , Parent: 579 }
   - { Id: 610 , Name: "明龙"   , Parent: 579 }
+  - { Id: 664 , Name: "希尧"   , Parent: 635 }
+  - { Id: 665 , Name: "希舜"   , Parent: 636 }
+  - { Id: 666 , Name: "希禹"   , Parent: 637 }
+  - { Id: 667 , Name: "希文"   , Parent: 638 }
+  - { Id: 668 , Name: "明灵"   , Parent: 639 }
+  - { Id: 669 , Name: "明常"   , Parent: 639 }
+  - { Id: 670 , Name: "明时"   , Parent: 640 }
+  - { Id: 671 , Name: "明尊"   , Parent: 640 }
+  - { Id: 672 , Name: "明和"   , Parent: 640 }
+  - { Id: 673 , Name: "明义"   , Parent: 640 }
+  - { Id: 674 , Name: "明凤"   , Parent: 641 }
+  - { Id: 675 , Name: "明龙"   , Parent: 641 }
+  - { Id: 676 , Name: "明栋"   , Parent: 642 }
+  - { Id: 677 , Name: "明月"   , Parent: 643 }
+  - { Id: 678 , Name: "明俊"   , Parent: 643 }
+  - { Id: 679 , Name: "明善"   , Parent: 643 }
+  - { Id: 680 , Name: "明瑞"   , Parent: 644 }
+  - { Id: 681 , Name: "明亮"   , Parent: 645 }
+  - { Id: 682 , Name: "明光"   , Parent: 645 }
+  - { Id: 683 , Name: "明贤"   , Parent: 646 }
+  - { Id: 684 , Name: "明珠"   , Parent: 646 }
+  - { Id: 685 , Name: "明圆"   , Parent: 647 }
+  - { Id: 686 , Name: "明海"   , Parent: 648 }
+  - { Id: 687 , Name: "明试"   , Parent: 649 }
+  - { Id: 688 , Name: "明大"   , Parent: 650 }
+  - { Id: 689 , Name: "明达"   , Parent: 651 }
+  - { Id: 690 , Name: "启哲"   , Parent: 652 }
+  - { Id: 691 , Name: "启智"   , Parent: 653 }
+  - { Id: 692 , Name: "麒"   , Parent: 654 }
+  - { Id: 693 , Name: "麟"   , Parent: 654 }
+  - { Id: 694 , Name: "明举"   , Parent: 655 }
+  - { Id: 695 , Name: "明禹"   , Parent: 659, Adopted: True }
+  - { Id: 696 , Name: "明勋"   , Parent: 660 }
+  - { Id: 697 , Name: "明舜"   , Parent: 660 }
+  - { Id: 698 , Name: "明现"   , Parent: 660 }
+  - { Id: 699 , Name: "明言"   , Parent: 660 }
+  - { Id: 700 , Name: "明禹"   , Parent: 660 }
+  - { Id: 701 , Name: "明吉"   , Parent: 661 }
+  - { Id: 702 , Name: "明炤"   , Parent: 662, Adopted: True }
+  - { Id: 703 , Name: "明炳"   , Parent: 663 }
+  - { Id: 704 , Name: "明焕"   , Parent: 663 }
+  - { Id: 705 , Name: "明炤"   , Parent: 663 }
   - { Id: 452 , Name: "明哲"   , Parent: 448 }
   - { Id: 453 , Name: "明语"   , Parent: 448 }
   - { Id: 454 , Name: "明通"   , Parent: 450 }
   - { Id: 455 , Name: "明俊"   , Parent: 451 }
-  - { Id: 475 , Name: "谟"   , Parent: 469 }
+  - { Id: 475 , Name: "谟"     , Parent: 469 }
   - { Id: 476 , Name: "必恭"   , Parent: 472 }
   - { Id: 477 , Name: "必进"   , Parent: 473 }
   - { Id: 478 , Name: "必延"   , Parent: 473 }
@@ -302,6 +446,36 @@ Family:
   - { Id: 515 , Name: "明轩"   , Parent: 502 }
   - { Id: 516 , Name: "明玉"   , Parent: 503 }
   - { Id: 517 , Name: "明元"   , Parent: 503 }
+  - { Id: 755 , Name: "明膏"   , Parent: 729 }
+  - { Id: 756 , Name: "明员"   , Parent: 729 }
+  - { Id: 757 , Name: "明辅"   , Parent: 729 }
+  - { Id: 758 , Name: "应富"   , Parent: 730 }
+  - { Id: 759 , Name: "应贵"   , Parent: 730 }
+  - { Id: 760 , Name: "明道"   , Parent: 731 }
+  - { Id: 761 , Name: "明德"   , Parent: 731 }
+  - { Id: 762 , Name: "应举"   , Parent: 732 }
+  - { Id: 763 , Name: "君陈"   , Parent: 733 }
+  - { Id: 764 , Name: "明怀"   , Parent: 734 }
+  - { Id: 765 , Name: "明发"   , Parent: 734 }
+  - { Id: 766 , Name: "明儒"   , Parent: 734 }
+  - { Id: 767 , Name: "明伦"   , Parent: 735 }
+  - { Id: 768 , Name: "明盛"   , Parent: 737 }
+  - { Id: 769 , Name: "明文"   , Parent: 737 }
+  - { Id: 770 , Name: "明璧"   , Parent: 738 }
+  - { Id: 771 , Name: "明善"   , Parent: 738 }
+  - { Id: 772 , Name: "明理"   , Parent: 739 }
+  - { Id: 773 , Name: "明传"   , Parent: 740 }
+  - { Id: 774 , Name: "永安"   , Parent: 741 }
+  - { Id: 775 , Name: "应世"   , Parent: 742 }
+  - { Id: 776 , Name: "应寿"   , Parent: 743 }
+  - { Id: 777 , Name: "应聘"   , Parent: 744 }
+  - { Id: 778 , Name: "应泰"   , Parent: 744 }
+  - { Id: 779 , Name: "应瑞"   , Parent: 744 }
+  - { Id: 780 , Name: "明贤"   , Parent: 745 }
+  - { Id: 781 , Name: "明安"   , Parent: 746 }
+  - { Id: 782 , Name: "明乾"   , Parent: 747 }
+  - { Id: 783 , Name: "明滕"   , Parent: 748 }
+  - { Id: 784 , Name: "明贞"   , Parent: 749 }
   - { Id: 539 , Name: "明孝"   , Parent: 528 }
   - { Id: 540 , Name: "明兆"   , Parent: 530 }
   - { Id: 541 , Name: "明枢"   , Parent: 530 }
