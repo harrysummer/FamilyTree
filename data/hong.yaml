@@ -1,5 +1,5 @@
 Family:
-  Title: 安徽巢湖洪家疃洪氏谱系图
+  Title: 徽州迁巢洪氏谱系图
   Subtitle: ※ 安徽巢湖五分洪洪氏字辈：允恭克让 世德作求 伦理益景 家道来昌
   Comment: |
     1. 本谱系图以族谱为本整理，并完善了十八世廷瑞公门下支系；
@@ -11,7 +11,8 @@ Family:
     6. 如您可以提供更多支系信息，请邮件联系 harrysummer@163.com
   Changelog: |
     更新记录：
-    2017.08.20: 根据民国旧谱完善前五代信息
+    2017.08.22: 根据旧谱完善至第十三代信息
+    2017.08.20: 根据民国旧谱完善前九代信息
     2017.08.19: 补全北份老四房作权公一支信息
     2017.07.19: 补完廷琪公一支信息
     2017.07.08: 添加老四房四子门炳暹公支下
@@ -490,18 +491,237 @@ Family:
   - { Id: 550 , Name: "明豹"   , Parent: 536 }
   - { Id: 551 , Name: "明鹏"   , Parent: 536 }
 
+  # 十世
   - { Id: 21  , Name: "三省"   , Parent: 20 }
   - { Id: 22  , Name: "三义"   , Parent: 20 }
   - { Id: 23  , Name: "三国"   , Parent: 20 }
+  - { Id: 785 , Name: "汝能"   , Parent: 755 }
+  - { Id: 786 , Name: "汝元"   , Parent: 756 }
+  - { Id: 787 , Name: "汝英"   , Parent: 757 }
+  - { Id: 788 , Name: "汝强"   , Parent: 758 }
+  - { Id: 789 , Name: "汝善"   , Parent: 759 }
+  - { Id: 790 , Name: "汝琦"   , Parent: 762 }
+  - { Id: 791 , Name: "汝玉"   , Parent: 762 }
+  - { Id: 792 , Name: "汝儒"   , Parent: 763 }
+  - { Id: 793 , Name: "汝舟"   , Parent: 764 }
+  - { Id: 794 , Name: "汝佩"   , Parent: 765 }
+  - { Id: 795 , Name: "有主"   , Parent: 766 }
+  - { Id: 796 , Name: "汝秀"   , Parent: 767 }
+  - { Id: 797 , Name: "汝仁"   , Parent: 768 }
+  - { Id: 798 , Name: "开祜"   , Parent: 769 }
+  - { Id: 799 , Name: "汝长"   , Parent: 770 }
+  - { Id: 800 , Name: "汝俊"   , Parent: 771 }
+  - { Id: 801 , Name: "汝先"   , Parent: 772 }
+  - { Id: 802 , Name: "汝和"   , Parent: 775 }
+  - { Id: 803 , Name: "汝富"   , Parent: 775 }
+  - { Id: 804 , Name: "三策"   , Parent: 777 }
+  - { Id: 805 , Name: "汝民"   , Parent: 778 }
+  - { Id: 806 , Name: "汝禧"   , Parent: 779 }
+  - { Id: 807 , Name: "汝聘"   , Parent: 782 }
+  - { Id: 808 , Name: "汝趾"   , Parent: 782 }
+  - { Id: 809 , Name: "汝茂"   , Parent: 782 }
+  - { Id: 810 , Name: "汝德"   , Parent: 782 }
+  - { Id: 811 , Name: "汝杰"   , Parent: 782 }
+  - { Id: 812 , Name: "汝祈"   , Parent: 783 }
+  - { Id: 813 , Name: "汝昇"   , Parent: 784 }
 
+  # 十一世
   - { Id: 24  , Name: "日晞"   , Parent: 21 }
   - { Id: 25  , Name: "日曜"   , Parent: 21 }
   - { Id: 26  , Name: "日旺"   , Parent: 21 }
   - { Id: 27  , Name: "日晊"   , Parent: 21 }
+  - { Id: 814 , Name: "谦忠"   , Parent: 785 }
+  - { Id: 815 , Name: "谦益"   , Parent: 786 }
+  - { Id: 816 , Name: "谦炳"   , Parent: 786 }
+  - { Id: 817 , Name: "谦恭"   , Parent: 786 }
+  - { Id: 818 , Name: "谦照"   , Parent: 786 }
+  - { Id: 819 , Name: "谦仪"   , Parent: 786 }
+  - { Id: 820 , Name: "谦修"   , Parent: 787 }
+  - { Id: 821 , Name: "谦逊"   , Parent: 788 }
+  - { Id: 822 , Name: "谦光"   , Parent: 789 }
+  - { Id: 823 , Name: "谦朗"   , Parent: 789 }
+  - { Id: 824 , Name: "谦相"   , Parent: 790 }
+  - { Id: 825 , Name: "谦仕"   , Parent: 792 }
+  - { Id: 826 , Name: "谦揖"   , Parent: 793 }
+  - { Id: 827 , Name: "谦范"   , Parent: 793 }
+  - { Id: 828 , Name: "谦昇"   , Parent: 793 }
+  - { Id: 829 , Name: "谦琮"   , Parent: 794 }
+  - { Id: 830 , Name: "谦璜"   , Parent: 794 }
+  - { Id: 831 , Name: "谦树"   , Parent: 795 }
+  - { Id: 832 , Name: "谦姿"   , Parent: 796 }
+  - { Id: 833 , Name: "谦奎"   , Parent: 796 }
+  - { Id: 834 , Name: "谦麒"   , Parent: 797 }
+  - { Id: 835 , Name: "谦龙"   , Parent: 797 }
+  - { Id: 836 , Name: "谦虎"   , Parent: 797 }
+  - { Id: 837 , Name: "佩仓"   , Parent: 798 }
+  - { Id: 838 , Name: "谦良"   , Parent: 799 }
+  - { Id: 839 , Name: "谦珍"   , Parent: 800 }
+  - { Id: 840 , Name: "配公"   , Parent: 801 }
+  - { Id: 841 , Name: "谦恩"   , Parent: 802 }
+  - { Id: 842 , Name: "谦思"   , Parent: 802 }
+  - { Id: 843 , Name: "配主"   , Parent: 803 }
+  - { Id: 844 , Name: "谦张"   , Parent: 804 }
+  - { Id: 845 , Name: "谦星"   , Parent: 804 }
+  - { Id: 846 , Name: "谦轸"   , Parent: 804 }
+  - { Id: 847 , Name: "谦翼"   , Parent: 804 }
+  - { Id: 848 , Name: "谦箕"   , Parent: 804 }
+  - { Id: 849 , Name: "谦毕"   , Parent: 804 }
+  - { Id: 850 , Name: "谦渠"   , Parent: 804 }
+  - { Id: 851 , Name: "谦胃"   , Parent: 804 }
+  - { Id: 852 , Name: "谦斗"   , Parent: 805 }
+  - { Id: 853 , Name: "谦升"   , Parent: 806 }
+  - { Id: 854 , Name: "谦受"   , Parent: 807 }
+  - { Id: 855 , Name: "谦志"   , Parent: 807 }
+  - { Id: 856 , Name: "谦禄"   , Parent: 808 }
+  - { Id: 857 , Name: "谦文"   , Parent: 809 }
+  - { Id: 858 , Name: "谦曙"   , Parent: 810 }
+  - { Id: 859 , Name: "配夫"   , Parent: 812 }
+  - { Id: 860 , Name: "谦耀"   , Parent: 813 }
 
+  # 十二世
   - { Id: 28  , Name: "璿"     , Parent: 26 }
+  - { Id: 861 , Name: "琎"     , Parent: 814 }
+  - { Id: 862 , Name: "越华"   , Parent: 815 }
+  - { Id: 863 , Name: "越众"   , Parent: 815 }
+  - { Id: 864 , Name: "越有"   , Parent: 818 }
+  - { Id: 865 , Name: "璋"     , Parent: 820 }
+  - { Id: 866 , Name: "瑞"     , Parent: 820 }
+  - { Id: 867 , Name: "杲"     , Parent: 821 }
+  - { Id: 868 , Name: "梓"     , Parent: 821 }
+  - { Id: 869 , Name: "桂"     , Parent: 822 }
+  - { Id: 870 , Name: "琳"     , Parent: 822 }
+  - { Id: 871 , Name: "朝"     , Parent: 822 }
+  - { Id: 872 , Name: "仁"     , Parent: 823 }
+  - { Id: 873 , Name: "贻蒙"   , Parent: 824 }
+  - { Id: 874 , Name: "苍淮"   , Parent: 833 }
+  - { Id: 875 , Name: "苍海"   , Parent: 833 }
+  - { Id: 876 , Name: "苍瀛"   , Parent: 833 }
+  - { Id: 877 , Name: "苍洲"   , Parent: 833 }
+  - { Id: 878 , Name: "苍泗"   , Parent: 834 }
+  - { Id: 879 , Name: "苍沂"   , Parent: 834 }
+  - { Id: 880 , Name: "苍沺"   , Parent: 835 }
+  - { Id: 881 , Name: "苍浗"   , Parent: 835 }
+  - { Id: 882 , Name: "苍浚"   , Parent: 835 }
+  - { Id: 883 , Name: "苍浩"   , Parent: 835 }
+  - { Id: 884 , Name: "苍宇"   , Parent: 835 }
+  - { Id: 885 , Name: "苍余"   , Parent: 836 }
+  - { Id: 886 , Name: "苍华"   , Parent: 836 }
+  - { Id: 887 , Name: "苍祥"   , Parent: 836 }
+  - { Id: 888 , Name: "苍凤"   , Parent: 836 }
+  - { Id: 889 , Name: "苍富"   , Parent: 836 }
+  - { Id: 890 , Name: "苍有"   , Parent: 836 }
+  - { Id: 891 , Name: "苍任"   , Parent: 838 }
+  - { Id: 892 , Name: "苍佑"   , Parent: 838 }
+  - { Id: 893 , Name: "苍佐"   , Parent: 838 }
+  - { Id: 894 , Name: "苍侣"   , Parent: 838 }
+  - { Id: 895 , Name: "苍俌"   , Parent: 838 }
+  - { Id: 896 , Name: "苍倍"   , Parent: 839 }
+  - { Id: 897 , Name: "今有"   , Parent: 840 }
+  - { Id: 898 , Name: "伦"   , Parent: 841 }
+  - { Id: 899 , Name: "珇"   , Parent: 841 }
+  - { Id: 900 , Name: "珍"   , Parent: 844 }
+  - { Id: 901 , Name: "珠"   , Parent: 844 }
+  - { Id: 902 , Name: "玙"   , Parent: 844 }
+  - { Id: 903 , Name: "珮"   , Parent: 845 }
+  - { Id: 904 , Name: "璠"   , Parent: 846 }
+  - { Id: 905 , Name: "⿰王⿲片一爿"   , Parent: 846 }
+  - { Id: 906 , Name: "瑸"   , Parent: 846 }
+  - { Id: 907 , Name: "琂"   , Parent: 846 }
+  - { Id: 908 , Name: "琮"   , Parent: 847 }
+  - { Id: 909 , Name: "璍"   , Parent: 848 }
+  - { Id: 910 , Name: "琦"   , Parent: 848 }
+  - { Id: 911 , Name: "珽"   , Parent: 849 }
+  - { Id: 912 , Name: "瑄"   , Parent: 849 }
+  - { Id: 913 , Name: "瑆"   , Parent: 849 }
+  - { Id: 914 , Name: "瑶"   , Parent: 850 }
+  - { Id: 915 , Name: "璥"   , Parent: 851 }
+  - { Id: 916 , Name: "璿"   , Parent: 852 }
+  - { Id: 917 , Name: "瓆"   , Parent: 852 }
+  - { Id: 918 , Name: "⿰王岡"   , Parent: 854 }
+  - { Id: 919 , Name: "标"   , Parent: 855 }
+  - { Id: 920 , Name: "楷"   , Parent: 855 }
+  - { Id: 921 , Name: "琚"   , Parent: 856 }
+  - { Id: 922 , Name: "琼"   , Parent: 856 }
+  - { Id: 923 , Name: "琇"   , Parent: 856 }
+  - { Id: 924 , Name: "琏"   , Parent: 857 }
+  - { Id: 925 , Name: "琰"   , Parent: 858 }
+  - { Id: 926 , Name: "才"   , Parent: 860 }
+  - { Id: 927 , Name: "极"   , Parent: 860 }
+  - { Id: 928 , Name: "珩"   , Parent: 860 }
 
+  # 十三世
   - { Id: 29  , Name: "杰"     , Parent: 28 }
+  - { Id: 929 , Name: "国鼎"   , Parent: 863 }
+  - { Id: 930 , Name: "国幹"   , Parent: 863, Terminated: True }
+  - { Id: 931 , Name: "朝贵"   , Parent: 864, Terminated: True }
+  - { Id: 932 , Name: "国珍"   , Parent: 869 }
+  - { Id: 933 , Name: "国禹"   , Parent: 869, Terminated: True }
+  - { Id: 934 , Name: "国兴"   , Parent: 871 }
+  - { Id: 935 , Name: "国隆"   , Parent: 871, Terminated: True }
+  - { Id: 936 , Name: "国瑞"   , Parent: 872 }
+  - { Id: 937 , Name: "国相"   , Parent: 872 }
+  - { Id: 938 , Name: "国璐"   , Parent: 872, Terminated: True }
+  - { Id: 939 , Name: "允泰"   , Parent: 873 }
+  - { Id: 940 , Name: "景春"   , Parent: 874, Terminated: True }
+  - { Id: 941 , Name: "殿良"   , Parent: 875 }
+  - { Id: 942 , Name: "殿达"   , Parent: 875, Terminated: True }
+  - { Id: 943 , Name: "金周"   , Parent: 877 }
+  - { Id: 944 , Name: "殿祥"   , Parent: 878, Terminated: True }
+  - { Id: 945 , Name: "殿陞"   , Parent: 882, Terminated: True }
+  - { Id: 946 , Name: "殿华"   , Parent: 891 }
+  - { Id: 947 , Name: "殿珍"   , Parent: 891 }
+  - { Id: 948 , Name: "殿选"   , Parent: 891 }
+  - { Id: 949 , Name: "殿魁"   , Parent: 892 }
+  - { Id: 950 , Name: "殿元"   , Parent: 892 }
+  - { Id: 951 , Name: "殿文"   , Parent: 892 }
+  - { Id: 952 , Name: "殿斌"   , Parent: 892, Terminated: True }
+  - { Id: 953 , Name: "允和"   , Parent: 893, Terminated: True }
+  - { Id: 954 , Name: "允盤"   , Parent: 893, Terminated: True }
+  - { Id: 955 , Name: "殿明"   , Parent: 894 }
+  - { Id: 956 , Name: "殿彩"   , Parent: 894, Terminated: True }
+  - { Id: 957 , Name: "殿宇"   , Parent: 894 }
+  - { Id: 958 , Name: "殿盛"   , Parent: 894 }
+  - { Id: 959 , Name: "殿伦"   , Parent: 895 }
+  - { Id: 960 , Name: "殿传"   , Parent: 895 }
+  - { Id: 961 , Name: "殿意"   , Parent: 895 }
+  - { Id: 962 , Name: "殿芳"   , Parent: 895 }
+  - { Id: 963 , Name: "彩章"   , Parent: 896 }
+  - { Id: 964 , Name: "有章"   , Parent: 896 }
+  - { Id: 965 , Name: "允盟"   , Parent: 902 }
+  - { Id: 966 , Name: "金桂"   , Parent: 903 }
+  - { Id: 967 , Name: "金维"   , Parent: 903 }
+  - { Id: 968 , Name: "金山"   , Parent: 903 }
+  - { Id: 969 , Name: "金鸾"   , Parent: 903 }
+  - { Id: 970 , Name: "万清"   , Parent: 909 }
+  - { Id: 971 , Name: "金镕"   , Parent: 909, Adopted: True }
+  - { Id: 972 , Name: "金现"   , Parent: 910 }
+  - { Id: 973 , Name: "金章"   , Parent: 910 }
+  - { Id: 974 , Name: "金良"   , Parent: 910 }
+  - { Id: 975 , Name: "金镕"   , Parent: 910, Note: "过继璍" }
+  - { Id: 976 , Name: "金榜"   , Parent: 911 }
+  - { Id: 977 , Name: "金灿"   , Parent: 912 }
+  - { Id: 978 , Name: "金相"   , Parent: 912 }
+  - { Id: 979 , Name: "金元"   , Parent: 912 }
+  - { Id: 980 , Name: "金韬"   , Parent: 912 }
+  - { Id: 981 , Name: "金发"   , Parent: 913 }
+  - { Id: 982 , Name: "金科"   , Parent: 913 }
+  - { Id: 983 , Name: "金瑞"   , Parent: 914 }
+  - { Id: 984 , Name: "谨瑞"   , Parent: 915 }
+  - { Id: 985 , Name: "金杨"   , Parent: 915 }
+  - { Id: 986 , Name: "殿勋"   , Parent: 916 }
+  - { Id: 987 , Name: "谨奎"   , Parent: 917 }
+  - { Id: 988 , Name: "谨璞"   , Parent: 917 }
+  - { Id: 989 , Name: "国玺"   , Parent: 918 }
+  - { Id: 990 , Name: "国安"   , Parent: 918 }
+  - { Id: 991 , Name: "国熙"   , Parent: 918 }
+  - { Id: 992 , Name: "国斗"   , Parent: 921 }
+  - { Id: 993 , Name: "国乡"   , Parent: 921 }
+  - { Id: 994 , Name: "国卿"   , Parent: 921 }
+  - { Id: 995 , Name: "文远"   , Parent: 926 }
+  - { Id: 996 , Name: "武远"   , Parent: 926 }
+  - { Id: 997 , Name: "和远"   , Parent: 926 }
+  - { Id: 998 , Name: "条远"   , Parent: 926 }
+  - { Id: 999 , Name: "金发"   , Parent: 927 }
 
   - { Id: 30  , Name: "恭貌"   , Parent: 29 }
 
@@ -587,11 +807,11 @@ Family:
   - { Id: 151 , Name: "廷理"   , Parent: 49 }
   - { Id: 152 , Name: "廷？"   , Parent: 49 }
 
-  - { Id: 57  , Name: "作江"   , Parent: 50, Terminal: True }
+  - { Id: 57  , Name: "作江"   , Parent: 50 }
   - { Id: 58  , Name: "作山"   , Gender: 'M', Married: True, Spouse: '陈根弟', Parent: 50 }
   - { Id: 59  , Name: "作海"   , Gender: 'M', Married: True, Spouse: '徐明霞', Parent: 50 }
   - { Id: 60  , Name: "作和"   , Gender: 'M', Married: True, Spouse: '顾学勤', Parent: 50 }
-  - { Id: 61  , Name: "作平"   , Parent: 50, Terminal: True }
+  - { Id: 61  , Name: "作平"   , Parent: 50 }
   - { Id: 153 , Name: "秀文"   , Gender: 'F', Married: True, Spouse: '梅国勋', Parent: 50 }
 
   - { Id: 77  , Name: "作文"   , Parent: 51 }
@@ -628,7 +848,7 @@ Family:
   - { Id: 62  , Name: "惠民"   , Gender: 'M', Married: True, Spouse: '陈孝英', Parent: 58 }
   - { Id: 63  , Name: "惠中"   , Gender: 'M', Married: True, Spouse: '金竞雄', Parent: 58 }
   - { Id: 64  , Name: "惠宝"   , Gender: 'M', Married: True, Spouse: '叶世皓', Parent: 58 }
-  - { Id: 65  , Name: "惠庆"   , Parent: 58, Terminal: True }
+  - { Id: 65  , Name: "惠庆"   , Parent: 58 }
   - { Id: 66  , Name: "惠余"   , Gender: 'M', Married: True, Spouse: '于万云', Parent: 58 }
   - { Id: 67  , Name: "惠政"   , Parent: 59 }
   - { Id: 68  , Name: "惠敏"   , Gender: 'M', Married: True, Spouse: '刘琼花', Parent: 59 }
@@ -637,10 +857,10 @@ Family:
   - { Id: 71  , Name: "惠芳"   , Gender: 'F', Married: True, Spouse: '丁之忠', Parent: 59 }
   - { Id: 72  , Name: "惠艳"   , Gender: 'F', Married: True, Spouse: '崔传海', Parent: 59 }
   - { Id: 73  , Name: "惠石"   , Gender: 'M', Married: True, Spouse: '王金娣', Parent: 60 }
-  - { Id: 74  , Name: "惠山"   , Gender: 'M', Married: True, Spouse: '许复根', Parent: 60, Terminal: True }
-  - { Id: 154 , Name: "梅洪安" , Parent: 153, Terminal: True }
-  - { Id: 155 , Name: "梅洪平" , Parent: 153, Terminal: True }
-  - { Id: 156 , Name: "梅洪全" , Parent: 153, Terminal: True }
+  - { Id: 74  , Name: "惠山"   , Gender: 'M', Married: True, Spouse: '许复根', Parent: 60 }
+  - { Id: 154 , Name: "梅洪安" , Parent: 153 }
+  - { Id: 155 , Name: "梅洪平" , Parent: 153 }
+  - { Id: 156 , Name: "梅洪全" , Parent: 153 }
 
   - { Id: 300 , Name: "昱"     , Parent: 62 }
   - { Id: 301 , Name: "燕君"   , Parent: 63 }

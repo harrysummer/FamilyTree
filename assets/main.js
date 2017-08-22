@@ -38,7 +38,7 @@ var nodesToTree = function(arr, id_, parentId_, name_, spouse_, note_, adopted_)
             spouse: spouse_(d),
             note: note_(d),
             specialLink: adopted_(d),
-            terminal: d.Terminal,
+            terminated: d.Terminated,
             children: []
         });
     }
@@ -297,8 +297,11 @@ var drawNode = function(paper, content, node) {
         paper.line(0, 0, 0, node.size.height).addClass('node-border'),
         paper.line(node.size.width, 0, node.size.width, node.size.height).addClass('node-border')
     );
-    if (node.id < 200 && node.children.length == 0 && !node.terminal) {
-        g.add(paper.line(node.size.width, node.size.height / 2, node.size.width + 30, node.size.height / 2).addClass('dash-link'));
+    //if (node.id < 200 && node.children.length == 0 && !node.terminal) {
+    //    g.add(paper.line(node.size.width, node.size.height / 2, node.size.width + 30, node.size.height / 2).addClass('dash-link'));
+    //}
+    if (node.terminated) {
+      g.add(paper.line(node.size.width + 5, 0, node.size.width + 5, node.size.height).addClass('bold-line'));
     }
 
     content.add(g);
