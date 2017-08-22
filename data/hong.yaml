@@ -177,7 +177,7 @@ Family:
   - { Id: 442 , Name: "本逵"   , Parent: 439 }
   - { Id: 443 , Name: "本进"   , Parent: 439 }
   - { Id: 444 , Name: "本文"   , Parent: 440 }
-  - { Id: 445 , Name: "本铅"   , Parent: 440, Adopted: True }
+  - { Id: 445 , Name: "本镒"   , Parent: 441 }
   - { Id: 446 , Name: "本锐"   , Parent: 441 }
   - { Id: 447 , Name: "本铅"   , Parent: 441 }
   - { Id: 462 , Name: "本龙"   , Parent: 456 }
