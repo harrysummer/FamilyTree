@@ -18,7 +18,7 @@ var nodesToTree = function(arr, id_, parentId_, name_, spouse_, note_, adopted_)
     if (note_ === undefined)
         note_ = function(d) { return d.Note; }
     if (adopted_ === undefined)
-        adopted_ = function(d) { return d.Adopted == true; }
+        adopted_ = function(d) { return d.Adopted; }
 
     var id2Index = {};
     var members = [];
@@ -316,10 +316,12 @@ var drawChildrenLink = function(paper, content, node, treeInfo, layoutInfo) {
     var firstChild = treeInfo.members[id2Index[node.children[0]]];
     var lastChild = treeInfo.members[id2Index[node.children[node.children.length - 1]]];
 
-    if (node.children.length == 1 && firstChild.specialLink) {
-        content.add(paper.line(node.x + node.size.width, node.y + node.size.height / 2 - 2,
-            midX, node.y + node.size.height / 2 - 2).addClass('link'));
-    } else {
+    var wordOnLink = { 'J': '继', 'T': '祧', 'S': '嗣', 'Y': '养' };
+
+    //if (node.children.length == 1 && firstChild.specialLink) {
+    //    content.add(paper.line(node.x + node.size.width, node.y + node.size.height / 2 - 2,
+    //        midX, node.y + node.size.height / 2 - 2).addClass('link'));
+    if (node.children.length > 1) {
         content.add(paper.line(midX, firstChild.y + firstChild.size.height / 2,
             midX, lastChild.y + lastChild.size.height / 2).addClass('link'));
         content.add(paper.line(node.x + node.size.width, node.y + node.size.height / 2,
@@ -327,19 +329,42 @@ var drawChildrenLink = function(paper, content, node, treeInfo, layoutInfo) {
     }
     for (var i = 0; i < node.children.length; i++) {
         var child = treeInfo.members[id2Index[node.children[i]]];
-        if (child.specialLink) {
-            content.add(paper.line(midX, child.y + child.size.height / 2 - 2,
-                child.x, child.y + child.size.height / 2 - 2).addClass('link'));
-            if (node.children.length == 1) {
-                content.add(paper.line(node.x + node.size.width, child.y + child.size.height / 2 + 2,
-                    child.x, child.y + child.size.height / 2 + 2).addClass('special-link'));
+        if (node.children.length > 1) {
+            if (!child.specialLink) {
+                content.add(paper.line(midX, child.y + child.size.height / 2,
+                    child.x, child.y + child.size.height / 2).addClass('link'));
             } else {
+                content.add(paper.line(midX, child.y + child.size.height / 2 - 2,
+                    child.x, child.y + child.size.height / 2 - 2).addClass('link'));
                 content.add(paper.line(midX, child.y + child.size.height / 2 + 2,
                     child.x, child.y + child.size.height / 2 + 2).addClass('special-link'));
+                if (wordOnLink[child.specialLink]) {
+                    var t = paper.text((midX + child.x) / 2, 0, wordOnLink[child.specialLink]).addClass('link-text');
+                    var bbox = t.getBBox();
+                    t.attr('y', child.y + child.size.height / 2 - bbox.height * 0.5 + (is.ie() || is.edge() ? bbox.height * 0.8 : 0));
+                    bbox = t.getBBox();
+                    content.add(paper.rect(bbox.x, bbox.y, bbox.width, bbox.height).addClass('link-text-bg'));
+                    content.add(t);
+                }
             }
         } else {
-            content.add(paper.line(midX, child.y + child.size.height / 2,
-                child.x, child.y + child.size.height / 2).addClass('link'));
+            if (!child.specialLink) {
+                content.add(paper.line(node.x + node.size.width, child.y + child.size.height / 2,
+                    child.x, child.y + child.size.height / 2).addClass('link'));
+            } else {
+                content.add(paper.line(node.x + node.size.width, child.y + child.size.height / 2 - 2,
+                    child.x, child.y + child.size.height / 2 - 2).addClass('link'));
+                content.add(paper.line(node.x + node.size.width, child.y + child.size.height / 2 + 2,
+                    child.x, child.y + child.size.height / 2 + 2).addClass('special-link'));
+                if (wordOnLink[child.specialLink]) {
+                    var t = paper.text((node.x + node.size.width + child.x) / 2, 0, wordOnLink[child.specialLink]).addClass('link-text');
+                    var bbox = t.getBBox();
+                    t.attr('y', child.y + child.size.height / 2 - bbox.height * 0.5 + (is.ie() || is.edge() ? bbox.height * 0.8 : 0));
+                    bbox = t.getBBox();
+                    content.add(paper.rect(bbox.x, bbox.y, bbox.width, bbox.height).addClass('link-text-bg'));
+                    content.add(t);
+                }
+            }
         }
     }
 };

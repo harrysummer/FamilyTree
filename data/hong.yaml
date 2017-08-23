@@ -454,7 +454,7 @@ Family:
   - { Id: 692 , Name: "麒"   , Parent: 654 }
   - { Id: 693 , Name: "麟"   , Parent: 654 }
   - { Id: 694 , Name: "明举"   , Parent: 655 }
-  - { Id: 695 , Name: "明禹"   , Parent: 659, Adopted: True }
+  - { Id: 695 , Name: "明禹"   , Parent: 659, Adopted: 'J' }
   - { Id: 696 , Name: "明勋"   , Parent: 660 }
   - { Id: 697 , Name: "明舜"   , Parent: 660 }
   - { Id: 698 , Name: "明现"   , Parent: 660 }
@@ -566,6 +566,21 @@ Family:
   - { Id: 21  , Name: "三省"   , Parent: 20 }
   - { Id: 22  , Name: "三义"   , Parent: 20 }
   - { Id: 23  , Name: "三国"   , Parent: 20 }
+  - { Id: 1071, Name: "又纯"   , Parent: 695 }
+  - { Id: 1072, Name: "声益"   , Parent: 696 }
+  - { Id: 1073, Name: "声会"   , Parent: 696 }
+  - { Id: 1074, Name: "声高"   , Parent: 696 }
+  - { Id: 1075, Name: "声忠"   , Parent: 697 }
+  - { Id: 1076, Name: "声华"   , Parent: 697 }
+  - { Id: 1077, Name: "声义"   , Parent: 697 }
+  - { Id: 1078, Name: "声礼"   , Parent: 698 }
+  - { Id: 1079, Name: "声秀"   , Parent: 698 }
+  - { Id: 1080, Name: "声义"   , Parent: 698 }
+  - { Id: 1081, Name: "声科"   , Parent: 698 }
+  - { Id: 1082, Name: "声崇"   , Parent: 699 }
+  - { Id: 1083, Name: "声旭"   , Parent: 699 }
+  - { Id: 1084, Name: "声成"   , Parent: 699 }
+  - { Id: 1085, Name: "声全"   , Parent: 699 }
   - { Id: 785 , Name: "汝能"   , Parent: 755 }
   - { Id: 786 , Name: "汝元"   , Parent: 756 }
   - { Id: 787 , Name: "汝英"   , Parent: 757 }
@@ -601,6 +616,20 @@ Family:
   - { Id: 25  , Name: "日曜"   , Parent: 21 }
   - { Id: 26  , Name: "日旺"   , Parent: 21 }
   - { Id: 27  , Name: "日晊"   , Parent: 21 }
+  - { Id: 1086, Name: "加光"   , Parent: 1071 }
+  - { Id: 1087, Name: "加义"   , Parent: 1072 }
+  - { Id: 1088, Name: "加义"   , Parent: 1073, Adopted: "T" }
+  - { Id: 1089, Name: "加聘"   , Parent: 1074 }
+  - { Id: 1090, Name: "加惠"   , Parent: 1075 }
+  - { Id: 1091, Name: "加级"   , Parent: 1075 }
+  - { Id: 1092, Name: "加节"   , Parent: 1075 }
+  - { Id: 1093, Name: "加玉"   , Parent: 1078 }
+  - { Id: 1094, Name: "加茂"   , Parent: 1080 }
+  - { Id: 1095, Name: "加权"   , Parent: 1082, Adopted: "J" }
+  - { Id: 1096, Name: "加聚"   , Parent: 1083, Adopted: "J" }
+  - { Id: 1097, Name: "加权"   , Parent: 1084 }
+  - { Id: 1098, Name: "加聚"   , Parent: 1084 }
+  - { Id: 1099, Name: "加元"   , Parent: 1084 }
   - { Id: 814 , Name: "谦忠"   , Parent: 785 }
   - { Id: 815 , Name: "谦益"   , Parent: 786 }
   - { Id: 816 , Name: "谦炳"   , Parent: 786 }
@@ -651,6 +680,21 @@ Family:
 
   # 十二世
   - { Id: 28  , Name: "璿"     , Parent: 26 }
+  - { Id: 1100, Name: "寅贵"   , Parent: 1087 }
+  - { Id: 1101, Name: "寅和"   , Parent: 1087 }
+  - { Id: 1102, Name: "寅贵"   , Parent: 1088, Note: "随父承祧" }
+  - { Id: 1103, Name: "寅和"   , Parent: 1088, Note: "随父承祧" }
+  - { Id: 1104, Name: "寅兆"   , Parent: 1089 }
+  - { Id: 1105, Name: "寅笔"   , Parent: 1089 }
+  - { Id: 1106, Name: "寅韬"   , Parent: 1090 }
+  - { Id: 1107, Name: "寅开"   , Parent: 1091 }
+  - { Id: 1108, Name: "寅宾"   , Parent: 1091 }
+  - { Id: 1109, Name: "寅桂"   , Parent: 1093 }
+  - { Id: 1110, Name: "怀珍"   , Parent: 1093 }
+  - { Id: 1111, Name: "寅早"   , Parent: 1095, Adopted: "T" }
+  - { Id: 1112, Name: "寅早"   , Parent: 1096, Adopted: "T" }
+  - { Id: 1113, Name: "寅早"   , Parent: 1099 }
+  - { Id: 1114, Name: "寅泰"   , Parent: 1099 }
   - { Id: 861 , Name: "琎"     , Parent: 814 }
   - { Id: 862 , Name: "越华"   , Parent: 815 }
   - { Id: 863 , Name: "越众"   , Parent: 815 }
@@ -722,6 +766,25 @@ Family:
 
   # 十三世
   - { Id: 29  , Name: "杰"     , Parent: 28 }
+  - { Id: 1115, Name: "金榜"   , Parent: 1100 }
+  - { Id: 1116, Name: "金匮"   , Parent: 1100 }
+  - { Id: 1117, Name: "金玉"   , Parent: 1100 }
+  - { Id: 1118, Name: "金匮"   , Parent: 1101, Adopted: "J" }
+  - { Id: 1119, Name: "允忠"   , Parent: 1104 }
+  - { Id: 1120, Name: "允清"   , Parent: 1104 }
+  - { Id: 1121, Name: "允福"   , Parent: 1104 }
+  - { Id: 1122, Name: "允清"   , Parent: 1105, Adopted: "J" }
+  - { Id: 1123, Name: "允泰"   , Parent: 1106, Adopted: "J" }
+  - { Id: 1124, Name: "允广"   , Parent: 1107 }
+  - { Id: 1125, Name: "允泰"   , Parent: 1107 }
+  - { Id: 1126, Name: "允贵"   , Parent: 1108 }
+  - { Id: 1127, Name: "允临"   , Parent: 1108 }
+  - { Id: 1128, Name: "允灿"   , Parent: 1108 }
+  - { Id: 1129, Name: "允祥"   , Parent: 1109, Adopted: "T" }
+  - { Id: 1130, Name: "允祥"   , Parent: 1110, Adopted: "T" }
+  - { Id: 1131, Name: "允祥"   , Parent: 1113 }
+  - { Id: 1132, Name: "允源"   , Parent: 1113 }
+  - { Id: 1133, Name: "允贤"   , Parent: 1114 }
   - { Id: 929 , Name: "国鼎"   , Parent: 863 }
   - { Id: 930 , Name: "国幹"   , Parent: 863, Terminated: True }
   - { Id: 931 , Name: "朝贵"   , Parent: 864, Terminated: True }
