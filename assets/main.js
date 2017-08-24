@@ -65,39 +65,35 @@ var nodesToTree = function(arr, id_, parentId_, name_, spouse_, note_, adopted_)
 };
 
 var measureNode = function(node) {
-    var paper = Snap("#canvas");
+    var paper = SVG('canvas');
     var result = { width: 0, height: 0 };
     if (node.name) {
-        var text = paper.text(0, 0, node.name).addClass('node-name');
-        var bbox = text.getBBox();
+        var text = paper.text(node.name).addClass('node-name');
+        var bbox = text.bbox();
         text.remove();
         result.width = Math.max(result.width, bbox.width);
-        result.height += bbox.height;
-        if (is.chrome() && is.windows())
-            result.height -= bbox.height * 0.3;
-        else if (is.firefox() && !is.mobile())
-            result.height -= bbox.height * 0.1;
+        result.height += bbox.height * (is.windows() ? 0.75 : 1);
     }
     if (node.spouse) {
         if (is.array(node.spouse)) {
             for (var i = 0; i < node.spouse.length; i++) {
-                var text = paper.text(0, 0, node.spouse[i]).addClass('node-spouse');
-                var bbox = text.getBBox();
+                var text = paper.text(node.spouse[i]).addClass('node-spouse');
+                var bbox = text.bbox();
                 text.remove();
                 result.width = Math.max(result.width, bbox.width);
                 result.height += bbox.height;
             }
         } else {
-            var text = paper.text(0, 0, node.spouse).addClass('node-spouse');
-            var bbox = text.getBBox();
+            var text = paper.text(node.spouse).addClass('node-spouse');
+            var bbox = text.bbox();
             text.remove();
             result.width = Math.max(result.width, bbox.width);
             result.height += bbox.height;
         }
     }
     if (node.note) {
-        var text = paper.text(0, 0, node.note).addClass('node-note');
-        var bbox = text.getBBox();
+        var text = paper.text(node.note).addClass('node-note');
+        var bbox = text.bbox();
         text.remove();
         result.width = Math.max(result.width, bbox.width);
         result.height += bbox.height;
@@ -243,63 +239,37 @@ var drawNode = function(paper, content, node) {
     var dx = node.x;
     var dy = node.y;
 
-    var g = paper.g();
-    g.transform(Snap.format("t{x} {y}", {
+    var g = paper.group();
+    g.transform({
         x: dx,
         y: dy
-    }));
+    });
 
     var curY = nodePaddingTop;
     if (node.name) {
-        var text = paper.text(node.size.width / 2, curY, node.name);
-        text.addClass('node-name');
+        var text = g.text(node.name).move(node.size.width / 2, curY).addClass('node-name');
         if (is.ie() || is.edge()) {
-            text.attr('y', curY + text.getBBox().height * 0.8);
+            text.attr('y', curY + text.bbox().height * 0.05);
         }
-        curY += text.getBBox().height;
-        if (is.chrome() && is.windows())
-            curY -= text.getBBox().height * 0.3;
-        else if (is.firefox() && !is.mobile())
-            curY -= text.getBBox().height * 0.1;
-        g.add(text);
+        curY += text.bbox().height * (is.windows() ? 0.75 : 1);
     }
     if (node.spouse) {
         if (is.array(node.spouse)) {
             for (var i = 0; i < node.spouse.length; i++) {
-                var text = paper.text(node.size.width / 2, curY, node.spouse[i]);
-                text.addClass('node-spouse');
-                if (is.ie() || is.edge()) {
-                    text.attr('y', curY + text.getBBox().height * 0.8);
-                }
-                curY += text.getBBox().height;
-                g.add(text);
+                var text = g.text(node.spouse[i]).move(node.size.width / 2, curY).addClass('node-spouse');
+                curY += text.bbox().height;
             }
         } else {
-            var text = paper.text(node.size.width / 2, curY, node.spouse);
-            text.addClass('node-spouse');
-            if (is.ie() || is.edge()) {
-                text.attr('y', curY + text.getBBox().height * 0.8);
-            }
-            curY += text.getBBox().height;
-            g.add(text);
+            var text = g.text(node.spouse).move(node.size.width / 2, curY).addClass('node-spouse');
+            curY += text.bbox().height;
         }
     }
     if (node.note) {
-        var text = paper.text(node.size.width / 2, curY, node.note);
-        text.addClass('node-note');
-        if (is.ie() || is.edge()) {
-            text.attr('y', curY + text.getBBox().height * 0.8);
-        }
-        curY += text.getBBox().height;
-        g.add(text);
+        var text = g.text(node.note).move(node.size.width / 2, curY).addClass('node-note');
+        curY += text.bbox().height;
     }
-    g.add(
-        paper.line(0, 0, 0, node.size.height).addClass('node-border'),
-        paper.line(node.size.width, 0, node.size.width, node.size.height).addClass('node-border')
-    );
-    //if (node.id < 200 && node.children.length == 0 && !node.terminal) {
-    //    g.add(paper.line(node.size.width, node.size.height / 2, node.size.width + 30, node.size.height / 2).addClass('dash-link'));
-    //}
+    g.line(0, 0, 0, node.size.height).addClass('node-border');
+    g.line(node.size.width, 0, node.size.width, node.size.height).addClass('node-border');
     if (node.terminated) {
       g.add(paper.line(node.size.width + 5, 0, node.size.width + 5, node.size.height).addClass('bold-line'));
     }
@@ -318,9 +288,6 @@ var drawChildrenLink = function(paper, content, node, treeInfo, layoutInfo) {
 
     var wordOnLink = { 'J': '继', 'T': '祧', 'S': '嗣', 'Y': '养' };
 
-    //if (node.children.length == 1 && firstChild.specialLink) {
-    //    content.add(paper.line(node.x + node.size.width, node.y + node.size.height / 2 - 2,
-    //        midX, node.y + node.size.height / 2 - 2).addClass('link'));
     if (node.children.length > 1) {
         content.add(paper.line(midX, firstChild.y + firstChild.size.height / 2,
             midX, lastChild.y + lastChild.size.height / 2).addClass('link'));
@@ -339,11 +306,11 @@ var drawChildrenLink = function(paper, content, node, treeInfo, layoutInfo) {
                 content.add(paper.line(midX, child.y + child.size.height / 2 + 2,
                     child.x, child.y + child.size.height / 2 + 2).addClass('special-link'));
                 if (wordOnLink[child.specialLink]) {
-                    var t = paper.text((midX + child.x) / 2, 0, wordOnLink[child.specialLink]).addClass('link-text');
-                    var bbox = t.getBBox();
-                    t.attr('y', child.y + child.size.height / 2 - bbox.height * 0.5 + (is.ie() || is.edge() ? bbox.height * 0.8 : 0));
-                    bbox = t.getBBox();
-                    content.add(paper.rect(bbox.x, bbox.y, bbox.width, bbox.height).addClass('link-text-bg'));
+                    var t = paper.text(wordOnLink[child.specialLink]).move((midX + child.x) / 2, 0).addClass('link-text');
+                    var bbox = t.bbox();
+                    t.attr('y', child.y + child.size.height / 2);
+                    bbox = t.bbox();
+                    content.add(paper.rect(bbox.width, bbox.height).move(bbox.x, bbox.y).addClass('link-text-bg'));
                     content.add(t);
                 }
             }
@@ -357,11 +324,11 @@ var drawChildrenLink = function(paper, content, node, treeInfo, layoutInfo) {
                 content.add(paper.line(node.x + node.size.width, child.y + child.size.height / 2 + 2,
                     child.x, child.y + child.size.height / 2 + 2).addClass('special-link'));
                 if (wordOnLink[child.specialLink]) {
-                    var t = paper.text((node.x + node.size.width + child.x) / 2, 0, wordOnLink[child.specialLink]).addClass('link-text');
-                    var bbox = t.getBBox();
-                    t.attr('y', child.y + child.size.height / 2 - bbox.height * 0.5 + (is.ie() || is.edge() ? bbox.height * 0.8 : 0));
-                    bbox = t.getBBox();
-                    content.add(paper.rect(bbox.x, bbox.y, bbox.width, bbox.height).addClass('link-text-bg'));
+                    var t = paper.text(wordOnLink[child.specialLink]).addClass('link-text');
+                    var bbox = t.bbox();
+                    t.move((node.x + node.size.width + child.x) / 2, child.y + child.size.height / 2 - bbox.height / 2);
+                    bbox = t.bbox();
+                    content.add(paper.rect(bbox.width, bbox.height).move(bbox.x, bbox.y).addClass('link-text-bg'));
                     content.add(t);
                 }
             }
@@ -388,14 +355,13 @@ var drawGeneration = function(paper, content, layoutInfo) {
         var firstNode = layoutInfo.nodePerLevel[i][0];
         var x = 0.5 * (offset[i] + offset[i + 1]);
         var y = firstNode.y - 15;
-        var text = paper.text(x, -50, (i==0 ? "始祖" : numberToChinese(i+1) + "世")).addClass('text-generation');
+        var text = content.text((i==0 ? "始祖" : numberToChinese(i+1) + "世")).move(x, -50).addClass('text-generation');
         if (is.ie() || is.edge()) {
-            text.attr('y', -50 + text.getBBox().height * 0.8);
+            text.attr('y', -50 + text.bbox().height * 0.8);
         }
-        var yEnd = text.getBBox().height * 1.2 - 50;
+        var yEnd = text.bbox().height * 1.2 - 50;
         content.add(
-            paper.line(x, y, x, yEnd).addClass('line-generation'),
-            text
+            paper.line(x, y, x, yEnd).addClass('line-generation')
         );
     }
 }

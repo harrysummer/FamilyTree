@@ -94,10 +94,11 @@ html(lang='zh-Hans')
     script!= 'var familyData = ' + JSON.stringify(family) + ', titleData = "' + title + '", subtitleData = "' + subtitle + '", commentData = "' + comment + '", detailData = ' + JSON.stringify(detail) + ', changelog = "' + changelog + '";'
     script(src='/vex.combined.min.js')
     script vex.defaultOptions.className='vex-theme-os'
-    script(src='/snap.svg-min.js')
+    script(src='/svg.min.js')
     script(src='/is.min.js')
     script(src='/main.js')
     script.
+      var t1 = performance.now();
       var treeInfo = nodesToTree(familyData, undefined, undefined, function(d) {
         if (d.Id >= 200) {
           if (d.Name && d.Name.length == 1) {
@@ -127,11 +128,16 @@ html(lang='zh-Hans')
         }
         return ret;
       });
+      var t2 = performance.now();
+      console.log("Parsing data: " + (t2 - t1) + "ms");
       var root = treeInfo.root;
       var id2Index = treeInfo.id2Index;
       var members = treeInfo.members;
 
+      var t3 = performance.now();
       var layoutInfo = layoutTree(members, id2Index);
+      var t4 = performance.now();
+      console.log("Building tree layout: " + (t4 - t3) + "ms");
       var generationOffset = layoutInfo.generationOffset;
       var size = layoutInfo.size;
 
@@ -141,61 +147,78 @@ html(lang='zh-Hans')
           ret = ret + str;
         return ret;
       };
-      var paper = Snap("#canvas");
-      var titleBar = paper.g();
-      var title = paper
-        .text(size.width / 2, 0, titleData)
+
+      var paper = SVG('canvas');
+      var titleBar = paper.group();
+      var title = titleBar
+        .text(titleData)
+        .move(size.width / 2, 0)
         .addClass('title-text')
         .attr('dx', '0' + repeat(' 24', titleData.length - 1))
-        .transform('s1.4 1');
+        .transform({ scaleX: 1.4 });
       if (is.ie() || is.edge()) {
-        title.attr('y', title.getBBox().height * 0.8);
+        title.attr('y', title.bbox().height * 0.8);
       }
-      var titleHeight = title.getBBox().height;
-      if (is.chrome() && is.windows())
-        titleHeight -= 0.3 * title.getBBox().height;
-      var subtitle = paper
-        .text(size.width / 2, titleHeight + 40, subtitleData)
+      var titleHeight = title.bbox().height;
+      var subtitle = titleBar
+        .text(subtitleData)
+        .move(size.width / 2, titleHeight + 40)
         .addClass('subtitle');
       if (is.ie() || is.edge()) {
-        subtitle.attr('y', titleHeight + 40 + subtitle.getBBox().height * 0.8);
+        subtitle.attr('y', titleHeight + 40 + subtitle.bbox().height * 0.8);
       }
-      titleBar.add(title, subtitle);
 
-      var content = paper.g().transform(Snap.format("t{x} {y}", {
+      var content = paper.group().transform({
         x: 0,
-        y: titleBar.getBBox().height + 70
-      }));
+        y: titleBar.bbox().height + 70
+      });
 
+      var t5 = performance.now();
       for (var i = 0; i < members.length; i++) {
         drawNode(paper, content, members[i]);
+      }
+      var t6 = performance.now();
+      console.log("Drawing node: " + (t6 - t5) + "ms");
+
+      var t7 = performance.now();
+      for (var i = 0; i < members.length; i++) {
         drawChildrenLink(paper, content, members[i], treeInfo, layoutInfo);
       }
+      var t8 = performance.now();
+      console.log("Drawing link: " + (t8 - t7) + "ms");
+
+      var t9 = performance.now();
       drawGeneration(paper, content, layoutInfo);
-      setupDetailButton(paper, content, detailData, treeInfo);
+      // setupDetailButton(paper, content, detailData, treeInfo);
+      var t10 = performance.now();
+      console.log("Drawing other parts: " + (t10 - t9) + "ms");
 
-      var commentText = paper
-        .text(100, layoutInfo.nodePerLevel[4][layoutInfo.nodePerLevel[4].length-1].y + 200, commentData.split("\n"))
-        .addClass('comment');
-        commentText.selectAll('tspan:nth-child(n+2)')
-        .attr({ dy: "1.2em" , x: 100 });
-      var commentBBox = commentText.getBBox();
-      var commentRect = paper
-        .rect(commentBBox.x - 40, commentBBox.y - 40, commentBBox.width + 80, commentBBox.height + 80)
-        .addClass('comment-border');
-      content.add(commentRect, commentText);
+      // var commentText = paper
+      //   .text()
+      //   .move(100, layoutInfo.nodePerLevel[4][layoutInfo.nodePerLevel[4].length-1].y + 200)
+      //   .addClass('comment');
+      //   commentText.selectAll('tspan:nth-child(n+2)')
+      //   .attr({ dy: "1.2em" , x: 100 });
+      // var commentBBox = commentText.bbox();
+      // var commentRect = paper
+      //   .rect(commentBBox.width + 80, commentBBox.height + 80)
+      //   .move(commentBBox.x - 40, commentBBox.y - 40)
+      //   .addClass('comment-border');
+      // content.add(commentRect, commentText);
 
-      var changelogText = paper
-        .text(100, layoutInfo.nodePerLevel[4][layoutInfo.nodePerLevel[4].length-1].y + 200 + commentBBox.height + 100, changelog.split("\n"))
-        .addClass('comment');
-        changelogText.selectAll('tspan:nth-child(n+2)')
-        .attr({ dy: "1.2em" , x: 100 });
-      var changelogBBox = changelogText.getBBox();
-      var changelogRect = paper
-        .rect(changelogBBox.x - 40, changelogBBox.y - 40, changelogBBox.width + 80, changelogBBox.height + 80)
-        .addClass('comment-border');
-      content.add(changelogRect, changelogText);
+      // var changelogText = paper
+      //   .text(changelog.split("\n"))
+      //   .move(100, layoutInfo.nodePerLevel[4][layoutInfo.nodePerLevel[4].length-1].y + 200 + commentBBox.height + 100)
+      //   .addClass('comment');
+      //   changelogText.selectAll('tspan:nth-child(n+2)')
+      //   .attr({ dy: "1.2em" , x: 100 });
+      // var changelogBBox = changelogText.bbox();
+      // var changelogRect = paper
+      //   .rect(changelogBBox.width + 80, changelogBBox.height + 80)
+      //   .move(changelogBBox.x - 40, changelogBBox.y - 40)
+      //   .addClass('comment-border');
+      // content.add(changelogRect, changelogText);
 
       paper.attr("width", size.width);
-      paper.attr("height", titleBar.getBBox().height + content.getBBox().height + 40);
+      paper.attr("height", titleBar.bbox().height + content.bbox().height + 40);
 
