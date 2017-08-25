@@ -16,13 +16,19 @@ html(lang='zh-Hans')
              url('/fonts/SourceHanSerifCN-Bold.ttf') format('truetype');
       }
       @font-face {
+        font-family: 'Hei';
+        src: url('/fonts/SourceHanSansSC-Regular.woff2') format('woff2'),
+             url('/fonts/SourceHanSansSC-Regular.woff') format('woff'),
+             url('/fonts/SourceHanSansSC-Regular.ttf') format('truetype');
+      }
+      @font-face {
         font-family: 'Kai';
         src: url('/fonts/FZKTK.woff2') format('woff2'),
              url('/fonts/FZKTK.woff') format('woff'),
              url('/fonts/FZKTK.ttf') format('truetype');
       }
       svg text {
-        font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "SimHei", "Microsoft YaHei";
+        font-family: Hei, sans-serif;
         -webkit-font-smoothing: subpixel-antialiased;
         font-smoothing: subpixel-antialiased;
         text-anchor: middle;
@@ -221,4 +227,3 @@ html(lang='zh-Hans')
 
       paper.attr("width", size.width);
       paper.attr("height", titleBar.bbox().height + content.bbox().height + 40);
-

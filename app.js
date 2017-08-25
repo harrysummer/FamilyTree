@@ -2,6 +2,16 @@ require('babel-polyfill');
 var fs = require('fs');
 var express = require('express');
 var yaml = require('js-yaml');
+const window = require('svgdom')
+    .setFontDir('./dist/fonts')
+    .setFontFamilyMappings({
+        'Song': 'SourceHanSerifCN-Bold.ttf',
+        'Hei': 'SourceHanSansSC-Regular.ttf',
+        'Kai': 'FZKTK.ttf'
+    })
+    .preloadFonts();
+const SVG = require('svg.js')(window);
+const document = window.document;
 
 var data;
 try {
@@ -10,6 +20,9 @@ try {
     console.log(e);
     process.exit(-1);
 }
+
+
+
 
 var app = express();
 app.set('views', __dirname + '/src/views');

@@ -67,6 +67,25 @@ function makeFont(text, fontName, outputPath) {
     subset(inputFile, text, outputPath, 'woff2');
 }
 
+function addStringToSet(S, str) {
+    for (let i = 0; i < str.length; ++i) {
+        S[str[i]] = true;
+    }
+    return S;
+}
+
+function convertSetToString(S) {
+    let ret = "";
+    for (let c in S) {
+        ret += c;
+    }
+    return ret;
+}
+
+function uniqueString(str) {
+    return convertSetToString(addStringToSet({}, str));
+}
+
 let data = null;
 try {
     data = yaml.safeLoad(fs.readFileSync(__dirname + '/data/hong.yaml', 'utf8'));
@@ -75,28 +94,34 @@ try {
     process.exit(-1);
 }
 
-let titleTexts = "";
-let titleTextSet = {};
-for (let i = 0; i < data.Family.Title.length; ++i) {
-    titleTextSet[data.Family.Title[i]] = true;
-}
-for (let c in titleTextSet)
-    titleTexts += c;
-titleTextSet = null;
+let titleTexts = uniqueString(data.Family.Title);
 
-let nameTexts = "";
 let nameTextSet = {};
 for (let i = 0; i < data.Family.Members.length; ++i) {
     let name = data.Family.Members[i].Name;
     if (name) {
-        for (let j = 0; j < name.length; ++j) {
-            nameTextSet[name[j]] = true;
-        }
+        nameTextSet = addStringToSet(nameTextSet, name);
     }
 }
-for (let c in nameTextSet)
-    nameTexts += c;
-nameTextSet = null;
+let nameTexts = convertSetToString(nameTextSet);
+
+let otherTextSet = {};
+otherTextSet = addStringToSet(otherTextSet, "始祖一二三四五六七八九十世夫妻元继嗣祧养");
+otherTextSet = addStringToSet(otherTextSet, data.Family.Subtitle);
+for (let i = 0; i < data.Family.Members.length; ++i) {
+    let spouse = data.Family.Members[i].Spouse;
+    if (spouse) {
+        otherTextSet = addStringToSet(otherTextSet, spouse);
+    }
+    let note = data.Family.Members[i].Spouse;
+    if (note) {
+        otherTextSet = addStringToSet(otherTextSet, note);
+    }
+}
+
+let otherTexts = convertSetToString(otherTextSet);
+
 
 makeFont(titleTexts, 'SourceHanSerifCN-Bold.otf', __dirname + '/dist/fonts');
+makeFont(otherTexts, 'SourceHanSansSC-Regular.otf', __dirname + '/dist/fonts');
 makeFont(nameTexts, 'FZKTK.TTF', __dirname + '/dist/fonts');

@@ -24,7 +24,9 @@
     "d3": "^4.2.2",
     "express": "^4.14.0",
     "js-yaml": "^3.6.1",
-    "pug": "^2.0.0-beta6"
+    "pug": "^2.0.0-beta6",
+    "svg.js": "^2.6.3",
+    "svgdom": "0.0.15"
   },
   "browserDependencies": {
     "han-css": "^3.3.0"
