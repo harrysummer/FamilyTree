@@ -64,27 +64,26 @@ var nodesToTree = function(arr, id_, parentId_, name_, spouse_, note_, adopted_)
     };
 };
 
-var measureNode = function(node) {
-    var paper = SVG('canvas');
+var measureNode = function(paper, node) {
     var result = { width: 0, height: 0 };
     if (node.name) {
-        var text = paper.text(node.name).addClass('node-name');
+        var text = paper.text(node.name).attr('font-family', 'Kai').attr('font-size', '20');
         var bbox = text.bbox();
         text.remove();
         result.width = Math.max(result.width, bbox.width);
-        result.height += bbox.height * (is.windows() ? 0.75 : 1);
+        result.height += bbox.height;
     }
     if (node.spouse) {
-        if (is.array(node.spouse)) {
+        if (node.spouse instanceof Array) {
             for (var i = 0; i < node.spouse.length; i++) {
-                var text = paper.text(node.spouse[i]).addClass('node-spouse');
+                var text = paper.text(node.spouse[i]).attr('font-family', 'Hei').attr('font-size', '10');
                 var bbox = text.bbox();
                 text.remove();
                 result.width = Math.max(result.width, bbox.width);
                 result.height += bbox.height;
             }
         } else {
-            var text = paper.text(node.spouse).addClass('node-spouse');
+            var text = paper.text(node.spouse).attr('font-family', 'Hei').attr('font-size', '10');
             var bbox = text.bbox();
             text.remove();
             result.width = Math.max(result.width, bbox.width);
@@ -92,7 +91,7 @@ var measureNode = function(node) {
         }
     }
     if (node.note) {
-        var text = paper.text(node.note).addClass('node-note');
+        var text = paper.text(node.note).attr('font-family', 'Hei').attr('font-size', '10');
         var bbox = text.bbox();
         text.remove();
         result.width = Math.max(result.width, bbox.width);
@@ -103,14 +102,14 @@ var measureNode = function(node) {
     return result;
 };
 
-var layoutTree = function(members, id2Index) {
+var layoutTree = function(paper, members, id2Index) {
     var root = null;
     var generationWidth = [];
 
     for (var i = 0; i < members.length; i++) {
         var node = members[i];
         var depth = node.depth;
-        node.size = measureNode(node);
+        node.size = measureNode(paper, node);
         if (node.parentId === null)
             root = node;
         if (generationWidth.length <= depth) {
@@ -247,31 +246,28 @@ var drawNode = function(paper, content, node) {
 
     var curY = nodePaddingTop;
     if (node.name) {
-        var text = g.text(node.name).move(node.size.width / 2, curY).addClass('node-name');
-        if (is.ie() || is.edge()) {
-            text.attr('y', curY + text.bbox().height * 0.05);
-        }
-        curY += text.bbox().height * (is.windows() ? 0.75 : 1);
+        var text = g.text(node.name).attr('font-family', 'Kai').attr('font-size', '20').attr('text-anchor', 'middle').move(node.size.width / 2, curY);
+        curY += text.bbox().height;
     }
     if (node.spouse) {
-        if (is.array(node.spouse)) {
+        if (node.spouse instanceof Array) {
             for (var i = 0; i < node.spouse.length; i++) {
-                var text = g.text(node.spouse[i]).move(node.size.width / 2, curY).addClass('node-spouse');
+                var text = g.text(node.spouse[i]).attr('font-family', 'Hei').attr('font-size', '10').attr('text-anchor', 'middle').move(node.size.width / 2, curY);
                 curY += text.bbox().height;
             }
         } else {
-            var text = g.text(node.spouse).move(node.size.width / 2, curY).addClass('node-spouse');
+            var text = g.text(node.spouse).attr('font-family', 'Hei').attr('font-size', '10').attr('text-anchor', 'middle').move(node.size.width / 2, curY);
             curY += text.bbox().height;
         }
     }
     if (node.note) {
-        var text = g.text(node.note).move(node.size.width / 2, curY).addClass('node-note');
+        var text = g.text(node.note).attr('font-family', 'Hei').attr('font-size', '10').attr('text-anchor', 'middle').move(node.size.width / 2, curY);
         curY += text.bbox().height;
     }
-    g.line(0, 0, 0, node.size.height).addClass('node-border');
-    g.line(node.size.width, 0, node.size.width, node.size.height).addClass('node-border');
+    g.line(0, 0, 0, node.size.height).attr('stroke', 'black').attr('stroke-width', '2');
+    g.line(node.size.width, 0, node.size.width, node.size.height).attr('stroke', 'black').attr('stroke-width', '2');
     if (node.terminated) {
-      g.add(paper.line(node.size.width + 5, 0, node.size.width + 5, node.size.height).addClass('bold-line'));
+        g.line(node.size.width + 5, 0, node.size.width + 5, node.size.height).attr('stroke', 'black').attr('stroke-width', '4');
     }
 
     content.add(g);
@@ -289,46 +285,46 @@ var drawChildrenLink = function(paper, content, node, treeInfo, layoutInfo) {
     var wordOnLink = { 'J': '继', 'T': '祧', 'S': '嗣', 'Y': '养' };
 
     if (node.children.length > 1) {
-        content.add(paper.line(midX, firstChild.y + firstChild.size.height / 2,
-            midX, lastChild.y + lastChild.size.height / 2).addClass('link'));
-        content.add(paper.line(node.x + node.size.width, node.y + node.size.height / 2,
-            midX, node.y + node.size.height / 2).addClass('link'));
+        content.line(midX, firstChild.y + firstChild.size.height / 2,
+            midX, lastChild.y + lastChild.size.height / 2).attr('stroke', 'black').attr('stroke-width', '1');
+        content.line(node.x + node.size.width, node.y + node.size.height / 2,
+            midX, node.y + node.size.height / 2).attr('stroke', 'black').attr('stroke-width', '1');
     }
     for (var i = 0; i < node.children.length; i++) {
         var child = treeInfo.members[id2Index[node.children[i]]];
         if (node.children.length > 1) {
             if (!child.specialLink) {
-                content.add(paper.line(midX, child.y + child.size.height / 2,
-                    child.x, child.y + child.size.height / 2).addClass('link'));
+                content.line(midX, child.y + child.size.height / 2,
+                    child.x, child.y + child.size.height / 2).attr('stroke', 'black').attr('stroke-width', '1');
             } else {
-                content.add(paper.line(midX, child.y + child.size.height / 2 - 2,
-                    child.x, child.y + child.size.height / 2 - 2).addClass('link'));
-                content.add(paper.line(midX, child.y + child.size.height / 2 + 2,
-                    child.x, child.y + child.size.height / 2 + 2).addClass('special-link'));
+                content.line(midX, child.y + child.size.height / 2 - 2,
+                    child.x, child.y + child.size.height / 2 - 2).attr('stroke', 'black').attr('stroke-width', '1');
+                content.line(midX, child.y + child.size.height / 2 + 2,
+                    child.x, child.y + child.size.height / 2 + 2).attr('stroke', 'black').attr('stroke-width', '1').attr('stroke-dasharray', '5, 2');
                 if (wordOnLink[child.specialLink]) {
-                    var t = paper.text(wordOnLink[child.specialLink]).move((midX + child.x) / 2, 0).addClass('link-text');
+                    var t = paper.text(wordOnLink[child.specialLink]).attr('font-family', 'Hei').attr('font-size', '14').attr('text-anchor', 'middle').move((midX + child.x) / 2, 0);
                     var bbox = t.bbox();
                     t.attr('y', child.y + child.size.height / 2);
                     bbox = t.bbox();
-                    content.add(paper.rect(bbox.width, bbox.height).move(bbox.x, bbox.y).addClass('link-text-bg'));
+                    content.rect(bbox.width, bbox.height).move(bbox.x - bbox.w/2, bbox.y).attr('fill', 'white');
                     content.add(t);
                 }
             }
         } else {
             if (!child.specialLink) {
-                content.add(paper.line(node.x + node.size.width, child.y + child.size.height / 2,
-                    child.x, child.y + child.size.height / 2).addClass('link'));
+                content.line(node.x + node.size.width, child.y + child.size.height / 2,
+                    child.x, child.y + child.size.height / 2).attr('stroke', 'black').attr('stroke-width', '1');
             } else {
-                content.add(paper.line(node.x + node.size.width, child.y + child.size.height / 2 - 2,
-                    child.x, child.y + child.size.height / 2 - 2).addClass('link'));
-                content.add(paper.line(node.x + node.size.width, child.y + child.size.height / 2 + 2,
-                    child.x, child.y + child.size.height / 2 + 2).addClass('special-link'));
+                content.line(node.x + node.size.width, child.y + child.size.height / 2 - 2,
+                    child.x, child.y + child.size.height / 2 - 2).attr('stroke', 'black').attr('stroke-width', '1');
+                content.line(node.x + node.size.width, child.y + child.size.height / 2 + 2,
+                    child.x, child.y + child.size.height / 2 + 2).attr('stroke', 'black').attr('stroke-width', '1').attr('stroke-dasharray', '5, 2');
                 if (wordOnLink[child.specialLink]) {
-                    var t = paper.text(wordOnLink[child.specialLink]).addClass('link-text');
+                    var t = paper.text(wordOnLink[child.specialLink]).attr('font-family', 'Hei').attr('font-size', '14').attr('text-anchor', 'middle');
                     var bbox = t.bbox();
                     t.move((node.x + node.size.width + child.x) / 2, child.y + child.size.height / 2 - bbox.height / 2);
                     bbox = t.bbox();
-                    content.add(paper.rect(bbox.width, bbox.height).move(bbox.x, bbox.y).addClass('link-text-bg'));
+                    content.rect(bbox.width, bbox.height).move(bbox.x - bbox.w/2, bbox.y).attr('fill', 'white');
                     content.add(t);
                 }
             }
@@ -355,14 +351,9 @@ var drawGeneration = function(paper, content, layoutInfo) {
         var firstNode = layoutInfo.nodePerLevel[i][0];
         var x = 0.5 * (offset[i] + offset[i + 1]);
         var y = firstNode.y - 15;
-        var text = content.text((i==0 ? "始祖" : numberToChinese(i+1) + "世")).move(x, -50).addClass('text-generation');
-        if (is.ie() || is.edge()) {
-            text.attr('y', -50 + text.bbox().height * 0.8);
-        }
+        var text = content.text((i==0 ? "始祖" : numberToChinese(i+1) + "世")).attr('font-family', 'Hei').attr('font-size', '10').attr('text-anchor', 'middle').move(x, -50);
         var yEnd = text.bbox().height * 1.2 - 50;
-        content.add(
-            paper.line(x, y, x, yEnd).addClass('line-generation')
-        );
+        content.line(x, y, x, yEnd).attr('stroke', 'black').attr('stroke-width', '1').attr('stroke-dasharray', '2, 8');
     }
 }
 
@@ -374,7 +365,7 @@ var setupDetailButton = function(paper, content, detail, treeInfo) {
             var node = treeInfo.members[treeInfo.id2Index[id]];
             content.add(paper
                 .rect(node.x, node.y, node.size.width, node.size.height)
-                .addClass('detail-button')
+                .attr('fill-opacity', '0.15')
                 .click(function() {
                     vex.dialog.buttons.YES.text = "关闭";
                     vex.dialog.alert({
@@ -386,3 +377,13 @@ var setupDetailButton = function(paper, content, detail, treeInfo) {
         })(i);
     }
 }
+
+module.exports = {
+    nodesToTree,
+    measureNode,
+    layoutTree,
+    drawNode,
+    drawChildrenLink,
+    drawGeneration,
+    setupDetailButton
+};

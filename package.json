@@ -26,7 +26,7 @@
     "js-yaml": "^3.6.1",
     "pug": "^2.0.0-beta6",
     "svg.js": "^2.6.3",
-    "svgdom": "0.0.15"
+    "svgdom": "git+https://github.com/svgdotjs/svgdom.git"
   },
   "browserDependencies": {
     "han-css": "^3.3.0"
