@@ -3,68 +3,73 @@ const path = require('path');
 const fs = require('fs');
 const cp = require('child_process');
 const mkdirp = require('mkdirp');
+var Promise = require("bluebird");
 
 function subset(input, text, outputPath, fmt) {
-    if (!fs.existsSync(outputPath)) {
-        mkdirp.sync(outputPath);
-    }
-    let output = path.join(outputPath, path.basename(input, path.extname(input)) + '.' + fmt);
-    let cmd = 'pyftsubset';
-    let args = [
-        input,
-        `--text='${text}'`,
-        `--output-file=${output}`
-    ];
-    if (fmt === 'woff') {
-        args.push('--flavor=woff');
-        args.push('--with-zopfli');
-    } else if (fmt === 'woff2') {
-        args.push('--flavor=woff2');
-        args.push('--with-zopfli');
-    }
-    let process = cp.spawn(cmd, args, {cwd: __dirname});
-    process.stdout.on('data', (data)=>console.log(data.toString('utf8')));
-    process.stderr.on('data', (data)=>console.error(data.toString('utf8')));
-    process.on('exit', (code)=> {
-        if (code == 0)
-            console.log(`${output} font created successfully`);
-        else
-            console.error(`${output} font creation failed`);
+    return new Promise(function (resolve, reject) {
+        if (!fs.existsSync(outputPath)) {
+            mkdirp.sync(outputPath);
+        }
+        let output = path.join(outputPath, path.basename(input, path.extname(input)) + '.' + fmt);
+        let cmd = 'pyftsubset';
+        let args = [
+            input,
+            `--text='${text}'`,
+            `--output-file=${output}`
+        ];
+        if (fmt === 'woff') {
+            args.push('--flavor=woff');
+            args.push('--with-zopfli');
+        } else if (fmt === 'woff2') {
+            args.push('--flavor=woff2');
+            args.push('--with-zopfli');
+        }
+        let process = cp.spawn(cmd, args, {cwd: __dirname});
+        process.stdout.on('data', (data)=>console.log(data.toString('utf8')));
+        process.stderr.on('data', (data)=>console.error(data.toString('utf8')));
+        process.on('exit', (code)=> {
+            if (code == 0) {
+                console.log(`${output} font created successfully`);
+                resolve();
+            } else {
+                reject(`${output} font creation failed`);
+            }
+        });
     });
-    return process;
 }
 
 function makeFont(text, fontName, outputPath) {
     const inputFile = `${__dirname}/data/${fontName}`;
     const ext = path.extname(fontName);
     const baseName = path.basename(fontName, ext);
+
+    var p;
     if (ext === '.otf' || ext === '.OTF') {
-        subset(inputFile, text, outputPath, 'otf')
-            .on('exit', (code) => {
-                if (code == 0) {
-                    const input = path.join(outputPath, baseName + '.otf');
-                    const output = path.join(outputPath,  baseName + '.ttf');
-                    let process = cp.spawn('fontforge', [
-                        '-lang=ff',
-                        '-c', 'Open($1);CIDFlatten();Generate($2);Quit(0);',
-                        input,
-                        output
-                    ], {cwd: __dirname});
-                    process.stdout.on('data', (data)=>console.log(data.toString('utf8')));
-                    process.stderr.on('data', (data)=>console.error(data.toString('utf8')));
-                    process.on('exit', (code)=> {
-                        if (code == 0)
-                            console.log(`${output} created successfully`);
-                        else
-                            console.error(`${output} creation failed`);
-                    });
-                }
+        p = subset(inputFile, text, outputPath, 'otf')
+            .then(() => {
+                const input = path.join(outputPath, baseName + '.otf');
+                const output = path.join(outputPath,  baseName + '.ttf');
+                let process = cp.spawn('fontforge', [
+                    '-lang=ff',
+                    '-c', 'Open($1);CIDFlatten();Generate($2);Quit(0);',
+                    input,
+                    output
+                ], {cwd: __dirname});
+                process.stdout.on('data', (data)=>console.log(data.toString('utf8')));
+                process.stderr.on('data', (data)=>console.error(data.toString('utf8')));
+                process.on('exit', (code)=> {
+                    if (code == 0)
+                        console.log(`${output} created successfully`);
+                    else
+                        console.error(`${output} creation failed`);
+                });
             });
     } else {
-        subset(inputFile, text, outputPath, 'ttf')
+        p = subset(inputFile, text, outputPath, 'ttf')
     }
-    subset(inputFile, text, outputPath, 'woff');
-    subset(inputFile, text, outputPath, 'woff2');
+    return p
+        .then(() => subset(inputFile, text, outputPath, 'woff'))
+        .then(() => subset(inputFile, text, outputPath, 'woff2'));
 }
 
 function addStringToSet(S, str) {
@@ -122,6 +127,9 @@ for (let i = 0; i < data.Family.Members.length; ++i) {
 let otherTexts = convertSetToString(otherTextSet);
 
 
-makeFont(titleTexts, 'SourceHanSerifCN-Bold.otf', __dirname + '/dist/fonts');
-makeFont(otherTexts, 'SourceHanSansSC-Regular.otf', __dirname + '/dist/fonts');
-makeFont(nameTexts, 'FZKTK.TTF', __dirname + '/dist/fonts');
+makeFont(titleTexts, 'SourceHanSerifCN-Bold.otf', __dirname + '/dist/fonts')
+    .then(() => makeFont(otherTexts, 'SourceHanSansSC-Regular.otf', __dirname + '/dist/fonts'))
+    .then(() => makeFont(nameTexts, 'FZKTK.TTF', __dirname + '/dist/fonts'))
+    .catch(e => {
+        console.error(e);
+    });

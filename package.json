@@ -21,6 +21,7 @@
     "mkdirp": "^0.5.1"
   },
   "dependencies": {
+    "bluebird": "^3.5.0",
     "d3": "^4.2.2",
     "express": "^4.14.0",
     "js-yaml": "^3.6.1",
