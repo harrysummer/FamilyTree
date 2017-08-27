@@ -107,7 +107,7 @@ var subtree = function(tree, rootId, maxDepth) {
     if (!root) return null;
 
     if (maxDepth === undefined)
-        maxDepth = tree.maxDepth - root.depth;
+        maxDepth = tree.depth - root.depth;
 
 
     var members = {};

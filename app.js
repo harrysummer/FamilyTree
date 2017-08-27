@@ -15,9 +15,6 @@ svg.drawLayout(canvas, layoutInfo);
 var svgStr = canvas.svg();
 svg.deleteCanvas(canvas);
 
-// jiazu.drawGeneration(paper, content, layoutInfo);
-// setupDetailButton(paper, content, detailData, treeInfo);
-
 // var commentText = paper
 //   .text()
 //   .move(100, layoutInfo.nodePerLevel[4][layoutInfo.nodePerLevel[4].length-1].y + 200)
@@ -49,6 +46,54 @@ app.set('views', __dirname + '/src/views');
 app.set('view engine', 'pug');
 
 app.get('/', function(req, res) {
+    res.render('index', {
+        title: tree.data.Family.Title,
+        svg: svgStr
+    });
+});
+
+app.get('/tree/:id', function(req, res, next) {
+    var subtree = Tree.subtree(tree, parseInt(req.params.id));
+    var canvas = svg.createCanvas();
+    var layoutInfo = layout.layoutTree(canvas, subtree);
+    svg.drawLayout(canvas, layoutInfo, {
+        drawTitle: false
+    });
+    var svgStr = canvas.svg();
+    svg.deleteCanvas(canvas);
+
+    res.render('index', {
+        title: tree.data.Family.Title,
+        svg: svgStr
+    });
+});
+
+app.get('/tree/:id/depth/:depth', function(req, res, next) {
+    var subtree = Tree.subtree(tree, parseInt(req.params.id), parseInt(req.params.depth));
+    var canvas = svg.createCanvas();
+    var layoutInfo = layout.layoutTree(canvas, subtree);
+    svg.drawLayout(canvas, layoutInfo, {
+        drawTitle: false
+    });
+    var svgStr = canvas.svg();
+    svg.deleteCanvas(canvas);
+
+    res.render('index', {
+        title: tree.data.Family.Title,
+        svg: svgStr
+    });
+});
+
+app.get('/depth/:depth', function(req, res, next) {
+    var subtree = Tree.subtree(tree, tree.getRoot().id, parseInt(req.params.depth));
+    var canvas = svg.createCanvas();
+    var layoutInfo = layout.layoutTree(canvas, subtree);
+    svg.drawLayout(canvas, layoutInfo, {
+        drawTitle: false
+    });
+    var svgStr = canvas.svg();
+    svg.deleteCanvas(canvas);
+
     res.render('index', {
         title: tree.data.Family.Title,
         svg: svgStr
