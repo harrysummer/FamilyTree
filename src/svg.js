@@ -34,6 +34,8 @@ var drawNode = function(canvas, node) {
         y: dy
     });
 
+    g.linkTo('/tree/' + node.data.id);
+
     var curY = vars.nodePaddingTop;
     if (node.data.name) {
         var text = g.text(node.data.name).attr('font-family', 'Kai').attr('font-size', '20').attr('text-anchor', 'middle').move(node.data.width / 2, curY);
@@ -167,7 +169,7 @@ var drawTitle = function(canvas, layoutInfo, opts) {
     };
 
     var curY = 0;
-    if (title && (!opts || opts.drawTitle)) {
+    if (title && (!opts || opts.drawTitle === undefined || opts.drawTitle)) {
         var text = canvas
             .text(title)
             .attr('font-family', 'Song')
@@ -178,7 +180,7 @@ var drawTitle = function(canvas, layoutInfo, opts) {
             .transform({ scaleX: 1.4 });
         curY += text.bbox().height;
     }
-    if (subtitle && (!opts || opts.drawSubtitle)) {
+    if (subtitle && (!opts || opts.drawSubtitle === undefined || opts.drawSubtitle)) {
         var subtitle = canvas
             .text(subtitle)
             .attr('font-family', 'Hei')
