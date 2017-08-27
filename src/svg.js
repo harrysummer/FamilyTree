@@ -203,7 +203,7 @@ var drawLayout = function(canvas, layoutInfo, opts) {
     drawGeneration(content, layoutInfo);
 
     canvas.attr("width", layoutInfo.size.width);
-    canvas.attr("height", layoutInfo.size.height + titleBBox.height);
+    canvas.attr("height", layoutInfo.size.height + titleBBox.height + 50);
 };
 
 module.exports = {
