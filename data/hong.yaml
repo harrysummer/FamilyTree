@@ -992,7 +992,7 @@ Family:
   - { Id: 1272, Name: "允奠"   , Parent: 1271 }
   - { Id: 1273, Name: "日昣"   , Parent: 1257 }
   - { Id: 1274, Name: "琱"     , Parent: 1273 }
-  - { Id: 1275, Name: "⿰王豕"     , Parent: 1273 }
+  - { Id: 1275, Name: "琢"     , Parent: 1273 }
   - { Id: 1276, Name: "允植"   , Parent: 1274 }
   - { Id: 1277, Name: "允朋"   , Parent: 1274 }
   - { Id: 1278, Name: "允泰"   , Parent: 1275 }
@@ -1195,6 +1195,78 @@ Family:
   - { Id: 1468, Name: "斌", Gender: 'M', Married: True, Spouse: '姚建华', Parent: 61 }
   - { Id: 1469, Name: "建", Gender: 'M', Married: True, Spouse: '孙玉莲', Parent: 61 }
   - { Id: 1470, Name: "林", Gender: 'M', Married: True, Spouse: '沈克菊', Parent: 61 }
+
+  # （五世）朝兴  -  时恩，学  -  本进，本文支下
+  - { Id: 1471, Name: "声和", Parent: 454 }
+  - { Id: 1472, Name: "琪仓", Parent: 1471 }
+  - { Id: 1473, Name: "盛仓", Parent: 1471 }
+  - { Id: 1474, Name: "三省", Parent: 455 }
+  - { Id: 1475, Name: "伯声", Parent: 1474 }
+  - { Id: 1476, Name: "日曔", Parent: 1474 }
+  - { Id: 1477, Name: "云声", Parent: 1474 }
+  - { Id: 1478, Name: "门光", Parent: 1476 }
+  - { Id: 1479, Name: "允韬", Parent: 1478 }
+  - { Id: 1480, Name: "允官", Parent: 1478 }
+  - { Id: 1481, Name: "允台", Parent: 1478 }
+  - { Id: 1482, Name: "允高", Parent: 1478 }
+  - { Id: 1483, Name: "允德", Parent: 1478 }
+
+  # 海  -  安公支下      谟（九世）
+  - { Id: 1484, Name: "声远", Parent: 475 }
+  - { Id: 1485, Name: "声达", Parent: 475 }
+  - { Id: 1486, Name: "声亮", Parent: 475 }
+  - { Id: 1487, Name: "谦福", Parent: 1484 }
+  - { Id: 1488, Name: "谦吉", Parent: 1485 }
+  - { Id: 1489, Name: "谦亨", Parent: 1485 }
+  - { Id: 1490, Name: "谦尊", Parent: 1485 }
+  - { Id: 1491, Name: "谦友", Parent: 1485 }
+  - { Id: 1492, Name: "谦让", Parent: 1486 }
+  - { Id: 1493, Name: "谦恭", Parent: 1486 }
+  - { Id: 1494, Name: "谦揖", Parent: 1486 }
+  - { Id: 1495, Name: "冕", Parent: 1487 }
+  - { Id: 1496, Name: "宝", Parent: 1488 }
+  - { Id: 1497, Name: "含", Parent: 1488 }
+  - { Id: 1498, Name: "仁", Parent: 1488 }
+  - { Id: 1499, Name: "景", Parent: 1488 }
+  - { Id: 1500, Name: "昱", Parent: 1489 }
+  - { Id: 1501, Name: "昇", Parent: 1489 }
+  - { Id: 1502, Name: "勗", Parent: 1489 }
+  - { Id: 1503, Name: "贵", Parent: 1490 }
+  - { Id: 1504, Name: "珠", Parent: 1492 }
+  - { Id: 1505, Name: "珍", Parent: 1492 }
+  - { Id: 1506, Name: "琄", Parent: 1492 }
+  - { Id: 1507, Name: "瑶", Parent: 1493 }
+  - { Id: 1508, Name: "璧", Parent: 1493 }
+  - { Id: 1509, Name: "瑢", Parent: 1494 }
+  - { Id: 1510, Name: "允清", Parent: 1495 }
+  - { Id: 1511, Name: "允琢", Parent: 1496 }
+  - { Id: 1512, Name: "允仓", Parent: 1496 }
+  - { Id: 1513, Name: "允龙", Parent: 1496 }
+  - { Id: 1514, Name: "允磨", Parent: 1496 }
+  - { Id: 1515, Name: "允海", Parent: 1499 }
+  - { Id: 1516, Name: "允湖", Parent: 1499 }
+  - { Id: 1517, Name: "允江", Parent: 1499 }
+  - { Id: 1518, Name: "允河", Parent: 1499 }
+  - { Id: 1519, Name: "允泽", Parent: 1505 }
+  - { Id: 1520, Name: "允澍", Parent: 1505 }
+  - { Id: 1521, Name: "允淮", Parent: 1506 }
+  - { Id: 1522, Name: "允麟", Parent: 1506 }
+  - { Id: 1523, Name: "允桂", Parent: 1506 }
+  - { Id: 1524, Name: "允顺", Parent: 1509 }
+
+  # 海祖  -  定公派  -  得泽  -  必进
+  - { Id: 1525, Name: "昌义", Parent: 477 }
+  - { Id: 1526, Name: "日泰", Parent: 1525 }
+  - { Id: 1527, Name: "日暄", Parent: 1525 }
+  - { Id: 1528, Name: "日裕", Parent: 1525 }
+  - { Id: 1529, Name: "旭", Parent: 1526 }
+  - { Id: 1530, Name: "涛", Parent: 1528 }
+  - { Id: 1531, Name: "畴", Parent: 1529 }
+  - { Id: 1532, Name: "思", Parent: 1529 }
+  - { Id: 1533, Name: "雷", Parent: 1529 }
+  - { Id: 1534, Name: "鳌", Parent: 1529 }
+  - { Id: 1535, Name: "允文", Parent: 1530 }
+  - { Id: 1536, Name: "允禹", Parent: 1530 }
 
   - { Id: 30  , Name: "恭貌"   , Parent: 1269 }
 
