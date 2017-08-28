@@ -1188,6 +1188,14 @@ Family:
   - { Id: 1462, Name: "张凯"  , Parent: 1461 }
   - { Id: 1463, Name: "张洪畴", Parent: 1461 }
 
+  - { Id: 1464, Name: "宁文静", Gender: 'F', Parent: 308 }
+  - { Id: 1465, Name: "宁雨晨", Gender: 'F', Parent: 308 }
+  - { Id: 1466, Name: "宁传城", Gender: 'M', Parent: 308 }
+  - { Id: 1467, Name: "宁传坤", Gender: 'M', Parent: 308 }
+  - { Id: 1468, Name: "斌", Gender: 'M', Married: True, Spouse: '姚建华', Parent: 61 }
+  - { Id: 1469, Name: "建", Gender: 'M', Married: True, Spouse: '孙玉莲', Parent: 61 }
+  - { Id: 1470, Name: "林", Gender: 'M', Married: True, Spouse: '沈克菊', Parent: 61 }
+
   - { Id: 30  , Name: "恭貌"   , Parent: 1269 }
 
   - { Id: 31  , Name: "业"     , Parent: 30 }
@@ -1276,7 +1284,7 @@ Family:
   - { Id: 58  , Name: "作山"   , Gender: 'M', Married: True, Spouse: '陈根弟', Parent: 50 }
   - { Id: 59  , Name: "作海"   , Gender: 'M', Married: True, Spouse: '徐明霞', Parent: 50 }
   - { Id: 60  , Name: "作和"   , Gender: 'M', Married: True, Spouse: '顾学勤', Parent: 50 }
-  - { Id: 61  , Name: "作平"   , Parent: 50 }
+  - { Id: 61  , Name: "作平"   , Gender: 'M', Married: True, Spouse: '左申华', Parent: 50 }
   - { Id: 153 , Name: "秀文"   , Gender: 'F', Married: True, Spouse: '梅国勋', Parent: 50 }
 
   - { Id: 77  , Name: "作文"   , Parent: 51 }
@@ -1335,7 +1343,7 @@ Family:
   - { Id: 305 , Name: "雪勇"   , Parent: 68 }
   - { Id: 306 , Name: "雪刚"   , Gender: 'M', Married: True, Alias: '刘晓威', Parent: 68 }
   - { Id: 307 , Name: "雪飞"   , Parent: 68 }
-  - { Id: 308 , Name: "晓菊"   , Gender: 'F', Married: True, Spouse: '宁蒙'  , Parent: 68 }
+  - { Id: 308 , Name: "晓菊"   , Gender: 'F', Married: True, Spouse: '宁猛'  , Parent: 68 }
   - { Id: 309 , Name: "雪智"   , Parent: 69 }
   - { Id: 310 , Name: "和平"   , Gender: 'M', Married: True, Spouse: '李青禾', Parent: 70 }
   - { Id: 311 , Name: "俊"     , Gender: 'M', Married: True, Spouse: '黄培香', Parent: 70 }
@@ -1347,7 +1355,7 @@ Family:
   - { Id: 317 , Name: "王莉莉" , Parent: 73 }
 
   - { Id: 318 , Name: "黄俊祺" , Parent: 304 }
-  - { Id: 319 , Name: "松果"   , Parent: 310 }
+  - { Id: 319 , Name: "展翎"   , Parent: 310 }
   - { Id: 320 , Name: "健君"   , Parent: 311 }
   - { Id: 321 , Name: "雨婷"   , Parent: 311 }
 
