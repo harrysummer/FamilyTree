@@ -28,13 +28,13 @@ var drawNode = function(canvas, node) {
     var dx = node.x;
     var dy = node.y;
 
-    var g = canvas.group();
+    var link = canvas.link('/tree/' + node.data.id);
+    link.attr('xlink:href', '/tree/' + node.data.id);
+    var g = link.group();
     g.transform({
         x: dx,
         y: dy
     });
-
-    g.linkTo('/tree/' + node.data.id);
 
     var curY = vars.nodePaddingTop;
     if (node.data.name) {
