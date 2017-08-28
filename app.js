@@ -37,7 +37,7 @@ app.get('/tree/:id', function(req, res, next) {
     svg.deleteCanvas(canvas);
 
     res.render('index', {
-        title: tree.data.Family.Title,
+        title: tree.data.Family.Title + ' - ' + subtree.getRoot().name + "后代",
         svg: svgStr
     });
 });
@@ -54,7 +54,7 @@ app.get('/tree/:id/depth/:depth', function(req, res, next) {
     svg.deleteCanvas(canvas);
 
     res.render('index', {
-        title: tree.data.Family.Title,
+        title: tree.data.Family.Title + ' - ' + subtree.getRoot().name + "后代",
         svg: svgStr
     });
 });
