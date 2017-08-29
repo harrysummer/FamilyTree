@@ -1268,6 +1268,101 @@ Family:
   - { Id: 1535, Name: "允文", Parent: 1530 }
   - { Id: 1536, Name: "允禹", Parent: 1530 }
 
+  # （四世）宥  -  继但  -  时相  -  本迁
+  - { Id: 1537, Name: "得名", Parent: 466 }
+  - { Id: 1538, Name: "明钟", Parent: 1537 }
+  - { Id: 1539, Name: "三星", Parent: 1538 }
+  - { Id: 1540, Name: "三韬", Parent: 1538 }
+  - { Id: 1541, Name: "三乐", Parent: 1538 }
+  - { Id: 1542, Name: "三多", Parent: 1538 }
+  - { Id: 1543, Name: "三训", Parent: 1538 }
+  - { Id: 1544, Name: "谦起", Parent: 1539 }
+  - { Id: 1545, Name: "谦朋", Parent: 1540 }
+  - { Id: 1546, Name: "谦位", Parent: 1541 }
+  - { Id: 1547, Name: "谦湧", Parent: 1541 }
+  - { Id: 1548, Name: "谦学", Parent: 1543 }
+  - { Id: 1549, Name: "玺", Parent: 1548 }
+  - { Id: 1550, Name: "珧", Parent: 1548 }
+  - { Id: 1551, Name: "允智", Parent: 1549 }
+  - { Id: 1552, Name: "允义", Parent: 1549 }
+  - { Id: 1553, Name: "允信", Parent: 1550 }
+  - { Id: 1554, Name: "允仁", Parent: 1550 }
+  - { Id: 1555, Name: "允贤", Parent: 1550 }
+  - { Id: 1556, Name: "允德", Parent: 1550 }
+  - { Id: 1557, Name: "桂", Parent: 1544 }
+  - { Id: 1558, Name: "珝", Parent: 1545 }
+  - { Id: 1559, Name: "允岐", Parent: 1557 }
+  - { Id: 1560, Name: "允明", Parent: 1557 }
+  - { Id: 1561, Name: "允沛", Parent: 1558 }
+  - { Id: 1562, Name: "允公", Parent: 1558 }
+  - { Id: 1563, Name: "允崇", Parent: 1558 }
+  - { Id: 1564, Name: "允良", Parent: 1558 }
+  - { Id: 1565, Name: "允金", Parent: 1558 }
+  - { Id: 1566, Name: "允玉", Parent: 1558 }
+  - { Id: 1567, Name: "瑍", Parent: 1546 }
+  - { Id: 1568, Name: "琏", Parent: 1546 }
+  - { Id: 1569, Name: "琮", Parent: 1546 }
+  - { Id: 1570, Name: "玥", Parent: 1547 }
+  - { Id: 1571, Name: "允效", Parent: 1568 }
+  - { Id: 1572, Name: "允振", Parent: 1568 }
+  - { Id: 1573, Name: "允鳌", Parent: 1568 }
+  - { Id: 1574, Name: "允云", Parent: 1569 }
+  - { Id: 1575, Name: "允懿", Parent: 1569 }
+  - { Id: 1576, Name: "允炼", Parent: 1569 }
+  - { Id: 1577, Name: "允坚", Parent: 1569 }
+  - { Id: 1578, Name: "允昇", Parent: 1570 }
+  - { Id: 1579, Name: "允亮", Parent: 1570 }
+  - { Id: 1580, Name: "允泰", Parent: 1570 }
+
+  # 海祖  -  宥公支下  :  九至十三世（明信，明秀，明奇，明彦  ……  支下）
+  - { Id: 1581, Name: "三朋", Parent: 479 }
+  - { Id: 1582, Name: "三本", Parent: 479 }
+  - { Id: 1583, Name: "谦和", Parent: 1581 }
+  - { Id: 1584, Name: "三遗", Parent: 480 }
+  - { Id: 1585, Name: "三英", Parent: 480 }
+  - { Id: 1586, Name: "三友", Parent: 504 }
+  - { Id: 1587, Name: "三闱", Parent: 504 }
+  - { Id: 1588, Name: "谦才", Parent: 1587 }
+  - { Id: 1589, Name: "玱", Parent: 1588 }
+  - { Id: 1590, Name: "三凤", Parent: 505 }
+  - { Id: 1591, Name: "三祝", Parent: 506 }
+  - { Id: 1592, Name: "三握", Parent: 506 }
+  - { Id: 1593, Name: "谦禄", Parent: 1591 }
+  - { Id: 1594, Name: "谦武", Parent: 1591 }
+  - { Id: 1595, Name: "楚珍", Parent: 1593 }
+  - { Id: 1596, Name: "珆", Parent: 1594 }
+  - { Id: 1597, Name: "谦敬", Parent: 1592 }
+  - { Id: 1598, Name: "玳", Parent: 1597 }
+  - { Id: 1599, Name: "允年", Parent: 1598 }
+  - { Id: 1600, Name: "三闿", Parent: 507 }
+  - { Id: 1601, Name: "谦元", Parent: 1600 }
+  - { Id: 1602, Name: "谦永", Parent: 1600 }
+  - { Id: 1603, Name: "谦爵", Parent: 1600 }
+  - { Id: 1604, Name: "璝", Parent: 1602 }
+  - { Id: 1605, Name: "琥", Parent: 1603 }
+  - { Id: 1606, Name: "允松", Parent: 1604 }
+  - { Id: 1607, Name: "琇", Parent: 1601 }
+  - { Id: 1608, Name: "璔", Parent: 1601 }
+  - { Id: 1609, Name: "珊", Parent: 1601 }
+  - { Id: 1610, Name: "允宝", Parent: 1607 }
+  - { Id: 1611, Name: "允昌", Parent: 1608 }
+  - { Id: 1612, Name: "允苍", Parent: 1608 }
+  - { Id: 1613, Name: "允起", Parent: 1609 }
+  - { Id: 1614, Name: "允惠", Parent: 1609 }
+  - { Id: 1615, Name: "三雄", Parent: 509 }
+  - { Id: 1616, Name: "三闾", Parent: 509 }
+  - { Id: 1617, Name: "三厚", Parent: 509 }
+  - { Id: 1618, Name: "谦躬", Parent: 1615 }
+  - { Id: 1619, Name: "谦鹏", Parent: 1616 }
+  - { Id: 1620, Name: "谦凤", Parent: 1616 }
+  - { Id: 1621, Name: "谦进", Parent: 1617 }
+  - { Id: 1622, Name: "梓", Parent: 1618, Adopted: "T" }
+  - { Id: 1623, Name: "梓", Parent: 1619 }
+  - { Id: 1624, Name: "宪", Parent: 1620 }
+  - { Id: 1625, Name: "允时", Parent: 1622 }
+  - { Id: 1626, Name: "允功", Parent: 1623 }
+  - { Id: 1627, Name: "允衡", Parent: 1624 }
+
   - { Id: 30  , Name: "恭貌"   , Parent: 1269 }
 
   - { Id: 31  , Name: "业"     , Parent: 30 }
