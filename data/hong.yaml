@@ -1026,7 +1026,7 @@ Family:
   - { Id: 1304, Name: "三加"   , Parent: 431 }
   - { Id: 1305, Name: "三煌"   , Parent: 432 }
   - { Id: 1306, Name: "三吴"   , Parent: 432 }
-  - { Id: 1307, Name: "日⿰日⿱山文"   , Parent: 1296 }
+  - { Id: 1307, Name: "日㫞"   , Parent: 1296 }
   - { Id: 1308, Name: "日曈"   , Parent: 1296 }
   - { Id: 1309, Name: "日暄"   , Parent: 1296 }
   - { Id: 1310, Name: "日暲"   , Parent: 1296 }
