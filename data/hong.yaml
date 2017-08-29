@@ -1363,6 +1363,76 @@ Family:
   - { Id: 1626, Name: "允功", Parent: 1623 }
   - { Id: 1627, Name: "允衡", Parent: 1624 }
 
+  # 海  -  完华公支下，明仲，明远，明达  ……  （  9  至  13  世）
+  - { Id: 1628, Name: "三令", Parent: 510 }
+  - { Id: 1629, Name: "三公", Parent: 510 }
+  - { Id: 1630, Name: "谦龙", Parent: 1628 }
+  - { Id: 1631, Name: "谦善", Parent: 1628 }
+  - { Id: 1632, Name: "珄"  , Parent: 1631 }
+  - { Id: 1633, Name: "谦逊", Parent: 1629 }
+  - { Id: 1634, Name: "谦礼", Parent: 1629 }
+  - { Id: 1635, Name: "谦德", Parent: 1629 }
+  - { Id: 1636, Name: "璠"  , Parent: 1633 }
+  - { Id: 1637, Name: "三极", Parent: 511 }
+  - { Id: 1638, Name: "三献", Parent: 511 }
+  - { Id: 1639, Name: "谦仁", Parent: 1637 }
+  - { Id: 1640, Name: "谦义", Parent: 1637 }
+  - { Id: 1641, Name: "梦虎", Parent: 1639 }
+  - { Id: 1642, Name: "梦羆", Parent: 1639 }
+  - { Id: 1643, Name: "梦熊", Parent: 1639 }
+  - { Id: 1644, Name: "允梅", Parent: 1641 }
+  - { Id: 1645, Name: "谦履", Parent: 1638 }
+  - { Id: 1646, Name: "梦雄", Parent: 1645 }
+  - { Id: 1647, Name: "梦龄", Parent: 1645 }
+  - { Id: 1648, Name: "梦景", Parent: 1645 }
+  - { Id: 1649, Name: "允周", Parent: 1646 }
+  - { Id: 1650, Name: "允占", Parent: 1647 }
+  - { Id: 1651, Name: "三槐", Parent: 512 }
+  - { Id: 1652, Name: "谦盛", Parent: 1651 }
+  - { Id: 1653, Name: "谦彝", Parent: 1651 }
+  - { Id: 1654, Name: "梦楠", Parent: 1652 }
+  - { Id: 1655, Name: "允雨", Parent: 1654 }
+  - { Id: 1656, Name: "允荣", Parent: 1654 }
+  - { Id: 1657, Name: "三杰", Parent: 514 }
+  - { Id: 1658, Name: "三泰", Parent: 514 }
+  - { Id: 1659, Name: "谦祝", Parent: 1657 }
+  - { Id: 1660, Name: "谦顺", Parent: 1657 }
+  - { Id: 1661, Name: "谦璧", Parent: 1657 }
+  - { Id: 1662, Name: "谦华", Parent: 1657 }
+  - { Id: 1663, Name: "谦基", Parent: 1657 }
+  - { Id: 1664, Name: "琼"  , Parent: 1661 }
+  - { Id: 1665, Name: "允连", Parent: 1664 }
+  - { Id: 1666, Name: "玲"  , Parent: 1663 }
+  - { Id: 1667, Name: "珏"  , Parent: 1663 }
+  - { Id: 1668, Name: "允科", Parent: 1667 }
+  - { Id: 1669, Name: "谦贵", Parent: 1658 }
+  - { Id: 1670, Name: "谦言", Parent: 1658 }
+  - { Id: 1671, Name: "谦荣", Parent: 1658 }
+  - { Id: 1672, Name: "三俊", Parent: 515 }
+  - { Id: 1673, Name: "三科", Parent: 515 }
+  - { Id: 1674, Name: "三楚", Parent: 517 }
+  - { Id: 1675, Name: "谦举", Parent: 1674 }
+  - { Id: 1676, Name: "谦文", Parent: 1674 }
+  - { Id: 1677, Name: "玫"  , Parent: 1675 }
+  - { Id: 1678, Name: "珑"  , Parent: 1675 }
+  - { Id: 1679, Name: "玠"  , Parent: 1675 }
+  - { Id: 1680, Name: "允選", Parent: 1678 }
+  - { Id: 1681, Name: "允贵", Parent: 1678 }
+  - { Id: 1682, Name: "允寿", Parent: 1678 }
+  - { Id: 1683, Name: "允龄", Parent: 1678 }
+  - { Id: 1684, Name: "寿"  , Parent: 1676 }
+  - { Id: 1685, Name: "禄"  , Parent: 1676 }
+  - { Id: 1686, Name: "玉"  , Parent: 1676 }
+  - { Id: 1687, Name: "允全", Parent: 1679 }
+  - { Id: 1688, Name: "允升", Parent: 1679 }
+  - { Id: 1689, Name: "允进", Parent: 1684 }
+  - { Id: 1690, Name: "允高", Parent: 1684 }
+  - { Id: 1691, Name: "允苾", Parent: 1685 }
+  - { Id: 1692, Name: "允芷", Parent: 1685 }
+  - { Id: 1693, Name: "允山", Parent: 1686 }
+  - { Id: 1694, Name: "允仪", Parent: 1686 }
+
+
   - { Id: 30  , Name: "恭貌"   , Parent: 1269 }
 
   - { Id: 31  , Name: "业"     , Parent: 30 }
