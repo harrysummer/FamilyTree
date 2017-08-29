@@ -7,7 +7,7 @@ var measureNode = function(canvas, node) {
     let width = 0;
     let height = 0;
     if (node.name) {
-        var text = g.text(node.name).attr('font-family', 'Kai').attr('font-size', '20');
+        var text = g.text(node.name).attr('font-family', 'Kai').attr('font-size', '24');
         var bbox = text.bbox();
         width = Math.max(width, bbox.width);
         height += bbox.height;

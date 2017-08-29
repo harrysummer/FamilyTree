@@ -27,7 +27,7 @@ function subset(input, text, outputPath, fmt) {
         let process = cp.spawn(cmd, args, {cwd: __dirname});
         process.stdout.on('data', (data)=>console.log(data.toString('utf8')));
         process.stderr.on('data', (data)=>console.error(data.toString('utf8')));
-        process.on('exit', (code)=> {
+        process.on('exit', (code) => {
             if (code == 0) {
                 console.log(`${output} font created successfully`);
                 resolve();
@@ -38,38 +38,78 @@ function subset(input, text, outputPath, fmt) {
     });
 }
 
+function OTF2TTF(input, output) {
+    return new Promise(function (resolve, reject) {
+        let process = cp.spawn('fontforge', [
+            '-lang=ff',
+            '-c', 'Open($1);CIDFlatten();Generate($2);Quit(0);',
+            input,
+            output
+        ], {cwd: __dirname});
+        process.stdout.on('data', (data)=>console.log(data.toString('utf8')));
+        process.stderr.on('data', (data)=>console.error(data.toString('utf8')));
+        process.on('exit', (code) => {
+            if (code == 0) {
+                console.log(`${output} created successfully`);
+                resolve();
+            } else {
+                reject(`${output} creation failed`);
+            }
+        });
+    });
+}
+
 function makeFont(text, fontName, outputPath) {
     const inputFile = `${__dirname}/data/${fontName}`;
     const ext = path.extname(fontName);
     const baseName = path.basename(fontName, ext);
+    const outputFile = path.join(outputPath,  baseName + '.ttf');
 
-    var p;
+    var p = Promise.resolve();
     if (ext === '.otf' || ext === '.OTF') {
-        p = subset(inputFile, text, outputPath, 'otf')
-            .then(() => {
-                const input = path.join(outputPath, baseName + '.otf');
-                const output = path.join(outputPath,  baseName + '.ttf');
-                let process = cp.spawn('fontforge', [
-                    '-lang=ff',
-                    '-c', 'Open($1);CIDFlatten();Generate($2);Quit(0);',
-                    input,
-                    output
-                ], {cwd: __dirname});
-                process.stdout.on('data', (data)=>console.log(data.toString('utf8')));
-                process.stderr.on('data', (data)=>console.error(data.toString('utf8')));
-                process.on('exit', (code)=> {
-                    if (code == 0)
-                        console.log(`${output} created successfully`);
-                    else
-                        console.error(`${output} creation failed`);
-                });
-            });
+        p = p
+            .then(() => subset(inputFile, text, outputPath, 'otf'))
+            .then(() => OTF2TTF(path.join(outputPath, baseName + '.otf'), path.join(outputPath, baseName + '.ttf')));
     } else {
-        p = subset(inputFile, text, outputPath, 'ttf')
+        p = p.then(() => subset(inputFile, text, outputPath, 'ttf'));
     }
     return p
-        .then(() => subset(inputFile, text, outputPath, 'woff'))
-        .then(() => subset(inputFile, text, outputPath, 'woff2'));
+        .then(() => subset(path.join(outputPath, baseName + '.ttf'), text, outputPath, 'woff'))
+        .then(() => subset(path.join(outputPath, baseName + '.ttf'), text, outputPath, 'woff2'));
+}
+
+function mergeAndMakeFont(text, fontNames, outputPath, outputName) {
+    return Promise.mapSeries(fontNames, fontName => {
+        const inputFile = `${__dirname}/data/${fontName}`;
+        const ext = path.extname(fontName);
+        const baseName = path.basename(fontName, ext);
+        const outputFile = path.join(outputPath,  baseName + '.ttf');
+        var p = Promise.resolve();
+        if (ext === '.otf' || ext === '.OTF') {
+            p = p
+                .then(() => subset(inputFile, text, outputPath, 'otf'))
+                .then(() => OTF2TTF(path.join(outputPath, baseName + '.otf'), path.join(outputPath, baseName + '.ttf')));
+        } else {
+            p = p.then(() => subset(inputFile, text, outputPath, 'ttf'));
+        }
+        return p.then(() => path.join(outputPath, baseName + '.ttf'));
+    })
+    .then(files => new Promise((resolve, reject) => {
+        let process = cp.spawn('pyftmerge', files, {cwd: __dirname});
+        process.stdout.on('data', (data)=>console.log(data.toString('utf8')));
+        process.stderr.on('data', (data)=>console.error(data.toString('utf8')));
+        process.on('exit', (code) => {
+            if (code == 0) {
+                console.log(`font merge successfully`);
+                resolve();
+            } else {
+                reject(`font merge failed`);
+            }
+        });
+    }))
+    .then(() => fs.renameSync(path.join(__dirname, 'merged.ttf'), path.join(outputPath, outputName + '.ttf')))
+    .then(() => subset(path.join(outputPath, outputName + '.ttf'), text, outputPath, 'woff'))
+    .then(() => subset(path.join(outputPath, outputName + '.ttf'), text, outputPath, 'woff2'));
 }
 
 function addStringToSet(S, str) {
@@ -129,7 +169,8 @@ let otherTexts = convertSetToString(otherTextSet);
 
 makeFont(titleTexts, 'SourceHanSerifCN-Bold.otf', __dirname + '/dist/fonts')
     .then(() => makeFont(otherTexts, 'SourceHanSansSC-Regular.otf', __dirname + '/dist/fonts'))
-    .then(() => makeFont(nameTexts, 'FZKTK.TTF', __dirname + '/dist/fonts'))
+    //.then(() => makeFont(nameTexts, 'FZKTK.TTF', __dirname + '/dist/fonts'))
+    .then(() => mergeAndMakeFont(nameTexts, ['TH-Khaai-TP0.ttf','TH-Khaai-TP2.ttf'], __dirname + '/dist/fonts', 'TH-Khaai'))
     .catch(e => {
         console.error(e);
     });

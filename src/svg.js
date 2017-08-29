@@ -38,7 +38,7 @@ var drawNode = function(canvas, node) {
 
     var curY = vars.nodePaddingTop;
     if (node.data.name) {
-        var text = g.text(node.data.name).attr('font-family', 'Kai').attr('font-size', '20').attr('text-anchor', 'middle').move(node.data.width / 2, curY);
+        var text = g.text(node.data.name).attr('font-family', 'Kai').attr('font-size', '24').attr('text-anchor', 'middle').move(node.data.width / 2, curY);
         curY += text.bbox().height;
     }
     if (node.data.note) {

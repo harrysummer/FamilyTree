@@ -59,7 +59,7 @@ Family:
   - { Id: 370 , Name: "寧"     , Parent: 355 }
   - { Id: 371 , Name: "完华"   , Parent: 357 }
   - { Id: 372 , Name: "清"     , Parent: 358 }
-  - { Id: 373 , Name: "⿰王巳"     , Parent: 358 }
+  - { Id: 373 , Name: "𤣱"     , Parent: 358 }
   - { Id: 374 , Name: "玮"     , Parent: 358 }
   - { Id: 375 , Name: "铣"     , Parent: 359 }
 
@@ -283,7 +283,7 @@ Family:
   - { Id: 656 , Name: "元礼"   , Parent: 630 }
   - { Id: 657 , Name: "元银"   , Parent: 631 }
   - { Id: 658 , Name: "元宾"   , Parent: 631 }
-  - { Id: 659 , Name: "元⿰王巳"   , Parent: 632 }
+  - { Id: 659 , Name: "元𤣱"   , Parent: 632 }
   - { Id: 660 , Name: "元金"   , Parent: 632 }
   - { Id: 661 , Name: "元玉"   , Parent: 632 }
   - { Id: 662 , Name: "元时"   , Parent: 633 }
@@ -374,7 +374,7 @@ Family:
 
   # 九世
   - { Id: 422 , Name: "明科"   , Parent: 16 }
-  - { Id: 423 , Name: "明⿰王巳"   , Parent: 16 }
+  - { Id: 423 , Name: "明𤣱"   , Parent: 16 }
   - { Id: 424 , Name: "明纯"   , Parent: 17 }
   - { Id: 425 , Name: "明良"   , Parent: 17 }
   - { Id: 19  , Name: "明榜"   , Parent: 18 }
@@ -784,7 +784,7 @@ Family:
   - { Id: 902 , Name: "玙"   , Parent: 844 }
   - { Id: 903 , Name: "珮"   , Parent: 845 }
   - { Id: 904 , Name: "璠"   , Parent: 846 }
-  - { Id: 905 , Name: "⿰王⿲片一爿"   , Parent: 846 }
+  - { Id: 905 , Name: "⿰王𣶒"   , Parent: 846 }
   - { Id: 906 , Name: "瑸"   , Parent: 846 }
   - { Id: 907 , Name: "琂"   , Parent: 846 }
   - { Id: 908 , Name: "琮"   , Parent: 847 }
@@ -797,7 +797,7 @@ Family:
   - { Id: 915 , Name: "璥"   , Parent: 851 }
   - { Id: 916 , Name: "璿"   , Parent: 852 }
   - { Id: 917 , Name: "瓆"   , Parent: 852 }
-  - { Id: 918 , Name: "⿰王岡"   , Parent: 854 }
+  - { Id: 918 , Name: "𤦇"   , Parent: 854 }
   - { Id: 919 , Name: "标"   , Parent: 855 }
   - { Id: 920 , Name: "楷"   , Parent: 855 }
   - { Id: 921 , Name: "琚"   , Parent: 856 }
