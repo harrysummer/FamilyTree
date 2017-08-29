@@ -8,6 +8,7 @@ const window = require('svgdom')
     })
     .preloadFonts();
 const vars = require('./variables');
+const util = require('./util');
 
 
 const SVG = svgjs(window);
@@ -131,19 +132,6 @@ var drawChildrenLink = function(canvas, node, layoutInfo) {
     }
 };
 
-var numberToChinese = function(number) {
-    var base = "零一二三四五六七八九";
-    var exp10 = "十百千";
-    var exp1000 = "万亿";
-    if (number < 10) {
-        return base[number];
-    } else if (number < 20) {
-        return exp10[0] + (number % 10 ? base[number % 10] : "");
-    } else if (number < 100) {
-        return base[Math.floor(number / 10)] + numberToChinese(10 + number % 10);
-    } else return "ERR";
-};
-
 var drawGeneration = function(canvas, layoutInfo) {
     var offset = layoutInfo.genOffset;
     for (var i = 0; i < offset.length - 1; i++) {
@@ -151,7 +139,7 @@ var drawGeneration = function(canvas, layoutInfo) {
         var x = 0.5 * (offset[i] + offset[i + 1]);
         var y = firstNode.y - 15;
         var gen = i + layoutInfo.tree.getRoot().depth;
-        var text = canvas.text((gen==0 ? "始祖" : numberToChinese(gen+1) + "世")).attr('font-family', 'Hei').attr('font-size', '10').attr('text-anchor', 'middle').move(x, -50);
+        var text = canvas.text(util.zhGeneration(gen)).attr('font-family', 'Hei').attr('font-size', '14').attr('text-anchor', 'middle').move(x, -50);
         var yEnd = text.bbox().height - 50;
         canvas.line(x, y, x, yEnd).attr('stroke', 'black').attr('stroke-width', '1').attr('stroke-dasharray', '2, 8');
     }
@@ -190,13 +178,46 @@ var drawTitle = function(canvas, layoutInfo, opts) {
     }
 };
 
+var drawToolbar = function(canvas, layoutInfo, opts) {
+    if (opts && opts.drawToolbar) {
+        var links = [
+            { text: '回首页',       url: '/' },
+            { text: '上溯一代',     url: '/tree/' + layoutInfo.tree.getRoot().parentId },
+            { text: '显示到七世孙', url: '/tree/' + layoutInfo.tree.getRoot().id + '/depth/7' },
+            { text: '显示所有后代', url: '/tree/' + layoutInfo.tree.getRoot().id }
+        ];
+        if (layoutInfo.tree.getRoot().depth === 0) {
+            links.splice(1, 1);
+        }
+        var curX = 0;
+        for (var id in links) {
+            var text = links[id].text;
+            var url = links[id].url;
+            var link = canvas.link(url).attr('xlink:href', url);
+            var g = link.group();
+            g.move(curX, 0);
+            var text = canvas.text(text).attr('font-family', 'Hei').attr('font-size', '20').attr('text-anchor', 'middle');
+            var bbox = text.bbox();
+            text.move(bbox.width / 2 + 5, 5);
+            var rect = g.rect(bbox.width + 10, bbox.height + 10).attr('stroke', 'black').attr('stroke-width', '3').attr('fill', 'white');
+            g.add(text);
+            curX += bbox.width + 20;
+        }
+    }
+}
+
 var drawLayout = function(canvas, layoutInfo, opts) {
     var titleBar = canvas.group();
     drawTitle(titleBar, layoutInfo, opts);
+    var titleBBox = titleBar.rbox();
+
+    var toolbar = canvas.group();
+    toolbar.move(0, titleBBox.height);
+    drawToolbar(toolbar, layoutInfo, opts);
+    var toolBBox = toolbar.rbox();
 
     var content = canvas.group();
-    var titleBBox = titleBar.rbox();
-    content.move(0, titleBBox.height + 50);
+    content.move(0, titleBBox.height + toolBBox.height + 100);
     layoutInfo.forEach(node => {
         drawNode(content, node);
         drawChildrenLink(content, node, layoutInfo);
@@ -204,8 +225,8 @@ var drawLayout = function(canvas, layoutInfo, opts) {
 
     drawGeneration(content, layoutInfo);
 
-    canvas.attr("width", layoutInfo.size.width);
-    canvas.attr("height", layoutInfo.size.height + titleBBox.height + 50);
+    canvas.attr("width", Math.max(layoutInfo.size.width, titleBBox.width, toolBBox.width));
+    canvas.attr("height", layoutInfo.size.height + titleBBox.height + toolBBox.height + 100);
 };
 
 module.exports = {

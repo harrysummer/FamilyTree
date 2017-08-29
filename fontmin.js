@@ -151,7 +151,7 @@ for (let i = 0; i < data.Family.Members.length; ++i) {
 let nameTexts = convertSetToString(nameTextSet);
 
 let otherTextSet = {};
-otherTextSet = addStringToSet(otherTextSet, "始祖一二三四五六七八九十世夫妻元继嗣祧养");
+otherTextSet = addStringToSet(otherTextSet, "始祖一二三四五六七八九十世夫妻元继嗣祧养回首页上溯一代显示到七世孙显示所有后代");
 otherTextSet = addStringToSet(otherTextSet, data.Family.Subtitle);
 for (let i = 0; i < data.Family.Members.length; ++i) {
     let spouse = data.Family.Members[i].Spouse;

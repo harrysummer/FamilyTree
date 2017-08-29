@@ -2,6 +2,7 @@ var express = require('express');
 var Tree = require('./src/tree');
 var layout = require('./src/layout');
 var svg = require('./src/svg');
+var util = require('./src/util');
 
 var tree = Tree.parseDataFile(__dirname + '/data/hong.yaml');
 
@@ -31,13 +32,14 @@ app.get('/tree/:id', function(req, res, next) {
     var layoutInfo = layout.layoutTree(canvas, subtree);
     svg.drawLayout(canvas, layoutInfo, {
         drawTitle: false,
-        drawSubtitle: false
+        drawSubtitle: false,
+        drawToolbar: true
     });
     var svgStr = canvas.svg();
     svg.deleteCanvas(canvas);
 
     res.render('index', {
-        title: tree.data.Family.Title + ' - ' + subtree.getRoot().name + "后代",
+        title: tree.data.Family.Title + ' - ' + util.zhGeneration(subtree.getRoot().depth) + subtree.getRoot().name + "公后代",
         svg: svgStr
     });
 });
@@ -48,30 +50,14 @@ app.get('/tree/:id/depth/:depth', function(req, res, next) {
     var layoutInfo = layout.layoutTree(canvas, subtree);
     svg.drawLayout(canvas, layoutInfo, {
         drawTitle: false,
-        drawSubtitle: false
+        drawSubtitle: false,
+        drawToolbar: true
     });
     var svgStr = canvas.svg();
     svg.deleteCanvas(canvas);
 
     res.render('index', {
-        title: tree.data.Family.Title + ' - ' + subtree.getRoot().name + "后代",
-        svg: svgStr
-    });
-});
-
-app.get('/depth/:depth', function(req, res, next) {
-    var subtree = Tree.subtree(tree, tree.getRoot().id, parseInt(req.params.depth));
-    var canvas = svg.createCanvas();
-    var layoutInfo = layout.layoutTree(canvas, subtree);
-    svg.drawLayout(canvas, layoutInfo, {
-        drawTitle: false,
-        drawSubtitle: false
-    });
-    var svgStr = canvas.svg();
-    svg.deleteCanvas(canvas);
-
-    res.render('index', {
-        title: tree.data.Family.Title,
+        title: tree.data.Family.Title + ' - ' + util.zhGeneration(subtree.getRoot().depth) + subtree.getRoot().name + "公后代（" + util.zhNumber(parseInt(req.params.depth)) + "代以内）",
         svg: svgStr
     });
 });
