@@ -48,6 +48,7 @@ app.get('/tree/:id/depth/:depth', function(req, res, next) {
     var subtree = Tree.subtree(tree, parseInt(req.params.id), parseInt(req.params.depth));
     var canvas = svg.createCanvas();
     var layoutInfo = layout.layoutTree(canvas, subtree);
+    layoutInfo.depthLimit = parseInt(req.params.depth);
     svg.drawLayout(canvas, layoutInfo, {
         drawTitle: false,
         drawSubtitle: false,

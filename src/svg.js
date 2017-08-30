@@ -25,12 +25,13 @@ var deleteCanvas = function(canvas) {
     document.removeChild(canvas.parent);
 }
 
-var drawNode = function(canvas, node) {
+var drawNode = function(canvas, node, layoutInfo) {
     var dx = node.x;
     var dy = node.y;
 
-    var link = canvas.link('/tree/' + node.data.id);
-    link.attr('xlink:href', '/tree/' + node.data.id);
+    var url = '/tree/' + node.data.id + (layoutInfo.depthLimit ? '/depth/' + layoutInfo.depthLimit : '');
+    var link = canvas.link(url);
+    link.attr('xlink:href', url);
     var g = link.group();
     g.transform({
         x: dx,
@@ -182,7 +183,7 @@ var drawToolbar = function(canvas, layoutInfo, opts) {
     if (opts && opts.drawToolbar) {
         var links = [
             { text: '回首页',       url: '/' },
-            { text: '上溯一代',     url: '/tree/' + layoutInfo.tree.getRoot().parentId },
+            { text: '上溯一代',     url: '/tree/' + layoutInfo.tree.getRoot().parentId + (layoutInfo.depthLimit ? '/depth/' + layoutInfo.depthLimit : '') },
             { text: '显示到五世孙', url: '/tree/' + layoutInfo.tree.getRoot().id + '/depth/5' },
             { text: '显示到七世孙', url: '/tree/' + layoutInfo.tree.getRoot().id + '/depth/7' },
             { text: '显示所有后代', url: '/tree/' + layoutInfo.tree.getRoot().id }
@@ -220,7 +221,7 @@ var drawLayout = function(canvas, layoutInfo, opts) {
     var content = canvas.group();
     content.move(0, titleBBox.height + toolBBox.height + 100);
     layoutInfo.forEach(node => {
-        drawNode(content, node);
+        drawNode(content, node, layoutInfo);
         drawChildrenLink(content, node, layoutInfo);
     });
 
