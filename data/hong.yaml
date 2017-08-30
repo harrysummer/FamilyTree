@@ -1471,11 +1471,11 @@ Family:
   - { Id: 1730, Name: "让来", Parent: 1727, Note: "长子过继克功" }
   - { Id: 1731, Name: "克敏", Parent: 1722 }
   - { Id: 1732, Name: "让友", Parent: 1731 }
-  - { Id: 1733, Name: "世承", Parent: 1732 }
+  - { Id: 1733, Name: "世承", Parent: 1732, Note: "生父存疑" }
   - { Id: 1734, Name: "让兰", Parent: 1731, Note: "过继克惠" }
   - { Id: 1735, Name: "克惠", Parent: 1722 }
   - { Id: 1736, Name: "让兰", Parent: 1735, Adopted: "J" }
-  - { Id: 1737, Name: "世承", Parent: 1736 }
+  - { Id: 1737, Name: "世承", Parent: 1736, Note: "生父存疑，田埠分 王字号谱" }
   - { Id: 1738, Name: "恭吉", Parent: 937 }
   - { Id: 1739, Name: "恭详", Parent: 937 }
   - { Id: 1740, Name: "恭鑑", Parent: 939 }
@@ -1594,6 +1594,152 @@ Family:
   - { Id: 1851, Name: "作康", Parent: 1830 }
   - { Id: 1852, Name: "作泰", Parent: 1830 }
   - { Id: 1853, Name: "作兴", Parent: 1837 }
+
+  # 祥—政—子芳、子茂支下
+  - { Id: 1854, Name: "恭廉", Parent: 961 }
+  - { Id: 1855, Name: "恭朝", Parent: 962 }
+  - { Id: 1856, Name: "恭起", Parent: 962 }
+  - { Id: 1857, Name: "恭清", Parent: 963, Adopted: "J" }
+  - { Id: 1858, Name: "恭清", Parent: 964, Note: "过继彩章" }
+  - { Id: 1859, Name: "恭慈", Parent: 964 }
+  - { Id: 1860, Name: "恭玖", Parent: 967 }
+  - { Id: 1861, Name: "鼎甲", Parent: 970, Adopted: "T" }
+  - { Id: 1862, Name: "鼎甲", Parent: 971 }
+  - { Id: 1863, Name: "鼎昇", Parent: 972 }
+  - { Id: 1864, Name: "鼎治", Parent: 972 }
+  - { Id: 1865, Name: "鼎铸", Parent: 973 }
+  - { Id: 1866, Name: "鼎有", Parent: 973 }
+  - { Id: 1867, Name: "鼎向", Parent: 973 }
+  - { Id: 1868, Name: "鼎鼒", Parent: 973 }
+  - { Id: 1869, Name: "克荣", Parent: 1857, Adopted: "J" }
+  - { Id: 1870, Name: "克诚", Parent: 1859 }
+  - { Id: 1871, Name: "克荣", Parent: 1859, Note: "过继恭清" }
+  - { Id: 1872, Name: "克簪", Parent: 1861 }
+  - { Id: 1873, Name: "克缨", Parent: 1862 }
+  - { Id: 1874, Name: "克财", Parent: 1863 }
+  - { Id: 1875, Name: "克勋", Parent: 1865 }
+  - { Id: 1876, Name: "克忠", Parent: 1866 }
+  - { Id: 1877, Name: "克华", Parent: 1867, Adopted: "J", Note: "鼎铸次子" }
+  - { Id: 1878, Name: "克善", Parent: 1868 }
+  - { Id: 1879, Name: "让官", Parent: 1869, Adopted: "T" }
+  - { Id: 1880, Name: "让官", Parent: 1870 }
+  - { Id: 1881, Name: "让义", Parent: 1872 }
+  - { Id: 1882, Name: "让题", Parent: 1872 }
+  - { Id: 1883, Name: "让盛", Parent: 1873 }
+  - { Id: 1884, Name: "让顺", Parent: 1873 }
+  - { Id: 1885, Name: "让绪", Parent: 1873 }
+  - { Id: 1886, Name: "让泽", Parent: 1874 }
+  - { Id: 1887, Name: "让本", Parent: 1875 }
+  - { Id: 1888, Name: "让煜", Parent: 1876 }
+  - { Id: 1889, Name: "让儒", Parent: 1877 }
+  - { Id: 1890, Name: "让萱", Parent: 1878 }
+  - { Id: 1891, Name: "世远", Parent: 1881 }
+  - { Id: 1892, Name: "世恒", Parent: 1881 }
+  - { Id: 1893, Name: "世友", Parent: 1881, Note: "过继让题" }
+  - { Id: 1894, Name: "世友", Parent: 1882, Adopted: "J" }
+  - { Id: 1895, Name: "世访", Parent: 1883 }
+  - { Id: 1896, Name: "世谅", Parent: 1884, Adopted: True, Note: "让盛三子" }
+  - { Id: 1897, Name: "世谅", Parent: 1885, Adopted: True, Note: "让盛三子" }
+  - { Id: 1898, Name: "世泽", Parent: 1886, Adopted: True, Note: "让盛长子" }
+  - { Id: 1899, Name: "世诚", Parent: 1887 }
+  - { Id: 1900, Name: "世訢", Parent: 1888 }
+  - { Id: 1901, Name: "世讲", Parent: 1888 }
+  - { Id: 1902, Name: "世记", Parent: 1889 }
+  - { Id: 1903, Name: "世诂", Parent: 1889 }
+  - { Id: 1904, Name: "世谋", Parent: 1889 }
+  - { Id: 1905, Name: "世谕", Parent: 1890 }
+  - { Id: 1906, Name: "德海", Parent: 1891, Adopted: "T" }
+  - { Id: 1907, Name: "德海", Parent: 1892 }
+  - { Id: 1908, Name: "德海", Parent: 1894, Adopted: "T" }
+  - { Id: 1909, Name: "德成", Parent: 1895 }
+  - { Id: 1910, Name: "德俊", Parent: 1899 }
+  - { Id: 1911, Name: "德铸", Parent: 1900 }
+  - { Id: 1912, Name: "德勋", Parent: 1901 }
+  - { Id: 1913, Name: "德俊", Parent: 1902 }
+
+  # 祥—政—子茂、子金支下
+  - { Id: 1914, Name: "鼎成", Parent: 974 }
+  - { Id: 1915, Name: "鼎重", Parent: 974 }
+  - { Id: 1916, Name: "恭芬", Parent: 977, Adopted: True, Note: "金相长子" }
+  - { Id: 1917, Name: "恭仪", Parent: 978 }
+  - { Id: 1918, Name: "恭芬", Parent: 979, Adopted: True, Note: "金相长子" }
+  - { Id: 1919, Name: "恭仪", Parent: 980, Adopted: "T", Note: "金相之子" }
+  - { Id: 1920, Name: "恭芳", Parent: 981, Adopted: "T" }
+  - { Id: 1921, Name: "恭芳", Parent: 982 }
+  - { Id: 1922, Name: "鼎助", Parent: 983 }
+  - { Id: 1923, Name: "鼎茂", Parent: 985 }
+  - { Id: 1924, Name: "鼎朝", Parent: 985 }
+  - { Id: 1925, Name: "恭志", Parent: 988 }
+  - { Id: 1926, Name: "恭友", Parent: 988 }
+  - { Id: 1927, Name: "恭薰", Parent: 989 }
+  - { Id: 1928, Name: "恭蓬", Parent: 989 }
+  - { Id: 1929, Name: "恭正", Parent: 989 }
+  - { Id: 1930, Name: "克刚", Parent: 1914 }
+  - { Id: 1931, Name: "克悦", Parent: 1916 }
+  - { Id: 1932, Name: "克灼", Parent: 1917, Note: "田埠分 武子号谱" }
+  - { Id: 1933, Name: "克尧", Parent: 1918 }
+  - { Id: 1934, Name: "克灼", Parent: 1919 }
+  - { Id: 1935, Name: "克银", Parent: 1920 }
+  - { Id: 1936, Name: "克银", Parent: 1921 }
+  - { Id: 1937, Name: "克鑫", Parent: 1927 }
+  - { Id: 1938, Name: "克钰", Parent: 1928, Adopted: "J", Note: "恭薰之子" }
+  - { Id: 1939, Name: "让炳", Parent: 1930 }
+  - { Id: 1940, Name: "让明", Parent: 1931 }
+  - { Id: 1941, Name: "让灵", Parent: 1931 }
+  - { Id: 1942, Name: "让廉", Parent: 1932 }
+  - { Id: 1943, Name: "让发", Parent: 1933 }
+  - { Id: 1944, Name: "让权", Parent: 1933 }
+  - { Id: 1945, Name: "让廉", Parent: 1934 }
+  - { Id: 1946, Name: "让元", Parent: 1935 }
+  - { Id: 1947, Name: "让友", Parent: 1936 }
+  - { Id: 1948, Name: "让梨", Parent: 1937 }
+  - { Id: 1949, Name: "让德", Parent: 1938, Adopted: "J", Note: "克和长子" }
+  - { Id: 1950, Name: "世谱", Parent: 1939 }
+  - { Id: 1951, Name: "世诩", Parent: 1939 }
+  - { Id: 1952, Name: "世评", Parent: 1939 }
+  - { Id: 1953, Name: "世询", Parent: 1939 }
+  - { Id: 1954, Name: "世荣", Parent: 1940, Adopted: "J", Note: "让灵长子" }
+  - { Id: 1955, Name: "世讚", Parent: 1941 }
+  - { Id: 1956, Name: "世譁", Parent: 1943 }
+  - { Id: 1957, Name: "世谨", Parent: 1944, Adopted: "J", Note: "让发次子" }
+  - { Id: 1958, Name: "世椿", Parent: 1946, Adopted: "J", Note: "让友次子" }
+  - { Id: 1959, Name: "世萱", Parent: 1947 }
+  - { Id: 1960, Name: "世椿", Parent: 1947, Note: "过继让元" }
+  - { Id: 1961, Name: "世荣", Parent: 1948, Adopted: "J", Note: "让钧三子" }
+  - { Id: 1962, Name: "世安", Parent: 1949, Adopted: "J", Note: "让元长子" }
+  - { Id: 1963, Name: "德焕", Parent: 1950 }
+  - { Id: 1964, Name: "德元", Parent: 1950 }
+  - { Id: 1965, Name: "德标", Parent: 1951 }
+  - { Id: 1966, Name: "德礼", Parent: 1952 }
+  - { Id: 1967, Name: "德知", Parent: 1952 }
+  - { Id: 1968, Name: "德信", Parent: 1952 }
+  - { Id: 1969, Name: "德贵", Parent: 1953 }
+  - { Id: 1970, Name: "德万", Parent: 1956 }
+  - { Id: 1971, Name: "德福", Parent: 1957 }
+  - { Id: 1972, Name: "德配", Parent: 1961 }
+  - { Id: 1973, Name: "作和", Parent: 1963 }
+  - { Id: 1974, Name: "作成", Parent: 1965 }
+
+  # 祥—政—子金支下
+  - { Id: 1975, Name: "恭榜", Parent: 992, Note: "生父存疑" }
+  - { Id: 1976, Name: "恭榜", Parent: 994, Note: "生父存疑" }
+  - { Id: 1977, Name: "恭瑞", Parent: 998 }
+  - { Id: 1978, Name: "恭俊", Parent: 997 }
+  - { Id: 1979, Name: "恭秀", Parent: 997 }
+  - { Id: 1980, Name: "克纲", Parent: 1975 }
+  - { Id: 1981, Name: "克和", Parent: 1976 }
+  - { Id: 1982, Name: "克金", Parent: 1977 }
+  - { Id: 1983, Name: "克玉", Parent: 1977 }
+  - { Id: 1984, Name: "让钧", Parent: 1980 }
+  - { Id: 1985, Name: "让元", Parent: 1981 }
+  - { Id: 1986, Name: "让贵", Parent: 1982, Adopted: True, Note: "克纲次子" }
+  - { Id: 1987, Name: "让贵", Parent: 1983, Adopted: True, Note: "克纲次子" }
+  - { Id: 1988, Name: "世诚", Parent: 1984 }
+  - { Id: 1989, Name: "世聪", Parent: 1985 }
+  - { Id: 1990, Name: "世誌", Parent: 1986 }
+  - { Id: 1991, Name: "德怀", Parent: 1988, Adopted: "J", Note: "世荣长子" }
+  - { Id: 1992, Name: "德清", Parent: 1988, Adopted: "J", Note: "世誌长子" }
+  - { Id: 1993, Name: "德盛", Parent: 1990 }
 
   - { Id: 30  , Name: "恭貌"   , Parent: 1269 }
 

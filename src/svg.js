@@ -183,6 +183,7 @@ var drawToolbar = function(canvas, layoutInfo, opts) {
         var links = [
             { text: '回首页',       url: '/' },
             { text: '上溯一代',     url: '/tree/' + layoutInfo.tree.getRoot().parentId },
+            { text: '显示到五世孙', url: '/tree/' + layoutInfo.tree.getRoot().id + '/depth/5' },
             { text: '显示到七世孙', url: '/tree/' + layoutInfo.tree.getRoot().id + '/depth/7' },
             { text: '显示所有后代', url: '/tree/' + layoutInfo.tree.getRoot().id }
         ];
