@@ -208,7 +208,38 @@ var drawToolbar = function(canvas, layoutInfo, opts) {
     }
 }
 
-var drawLayout = function(canvas, layoutInfo, opts) {
+var drawAncestors = function(canvas, layoutInfo, opts, fulltree) {
+    var g = canvas.group();
+    if (opts && opts.drawAncestors) {
+        var curNode = layoutInfo.tree.getRoot();
+        if (curNode.depth > 0) {
+            var maxWidth = 0;
+            while (true) {
+                curNode = fulltree.getNodeById(curNode.parentId);
+                maxWidth = Math.max(maxWidth, curNode.width);
+                if (curNode.parentId === null) break;
+            }
+
+            var curNode = layoutInfo.tree.getRoot();
+            var curY = layoutInfo.getNodeById(curNode.id).y;
+            canvas.line(fulltree.getNodeById(curNode.parentId).width / 2 - maxWidth / 2, curY + curNode.height / 2, layoutInfo.getNodeById(layoutInfo.tree.getRoot().id).x, curY + curNode.height / 2).attr('stroke', 'black').attr('stroke-width', '1');
+            while (true) {
+                curNode = fulltree.getNodeById(curNode.parentId);
+                var node = drawNode(canvas, {
+                    x: -maxWidth / 2 - curNode.width / 2,
+                    y: curY,
+                    data: curNode
+                }, layoutInfo);
+                var gen = canvas.text(util.zhGeneration(curNode.depth)).attr('font-family', 'Hei').attr('font-size', '14').attr('text-anchor', 'right');
+                gen.move(-maxWidth / 2 - curNode.width / 2 - gen.bbox().width - 10, curY + curNode.height / 2 - gen.bbox().height / 2);
+                curY -= vars.siblingGap + curNode.height;
+                if (curNode.parentId === null) break;
+            }
+        }
+    }
+}
+
+var drawLayout = function(canvas, layoutInfo, opts, fulltree) {
     var titleBar = canvas.group();
     drawTitle(titleBar, layoutInfo, opts);
     var titleBBox = titleBar.rbox();
@@ -219,7 +250,10 @@ var drawLayout = function(canvas, layoutInfo, opts) {
     var toolBBox = toolbar.rbox();
 
     var content = canvas.group();
-    content.move(0, titleBBox.height + toolBBox.height + 100);
+    var ancestors = content.group();
+    drawAncestors(ancestors, layoutInfo, opts, fulltree); 
+    var ancestorsBBox = ancestors.rbox();
+    content.move(ancestorsBBox.width, titleBBox.height + toolBBox.height + 50 + Math.max(50, -ancestorsBBox.y));
     layoutInfo.forEach(node => {
         drawNode(content, node, layoutInfo);
         drawChildrenLink(content, node, layoutInfo);
@@ -227,8 +261,8 @@ var drawLayout = function(canvas, layoutInfo, opts) {
 
     drawGeneration(content, layoutInfo);
 
-    canvas.attr("width", Math.max(layoutInfo.size.width, titleBBox.width, toolBBox.width));
-    canvas.attr("height", layoutInfo.size.height + titleBBox.height + toolBBox.height + 100);
+    canvas.attr("width", Math.max(layoutInfo.size.width + ancestorsBBox.width, titleBBox.width, toolBBox.width));
+    canvas.attr("height", layoutInfo.size.height + titleBBox.height + toolBBox.height + 50 + Math.max(50, -ancestorsBBox.y));
 };
 
 module.exports = {

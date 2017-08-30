@@ -33,8 +33,9 @@ app.get('/tree/:id', function(req, res, next) {
     svg.drawLayout(canvas, layoutInfo, {
         drawTitle: false,
         drawSubtitle: false,
-        drawToolbar: true
-    });
+        drawToolbar: true,
+        drawAncestors: true
+    }, tree);
     var svgStr = canvas.svg();
     svg.deleteCanvas(canvas);
 
@@ -52,8 +53,9 @@ app.get('/tree/:id/depth/:depth', function(req, res, next) {
     svg.drawLayout(canvas, layoutInfo, {
         drawTitle: false,
         drawSubtitle: false,
-        drawToolbar: true
-    });
+        drawToolbar: true,
+        drawAncestors: true
+    }, tree);
     var svgStr = canvas.svg();
     svg.deleteCanvas(canvas);
 
