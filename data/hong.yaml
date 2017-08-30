@@ -1234,7 +1234,7 @@ Family:
   - { Id: 1503, Name: "贵", Parent: 1490 }
   - { Id: 1504, Name: "珠", Parent: 1492 }
   - { Id: 1505, Name: "珍", Parent: 1492 }
-  - { Id: 1506, Name: "琄", Parent: 1492 }
+  - { Id: 1506, Name: "瑁", Parent: 1492 }
   - { Id: 1507, Name: "瑶", Parent: 1493 }
   - { Id: 1508, Name: "璧", Parent: 1493 }
   - { Id: 1509, Name: "瑢", Parent: 1494 }
