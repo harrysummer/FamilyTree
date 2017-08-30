@@ -221,10 +221,12 @@ var drawAncestors = function(canvas, layoutInfo, opts, fulltree) {
             }
 
             var curNode = layoutInfo.tree.getRoot();
-            var curY = layoutInfo.getNodeById(curNode.id).y;
-            canvas.line(fulltree.getNodeById(curNode.parentId).width / 2 - maxWidth / 2, curY + curNode.height / 2, layoutInfo.getNodeById(layoutInfo.tree.getRoot().id).x, curY + curNode.height / 2).attr('stroke', 'black').attr('stroke-width', '1');
+            var parentNode = fulltree.getNodeById(curNode.parentId);
+            var curY = layoutInfo.getNodeById(curNode.id).y + curNode.height / 2 - parentNode.height / 2;
+            canvas.line(parentNode.width / 2 - maxWidth / 2, curY + parentNode.height / 2, layoutInfo.getNodeById(curNode.id).x, curY + parentNode.height / 2).attr('stroke', 'black').attr('stroke-width', '1');
             while (true) {
                 curNode = fulltree.getNodeById(curNode.parentId);
+                var parentNode = fulltree.getNodeById(curNode.parentId);
                 var node = drawNode(canvas, {
                     x: -maxWidth / 2 - curNode.width / 2,
                     y: curY,
@@ -232,8 +234,8 @@ var drawAncestors = function(canvas, layoutInfo, opts, fulltree) {
                 }, layoutInfo);
                 var gen = canvas.text(util.zhGeneration(curNode.depth)).attr('font-family', 'Hei').attr('font-size', '14').attr('text-anchor', 'right');
                 gen.move(-maxWidth / 2 - curNode.width / 2 - gen.bbox().width - 10, curY + curNode.height / 2 - gen.bbox().height / 2);
-                curY -= vars.siblingGap + curNode.height;
                 if (curNode.parentId === null) break;
+                curY -= vars.siblingGap + parentNode.height;
             }
         }
     }
