@@ -37,10 +37,15 @@ var prepareTree = function(canvas, tree) {
 };
 
 var layoutTree = function(canvas, tree) {
+    var baseDepth = tree.getRoot().depth;
     var genWidth = [];
     for (var i = 0; i <= tree.depth; ++i) {
         genWidth.push(0);
     }
+
+    tree.forEach(node => {
+        genWidth[node.depth - baseDepth] = Math.max(genWidth[node.depth - baseDepth], node.width);
+    });
 
     var genOffset = [ 0 ];
     for (var i = 0; i < genWidth.length; i++) {

@@ -1,5 +1,5 @@
 module.exports = {
-    generationGap : 120,
+    generationGap : 50,
     siblingGap : 10,
     cousinGap : 20,
     nodePaddingLeft : 12,
