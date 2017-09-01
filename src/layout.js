@@ -44,7 +44,7 @@ var layoutTree = function(canvas, tree) {
 
     var genOffset = [ 0 ];
     for (var i = 0; i < genWidth.length; i++) {
-        genOffset.push(genOffset[genOffset.length - 1] + genWidth[i] + vars.generationGap * 2);
+        genOffset.push(genOffset[genOffset.length - 1] + genWidth[i] + vars.generationGap);
     }
 
     var layout = {};
