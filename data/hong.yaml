@@ -477,28 +477,28 @@ Family:
   - { Id: 1046, Name: "明标"   , Parent: 1021 }
   - { Id: 1047, Name: "明策"   , Parent: 1022 }
   - { Id: 1048, Name: "明箴"   , Parent: 1022 }
-  - { Id: 1049, Name: "大武"   , Parent: 1023 }
+  - { Id: 1049, Name: "大武"   , Parent: 1023, Terminated: True }
   - { Id: 1050, Name: "明统"   , Parent: 1024 }
-  - { Id: 1051, Name: "明动"   , Parent: 1025 }
+  - { Id: 1051, Name: "明幼"   , Parent: 1025 }
   - { Id: 1052, Name: "明簧"   , Parent: 1027 }
   - { Id: 1053, Name: "明仪"   , Parent: 1028 }
   - { Id: 1054, Name: "明星"   , Parent: 1029 }
   - { Id: 1055, Name: "明信"   , Parent: 1030 }
-  - { Id: 1056, Name: "明仕"   , Parent: 1030 }
+  - { Id: 1056, Name: "明仕"   , Parent: 1030, Terminated: True }
   - { Id: 1057, Name: "明德"   , Parent: 1031 }
   - { Id: 1058, Name: "明杰"   , Parent: 1032 }
   - { Id: 1059, Name: "大伦"   , Parent: 1033 }
   - { Id: 1060, Name: "大成"   , Parent: 1034 }
-  - { Id: 1061, Name: "明荣"   , Parent: 1036 }
+  - { Id: 1061, Name: "明荣"   , Parent: 1036, Note: "迁庐江黄蜀山" }
   - { Id: 1062, Name: "明富"   , Parent: 1036 }
-  - { Id: 1063, Name: "明道"   , Parent: 1037 }
-  - { Id: 1064, Name: "明信"   , Parent: 1038 }
-  - { Id: 1065, Name: "明昌"   , Parent: 1039 }
+  - { Id: 1063, Name: "明道"   , Parent: 1037, Terminated: True }
+  - { Id: 1064, Name: "明信"   , Parent: 1038, Terminated: True }
+  - { Id: 1065, Name: "明昌"   , Parent: 1039, Terminated: True }
   - { Id: 1066, Name: "明福"   , Parent: 1040 }
   - { Id: 1067, Name: "成明"   , Parent: 1040 }
   - { Id: 1068, Name: "君明"   , Parent: 1040 }
   - { Id: 1069, Name: "圣明"   , Parent: 1040 }
-  - { Id: 1070, Name: "仕明"   , Parent: 1040 }
+  - { Id: 1070, Name: "仕明"   , Parent: 1040, Terminated: True }
   - { Id: 475 , Name: "谟"     , Parent: 469 }
   - { Id: 476 , Name: "必恭"   , Parent: 472 }
   - { Id: 477 , Name: "必进"   , Parent: 473 }
@@ -1978,6 +1978,170 @@ Family:
   - { Id: 2221, Name: "盛士", Parent: 2216 }
   - { Id: 2222, Name: "省我", Parent: 693 }
 
+  - { Id: 2223, Name: "声伟", Parent: 1042 }
+  - { Id: 2224, Name: "声芳", Parent: 1043 }
+  - { Id: 2225, Name: "三仁", Parent: 1044 }
+  - { Id: 2226, Name: "三礼", Parent: 1044 }
+  - { Id: 2227, Name: "三虎", Parent: 1045 }
+  - { Id: 2228, Name: "汉仪", Parent: 1045 }
+  - { Id: 2229, Name: "汉世", Parent: 1046 }
+  - { Id: 2230, Name: "汉坤", Parent: 1047 }
+  - { Id: 2231, Name: "汉文", Parent: 1047 }
+  - { Id: 2232, Name: "举士", Parent: 1048 }
+  - { Id: 2233, Name: "声义", Parent: 1050 }
+  - { Id: 2234, Name: "汉韬", Parent: 1051 }
+  - { Id: 2235, Name: "汉略", Parent: 1051 }
+  - { Id: 2236, Name: "汉德", Parent: 1052 }
+  - { Id: 2237, Name: "汉奎", Parent: 1052 }
+  - { Id: 2238, Name: "声早", Parent: 1053 }
+  - { Id: 2239, Name: "声元", Parent: 1053 }
+  - { Id: 2240, Name: "汉雄", Parent: 1054 }
+  - { Id: 2241, Name: "三畏", Parent: 1055 }
+  - { Id: 2242, Name: "三定", Parent: 1055 }
+  - { Id: 2243, Name: "三益", Parent: 1055 }
+  - { Id: 2244, Name: "美之", Parent: 1057 }
+  - { Id: 2245, Name: "声远", Parent: 1058 }
+  - { Id: 2246, Name: "声凡", Parent: 1059 }
+  - { Id: 2247, Name: "声荣", Parent: 1059 }
+  - { Id: 2248, Name: "声朗", Parent: 1059 }
+  - { Id: 2249, Name: "汉盛", Parent: 1060 }
+  - { Id: 2250, Name: "笃盟", Parent: 1060 }
+  - { Id: 2251, Name: "三英", Parent: 1061 }
+  - { Id: 2252, Name: "三奇", Parent: 1061 }
+  - { Id: 2253, Name: "三聘", Parent: 1061 }
+  - { Id: 2254, Name: "三元", Parent: 1061 }
+  - { Id: 2255, Name: "声昂", Parent: 1061 }
+  - { Id: 2256, Name: "三乐", Parent: 1062 }
+  - { Id: 2257, Name: "三有", Parent: 1062 }
+  - { Id: 2258, Name: "三品", Parent: 1066 }
+  - { Id: 2259, Name: "三友", Parent: 1066 }
+  - { Id: 2260, Name: "三元", Parent: 1067 }
+  - { Id: 2261, Name: "三贵", Parent: 1068 }
+  - { Id: 2262, Name: "三臣", Parent: 1069 }
+  - { Id: 2263, Name: "日初", Parent: 2223 }
+  - { Id: 2264, Name: "加品", Parent: 2224 }
+  - { Id: 2265, Name: "大福", Parent: 2225 }
+  - { Id: 2266, Name: "加庸", Parent: 2225 }
+  - { Id: 2267, Name: "会万", Parent: 2228 }
+  - { Id: 2268, Name: "岐芳", Parent: 2228 }
+  - { Id: 2269, Name: "之普", Parent: 2229 }
+  - { Id: 2270, Name: "加级", Parent: 2229 }
+  - { Id: 2271, Name: "东贵", Parent: 2230 }
+  - { Id: 2272, Name: "全惠", Parent: 2230 }
+  - { Id: 2273, Name: "加之", Parent: 2233 }
+  - { Id: 2274, Name: "加寅", Parent: 2234 }
+  - { Id: 2275, Name: "加贤", Parent: 2235 }
+  - { Id: 2276, Name: "加富", Parent: 2238 }
+  - { Id: 2277, Name: "加佑", Parent: 2238 }
+  - { Id: 2278, Name: "加容", Parent: 2240 }
+  - { Id: 2279, Name: "加有", Parent: 2240 }
+  - { Id: 2280, Name: "奇有", Parent: 2240 }
+  - { Id: 2281, Name: "振彩", Parent: 2241 }
+  - { Id: 2282, Name: "天相", Parent: 2241 }
+  - { Id: 2283, Name: "天受", Parent: 2242 }
+  - { Id: 2284, Name: "天爵", Parent: 2243 }
+  - { Id: 2285, Name: "天禄", Parent: 2243 }
+  - { Id: 2286, Name: "士云", Parent: 2244 }
+  - { Id: 2287, Name: "有信", Parent: 2245 }
+  - { Id: 2288, Name: "文吉", Parent: 2245 }
+  - { Id: 2289, Name: "兆吉", Parent: 2248 }
+  - { Id: 2290, Name: "相吉", Parent: 2248 }
+  - { Id: 2291, Name: "天应", Parent: 2248 }
+  - { Id: 2292, Name: "日林", Parent: 2249 }
+  - { Id: 2293, Name: "日华", Parent: 2249 }
+  - { Id: 2294, Name: "日繡", Parent: 2249 }
+  - { Id: 2295, Name: "加盛", Parent: 2250 }
+  - { Id: 2296, Name: "加修", Parent: 2250 }
+  - { Id: 2297, Name: "加勋", Parent: 2250 }
+  - { Id: 2298, Name: "日连", Parent: 2252 }
+  - { Id: 2299, Name: "明秀", Parent: 2253 }
+  - { Id: 2300, Name: "日海", Parent: 2256 }
+  - { Id: 2301, Name: "日湖", Parent: 2257 }
+  - { Id: 2302, Name: "正华", Parent: 2258 }
+  - { Id: 2303, Name: "正傅", Parent: 2258 }
+  - { Id: 2304, Name: "正勋", Parent: 2258 }
+  - { Id: 2305, Name: "正年", Parent: 2258 }
+  - { Id: 2306, Name: "正举", Parent: 2258 }
+  - { Id: 2307, Name: "正凤", Parent: 2259 }
+  - { Id: 2308, Name: "正玉", Parent: 2259 }
+  - { Id: 2309, Name: "正选", Parent: 2260 }
+  - { Id: 2310, Name: "正昇", Parent: 2260 }
+  - { Id: 2311, Name: "正龙", Parent: 2261 }
+  - { Id: 2312, Name: "正士", Parent: 2261 }
+  - { Id: 2313, Name: "正喜", Parent: 2261 }
+  - { Id: 2314, Name: "正朔", Parent: 2262 }
+  - { Id: 2315, Name: "正连", Parent: 2262 }
+  - { Id: 2316, Name: "曙", Parent: 2263 }
+  - { Id: 2317, Name: "旭", Parent: 2263 }
+  - { Id: 2318, Name: "寅光", Parent: 2263 }
+  - { Id: 2319, Name: "道", Parent: 2264 }
+  - { Id: 2320, Name: "德", Parent: 2264 }
+  - { Id: 2321, Name: "明奇", Parent: 2265 }
+  - { Id: 2322, Name: "寅举", Parent: 2267 }
+  - { Id: 2323, Name: "重友", Parent: 2268 }
+  - { Id: 2324, Name: "寅柏", Parent: 2271 }
+  - { Id: 2325, Name: "广玉", Parent: 2271 }
+  - { Id: 2326, Name: "榖", Parent: 2273 }
+  - { Id: 2327, Name: "寅", Parent: 2273 }
+  - { Id: 2328, Name: "广友", Parent: 2276 }
+  - { Id: 2329, Name: "名沅", Parent: 2277 }
+  - { Id: 2330, Name: "龙", Parent: 2282 }
+  - { Id: 2331, Name: "玉能", Parent: 2284 }
+  - { Id: 2332, Name: "耀廷", Parent: 2285 }
+  - { Id: 2333, Name: "奎", Parent: 2286 }
+  - { Id: 2334, Name: "应玉", Parent: 2298 }
+  - { Id: 2335, Name: "应嘉", Parent: 2298 }
+  - { Id: 2336, Name: "应武", Parent: 2298 }
+  - { Id: 2337, Name: "应昇", Parent: 2298 }
+  - { Id: 2338, Name: "应芳", Parent: 2298 }
+  - { Id: 2339, Name: "龙章", Parent: 2299 }
+  - { Id: 2340, Name: "应贤", Parent: 2300 }
+  - { Id: 2341, Name: "应安", Parent: 2300 }
+  - { Id: 2342, Name: "应千", Parent: 2300 }
+  - { Id: 2343, Name: "明秀", Parent: 2301 }
+  - { Id: 2344, Name: "应端", Parent: 2301 }
+  - { Id: 2345, Name: "玉能", Parent: 2301 }
+  - { Id: 2346, Name: "应惟", Parent: 2301 }
+  - { Id: 2347, Name: "家富", Parent: 2302 }
+  - { Id: 2348, Name: "家贵", Parent: 2303 }
+  - { Id: 2349, Name: "家寿", Parent: 2309 }
+  - { Id: 2350, Name: "家昌", Parent: 2309 }
+  - { Id: 2351, Name: "家义", Parent: 2309 }
+  - { Id: 2352, Name: "允兴", Parent: 2316 }
+  - { Id: 2353, Name: "允旺", Parent: 2316 }
+  - { Id: 2354, Name: "允全", Parent: 2316 }
+  - { Id: 2355, Name: "允能", Parent: 2317 }
+  - { Id: 2356, Name: "允聪", Parent: 2317 }
+  - { Id: 2357, Name: "允华", Parent: 2318 }
+  - { Id: 2358, Name: "允文", Parent: 2318 }
+  - { Id: 2359, Name: "允志", Parent: 2319 }
+  - { Id: 2360, Name: "允荣", Parent: 2319 }
+  - { Id: 2361, Name: "允玉", Parent: 2319 }
+  - { Id: 2362, Name: "允福", Parent: 2320 }
+  - { Id: 2363, Name: "允贵", Parent: 2320 }
+  - { Id: 2364, Name: "允来", Parent: 2334 }
+  - { Id: 2365, Name: "允合", Parent: 2334 }
+  - { Id: 2366, Name: "允想", Parent: 2335 }
+  - { Id: 2367, Name: "允禄", Parent: 2335 }
+  - { Id: 2368, Name: "允全", Parent: 2335 }
+  - { Id: 2369, Name: "允荘", Parent: 2336 }
+  - { Id: 2370, Name: "允盛", Parent: 2336 }
+  - { Id: 2371, Name: "允江", Parent: 2338 }
+  - { Id: 2372, Name: "允怀", Parent: 2338 }
+  - { Id: 2373, Name: "允爱", Parent: 2338 }
+  - { Id: 2374, Name: "允仲", Parent: 2338 }
+  - { Id: 2375, Name: "允泉", Parent: 2338 }
+  - { Id: 2376, Name: "允朋", Parent: 2340 }
+  - { Id: 2377, Name: "允有", Parent: 2340 }
+  - { Id: 2378, Name: "允啟", Parent: 2340 }
+  - { Id: 2379, Name: "允中", Parent: 2340 }
+  - { Id: 2380, Name: "允厚", Parent: 2340 }
+  - { Id: 2381, Name: "允秩", Parent: 2346 }
+  - { Id: 2382, Name: "允寿", Parent: 2347 }
+  - { Id: 2383, Name: "允田", Parent: 2348 }
+  - { Id: 2384, Name: "允仕", Parent: 2348 }
+  - { Id: 2385, Name: "试全", Parent: 2349 }
+  - { Id: 2386, Name: "宝全", Parent: 2349 }
 
   - { Id: 30  , Name: "恭貌"   , Parent: 1269 }
 
