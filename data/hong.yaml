@@ -23,11 +23,11 @@ Family:
     2016.09.25: 根据近亲信息完成廷瑄公一支谱系
   Members:
   # 迁巢始祖
-  - { Id: 0   , Name: "宽公"   , Parent: ~ }
+  - { Id: 0   , Name: "宽"   , Parent: ~ }
 
   # 二世
   - { Id: 1   , Name: "宗"     , Parent: 0 }
-  - { Id: 2   , Name: "海祖"   , Parent: 0 }
+  - { Id: 2   , Name: "海"   , Parent: 0 }
   - { Id: 3   , Name: "祥"     , Parent: 0 }
 
   # 三世
