@@ -932,7 +932,7 @@ Family:
   - { Id: 1213, Name: "日益"   , Parent: 1211 }
   - { Id: 1214, Name: "日升"   , Parent: 1211 }
   - { Id: 1215, Name: "琯"     , Parent: 1213, Adopted: "J" }
-  - { Id: 1216, Name: "允纲"   , Parent: 1215 }
+  - { Id: 1216, Name: "允纲"   , Parent: 1215, Adopted: "J" }
   - { Id: 1217, Name: "日旭"   , Parent: 1212 }
   - { Id: 1218, Name: "日晟"   , Parent: 1212 }
   - { Id: 1219, Name: "日灿"   , Parent: 1212 }
@@ -942,7 +942,7 @@ Family:
   - { Id: 1223, Name: "琯"     , Parent: 1219 }
   - { Id: 1224, Name: "玖"     , Parent: 1219 }
   - { Id: 1225, Name: "允康"   , Parent: 1220 }
-  - { Id: 1226, Name: "允纲"   , Parent: 1221 }
+  - { Id: 1226, Name: "允纲"   , Parent: 1221, Note: "过继琯" }
   - { Id: 1227, Name: "允占"   , Parent: 1221 }
   - { Id: 1228, Name: "允松"   , Parent: 1222 }
   - { Id: 1229, Name: "三戒"   , Parent: 423 }
@@ -2142,6 +2142,82 @@ Family:
   - { Id: 2384, Name: "允仕", Parent: 2348 }
   - { Id: 2385, Name: "试全", Parent: 2349 }
   - { Id: 2386, Name: "宝全", Parent: 2349 }
+
+  # 诏公支下（13到17世）
+  - { Id: 2387, Name: "恭端", Parent: 1216, Adopted: "J" }
+  - { Id: 2388, Name: "恭肃", Parent: 1225 }
+  - { Id: 2389, Name: "恭端", Parent: 1225, Note: "过继允纲" }
+  - { Id: 2390, Name: "恭儒", Parent: 1227 }
+  - { Id: 2391, Name: "恭求", Parent: 1240 }
+  - { Id: 2392, Name: "恭爵", Parent: 1241 }
+  - { Id: 2393, Name: "恭福", Parent: 1242 }
+  - { Id: 2394, Name: "恭禄", Parent: 1242 }
+  - { Id: 2395, Name: "恭寿", Parent: 1242 }
+  - { Id: 2396, Name: "恭谙", Parent: 1250, Adopted: "J", Note: "允贞次子" }
+  - { Id: 2397, Name: "得富", Parent: 1255 }
+  - { Id: 2398, Name: "得贵", Parent: 1255 }
+  - { Id: 2399, Name: "得华", Parent: 1255 }
+  - { Id: 2400, Name: "恭约", Parent: 1261, Adopted: "T" }
+  - { Id: 2401, Name: "恭约", Parent: 1263, Note: "双祧" }
+  - { Id: 2402, Name: "恭正", Parent: 1266 }
+  - { Id: 2403, Name: "恭膏", Parent: 1272 }
+  - { Id: 2404, Name: "恭戺", Parent: 1272 }
+  - { Id: 2405, Name: "恭疆", Parent: 1272 }
+  - { Id: 2406, Name: "恭瑚", Parent: 1272 }
+  - { Id: 2407, Name: "克鸣", Parent: 2387 }
+  - { Id: 2408, Name: "克讯", Parent: 2388 }
+  - { Id: 2409, Name: "克芝", Parent: 2392, Adopted: "J" }
+  - { Id: 2410, Name: "克奎", Parent: 2393, Adopted: "T" }
+  - { Id: 2411, Name: "克奎", Parent: 2394 }
+  - { Id: 2412, Name: "克诗", Parent: 2403 }
+  - { Id: 2413, Name: "克勤", Parent: 2403 }
+  - { Id: 2414, Name: "克俭", Parent: 2403, Note: "过继恭疆" }
+  - { Id: 2415, Name: "克明", Parent: 2404 }
+  - { Id: 2416, Name: "克开", Parent: 2404 }
+  - { Id: 2417, Name: "克俭", Parent: 2405, Adopted: "J" }
+  - { Id: 2418, Name: "让文", Parent: 2407 }
+  - { Id: 2419, Name: "让谦", Parent: 2408 }
+  - { Id: 2420, Name: "让功", Parent: 2409 }
+  - { Id: 2421, Name: "让珏", Parent: 2409 }
+  - { Id: 2422, Name: "让美", Parent: 2410 }
+  - { Id: 2423, Name: "让善", Parent: 2411 }
+  - { Id: 2424, Name: "福谦", Parent: 2412 }
+  - { Id: 2425, Name: "福康", Parent: 2415 }
+  - { Id: 2426, Name: "福安", Parent: 2415 }
+  - { Id: 2427, Name: "福烜", Parent: 2417 }
+  - { Id: 2428, Name: "世盈", Parent: 2418 }
+  - { Id: 2429, Name: "世金", Parent: 2420 }
+  - { Id: 2430, Name: "世秀", Parent: 2422, Adopted: "T" }
+  - { Id: 2431, Name: "世秀", Parent: 2423 }
+  - { Id: 2432, Name: "世缨", Parent: 2424 }
+  - { Id: 2433, Name: "世缃", Parent: 2424, Note: "过继福烜" }
+  - { Id: 2434, Name: "世功", Parent: 2425, Adopted: "T" }
+  - { Id: 2435, Name: "世功", Parent: 2426 }
+  - { Id: 2436, Name: "世缃", Parent: 2427, Adopted: "J" }
+  - { Id: 2437, Name: "德智", Parent: 2428 }
+  - { Id: 2438, Name: "德慧", Parent: 2428 }
+  - { Id: 2439, Name: "德明", Parent: 2428, Note: "过继世科" }
+  - { Id: 2440, Name: "禄兴", Parent: 2429 }
+  - { Id: 2441, Name: "德润", Parent: 2432 }
+  - { Id: 2442, Name: "德林", Parent: 2432 }
+  - { Id: 2443, Name: "德精", Parent: 2432 }
+  - { Id: 2444, Name: "德华", Parent: 2432 }
+  - { Id: 2445, Name: "德餘", Parent: 2432 }
+  - { Id: 2446, Name: "德輶", Parent: 2434 }
+  - { Id: 2447, Name: "德鸿", Parent: 2435 }
+  - { Id: 2448, Name: "德经", Parent: 2435 }
+  - { Id: 2449, Name: "德修", Parent: 2436 }
+  - { Id: 2450, Name: "作琴", Parent: 2441, Adopted: "J", Note: "德林长子" }
+  - { Id: 2451, Name: "作书", Parent: 2442 }
+  - { Id: 2452, Name: "作云", Parent: 2443, Adopted: "T" }
+  - { Id: 2453, Name: "作云", Parent: 2444, Adopted: "T" }
+  - { Id: 2454, Name: "作云", Parent: 2445 }
+  - { Id: 2455, Name: "作海", Parent: 2449 }
+  - { Id: 2456, Name: "作江", Parent: 2449, Alias: "作福" }
+  - { Id: 2457, Name: "作河", Parent: 2449 }
+  - { Id: 2458, Name: "作淮", Parent: 2449, Note: "过继德化、德兴" }
+  - { Id: 2459, Name: "求全", Parent: 2456 }
+  - { Id: 2460, Name: "求正", Parent: 2456 }
 
   - { Id: 30  , Name: "恭貌"   , Parent: 1269 }
 
