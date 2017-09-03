@@ -2577,6 +2577,90 @@ Family:
   - { Id: 2801, Name: "允泰", Parent: 2796 }
   - { Id: 2802, Name: "允源", Parent: 2797 }
 
+  # 14:10
+  - { Id: 2803, Name: "恭珍", Parent: 1276 }
+  - { Id: 2804, Name: "恭身", Parent: 1278 }
+  - { Id: 2805, Name: "恭仁", Parent: 1281 }
+  - { Id: 2806, Name: "恭荣", Parent: 1284 }
+  - { Id: 2807, Name: "恭谙", Parent: 1284, Note: "过继允登" }
+  - { Id: 2808, Name: "恭礼", Parent: 1286 }
+  - { Id: 2809, Name: "克泰", Parent: 2803 }
+  - { Id: 2810, Name: "克从", Parent: 2804 }
+  - { Id: 2811, Name: "克復", Parent: 2804 }
+  - { Id: 2812, Name: "克见", Parent: 2805 }
+  - { Id: 2813, Name: "克祥", Parent: 2805 }
+  - { Id: 2814, Name: "克盛", Parent: 2805 }
+  - { Id: 2815, Name: "克知", Parent: 2806, Adopted: "J" }
+  - { Id: 2816, Name: "克灼", Parent: 2808 }
+  - { Id: 2817, Name: "克知", Parent: 2808, Note: "长子，过继恭荣" }
+  - { Id: 2818, Name: "聚", Parent: 2809 }
+  - { Id: 2819, Name: "财", Parent: 2809 }
+  - { Id: 2820, Name: "新", Parent: 2809 }
+  - { Id: 2821, Name: "斗", Parent: 2809 }
+  - { Id: 2822, Name: "让畔", Parent: 2810 }
+  - { Id: 2823, Name: "让福", Parent: 2810 }
+  - { Id: 2824, Name: "让耕", Parent: 2810 }
+  - { Id: 2825, Name: "贵", Parent: 2811 }
+  - { Id: 2826, Name: "材", Parent: 2811 }
+  - { Id: 2827, Name: "让陞", Parent: 2812 }
+  - { Id: 2828, Name: "让庚", Parent: 2813 }
+  - { Id: 2829, Name: "让材", Parent: 2813 }
+  - { Id: 2830, Name: "让楹", Parent: 2813 }
+  - { Id: 2831, Name: "让泉", Parent: 2814 }
+  - { Id: 2832, Name: "章", Parent: 2815 }
+  - { Id: 2833, Name: "让富", Parent: 2815, Adopted: "J" }
+  - { Id: 2834, Name: "让先", Parent: 2816 }
+  - { Id: 2835, Name: "让宣", Parent: 2816 }
+  - { Id: 2836, Name: "世杰", Parent: 2818 }
+  - { Id: 2837, Name: "世刚", Parent: 2819 }
+  - { Id: 2838, Name: "世强", Parent: 2819 }
+  - { Id: 2839, Name: "世才", Parent: 2820, Adopted: "J", Note: "子德厚过继" }
+  - { Id: 2840, Name: "世本", Parent: 2821 }
+  - { Id: 2841, Name: "世源", Parent: 2821 }
+  - { Id: 2842, Name: "世才", Parent: 2821, Note: "过继新" }
+  - { Id: 2843, Name: "世贵", Parent: 2822 }
+  - { Id: 2844, Name: "世科", Parent: 2823 }
+  - { Id: 2845, Name: "世科", Parent: 2824, Adopted: "T" }
+  - { Id: 2846, Name: "世海", Parent: 2825 }
+  - { Id: 2847, Name: "世盛", Parent: 2825 }
+  - { Id: 2848, Name: "世盈", Parent: 2825, Note: "长子，过继让文" }
+  - { Id: 2849, Name: "世焕", Parent: 2826 }
+  - { Id: 2850, Name: "世忠", Parent: 2826 }
+  - { Id: 2851, Name: "家祥", Parent: 2827, Adopted: "J" }
+  - { Id: 2852, Name: "世彬", Parent: 2828 }
+  - { Id: 2853, Name: "世金", Parent: 2829 }
+  - { Id: 2854, Name: "世有", Parent: 2829, Note: "过继让楹" }
+  - { Id: 2855, Name: "世有", Parent: 2830, Adopted: "J" }
+  - { Id: 2856, Name: "家旺", Parent: 2831 }
+  - { Id: 2857, Name: "家祥", Parent: 2831, Note: "长子，过继让陞" }
+  - { Id: 2858, Name: "世佐", Parent: 2832, Adopted: "T" }
+  - { Id: 2859, Name: "世佐", Parent: 2833 }
+  - { Id: 2860, Name: "世宝", Parent: 2833, Note: "过继让华" }
+  - { Id: 2861, Name: "世彬", Parent: 2834 }
+  - { Id: 2862, Name: "世金", Parent: 2834, Note: "过继让宣" }
+  - { Id: 2863, Name: "世金", Parent: 2835, Adopted: "J" }
+  - { Id: 2864, Name: "化德", Parent: 2836 }
+  - { Id: 2865, Name: "德兴", Parent: 2836 }
+  - { Id: 2866, Name: "德魁", Parent: 2837 }
+  - { Id: 2867, Name: "德魁", Parent: 2838, Adopted: "T" }
+  - { Id: 2868, Name: "德厚", Parent: 2840, Adopted: "T" }
+  - { Id: 2869, Name: "德厚", Parent: 2841, Adopted: "T" }
+  - { Id: 2870, Name: "德华", Parent: 2843, Adopted: "J" }
+  - { Id: 2871, Name: "德明", Parent: 2844, Adopted: "J", Note: "世盈三子" }
+  - { Id: 2872, Name: "德明", Parent: 2845, Adopted: "J", Note: "世盈三子" }
+  - { Id: 2873, Name: "德应", Parent: 2846 }
+  - { Id: 2874, Name: "德华", Parent: 2846, Note: "过继世贵" }
+  - { Id: 2875, Name: "德钧", Parent: 2846 }
+  - { Id: 2876, Name: "德成", Parent: 2847 }
+  - { Id: 2877, Name: "德言", Parent: 2849 }
+  - { Id: 2878, Name: "德定", Parent: 2850, Adopted: "J", Note: "世焕次子" }
+  - { Id: 2879, Name: "德全", Parent: 2851 }
+  - { Id: 2880, Name: "德芳", Parent: 2851 }
+  - { Id: 2881, Name: "德发", Parent: 2852 }
+  - { Id: 2882, Name: "德义", Parent: 2853 }
+  - { Id: 2883, Name: "德源", Parent: 2855 }
+  - { Id: 2884, Name: "作淮", Parent: 2864, Adopted: "T", Note: "德修四子" }
+  - { Id: 2885, Name: "作淮", Parent: 2865, Adopted: "T" }
 
   - { Id: 30  , Name: "恭貌"   , Parent: 1269 }
 
