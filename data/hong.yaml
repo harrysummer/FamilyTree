@@ -2662,6 +2662,149 @@ Family:
   - { Id: 2884, Name: "作淮", Parent: 2864, Adopted: "T", Note: "德修四子" }
   - { Id: 2885, Name: "作淮", Parent: 2865, Adopted: "T" }
 
+  - { Id: 2886, Name: "恭鼎", Parent: 1292, Adopted: "J", Note: "允龄次子" }
+  - { Id: 2887, Name: "恭鑑", Parent: 1293, Note: "克芝→恭爵(2)，克信→恭佩(3)" }
+  - { Id: 2888, Name: "恭鼎", Parent: 1293, Note: "过继允财" }
+  - { Id: 2889, Name: "恭聘", Parent: 1294, Adopted: "J", Note: "允苏长子" }
+  - { Id: 2890, Name: "克仁", Parent: 2886 }
+  - { Id: 2891, Name: "克礼", Parent: 2886 }
+  - { Id: 2892, Name: "克义", Parent: 2887 }
+  - { Id: 2893, Name: "克绳", Parent: 2887 }
+  - { Id: 2894, Name: "克成", Parent: 2889, Adopted: "J", Note: "恭朝长子" }
+  - { Id: 2895, Name: "让达", Parent: 2890 }
+  - { Id: 2896, Name: "让尊", Parent: 2890 }
+  - { Id: 2897, Name: "让佐", Parent: 2890 }
+  - { Id: 2898, Name: "让品", Parent: 2890 }
+  - { Id: 2899, Name: "让言", Parent: 2890 }
+  - { Id: 2900, Name: "让宾", Parent: 2891 }
+  - { Id: 2901, Name: "让直", Parent: 2891 }
+  - { Id: 2902, Name: "让行", Parent: 2891 }
+  - { Id: 2903, Name: "让履", Parent: 2891 }
+  - { Id: 2904, Name: "让暄", Parent: 2892 }
+  - { Id: 2905, Name: "让海", Parent: 2892 }
+  - { Id: 2906, Name: "让才", Parent: 2893 }
+  - { Id: 2907, Name: "让银", Parent: 2893 }
+  - { Id: 2908, Name: "让师", Parent: 2894, Adopted: "J", Note: "烈长子" }
+  - { Id: 2909, Name: "世元", Parent: 2895, Adopted: "J", Note: "让宾三子" }
+  - { Id: 2910, Name: "世泰", Parent: 2896, Adopted: "J", Note: "让直次子" }
+  - { Id: 2911, Name: "联元", Parent: 2897, Adopted: "J", Note: "让行次子" }
+  - { Id: 2912, Name: "世荣", Parent: 2898, Adopted: "J", Note: "让履三子" }
+  - { Id: 2913, Name: "世荣", Parent: 2899, Adopted: "J", Note: "让履三子" }
+  - { Id: 2914, Name: "世芳", Parent: 2900 }
+  - { Id: 2915, Name: "世富", Parent: 2900 }
+  - { Id: 2916, Name: "世元", Parent: 2900, Note: "过继让达" }
+  - { Id: 2917, Name: "世有", Parent: 2900 }
+  - { Id: 2918, Name: "世才", Parent: 2901 }
+  - { Id: 2919, Name: "世泰", Parent: 2901, Note: "过继让尊" }
+  - { Id: 2920, Name: "联发", Parent: 2902 }
+  - { Id: 2921, Name: "联元", Parent: 2902, Note: "过继让佐" }
+  - { Id: 2922, Name: "世第", Parent: 2903 }
+  - { Id: 2923, Name: "世庆", Parent: 2903 }
+  - { Id: 2924, Name: "世荣", Parent: 2903, Note: "过继让言、让品" }
+  - { Id: 2925, Name: "世道", Parent: 2903 }
+  - { Id: 2926, Name: "世钧", Parent: 2904 }
+  - { Id: 2927, Name: "世俊", Parent: 2904 }
+  - { Id: 2928, Name: "世发", Parent: 2905 }
+  - { Id: 2929, Name: "世和", Parent: 2905 }
+  - { Id: 2930, Name: "长明", Parent: 2906 }
+  - { Id: 2931, Name: "有生", Parent: 2908 }
+  - { Id: 2932, Name: "金玉", Parent: 2922 }
+  - { Id: 2933, Name: "德本", Parent: 2926 }
+  - { Id: 2934, Name: "德发", Parent: 2926, Note: "过继世俊" }
+  - { Id: 2935, Name: "德金", Parent: 2926 }
+  - { Id: 2936, Name: "德银", Parent: 2926 }
+  - { Id: 2937, Name: "德发", Parent: 2927 }
+
+  - { Id: 2938, Name: "恭选", Parent: 1344 }
+  - { Id: 2939, Name: "恭和", Parent: 1344 }
+  - { Id: 2940, Name: "恭周", Parent: 1344 }
+  - { Id: 2941, Name: "恭维", Parent: 1344 }
+  - { Id: 2942, Name: "恭皋", Parent: 1344, Note: "过继起盛" }
+  - { Id: 2943, Name: "怀清", Parent: 1345, Adopted: "J", Note: "起山次子" }
+  - { Id: 2944, Name: "恭皋", Parent: 1346, Adopted: "J", Note: "起云五子" }
+  - { Id: 2945, Name: "恭普", Parent: 1348 }
+  - { Id: 2946, Name: "恭政", Parent: 1348, Note: "过继允理" }
+  - { Id: 2947, Name: "恭服", Parent: 1349 }
+  - { Id: 2948, Name: "克任", Parent: 2938 }
+  - { Id: 2949, Name: "克聚", Parent: 2938, Note: "长子，过继恭和" }
+  - { Id: 2950, Name: "克俊", Parent: 2938, Note: "三子，过继恭周" }
+  - { Id: 2951, Name: "克聚", Parent: 2939, Adopted: "J", Note: "恭选长子" }
+  - { Id: 2952, Name: "克俊", Parent: 2940, Adopted: "J", Note: "恭选三子" }
+  - { Id: 2953, Name: "克伸", Parent: 2941, Adopted: "J", Note: "恭皋长子" }
+  - { Id: 2954, Name: "克猷", Parent: 2943, Adopted: "J", Note: "怀友次子" }
+  - { Id: 2955, Name: "克务", Parent: 2944 }
+  - { Id: 2956, Name: "克伸", Parent: 2944, Note: "长子，过继恭维" }
+  - { Id: 2957, Name: "克敬", Parent: 2945 }
+  - { Id: 2958, Name: "克夺", Parent: 2947, Adopted: "J", Note: "怀德三子" }
+  - { Id: 2959, Name: "让恒", Parent: 2948 }
+  - { Id: 2960, Name: "让绩", Parent: 2951 }
+  - { Id: 2961, Name: "让仁", Parent: 2951 }
+  - { Id: 2962, Name: "让法", Parent: 2951 }
+  - { Id: 2963, Name: "让国", Parent: 2951 }
+  - { Id: 2964, Name: "让伦", Parent: 2951, Note: "过继克伸" }
+  - { Id: 2965, Name: "让谟", Parent: 2952 }
+  - { Id: 2966, Name: "让全", Parent: 2952 }
+  - { Id: 2967, Name: "让福", Parent: 2952 }
+  - { Id: 2968, Name: "让田", Parent: 2952 }
+  - { Id: 2969, Name: "让伦", Parent: 2953, Adopted: "J", Note: "克聚五子" }
+  - { Id: 2970, Name: "让瀛", Parent: 2954 }
+  - { Id: 2971, Name: "让满", Parent: 2954 }
+  - { Id: 2972, Name: "让海", Parent: 2954 }
+  - { Id: 2973, Name: "让陈", Parent: 2955 }
+  - { Id: 2974, Name: "让印", Parent: 2957 }
+  - { Id: 2975, Name: "让泉", Parent: 2958 }
+  - { Id: 2976, Name: "让初", Parent: 2958, Note: "过继克荣" }
+  - { Id: 2977, Name: "让朋", Parent: 2958, Note: "过继克和" }
+  - { Id: 2978, Name: "世田", Parent: 2960 }
+  - { Id: 2979, Name: "世根", Parent: 2960, Note: "过继让国" }
+  - { Id: 2980, Name: "世昌", Parent: 2961 }
+  - { Id: 2981, Name: "世根", Parent: 2963, Adopted: "J" }
+  - { Id: 2982, Name: "世生", Parent: 2970 }
+  - { Id: 2983, Name: "世宝", Parent: 2970 }
+  - { Id: 2984, Name: "世畊", Parent: 2971 }
+  - { Id: 2985, Name: "世苗", Parent: 2971 }
+  - { Id: 2986, Name: "世顯", Parent: 2974 }
+  - { Id: 2987, Name: "世炳", Parent: 2974 }
+  - { Id: 2988, Name: "世庆", Parent: 2975 }
+  - { Id: 2989, Name: "益全", Parent: 2987 }
+
+  - { Id: 2990, Name: "恭政", Parent: 1350, Adopted: "J", Note: "步高次子" }
+  - { Id: 2991, Name: "恭颜", Parent: 1387 }
+  - { Id: 2992, Name: "恭仙", Parent: 1388, Adopted: "J", Note: "南分，允章三子" }
+  - { Id: 2993, Name: "恭仙", Parent: 1389, Adopted: "J", Note: "允章三子" }
+  - { Id: 2994, Name: "恭默", Parent: 1390 }
+  - { Id: 2995, Name: "恭俭", Parent: 1390, Note: "过继允举" }
+  - { Id: 2996, Name: "恭俭", Parent: 1391, Adopted: "J", Note: "允进次子" }
+  - { Id: 2997, Name: "克和", Parent: 2990 }
+  - { Id: 2998, Name: "克勇", Parent: 2992, Adopted: "J", Note: "恭发次子" }
+  - { Id: 2999, Name: "克华", Parent: 2993, Adopted: "J", Note: "怀德次子，子存疑" }
+  - { Id: 3000, Name: "克家", Parent: 2994 }
+  - { Id: 3001, Name: "克敏", Parent: 2994, Note: "过继恭祥" }
+  - { Id: 3002, Name: "克扈", Parent: 2996 }
+  - { Id: 3003, Name: "让朋", Parent: 2997, Adopted: "J", Note: "克夺子" }
+  - { Id: 3004, Name: "让选", Parent: 2998, Adopted: "J", Note: "克应三子" }
+  - { Id: 3005, Name: "让礼", Parent: 3000 }
+  - { Id: 3006, Name: "让鼎", Parent: 3002, Adopted: "J", Note: "克敏之子" }
+  - { Id: 3007, Name: "世义", Parent: 3004 }
+  - { Id: 3008, Name: "世鋆", Parent: 3005 }
+  - { Id: 3009, Name: "德美", Parent: 3008 }
+
+  - { Id: 3010, Name: "时生", Gender: "M", Spouse: "黄书兰", Parent: 141 }
+  - { Id: 3011, Name: "明生", Gender: "F", Spouse: "张继民", Parent: 141 }
+  - { Id: 3012, Name: "春生", Gender: "F", Spouse: "周胜海", Parent: 141 }
+  - { Id: 3013, Name: "晓强", Gender: "M", Spouse: "陈朝丽", Parent: 3010 }
+  - { Id: 3014, Name: "晓泉", Gender: "M", Spouse: "程庭红", Parent: 3010 }
+  - { Id: 3015, Name: "晓玲", Gender: "F", Spouse: "潘永斌", Parent: 3010 }
+  - { Id: 3016, Name: "张晓湘", Parent: 3011 }
+  - { Id: 3017, Name: "张晓庆", Parent: 3011 }
+  - { Id: 3018, Name: "张勇进", Parent: 3011 }
+  - { Id: 3019, Name: "周俊", Parent: 3012 }
+  - { Id: 3020, Name: "周岭", Parent: 3012 }
+  - { Id: 3021, Name: "湘容", Parent: 3013 }
+  - { Id: 3022, Name: "陈一", Parent: 3013 }
+  - { Id: 3023, Name: "颖奇", Parent: 3014 }
+  - { Id: 3024, Name: "潘栖梧", Parent: 3015 }
+
   - { Id: 30  , Name: "恭貌"   , Parent: 1269 }
 
   - { Id: 31  , Name: "业"     , Parent: 30 }
