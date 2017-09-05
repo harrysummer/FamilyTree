@@ -785,7 +785,7 @@ Family:
   - { Id: 902 , Name: "玙"   , Parent: 844 }
   - { Id: 903 , Name: "珮"   , Parent: 845 }
   - { Id: 904 , Name: "璠"   , Parent: 846 }
-  - { Id: 905 , Name: "⿰王𣶒"   , Parent: 846 }
+  - { Id: 905 , Name: "\uE001"   , Parent: 846 } # 王片一爿
   - { Id: 906 , Name: "瑸"   , Parent: 846 }
   - { Id: 907 , Name: "琂"   , Parent: 846 }
   - { Id: 908 , Name: "琮"   , Parent: 847 }
@@ -1772,7 +1772,7 @@ Family:
   - { Id: 2020, Name: "日㫞", Parent: 2010 }
   - { Id: 2021, Name: "日選", Parent: 2010 }
   - { Id: 2022, Name: "璼", Parent: 2020 }
-  - { Id: 2023, Name: "⿰王雍", Parent: 2020 }
+  - { Id: 2023, Name: "\uE000", Parent: 2020 } # ⿰王雍
   - { Id: 2024, Name: "允贵", Parent: 2022 }
   - { Id: 2025, Name: "允元", Parent: 2023 }
   - { Id: 2026, Name: "允能", Parent: 2023 }

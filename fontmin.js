@@ -170,7 +170,7 @@ let otherTexts = convertSetToString(otherTextSet);
 makeFont(titleTexts, 'SourceHanSerifCN-Bold.otf', __dirname + '/dist/fonts')
     .then(() => makeFont(otherTexts, 'SourceHanSansSC-Regular.otf', __dirname + '/dist/fonts'))
     //.then(() => makeFont(nameTexts, 'FZKTK.TTF', __dirname + '/dist/fonts'))
-    .then(() => mergeAndMakeFont(nameTexts, ['TH-Khaai-TP0.ttf','TH-Khaai-TP2.ttf'], __dirname + '/dist/fonts', 'TH-Khaai'))
+    .then(() => mergeAndMakeFont(nameTexts, ['TH-Khaai-TP0.ttf','TH-Khaai-TP2.ttf', 'TH-Khaai-PUA.ttf'], __dirname + '/dist/fonts', 'TH-Khaai'))
     .catch(e => {
         console.error(e);
     });
