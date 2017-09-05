@@ -283,7 +283,7 @@ Family:
   - { Id: 656 , Name: "元礼"   , Parent: 630 }
   - { Id: 657 , Name: "元银"   , Parent: 631 }
   - { Id: 658 , Name: "元宾"   , Parent: 631 }
-  - { Id: 659 , Name: "元𤣱"   , Parent: 632 }
+  - { Id: 659 , Name: "元玘"   , Parent: 632 }
   - { Id: 660 , Name: "元金"   , Parent: 632 }
   - { Id: 661 , Name: "元玉"   , Parent: 632 }
   - { Id: 662 , Name: "元时"   , Parent: 633 }
@@ -374,7 +374,7 @@ Family:
 
   # 九世
   - { Id: 422 , Name: "明科"   , Parent: 16 }
-  - { Id: 423 , Name: "明𤣱"   , Parent: 16 }
+  - { Id: 423 , Name: "明玘"   , Parent: 16 }
   - { Id: 424 , Name: "明纯"   , Parent: 17 }
   - { Id: 425 , Name: "明良"   , Parent: 17 }
   - { Id: 19  , Name: "明榜"   , Parent: 18 }
