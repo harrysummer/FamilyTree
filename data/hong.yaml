@@ -357,9 +357,9 @@ Family:
   - { Id: 749 , Name: "得纲"   , Parent: 725 }
   - { Id: 750 , Name: "得朋"   , Parent: 726 }
   - { Id: 751 , Name: "得经"   , Parent: 727 }
-  - { Id: 752 , Name: "元兆"   , Parent: 728 }
-  - { Id: 753 , Name: "元启"   , Parent: 728 }
-  - { Id: 754 , Name: "成所"   , Parent: 728 }
+  - { Id: 752 , Name: "元兆"   , Parent: 728, Terminated: True }
+  - { Id: 753 , Name: "元启"   , Parent: 728, Terminated: True }
+  - { Id: 754 , Name: "成所"   , Parent: 728, Terminated: True }
   - { Id: 528 , Name: "元潮"   , Parent: 522 }
   - { Id: 529 , Name: "元海"   , Parent: 522 }
   - { Id: 530 , Name: "元洲"   , Parent: 523 }
@@ -544,8 +544,8 @@ Family:
   - { Id: 777 , Name: "应聘"   , Parent: 744 }
   - { Id: 778 , Name: "应泰"   , Parent: 744 }
   - { Id: 779 , Name: "应瑞"   , Parent: 744 }
-  - { Id: 780 , Name: "明贤"   , Parent: 745 }
-  - { Id: 781 , Name: "明安"   , Parent: 746 }
+  - { Id: 780 , Name: "明贤"   , Parent: 745, Terminated: True }
+  - { Id: 781 , Name: "明安"   , Parent: 746, Terminated: True }
   - { Id: 782 , Name: "明乾"   , Parent: 747 }
   - { Id: 783 , Name: "明滕"   , Parent: 748 }
   - { Id: 784 , Name: "明贞"   , Parent: 749 }
@@ -2804,6 +2804,337 @@ Family:
   - { Id: 3022, Name: "陈一", Parent: 3013 }
   - { Id: 3023, Name: "颖奇", Parent: 3014 }
   - { Id: 3024, Name: "潘栖梧", Parent: 3015 }
+
+  # 宽_宗_诲_宿_朝兴支下（13至17世）（1）
+  - { Id: 3025, Name: "恭顺", Parent: 1115 }
+  - { Id: 3026, Name: "恭明", Parent: 1115 }
+  - { Id: 3027, Name: "恭江", Parent: 1115 }
+  - { Id: 3028, Name: "恭良", Parent: 1115 }
+  - { Id: 3029, Name: "恭明", Parent: 1118, Adopted: "J" }
+  - { Id: 3030, Name: "恭利", Parent: 1119 }
+  - { Id: 3031, Name: "恭质", Parent: 1121 }
+  - { Id: 3032, Name: "恭泉", Parent: 1121 }
+  - { Id: 3033, Name: "恭元", Parent: 1122 }
+  - { Id: 3034, Name: "恭享", Parent: 1122 }
+  - { Id: 3035, Name: "恭平", Parent: 1122 }
+  - { Id: 3036, Name: "恭文", Parent: 1122 }
+  - { Id: 3037, Name: "恭成", Parent: 1122 }
+  - { Id: 3038, Name: "恭文", Parent: 1123, Adopted: "J" }
+  - { Id: 3039, Name: "恭言", Parent: 1124 }
+  - { Id: 3040, Name: "恭呈", Parent: 1126 }
+  - { Id: 3041, Name: "恭源", Parent: 1127 }
+  - { Id: 3042, Name: "恭呈", Parent: 1128, Adopted: "T" }
+  - { Id: 3043, Name: "恭义", Parent: 1129, Adopted: "J" }
+  - { Id: 3044, Name: "恭义", Parent: 1132 }
+  - { Id: 3045, Name: "恭礼", Parent: 1132 }
+  - { Id: 3046, Name: "恭智", Parent: 1132 }
+  - { Id: 3047, Name: "恭信", Parent: 1132 }
+  - { Id: 3048, Name: "恭敬", Parent: 1133 }
+  - { Id: 3049, Name: "恭壁", Parent: 1187 }
+  - { Id: 3050, Name: "克全", Parent: 3025, Adopted: "T" }
+  - { Id: 3051, Name: "克全", Parent: 3027 }
+  - { Id: 3052, Name: "克全", Parent: 3028, Adopted: "T" }
+  - { Id: 3053, Name: "克支", Parent: 3029 }
+  - { Id: 3054, Name: "夺标", Parent: 3030 }
+  - { Id: 3055, Name: "克财", Parent: 3031, Adopted: "T" }
+  - { Id: 3056, Name: "克财", Parent: 3032 }
+  - { Id: 3057, Name: "克明", Parent: 3033 }
+  - { Id: 3058, Name: "克昌", Parent: 3034 }
+  - { Id: 3059, Name: "克善", Parent: 3034 }
+  - { Id: 3060, Name: "克贤", Parent: 3034 }
+  - { Id: 3061, Name: "克容", Parent: 3034 }
+  - { Id: 3062, Name: "克顺", Parent: 3035 }
+  - { Id: 3063, Name: "克济", Parent: 3037 }
+  - { Id: 3064, Name: "克享", Parent: 3038 }
+  - { Id: 3065, Name: "克斌", Parent: 3038, Terminated: True }
+  - { Id: 3066, Name: "克发", Parent: 3039, Terminated: True }
+  - { Id: 3067, Name: "克富", Parent: 3040, Adopted: "T" }
+  - { Id: 3068, Name: "克富", Parent: 3041 }
+  - { Id: 3069, Name: "克财", Parent: 3043 }
+  - { Id: 3070, Name: "克兴", Parent: 3043 }
+  - { Id: 3071, Name: "克富", Parent: 3043 }
+  - { Id: 3072, Name: "克茂", Parent: 3043 }
+  - { Id: 3073, Name: "克培", Parent: 3045, Terminated: True }
+  - { Id: 3074, Name: "克植", Parent: 3045, Terminated: True }
+  - { Id: 3075, Name: "克厚", Parent: 3045, Terminated: True }
+  - { Id: 3076, Name: "克财", Parent: 3046, Adopted: "J" }
+  - { Id: 3077, Name: "克兴", Parent: 3048 }
+  - { Id: 3078, Name: "承皓", Parent: 3049 }
+  - { Id: 3079, Name: "克礼", Parent: 3049 }
+  - { Id: 3080, Name: "克清", Parent: 3049 }
+  - { Id: 3081, Name: "克亮", Parent: 3049 }
+  - { Id: 3082, Name: "克升", Parent: 3049 }
+  - { Id: 3083, Name: "让名", Parent: 3050, Adopted: "T" }
+  - { Id: 3084, Name: "让名", Parent: 3051 }
+  - { Id: 3085, Name: "让声", Parent: 3051 }
+  - { Id: 3086, Name: "让远", Parent: 3051 }
+  - { Id: 3087, Name: "让声", Parent: 3052, Adopted: "T" }
+  - { Id: 3088, Name: "让远", Parent: 3053, Adopted: "T" }
+  - { Id: 3089, Name: "让泽", Parent: 3054 }
+  - { Id: 3090, Name: "让发", Parent: 3056 }
+  - { Id: 3091, Name: "让乐", Parent: 3057 }
+  - { Id: 3092, Name: "让友", Parent: 3058 }
+  - { Id: 3093, Name: "让先", Parent: 3059 }
+  - { Id: 3094, Name: "让芝", Parent: 3061 }
+  - { Id: 3095, Name: "让友", Parent: 3062, Adopted: "T" }
+  - { Id: 3096, Name: "让友", Parent: 3063, Adopted: "T" }
+  - { Id: 3097, Name: "让前", Parent: 3064 }
+  - { Id: 3098, Name: "让财", Parent: 3068 }
+  - { Id: 3099, Name: "让起", Parent: 3077 }
+  - { Id: 3100, Name: "标", Parent: 3078 }
+  - { Id: 3101, Name: "崖", Parent: 3078 }
+  - { Id: 3102, Name: "崖", Parent: 3079, Adopted: "J" }
+  - { Id: 3103, Name: "猷", Parent: 3081 }
+  - { Id: 3104, Name: "让畴", Parent: 3082 }
+  - { Id: 3105, Name: "让恒", Parent: 3082 }
+  - { Id: 3106, Name: "世烁", Parent: 3104 }
+  - { Id: 3107, Name: "世云", Parent: 3104 }
+  - { Id: 3108, Name: "世桃", Parent: 3104 }
+  - { Id: 3109, Name: "世谷", Parent: 3104 }
+  - { Id: 3110, Name: "世和", Parent: 3105 }
+  - { Id: 3111, Name: "世泰", Parent: 3105 }
+  - { Id: 3112, Name: "世年", Parent: 3089 }
+  - { Id: 3113, Name: "世年", Parent: 3091 }
+  - { Id: 3114, Name: "澍", Parent: 3100 }
+  - { Id: 3115, Name: "彦", Parent: 3100 }
+  - { Id: 3116, Name: "世兰", Parent: 3102 }
+  - { Id: 3117, Name: "亮", Parent: 3102 }
+  - { Id: 3118, Name: "世泽", Parent: 3103 }
+  - { Id: 3119, Name: "世昌", Parent: 3103 }
+  - { Id: 3120, Name: "世刚", Parent: 3103 }
+  - { Id: 3121, Name: "世杰", Parent: 3103 }
+  - { Id: 3122, Name: "德品", Parent: 3118 }
+  - { Id: 3123, Name: "德威", Parent: 3118 }
+  - { Id: 3124, Name: "德称", Parent: 3119 }
+  - { Id: 3125, Name: "德端", Parent: 3120 }
+  
+  # 宽_宗_诲_宿_朝兴支下（13至17世）（2）
+  - { Id: 3126, Name: "恭璠", Parent: 1188 }
+  - { Id: 3127, Name: "恭球", Parent: 1188 }
+  - { Id: 3128, Name: "克彬", Parent: 3126 }
+  - { Id: 3129, Name: "克言", Parent: 3126 }
+  - { Id: 3130, Name: "克钱", Parent: 3126 }
+  - { Id: 3131, Name: "舒", Parent: 3127 }
+  - { Id: 3132, Name: "琼发", Parent: 3128 }
+  - { Id: 3133, Name: "让廉", Parent: 3129 }
+  - { Id: 3134, Name: "让畔", Parent: 3130 }
+  - { Id: 3135, Name: "让国", Parent: 3130 }
+  - { Id: 3136, Name: "让均", Parent: 3130 }
+  - { Id: 3137, Name: "世权", Parent: 3132 }
+  - { Id: 3138, Name: "世茂", Parent: 3132 }
+  - { Id: 3139, Name: "世荣", Parent: 3132 }
+  - { Id: 3140, Name: "世美", Parent: 3133 }
+  - { Id: 3141, Name: "世和", Parent: 3134, Adopted: "T" }
+  - { Id: 3142, Name: "世泰", Parent: 3135, Adopted: "T" }
+  - { Id: 3143, Name: "世泰", Parent: 3136, Adopted: "T" }
+  - { Id: 3144, Name: "让廷", Parent: 3131 }
+  - { Id: 3145, Name: "让礼", Parent: 3131 }
+  - { Id: 3146, Name: "让达", Parent: 3131 }
+  - { Id: 3147, Name: "世铨", Parent: 3144 }
+  - { Id: 3148, Name: "世钧", Parent: 3144 }
+  - { Id: 3149, Name: "世钦", Parent: 3144 }
+  - { Id: 3150, Name: "世镶", Parent: 3144 }
+  - { Id: 3151, Name: "世银", Parent: 3144 }
+  - { Id: 3152, Name: "世铎", Parent: 3144 }
+  - { Id: 3153, Name: "世镛", Parent: 3145 }
+  - { Id: 3154, Name: "世鑑", Parent: 3145 }
+  - { Id: 3155, Name: "德玉", Parent: 3153 }
+  - { Id: 3156, Name: "世铸", Parent: 3146 }
+  - { Id: 3157, Name: "恭发", Parent: 1189 }
+  - { Id: 3158, Name: "恭须", Parent: 1189 }
+  - { Id: 3159, Name: "恭志", Parent: 1189 }
+  - { Id: 3160, Name: "恭安", Parent: 1189 }
+  - { Id: 3161, Name: "克柔", Parent: 3157, Adopted: "T" }
+  - { Id: 3162, Name: "克柔", Parent: 3158, Adopted: "T" }
+  - { Id: 3163, Name: "克柔", Parent: 3159 }
+  - { Id: 3164, Name: "克长", Parent: 3160 }
+  - { Id: 3165, Name: "让和", Parent: 3161, Adopted: "J" }
+  - { Id: 3166, Name: "让为", Parent: 3162, Adopted: "T" }
+  - { Id: 3167, Name: "让和", Parent: 3163 }
+  - { Id: 3168, Name: "让为", Parent: 3163 }
+  - { Id: 3169, Name: "让贵", Parent: 3163 }
+  - { Id: 3170, Name: "世功", Parent: 3165 }
+  - { Id: 3171, Name: "世中", Parent: 3168 }
+  - { Id: 3172, Name: "世平", Parent: 3168 }
+  - { Id: 3173, Name: "让正", Parent: 3164 }
+  - { Id: 3174, Name: "恭祥", Parent: 1190 }
+  - { Id: 3175, Name: "恭义", Parent: 1190 }
+  - { Id: 3176, Name: "恭有", Parent: 1190, Terminated: True }
+  - { Id: 3177, Name: "克猷", Parent: 3174 }
+  - { Id: 3178, Name: "克猷", Parent: 3175, Adopted: "T" }
+  - { Id: 3179, Name: "让清", Parent: 3177 }
+  - { Id: 3180, Name: "让右", Parent: 3178 }
+  - { Id: 3181, Name: "让前", Parent: 3178 }
+  - { Id: 3182, Name: "世长", Parent: 3179 }
+  - { Id: 3183, Name: "恭仁", Parent: 1191 }
+  - { Id: 3184, Name: "恭让", Parent: 1191 }
+  - { Id: 3185, Name: "恭让", Parent: 1192, Adopted: "J" }
+  - { Id: 3186, Name: "恭定", Parent: 1193, Adopted: "J" }
+  - { Id: 3187, Name: "恭盛", Parent: 1194 }
+  - { Id: 3188, Name: "恭定", Parent: 1194 }
+  - { Id: 3189, Name: "克长", Parent: 3183 }
+  - { Id: 3190, Name: "克勋", Parent: 3185 }
+  - { Id: 3191, Name: "克功", Parent: 3185 }
+  - { Id: 3192, Name: "克高", Parent: 3185 }
+  - { Id: 3193, Name: "克成", Parent: 3186, Terminated: True }
+  - { Id: 3194, Name: "克昌", Parent: 3187, Terminated: True }
+  - { Id: 3195, Name: "克成", Parent: 3187, Terminated: True }
+  - { Id: 3196, Name: "克邦", Parent: 3187, Terminated: True }
+  - { Id: 3197, Name: "让轩", Parent: 3189 }
+  - { Id: 3198, Name: "让华", Parent: 3189 }
+  - { Id: 3199, Name: "让荣", Parent: 3189 }
+  - { Id: 3200, Name: "让正", Parent: 3189 }
+  - { Id: 3201, Name: "让能", Parent: 3189 }
+  - { Id: 3202, Name: "让三", Parent: 3190 }
+  - { Id: 3203, Name: "让道", Parent: 3191 }
+  - { Id: 3204, Name: "让义", Parent: 3192 }
+  - { Id: 3205, Name: "让德", Parent: 3191 }
+  - { Id: 3206, Name: "让仁", Parent: 3191 }
+  - { Id: 3207, Name: "恭兆", Parent: 1195 }
+  - { Id: 3208, Name: "恭盛", Parent: 1197 }
+  - { Id: 3209, Name: "恭聚", Parent: 1198 }
+  - { Id: 3210, Name: "恭起", Parent: 1202 }
+  - { Id: 3211, Name: "兴和", Parent: 1204 }
+  - { Id: 3212, Name: "兴传", Parent: 1205, Terminated: True }
+  - { Id: 3213, Name: "兴广", Parent: 1206, Adopted: "T" }
+  - { Id: 3214, Name: "兴广", Parent: 1207 }
+  - { Id: 3215, Name: "克襄", Parent: 3207 }
+  - { Id: 3216, Name: "克明", Parent: 3207, Terminated: True }
+  - { Id: 3217, Name: "克襄", Parent: 3208 }
+  - { Id: 3218, Name: "克敬", Parent: 3208 }
+  - { Id: 3219, Name: "克说", Parent: 3208 }
+  - { Id: 3220, Name: "克敬", Parent: 3209, Adopted: "J" }
+  - { Id: 3221, Name: "克金", Parent: 3210 }
+  - { Id: 3222, Name: "正思", Parent: 3211 }
+  - { Id: 3223, Name: "克承", Parent: 3214 }
+  - { Id: 3224, Name: "让逊", Parent: 3215 }
+  - { Id: 3225, Name: "让尊", Parent: 3219 }
+  - { Id: 3226, Name: "让英", Parent: 3220 }
+  - { Id: 3227, Name: "让路", Parent: 3221 }
+  - { Id: 3228, Name: "让昭", Parent: 3222, Terminated: True }
+  - { Id: 3229, Name: "让平", Parent: 3223 }
+  - { Id: 3230, Name: "世略", Parent: 3224 }
+  - { Id: 3231, Name: "世业", Parent: 3224 }
+  - { Id: 3232, Name: "世朋", Parent: 3224 }
+  - { Id: 3233, Name: "世韫", Parent: 3225 }
+  - { Id: 3234, Name: "世谟", Parent: 3226 }
+  - { Id: 3235, Name: "世安", Parent: 3227 }
+  - { Id: 3236, Name: "世靖", Parent: 3227 }
+  - { Id: 3237, Name: "世茂", Parent: 3229, Adopted: "J" }
+  - { Id: 3238, Name: "德和", Parent: 3232 }
+  - { Id: 3239, Name: "德泽", Parent: 3233 }
+  - { Id: 3240, Name: "德润", Parent: 3233 }
+  - { Id: 3241, Name: "德川", Parent: 3233 }
+  - { Id: 3242, Name: "德盛", Parent: 3237 }
+  
+  # 宽_宗_诲_宿_朝兴支（3）
+  - { Id: 3243, Name: "恭道", Parent: 1208 }
+  - { Id: 3244, Name: "恭玙", Parent: 1208 }
+  - { Id: 3245, Name: "恭起", Parent: 1208, Terminated: True }
+  - { Id: 3246, Name: "恭瑛", Parent: 1208 }
+  - { Id: 3247, Name: "克家", Parent: 3243 }
+  - { Id: 3248, Name: "克承", Parent: 3243, Terminated: True }
+  - { Id: 3249, Name: "克金", Parent: 3243, Terminated: True }
+  - { Id: 3250, Name: "克和", Parent: 3244 }
+  - { Id: 3251, Name: "克忠", Parent: 3244 }
+  - { Id: 3252, Name: "克官", Parent: 3244 }
+  - { Id: 3253, Name: "克信", Parent: 3244 }
+  - { Id: 3254, Name: "克圣", Parent: 3244 }
+  - { Id: 3255, Name: "克效", Parent: 3246 }
+  - { Id: 3256, Name: "克年", Parent: 3246 }
+  - { Id: 3257, Name: "让贤", Parent: 3247 }
+  - { Id: 3258, Name: "让平", Parent: 3247 }
+  - { Id: 3259, Name: "让正", Parent: 3247 }
+  - { Id: 3260, Name: "演畴", Parent: 3250 }
+  - { Id: 3261, Name: "让恕", Parent: 3250 }
+  - { Id: 3262, Name: "让龙", Parent: 3251 }
+  - { Id: 3263, Name: "让行", Parent: 3251 }
+  - { Id: 3264, Name: "让筠", Parent: 3252 }
+  - { Id: 3265, Name: "让余", Parent: 3252 }
+  - { Id: 3266, Name: "让德", Parent: 3252 }
+  - { Id: 3267, Name: "让恕", Parent: 3253, Adopted: "J" }
+  - { Id: 3268, Name: "让能", Parent: 3254, Terminated: True }
+  - { Id: 3269, Name: "让宾", Parent: 3255 }
+  - { Id: 3270, Name: "让俊", Parent: 3256, Terminated: True }
+  - { Id: 3271, Name: "让瑛", Parent: 3256, Terminated: True }
+  - { Id: 3272, Name: "让豪", Parent: 3256 }
+  - { Id: 3273, Name: "让贵", Parent: 3256 }
+  - { Id: 3274, Name: "让雄", Parent: 3256 }
+  - { Id: 3275, Name: "让先", Parent: 3256 }
+  - { Id: 3276, Name: "世华", Parent: 3257 }
+  - { Id: 3277, Name: "世芬", Parent: 3257 }
+  - { Id: 3278, Name: "世茂", Parent: 3257 }
+  - { Id: 3279, Name: "世友", Parent: 3257 }
+  - { Id: 3280, Name: "世泽", Parent: 3260 }
+  - { Id: 3281, Name: "世济", Parent: 3260 }
+  - { Id: 3282, Name: "世渐", Parent: 3260 }
+  - { Id: 3283, Name: "世濬", Parent: 3260 }
+  - { Id: 3284, Name: "世沅", Parent: 3260 }
+  - { Id: 3285, Name: "世兴", Parent: 3263 }
+  - { Id: 3286, Name: "世运", Parent: 3264 }
+  - { Id: 3287, Name: "世俊", Parent: 3265 }
+  - { Id: 3288, Name: "世谊", Parent: 3265 }
+  - { Id: 3289, Name: "世球", Parent: 3265 }
+  - { Id: 3290, Name: "世培", Parent: 3266 }
+  - { Id: 3291, Name: "世度", Parent: 3267 }
+  - { Id: 3292, Name: "世量", Parent: 3267 }
+  - { Id: 3293, Name: "世衡", Parent: 3267 }
+  - { Id: 3294, Name: "世真", Parent: 3269, Terminated: True }
+  - { Id: 3295, Name: "世玉", Parent: 3269, Terminated: True }
+  - { Id: 3296, Name: "世财", Parent: 3272 }
+  - { Id: 3297, Name: "世福", Parent: 3272 }
+  - { Id: 3298, Name: "世福", Parent: 3273, Adopted: "T" }
+  - { Id: 3299, Name: "世福", Parent: 3274, Adopted: "T" }
+  - { Id: 3300, Name: "世福", Parent: 3275, Adopted: "T" }
+  - { Id: 3301, Name: "德全", Parent: 3276 }
+  - { Id: 3302, Name: "德全", Parent: 3277, Adopted: "T" }
+  - { Id: 3303, Name: "德福", Parent: 3279 }
+  - { Id: 3304, Name: "德存", Parent: 3280 }
+  - { Id: 3305, Name: "德树", Parent: 3280 }
+  - { Id: 3306, Name: "德种", Parent: 3280 }
+  - { Id: 3307, Name: "德化", Parent: 3280 }
+  - { Id: 3308, Name: "德裁", Parent: 3280 }
+  - { Id: 3309, Name: "德扬", Parent: 3281 }
+  - { Id: 3310, Name: "德播", Parent: 3281 }
+  - { Id: 3311, Name: "德中", Parent: 3281 }
+  - { Id: 3312, Name: "德华", Parent: 3281 }
+  - { Id: 3313, Name: "德施", Parent: 3282 }
+  - { Id: 3314, Name: "德报", Parent: 3282 }
+  - { Id: 3315, Name: "德培", Parent: 3283 }
+  - { Id: 3316, Name: "德值", Parent: 3283 }
+  - { Id: 3317, Name: "德厚", Parent: 3283 }
+  - { Id: 3318, Name: "德胜", Parent: 3284 }
+  - { Id: 3319, Name: "德朝", Parent: 3287 }
+  - { Id: 3320, Name: "德安", Parent: 3287 }
+  - { Id: 3321, Name: "德贵", Parent: 3288 }
+  - { Id: 3322, Name: "德聪", Parent: 3289 }
+  - { Id: 3323, Name: "德明", Parent: 3289 }
+  - { Id: 3324, Name: "德仪", Parent: 3290 }
+  - { Id: 3325, Name: "德溥", Parent: 3291 }
+  - { Id: 3326, Name: "作先", Parent: 3325 }
+  - { Id: 3327, Name: "德博", Parent: 3291 }
+  - { Id: 3328, Name: "德基", Parent: 3292 }
+  - { Id: 3329, Name: "德深", Parent: 3293 }
+  - { Id: 3330, Name: "克福", Parent: 3246 }
+  - { Id: 3331, Name: "克勤", Parent: 3246 }
+  - { Id: 3332, Name: "让耕", Parent: 3330 }
+  - { Id: 3333, Name: "让明", Parent: 3330, Terminated: True }
+  - { Id: 3334, Name: "让文", Parent: 3330 }
+  - { Id: 3335, Name: "让武", Parent: 3330 }
+  - { Id: 3336, Name: "让全", Parent: 3330 }
+  - { Id: 3337, Name: "让虞", Parent: 3331 }
+  - { Id: 3338, Name: "让杰", Parent: 3331 }
+  - { Id: 3339, Name: "让慎", Parent: 3331 }
+  - { Id: 3340, Name: "世龙", Parent: 3332 }
+  - { Id: 3341, Name: "世凤", Parent: 3332 }
+  - { Id: 3342, Name: "世凤", Parent: 3334, Adopted: "J" }
+  - { Id: 3343, Name: "世贵", Parent: 3335 }
+  - { Id: 3344, Name: "世舞", Parent: 3336 }
+  - { Id: 3345, Name: "世旺", Parent: 3337, Adopted: "T" }
+  - { Id: 3346, Name: "世旺", Parent: 3338, Adopted: "T" }
+  - { Id: 3347, Name: "世旺", Parent: 3339 }
+  - { Id: 3348, Name: "世兴", Parent: 3262, Adopted: "T" }
+
 
   - { Id: 30  , Name: "恭貌"   , Parent: 1269 }
 
