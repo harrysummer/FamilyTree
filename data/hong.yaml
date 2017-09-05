@@ -59,7 +59,7 @@ Family:
   - { Id: 370 , Name: "寧"     , Parent: 355 }
   - { Id: 371 , Name: "完华"   , Parent: 357 }
   - { Id: 372 , Name: "清"     , Parent: 358 }
-  - { Id: 373 , Name: "𤣱"     , Parent: 358 }
+  - { Id: 373 , Name: "玘"     , Parent: 358 }
   - { Id: 374 , Name: "玮"     , Parent: 358 }
   - { Id: 375 , Name: "铣"     , Parent: 359 }
 
@@ -798,7 +798,7 @@ Family:
   - { Id: 915 , Name: "璥"   , Parent: 851 }
   - { Id: 916 , Name: "璿"   , Parent: 852 }
   - { Id: 917 , Name: "瓆"   , Parent: 852 }
-  - { Id: 918 , Name: "⿰王岡"   , Parent: 854 }
+  - { Id: 918 , Name: "\U00024987"   , Parent: 854 }
   - { Id: 919 , Name: "标"   , Parent: 855 }
   - { Id: 920 , Name: "楷"   , Parent: 855 }
   - { Id: 921 , Name: "琚"   , Parent: 856 }
@@ -1826,7 +1826,7 @@ Family:
   - { Id: 2074, Name: "日㬏", Parent: 2035 }
   - { Id: 2075, Name: "日昶", Parent: 2035 }
   - { Id: 2076, Name: "日起", Parent: 2035 }
-  - { Id: 2077, Name: "𤣱", Parent: 2074 }
+  - { Id: 2077, Name: "玘", Parent: 2074 }
   - { Id: 2078, Name: "玹", Parent: 2075 }
   - { Id: 2079, Name: "允孝", Parent: 2077 }
   - { Id: 2080, Name: "允忠", Parent: 2077 }
@@ -2340,7 +2340,7 @@ Family:
   - { Id: 2576, Name: "大宗", Parent: 2555 }
   - { Id: 2577, Name: "寤生", Parent: 2556 }
   - { Id: 2578, Name: "谦武", Parent: 2557 }
-  - { Id: 2579, Name: "⿰王乇", Parent: 2560 }
+  - { Id: 2579, Name: "\U000248EF", Parent: 2560 }
   - { Id: 2580, Name: "孚", Parent: 2560 }
   - { Id: 2581, Name: "济", Parent: 2560 }
   - { Id: 2582, Name: "瑱", Parent: 2560 }

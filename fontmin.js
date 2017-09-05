@@ -113,8 +113,8 @@ function mergeAndMakeFont(text, fontNames, outputPath, outputName) {
 }
 
 function addStringToSet(S, str) {
-    for (let i = 0; i < str.length; ++i) {
-        S[str[i]] = true;
+    for (let c of str) {
+        S[c] = true;
     }
     return S;
 }
