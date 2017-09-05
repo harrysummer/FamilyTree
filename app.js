@@ -40,7 +40,7 @@ app.get('/tree/:id', function(req, res, next) {
     svg.deleteCanvas(canvas);
 
     res.render('index', {
-        title: tree.data.Family.Title + ' - ' + util.zhGeneration(subtree.getRoot().depth) + subtree.getRoot().name + "公后代",
+        title:  util.zhGeneration(subtree.getRoot().depth) + subtree.getRoot().name + "公后代 - " + tree.data.Family.Title,
         svg: svgStr
     });
 });
@@ -60,7 +60,7 @@ app.get('/tree/:id/depth/:depth', function(req, res, next) {
     svg.deleteCanvas(canvas);
 
     res.render('index', {
-        title: tree.data.Family.Title + ' - ' + util.zhGeneration(subtree.getRoot().depth) + subtree.getRoot().name + "公后代（" + util.zhNumber(parseInt(req.params.depth)) + "代以内）",
+        title:  util.zhGeneration(subtree.getRoot().depth) + subtree.getRoot().name + "公后代（" + util.zhNumber(parseInt(req.params.depth)) + "代以内） - " + tree.data.Family.Title,
         svg: svgStr
     });
 });
