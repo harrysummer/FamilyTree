@@ -3387,6 +3387,152 @@ Family:
   - { Id: 3594, Name: "德盛", Parent: 3573, Adopted: "T" }
   - { Id: 3595, Name: "德盛", Parent: 3575 }
 
+  # 老四房,宗适,恩荫,廷俊,作津
+  - { Id: 3596, Name: "竹山", Gender: 'M', Spouse: "章学珍", Parent: 110 }
+  - { Id: 3597, Name: "竹林", Gender: 'M', Spouse: "陈怡培", Parent: 110 }
+  - { Id: 3598, Name: "竹筠", Gender: 'M', Spouse: "刘长俊", Parent: 110 }
+  - { Id: 3599, Name: "竹君", Gender: 'M', Spouse: "薛君壁", Parent: 110 }
+  - { Id: 3600, Name: "竹溪", Gender: 'M', Spouse: "鞠天健", Note: "生女三", Parent: 110 }
+  - { Id: 3601, Name: "伟", Gender: 'M', Spouse: "刘群", Parent: 3596 }
+  - { Id: 3602, Name: "丽萍", Gender: 'F', Spouse: "刘旭", Parent: 3596 }
+  - { Id: 3603, Name: "丽玲", Gender: 'F', Spouse: "赵永伟", Parent: 3596 }
+  - { Id: 3604, Name: "刘洪", Parent: 3598 }
+  - { Id: 3605, Name: "刘鸣", Parent: 3598 }
+  - { Id: 3606, Name: "刘跃", Parent: 3598 }
+  - { Id: 3607, Name: "薛洪兵", Gender: 'M', Spouse: "李氏", Parent: 3599 }
+  - { Id: 3608, Name: "薛洪云", Gender: 'M', Spouse: "胡厚军", Parent: 3599 }
+  - { Id: 3610, Name: "文杰", Parent: 3601 }
+  - { Id: 3611, Name: "刘洪睿", Parent: 3602 }
+  - { Id: 3612, Name: "赵楠", Parent: 3603 }
+
+  # 庐江:宗，仲义，本泰，明荣，应芳
+  - { Id: 3613, Name: "恭发", Parent: 2371 }
+  - { Id: 3614, Name: "恭其", Parent: 2371 }
+  - { Id: 3615, Name: "恭文", Parent: 2371 }
+  - { Id: 3616, Name: "克长", Parent: 3613 }
+  - { Id: 3617, Name: "克璋", Parent: 3613 }
+  - { Id: 3618, Name: "克清", Parent: 3613 }
+  - { Id: 3619, Name: "克里", Parent: 3613 }
+  - { Id: 3620, Name: "克风", Parent: 3614 }
+  - { Id: 3621, Name: "克雨", Parent: 3614 }
+  - { Id: 3622, Name: "克顺", Parent: 3614 }
+  - { Id: 3623, Name: "克璋", Parent: 3615, Adopted: "J" }
+  - { Id: 3624, Name: "让学", Parent: 3616 }
+  - { Id: 3625, Name: "让蟾", Parent: 3616 }
+  - { Id: 3626, Name: "让能", Parent: 3618 }
+  - { Id: 3627, Name: "让勋", Parent: 3618 }
+  - { Id: 3628, Name: "让知", Parent: 3618 }
+  - { Id: 3629, Name: "让雄", Parent: 3619 }
+  - { Id: 3630, Name: "让知", Parent: 3619, Adopted: "J" }
+  - { Id: 3631, Name: "让语", Parent: 3620, Adopted: "J" }
+  - { Id: 3632, Name: "让勋", Parent: 3622, Adopted: "J" }
+  - { Id: 3633, Name: "让语", Parent: 3623 }
+  - { Id: 3634, Name: "让德", Parent: 3623 }
+  - { Id: 3635, Name: "让祥", Parent: 3623 }
+  - { Id: 3636, Name: "世恩", Parent: 3624, Adopted: "J" }
+  - { Id: 3637, Name: "世昭", Parent: 3626 }
+  - { Id: 3638, Name: "世敏", Parent: 3630, Adopted: "T" }
+  - { Id: 3639, Name: "世敏", Parent: 3631, Adopted: "J" }
+  - { Id: 3640, Name: "世传", Parent: 3632 }
+  - { Id: 3641, Name: "世恩", Parent: 3632 }
+  - { Id: 3642, Name: "世思", Parent: 3632 }
+  - { Id: 3643, Name: "世敏", Parent: 3632 }
+  - { Id: 3644, Name: "世泽", Parent: 3632 }
+  - { Id: 3645, Name: "世恩", Parent: 3634, Adopted: "T" }
+  - { Id: 3646, Name: "德发", Parent: 3636 }
+  - { Id: 3647, Name: "德财", Parent: 3636 }
+  - { Id: 3648, Name: "德应", Parent: 3637 }
+  - { Id: 3649, Name: "德甲", Parent: 3639, Adopted: "J" }
+  - { Id: 3650, Name: "德久", Parent: 3640 }
+  - { Id: 3651, Name: "德长", Parent: 3640 }
+  - { Id: 3652, Name: "德富", Parent: 3642 }
+  - { Id: 3653, Name: "德贵", Parent: 3642 }
+  - { Id: 3654, Name: "德信", Parent: 3642 }
+  - { Id: 3655, Name: "德仙", Parent: 3642 }
+  - { Id: 3656, Name: "德科", Parent: 3644 }
+  - { Id: 3657, Name: "德甲", Parent: 3644 }
+  - { Id: 3658, Name: "德春", Parent: 3644 }
+  - { Id: 3659, Name: "德华", Parent: 3644 }
+  - { Id: 3660, Name: "德和", Parent: 3644 }
+  - { Id: 3661, Name: "作勤", Parent: 3646 }
+  - { Id: 3662, Name: "作俊", Parent: 3646 }
+  - { Id: 3663, Name: "作林", Parent: 3646 }
+  - { Id: 3664, Name: "作金", Parent: 3646 }
+  - { Id: 3665, Name: "作义", Parent: 3646 }
+  - { Id: 3666, Name: "作文", Parent: 3647 }
+  - { Id: 3667, Name: "作秉", Parent: 3647 }
+  - { Id: 3668, Name: "作忠", Parent: 3647 }
+  - { Id: 3669, Name: "作法", Parent: 3648 }
+  - { Id: 3670, Name: "作才", Parent: 3648 }
+  - { Id: 3671, Name: "作玉", Parent: 3649 }
+  - { Id: 3672, Name: "作有", Parent: 3650 }
+  - { Id: 3673, Name: "作福", Parent: 3650 }
+  - { Id: 3674, Name: "作宾", Parent: 3650 }
+  - { Id: 3675, Name: "作善", Parent: 3651 }
+  - { Id: 3676, Name: "作生", Parent: 3651 }
+  - { Id: 3677, Name: "作权", Parent: 3651 }
+  - { Id: 3678, Name: "作满", Parent: 3652, Adopted: "J" }
+  - { Id: 3679, Name: "作成", Parent: 3653, Adopted: "J" }
+  - { Id: 3680, Name: "作新", Parent: 3654 }
+  - { Id: 3681, Name: "作成", Parent: 3654 }
+  - { Id: 3682, Name: "作满", Parent: 3654 }
+  - { Id: 3683, Name: "作照", Parent: 3656 }
+  - { Id: 3684, Name: "作祥", Parent: 3656 }
+  - { Id: 3685, Name: "作柱", Parent: 3656 }
+  - { Id: 3686, Name: "作礼", Parent: 3658 }
+  - { Id: 3687, Name: "作胜", Parent: 3658 }
+  - { Id: 3688, Name: "作元", Parent: 3658 }
+  - { Id: 3689, Name: "作良", Parent: 3660 }
+  - { Id: 3690, Name: "作庭", Parent: 3660 }
+  - { Id: 3691, Name: "作堂", Parent: 3660 }
+  - { Id: 3692, Name: "作付", Parent: 3660 }
+  - { Id: 3693, Name: "求胜", Parent: 3661 }
+  - { Id: 3694, Name: "求余", Parent: 3661 }
+  - { Id: 3695, Name: "海涛", Parent: 3662 }
+  - { Id: 3696, Name: "求明", Parent: 3663 }
+  - { Id: 3697, Name: "求华", Parent: 3663 }
+  - { Id: 3698, Name: "求海", Parent: 3663 }
+  - { Id: 3699, Name: "求存", Parent: 3664 }
+  - { Id: 3700, Name: "求东", Parent: 3665 }
+  - { Id: 3701, Name: "求松", Parent: 3665 }
+  - { Id: 3702, Name: "求科", Parent: 3666 }
+  - { Id: 3703, Name: "求勇", Parent: 3668 }
+  - { Id: 3704, Name: "江元", Parent: 3672 }
+  - { Id: 3705, Name: "九林", Parent: 3672 }
+  - { Id: 3706, Name: "求正", Parent: 3675 }
+  - { Id: 3707, Name: "求山", Parent: 3677 }
+  - { Id: 3708, Name: "求法", Parent: 3677 }
+  - { Id: 3709, Name: "求道", Parent: 3678 }
+  - { Id: 3710, Name: "求仓", Parent: 3679 }
+  - { Id: 3711, Name: "求应", Parent: 3679 }
+  - { Id: 3712, Name: "求哥", Parent: 3680 }
+  - { Id: 3713, Name: "求洋", Parent: 3680 }
+  - { Id: 3714, Name: "求兵", Parent: 3680 }
+  - { Id: 3715, Name: "求长", Parent: 3683 }
+  - { Id: 3716, Name: "求稳", Parent: 3686 }
+  - { Id: 3717, Name: "求年", Parent: 3686 }
+  - { Id: 3718, Name: "求才", Parent: 3686 }
+  - { Id: 3719, Name: "求四", Parent: 3686 }
+  - { Id: 3720, Name: "天翼", Parent: 3689 }
+  - { Id: 3721, Name: "跃", Parent: 3690 }
+  - { Id: 3722, Name: "君", Parent: 3691 }
+  - { Id: 3723, Name: "昊天", Parent: 3692 }
+  - { Id: 3724, Name: "学扬", Parent: 3695 }
+  - { Id: 3725, Name: "学武", Parent: 3695 }
+  - { Id: 3726, Name: "玉生", Parent: 3695 }
+  - { Id: 3727, Name: "浩", Parent: 3696 }
+  - { Id: 3728, Name: "志强", Parent: 3699 }
+  - { Id: 3729, Name: "泽宇", Parent: 3703 }
+  - { Id: 3730, Name: "照国", Parent: 3704 }
+  - { Id: 3731, Name: "涛", Parent: 3705 }
+  - { Id: 3732, Name: "天昊", Parent: 3705 }
+  - { Id: 3733, Name: "远威", Parent: 3711 }
+  - { Id: 3734, Name: "波", Parent: 3715 }
+  - { Id: 3735, Name: "飞", Parent: 3715 }
+  - { Id: 3736, Name: "伟", Parent: 3716 }
+  - { Id: 3737, Name: "浩宇", Parent: 3718 }
+  - { Id: 3738, Name: "雨豪", Parent: 3719 }
+
 
   - { Id: 30  , Name: "恭貌"   , Parent: 1269 }
 
