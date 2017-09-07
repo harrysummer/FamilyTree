@@ -2126,7 +2126,7 @@ Family:
   - { Id: 2368, Name: "允全", Parent: 2335 }
   - { Id: 2369, Name: "允荘", Parent: 2336 }
   - { Id: 2370, Name: "允盛", Parent: 2336 }
-  - { Id: 2371, Name: "允江", Parent: 2338 }
+  - { Id: 2371, Name: "允江", Parent: 2338, Note: "薛家桥" }
   - { Id: 2372, Name: "允怀", Parent: 2338 }
   - { Id: 2373, Name: "允爱", Parent: 2338 }
   - { Id: 2374, Name: "允仲", Parent: 2338 }
