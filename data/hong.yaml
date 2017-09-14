@@ -1126,7 +1126,7 @@ Family:
   - { Id: 1399, Name: "张大伟", Parent: 1395 }
   - { Id: 1400, Name: "李安澜", Parent: 1396 }
   - { Id: 1401, Name: "李安祺", Parent: 1396 }
-  - { Id: 1402, Name: "李隽其", Parent: 1397 }
+  - { Id: 1402, Name: "安隽其", Parent: 1397 }
   - { Id: 1403, Name: "秉锋"  , Parent: 106 }
   - { Id: 1404, Name: "铸良"  , Parent: 106 }
   - { Id: 1405, Name: "铸美"  , Parent: 106 }
