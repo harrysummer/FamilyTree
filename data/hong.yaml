@@ -3810,7 +3810,7 @@ Family:
   - { Id: 114 , Name: "作炽"     , Parent: 100 , Adopted: True }
   - { Id: 115 , Name: "作明"     , Parent: 101 }
   - { Id: 116 , Name: "作哲"     , Parent: 101 }
-  - { Id: 117 , Name: "作贵"     , Parent: 101 }
+  - { Id: 117 , Name: "作贵"     , Parent: 102 }
 
   - { Id: 62  , Name: "惠民"   , Gender: 'M', Married: True, Spouse: '陈孝英', Parent: 58 }
   - { Id: 63  , Name: "惠中"   , Gender: 'M', Married: True, Spouse: '金竞雄', Parent: 58 }
