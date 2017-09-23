@@ -1124,7 +1124,7 @@ Family:
   - { Id: 1396, Name: "力群"  , Parent: 1393 }
   - { Id: 1397, Name: "力新"  , Parent: 1393 }
   - { Id: 1398, Name: "量"    , Parent: 1394 }
-  - { Id: 1399, Name: "张大伟", Parent: 1395 }
+  - { Id: 1399, Name: "张大炜", Parent: 1395 }
   - { Id: 1400, Name: "李安澜", Parent: 1396 }
   - { Id: 1401, Name: "李安祺", Parent: 1396 }
   - { Id: 1402, Name: "安隽其", Parent: 1397 }
@@ -4524,6 +4524,37 @@ Family:
   - { Id: 4723, Name: "德生", Parent: 4708 }
   - { Id: 4724, Name: "德海", Parent: 4710, Adopted: "T" }
 
+  - { Id: 4725, Name: "求月", Parent: 115 }
+  - { Id: 4726, Name: "求朋", Parent: 115 }
+  - { Id: 4744, Name: "胜求", Gender: 'M', Spouse: '李氏', Parent: 115 }
+  - { Id: 4727, Name: "伦胜", Gender: 'M', Spouse: '崔敏', Parent: 4744 }
+  - { Id: 4728, Name: "伦星", Gender: 'M', Spouse: '洪玉芝', Parent: 4744 }
+  - { Id: 4729, Name: "伦强", Gender: 'M', Spouse: '周平英', Parent: 4744 }
+  - { Id: 4730, Name: "伦武", Gender: 'M', Spouse: '周红霞', Parent: 4744 }
+  - { Id: 4731, Name: "叶", Gender: 'F', Spouse: '刘福桦', Parent: 4727 }
+  - { Id: 4732, Name: "姐", Parent: 4728 }
+  - { Id: 4733, Name: "小古", Parent: 4729 }
+  - { Id: 4734, Name: "二古", Parent: 4729 }
+  - { Id: 4735, Name: "艳", Gender: 'F', Spouse: '王强', Parent: 4730 }
+  - { Id: 4736, Name: "芳", Gender: 'F', Spouse: '叶迎松', Parent: 4730 }
+  - { Id: 4737, Name: "环", Gender: 'F', Spouse: '蒯腾飞', Parent: 4730 }
+  - { Id: 4738, Name: "刘奕宏", Parent: 4731 }
+  - { Id: 4739, Name: "王博雅", Parent: 4735 }
+  - { Id: 4740, Name: "崔果儿", Parent: 4735 }
+  - { Id: 4741, Name: "叶洪朵儿", Parent: 4736 }
+  - { Id: 4742, Name: "蒯天奇", Parent: 4737 }
+  - { Id: 4743, Name: "蒯天佑", Parent: 4737 }
+
+  - { Id: 4745, Name: "润国", Gender: 'M', Spouse: '董菊香', Parent: 150 }
+  - { Id: 4746, Name: "润忠", Gender: 'M', Parent: 150 }
+  - { Id: 4747, Name: "润芬", Gender: 'F', Spouse: '刘昆明', Parent: 150 }
+  - { Id: 4748, Name: "黄涛", Parent:  4745 }
+  - { Id: 4749, Name: "黄超", Parent:  4745 }
+  - { Id: 4750, Name: "洪嫒", Parent:  4746 }
+  - { Id: 4751, Name: "洪黎", Parent:  4746 }
+  - { Id: 4752, Name: "刘洪", Parent:  4747 }
+  - { Id: 4753, Name: "刘廷", Parent:  4747 }
+
 
   - { Id: 30  , Name: "恭貌"   , Parent: 1269 }
 
@@ -4605,7 +4636,7 @@ Family:
   - { Id: 147 , Name: "廷璩"   , Parent: 48 }
   - { Id: 148 , Name: "廷玹"   , Parent: 48 }
   - { Id: 149 , Name: "廷瓖"   , Parent: 49 }
-  - { Id: 150 , Name: "廷琏"   , Parent: 49 }
+  - { Id: 150 , Name: "廷琏"   , Gender: 'M', Spouse: ['徐玉珍', '李氏'], Parent: 49 }
   - { Id: 151 , Name: "廷理"   , Parent: 49 }
   - { Id: 152 , Name: "廷？"   , Parent: 49 }
 
@@ -4643,7 +4674,7 @@ Family:
   - { Id: 112 , Name: "煜"     , Parent: 99 }
   - { Id: 113 , Name: "泽"     , Parent: 99 }
   - { Id: 114 , Name: "作炽"     , Parent: 100 , Adopted: True }
-  - { Id: 115 , Name: "作明"     , Parent: 101 }
+  - { Id: 115 , Name: "作明"     , Parent: 101, Gender: 'M', Spouse: '罗氏' }
   - { Id: 116 , Name: "作哲"     , Parent: 101 }
   - { Id: 117 , Name: "作贵"     , Parent: 102 }
 
