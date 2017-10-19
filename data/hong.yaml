@@ -2646,7 +2646,7 @@ Family:
   - { Id: 2861, Name: "世彬", Parent: 2834 }
   - { Id: 2862, Name: "世金", Parent: 2834, Note: "过继让宣" }
   - { Id: 2863, Name: "世金", Parent: 2835, Adopted: "J" }
-  - { Id: 2864, Name: "化德", Parent: 2836 }
+  - { Id: 2864, Name: "德化", Parent: 2836 }
   - { Id: 2865, Name: "德兴", Parent: 2836 }
   - { Id: 2866, Name: "德魁", Parent: 2837 }
   - { Id: 2867, Name: "德魁", Parent: 2838, Adopted: "T" }
