@@ -1206,7 +1206,7 @@ Family:
   - { Id: 1475, Name: "伯声", Parent: 1474 }
   - { Id: 1476, Name: "日曔", Parent: 1474 }
   - { Id: 1477, Name: "云声", Parent: 1474 }
-  - { Id: 1478, Name: "门光", Parent: 1476 }
+  - { Id: 1478, Name: "门光", Parent: 1476, Note: "洪家牌坊" }
   - { Id: 1479, Name: "允韬", Parent: 1478 }
   - { Id: 1480, Name: "允官", Parent: 1478 }
   - { Id: 1481, Name: "允台", Parent: 1478 }
@@ -3304,12 +3304,12 @@ Family:
   # 宽_宗_诲_宿_朝兴，用（4）
   - { Id: 3505, Name: "开基", Parent: 1209 }
   - { Id: 3506, Name: "兴隆", Parent: 1210 }
-  - { Id: 3507, Name: "恭\U0002B1FA", Parent: 1479 }
+  - { Id: 3507, Name: "恭庄", Parent: 1479 }
   - { Id: 3508, Name: "恭信", Parent: 1480 }
   - { Id: 3509, Name: "恭敏", Parent: 1480 }
   - { Id: 3510, Name: "恭惠", Parent: 1480 }
   - { Id: 3511, Name: "恭朝", Parent: 1481 }
-  - { Id: 3512, Name: "恭敏", Parent: 1482 }
+  - { Id: 3512, Name: "恭敏", Parent: 1482, Adopted: "J" }
   - { Id: 3513, Name: "恭邦", Parent: 1483 }
   - { Id: 3514, Name: "恭义", Parent: 1483 }
   - { Id: 3515, Name: "恭顺", Parent: 1483 }
@@ -3343,29 +3343,29 @@ Family:
   - { Id: 3543, Name: "让谱", Parent: 3519 }
   - { Id: 3544, Name: "让勋", Parent: 3520, Adopted: "T" }
   - { Id: 3545, Name: "让勋", Parent: 3521, Adopted: "J" }
-  - { Id: 3546, Name: "让来", Parent: 3522, Adopted: "T" }
-  - { Id: 3547, Name: "让来", Parent: 3523 }
+  - { Id: 3546, Name: "让来", Parent: 3522 }
+  - { Id: 3547, Name: "让来", Parent: 3523, Adopted: "J" }
   - { Id: 3548, Name: "让勋", Parent: 3524 }
-  - { Id: 3549, Name: "让正", Parent: 3524, Terminated: True }
-  - { Id: 3550, Name: "让德", Parent: 3524, Terminated: True }
-  - { Id: 3551, Name: "让生", Parent: 3524, Terminated: True }
-  - { Id: 3552, Name: "让存", Parent: 3524, Terminated: True }
-  - { Id: 3553, Name: "让行", Parent: 3525, Terminated: True }
+  - { Id: 3549, Name: "让正", Parent: 3524 }
+  - { Id: 3550, Name: "让德", Parent: 3524 }
+  - { Id: 3551, Name: "让生", Parent: 3524 }
+  - { Id: 3552, Name: "让存", Parent: 3524 }
+  - { Id: 3553, Name: "让存", Parent: 3525, Adopted: "J" }
   - { Id: 3554, Name: "让来", Parent: 3526, Adopted: "T" }
   - { Id: 3555, Name: "让德", Parent: 3527 }
   - { Id: 3556, Name: "让宾", Parent: 3527 }
   - { Id: 3557, Name: "让好", Parent: 3527 }
-  - { Id: 3558, Name: "让富", Parent: 3529 }
-  - { Id: 3559, Name: "让贵", Parent: 3529 }
-  - { Id: 3560, Name: "让全", Parent: 3529 }
+  - { Id: 3558, Name: "让富", Parent: 3529, Adopted: "J" }
+  - { Id: 3559, Name: "让贵", Parent: 3529, Adopted: "J" }
+  - { Id: 3560, Name: "让全", Parent: 3529, Adopted: "J" }
   - { Id: 3561, Name: "让贵", Parent: 3530, Adopted: "J" }
-  - { Id: 3562, Name: "让贵", Parent: 3531, Adopted: "T" }
-  - { Id: 3563, Name: "让富", Parent: 3532, Adopted: "T" }
-  - { Id: 3564, Name: "让全", Parent: 3533, Adopted: "T" }
-  - { Id: 3565, Name: "让全", Parent: 3535, Adopted: "T" }
-  - { Id: 3566, Name: "让全", Parent: 3536, Adopted: "T" }
-  - { Id: 3567, Name: "让秀", Parent: 3537 }
-  - { Id: 3568, Name: "让秀", Parent: 3538, Adopted: "T" }
+  - { Id: 3562, Name: "让贵", Parent: 3531, Adopted: "J" }
+  - { Id: 3563, Name: "让富", Parent: 3532, Adopted: "J" }
+  - { Id: 3564, Name: "让全", Parent: 3533, Adopted: "J" }
+  - { Id: 3565, Name: "让全", Parent: 3535, Adopted: "J" }
+  - { Id: 3566, Name: "让全", Parent: 3536, Adopted: "J" }
+  - { Id: 3567, Name: "让秀", Parent: 3537, Adopted: "J" }
+  - { Id: 3568, Name: "让秀", Parent: 3538, Adopted: "J" }
   - { Id: 3569, Name: "世富", Parent: 3539 }
   - { Id: 3570, Name: "世长", Parent: 3539 }
   - { Id: 3571, Name: "世贵", Parent: 3539 }
@@ -3374,25 +3374,25 @@ Family:
   - { Id: 3574, Name: "世盈", Parent: 3541 }
   - { Id: 3575, Name: "世福", Parent: 3541 }
   - { Id: 3576, Name: "世福", Parent: 3543, Adopted: "T" }
-  - { Id: 3577, Name: "世舞", Parent: 3545 }
-  - { Id: 3578, Name: "世選", Parent: 3545 }
-  - { Id: 3579, Name: "世耕", Parent: 3547 }
+  - { Id: 3577, Name: "世舞", Parent: 3545, Adopted: "J" }
+  - { Id: 3578, Name: "世选", Parent: 3545, Adopted: "J" }
+  - { Id: 3579, Name: "世耕", Parent: 3547, Adopted: "J" }
   - { Id: 3580, Name: "世苗", Parent: 3547 }
-  - { Id: 3581, Name: "世苗", Parent: 3554 }
+  - { Id: 5832, Name: "世苗", Parent: 3554 }
   - { Id: 3582, Name: "世模", Parent: 3555, Adopted: "T" }
   - { Id: 3583, Name: "世模", Parent: 3556, Adopted: "T" }
   - { Id: 3584, Name: "世楷", Parent: 3557 }
   - { Id: 3585, Name: "世模", Parent: 3557 }
   - { Id: 3586, Name: "世有", Parent: 3557 }
-  - { Id: 3587, Name: "世明", Parent: 3558 }
-  - { Id: 3588, Name: "世照", Parent: 3558 }
-  - { Id: 3589, Name: "世光", Parent: 3558 }
+  - { Id: 3587, Name: "世明", Parent: 3558, Adopted: "J" }
+  - { Id: 3588, Name: "世照", Parent: 3558, Adopted: "J" }
+  - { Id: 3589, Name: "世光", Parent: 3558, Adopted: "J" }
   - { Id: 3590, Name: "世有", Parent: 3560 }
-  - { Id: 3591, Name: "世照", Parent: 3561, Adopted: "T" }
-  - { Id: 3592, Name: "世光", Parent: 3563 }
+  - { Id: 3591, Name: "世照", Parent: 3561, Adopted: "J" }
+  - { Id: 3592, Name: "世光", Parent: 3563, Adopted: "J" }
   - { Id: 3593, Name: "世艮", Parent: 3567 }
-  - { Id: 3594, Name: "德盛", Parent: 3573, Adopted: "T" }
-  - { Id: 3595, Name: "德盛", Parent: 3575 }
+  - { Id: 3594, Name: "德盛", Parent: 3573 }
+  - { Id: 3595, Name: "德盛", Parent: 3575, Adopted: "T" }
 
   # 老四房,宗适,恩荫,廷俊,作津
   - { Id: 3596, Name: "竹山", Gender: 'M', Spouse: "章学珍", Parent: 110 }
@@ -5854,6 +5854,66 @@ Family:
   - { Id: 5773, Name: "星语", Gender: "F", Parent: 5760 }
   - { Id: 5774, Name: "文翊", Parent: 5765 }
   - { Id: 5775, Name: "文睿", Parent: 5766 }
+
+  # 庐江洪家牌坊
+  - { Id: 5776, Name: "德金", Parent: 3572 }
+  - { Id: 5777, Name: "德金", Parent: 3573, Adopted: 'J' }
+  - { Id: 5778, Name: "德盛", Parent: 3574, Adopted: 'J' }
+  - { Id: 5779, Name: "德盛", Parent: 3576, Adopted: 'J' }
+  - { Id: 5780, Name: "德金", Parent: 3576, Adopted: 'J' }
+  - { Id: 5781, Name: "世舞", Parent: 3544 }
+  - { Id: 5782, Name: "世选", Parent: 3544 }
+  - { Id: 5783, Name: "世达", Parent: 3545 }
+  - { Id: 5784, Name: "德怌", Parent: 5783 }
+  - { Id: 5785, Name: "世耕", Parent: 3546 }
+  - { Id: 5786, Name: "德玉", Parent: 5785 }
+  - { Id: 5787, Name: "世祥", Parent: 3547 }
+  - { Id: 5788, Name: "世植", Parent: 3547 }
+  - { Id: 5789, Name: "世茂", Parent: 3547 }
+  - { Id: 5790, Name: "德满", Parent: 3580 }
+  - { Id: 5791, Name: "德性", Parent: 3580 }
+  - { Id: 5792, Name: "德森", Parent: 5787 }
+  - { Id: 5793, Name: "德华", Parent: 5787 }
+  - { Id: 5794, Name: "世成", Parent: 3549 }
+  - { Id: 5795, Name: "世叶", Parent: 3549 }
+  - { Id: 5796, Name: "德流", Parent: 5795 }
+  - { Id: 5797, Name: "德宝", Parent: 5795 }
+  - { Id: 5798, Name: "德三", Parent: 5795 }
+  - { Id: 5799, Name: "佚名", Parent: 5795 }
+  - { Id: 5800, Name: "德友", Parent: 5795 }
+  - { Id: 5801, Name: "德文", Parent: 5795 }
+  - { Id: 5802, Name: "世金", Parent: 3550 }
+  - { Id: 5803, Name: "世玉", Parent: 3550 }
+  - { Id: 5804, Name: "世钟", Parent: 3550 }
+  - { Id: 5805, Name: "世满", Parent: 3550 }
+  - { Id: 5806, Name: "世财", Parent: 3551 }
+  - { Id: 5807, Name: "世成", Parent: 3553, Adopted: "J" }
+  - { Id: 5808, Name: "世耕", Parent: 3554, Adopted: 'J' }
+  - { Id: 5833, Name: "世苗", Parent: 3554, Adopted: 'J' }
+  - { Id: 5809, Name: "让富", Parent: 3528 }
+  - { Id: 5810, Name: "让贵", Parent: 3528 }
+  - { Id: 5811, Name: "让全", Parent: 3528 }
+  - { Id: 5812, Name: "世明", Parent: 5809 }
+  - { Id: 5813, Name: "世照", Parent: 5809 }
+  - { Id: 5814, Name: "世光", Parent: 5809 }
+  - { Id: 5815, Name: "德来", Parent: 3587 }
+  - { Id: 5816, Name: "德珍", Parent: 3587 }
+  - { Id: 5817, Name: "德平", Parent: 3587 }
+  - { Id: 5818, Name: "世光", Parent: 3561 }
+  - { Id: 5819, Name: "世照", Parent: 3562, Adopted: 'J' }
+  - { Id: 5820, Name: "德伦", Parent: 3592 }
+  - { Id: 5821, Name: "德宽", Parent: 3592 }
+  - { Id: 5832, Name: "世有", Parent: 3564 }
+  - { Id: 5822, Name: "德宽", Parent: 5832, Adopted: 'J' }
+  - { Id: 5823, Name: "世有", Parent: 3565, Adopted: 'J' }
+  - { Id: 5824, Name: "德宽", Parent: 5823, Adopted: 'J' }
+  - { Id: 5825, Name: "世有", Parent: 3566, Adopted: 'J' }
+  - { Id: 5826, Name: "德宽", Parent: 5825, Adopted: 'J' }
+  - { Id: 5827, Name: "德玉", Parent: 3593 }
+  - { Id: 5828, Name: "世艮", Parent: 3568, Adopted: 'J' }
+  - { Id: 5829, Name: "世耕", Parent: 3568, Adopted: 'J' }
+  - { Id: 5830, Name: "德玉", Parent: 5829, Adopted: 'J' }
+  - { Id: 5831, Name: "德全", Parent: 5829 }
 
 
 
