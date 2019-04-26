@@ -125,7 +125,7 @@ var drawChildrenLink = function(canvas, node, layoutInfo) {
                     var bbox = t.bbox();
                     t.move((node.x + node.data.width + child.x) / 2, child.y + child.data.height / 2 - bbox.height / 2);
                     bbox = t.bbox();
-                    canvas.rect(bbox.width, bbox.height).move(bbox.x - bbox.w/2, bbox.y).attr('fill', 'white');
+                    canvas.rect(bbox.width, bbox.height).move(bbox.x, bbox.y).attr('fill', 'white');
                     canvas.add(t);
                 }
             }
