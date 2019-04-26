@@ -40,11 +40,11 @@ function subset(input, text, outputPath, fmt) {
 
 function OTF2TTF(input, output) {
     return new Promise(function (resolve, reject) {
-        let process = cp.spawn('fontforge', [
-            '-lang=ff',
-            '-c', 'Open($1);CIDFlatten();Generate($2);Quit(0);',
-            input,
-            output
+        let process = cp.spawn('python', [
+            'otf2ttf.py',
+            '-o', output,
+            '--overwrite',
+            input
         ], {cwd: __dirname});
         process.stdout.on('data', (data)=>console.log(data.toString('utf8')));
         process.stderr.on('data', (data)=>console.error(data.toString('utf8')));
@@ -166,10 +166,9 @@ for (let i = 0; i < data.Family.Members.length; ++i) {
 
 let otherTexts = convertSetToString(otherTextSet);
 
-
 makeFont(titleTexts, 'SourceHanSerifCN-Bold.otf', __dirname + '/dist/fonts')
     .then(() => makeFont(otherTexts, 'SourceHanSansSC-Regular.otf', __dirname + '/dist/fonts'))
-    //.then(() => makeFont(nameTexts, 'FZKTK.TTF', __dirname + '/dist/fonts'))
+    .then(() => makeFont(nameTexts, 'FZKTK.TTF', __dirname + '/dist/fonts'))
     .then(() => mergeAndMakeFont(nameTexts, ['TH-Khaai-TP0.ttf','TH-Khaai-TP2.ttf', 'TH-Khaai-PUA.ttf'], __dirname + '/dist/fonts', 'TH-Khaai'))
     .catch(e => {
         console.error(e);
