@@ -1,5 +1,5 @@
 {
-  "name": "jiazu",
+  "name": "family-tree",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -11,37 +11,12 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@babel/cli": "^7.4.3",
-    "@babel/core": "^7.4.3",
-    "@babel/polyfill": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "@babel/register": "^7.4.0",
-    "@types/bluebird": "^3.5.36",
-    "fontkit": "^1.8.0",
-    "gulp": "^4.0.1",
-    "gulp-babel": "^8.0.0",
-    "gulp-fontmin": "^0.7.4",
-    "gulp-livereload": "^4.0.1",
-    "gulp-webpack": "^1.5.0",
-    "mkdirp": "^1.0.4"
-  },
   "dependencies": {
     "@svgdotjs/svg.js": "^3.1.2",
-    "bluebird": "^3.5.0",
     "express": "^4.16.4",
-    "install": "^0.13.0",
     "js-yaml": "^4.1.0",
-    "npm": "^8.12.1",
+    "mkdirp": "^1.0.4",
     "pug": "^3.0.2",
     "svgdom": "^0.1.10"
-  },
-  "browserDependencies": {
-    "han-css": "^3.3.0"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
   }
 }
