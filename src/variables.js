@@ -1,9 +1,7 @@
-module.exports = {
-    generationGap : 50,
-    siblingGap : 10,
-    cousinGap : 20,
-    nodePaddingLeft : 12,
-    nodePaddingRight : 12,
-    nodePaddingTop : 2,
-    nodePaddingBottom : 2
-}
+export const generationGap = 50;
+export const siblingGap = 10;
+export const cousinGap = 20;
+export const nodePaddingLeft = 12;
+export const nodePaddingRight = 12;
+export const nodePaddingTop = 2;
+export const nodePaddingBottom = 2;

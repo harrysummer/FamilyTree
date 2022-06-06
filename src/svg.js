@@ -1,28 +1,26 @@
-const svgjs = require('svg.js');
-const window = require('svgdom')
-    .setFontDir(__dirname + '/../dist/fonts')
+import { SVG, registerWindow } from '@svgdotjs/svg.js';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { config, createSVGWindow } from 'svgdom';
+import { nodePaddingTop, siblingGap } from './variables.js';
+import { zhGeneration } from './util.js';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+config.setFontDir(__dirname + '/../dist/fonts')
     .setFontFamilyMappings({
         'Song': 'SourceHanSerifCN-Bold.ttf',
         'Hei': 'SourceHanSansSC-Regular.ttf',
-        'Kai': 'FZKTK.ttf'
+        'Kai': 'FZKTK.ttf',
+        'sans-serif': 'SourceHanSerifCN-Bold.ttf'
     })
     .preloadFonts();
-const vars = require('./variables');
-const util = require('./util');
 
-
-const SVG = svgjs(window);
-const document = window.document;
-
-var createCanvas = function() {
-    var ele = document.createElement('svg');
-    var canvas = SVG(ele);
-    canvas.parent = ele;
-    return canvas;
-}
-
-var deleteCanvas = function(canvas) {
-    document.removeChild(canvas.parent);
+export function createCanvas() {
+    const window = createSVGWindow();
+    const document = window.document;
+    registerWindow(window, document);
+    return SVG(document.documentElement);
 }
 
 var drawNode = function(canvas, node, layoutInfo) {
@@ -34,18 +32,18 @@ var drawNode = function(canvas, node, layoutInfo) {
     link.attr('xlink:href', url);
     var g = link.group();
     g.transform({
-        x: dx,
-        y: dy
+        translateX: dx,
+        translateY: dy
     });
 
-    var curY = vars.nodePaddingTop;
+    var curY = nodePaddingTop;
     if (node.data.name) {
-        var text = g.text(node.data.name).attr('font-family', 'Kai').attr('font-size', '24').attr('text-anchor', 'middle').move(node.data.width / 2, curY);
+        var text = g.text(node.data.name).font({ family: 'Kai', size: 24 }).cx(node.data.width / 2).y(curY);
         curY += text.bbox().height;
     }
     if (node.data.note) {
         for (var i = 0; i < node.data.note.length; i++) {
-            var text = g.text(node.data.note[i]).attr('font-family', 'Hei').attr('font-size', '10').attr('text-anchor', 'middle').move(node.data.width / 2, curY);
+            var text = g.text(node.data.note[i]).font({ family: 'Hei', size: 10 }).cx(node.data.width / 2).y(curY);
             curY += text.bbox().height;
         }
     }
@@ -92,12 +90,9 @@ var drawChildrenLink = function(canvas, node, layoutInfo) {
                 canvas.line(midX, child.y + child.data.height / 2 + 2,
                     child.x, child.y + child.data.height / 2 + 2).attr('stroke', 'black').attr('stroke-width', '1').attr('stroke-dasharray', '5, 2');
                 if (wordOnLink[child.data.specialLink]) {
-                    var t = canvas.text(wordOnLink[child.data.specialLink])
-                        .attr('font-family', 'Hei')
-                        .attr('font-size', '14')
-                        .attr('text-anchor', 'middle');
+                    var t = canvas.text(wordOnLink[child.data.specialLink]).font({ family: 'Hei', size: 14 });
                     var bbox = t.bbox();
-                    t.move((midX + child.x) / 2, child.y + child.data.height / 2 - bbox.height / 2);
+                    t.cx((midX + child.x) / 2).y(child.y + child.data.height / 2 - bbox.height / 2);
                     bbox = t.bbox();
                     canvas.rect(bbox.width, bbox.height).move(bbox.x - bbox.w/2, bbox.y).attr('fill', 'white');
                     canvas.add(t);
@@ -118,12 +113,9 @@ var drawChildrenLink = function(canvas, node, layoutInfo) {
                     .attr('stroke-width', '1')
                     .attr('stroke-dasharray', '5, 2');
                 if (wordOnLink[child.data.specialLink]) {
-                    var t = canvas.text(wordOnLink[child.data.specialLink])
-                        .attr('font-family', 'Hei')
-                        .attr('font-size', '14')
-                        .attr('text-anchor', 'middle');
+                    var t = canvas.text(wordOnLink[child.data.specialLink]).font({ family: 'Hei', size: 14 });
                     var bbox = t.bbox();
-                    t.move((node.x + node.data.width + child.x) / 2, child.y + child.data.height / 2 - bbox.height / 2);
+                    t.cx((node.x + node.data.width + child.x) / 2).y(child.y + child.data.height / 2 - bbox.height / 2);
                     bbox = t.bbox();
                     canvas.rect(bbox.width, bbox.height).move(bbox.x, bbox.y).attr('fill', 'white');
                     canvas.add(t);
@@ -140,7 +132,7 @@ var drawGeneration = function(canvas, layoutInfo) {
         var x = 0.5 * (offset[i] + offset[i + 1]);
         var y = firstNode.y - 15;
         var gen = i + layoutInfo.tree.getRoot().depth;
-        var text = canvas.text(util.zhGeneration(gen)).attr('font-family', 'Hei').attr('font-size', '14').attr('text-anchor', 'middle').move(x, -50);
+        var text = canvas.text(zhGeneration(gen)).font({ family: 'Hei', size: 14 }).cx(x).y(-50);
         var yEnd = text.bbox().height - 50;
         canvas.line(x, y, x, yEnd).attr('stroke', 'black').attr('stroke-width', '1').attr('stroke-dasharray', '2, 8');
     }
@@ -161,10 +153,8 @@ var drawTitle = function(canvas, layoutInfo, opts) {
     if (title && (!opts || opts.drawTitle === undefined || opts.drawTitle)) {
         var text = canvas
             .text(title)
-            .attr('font-family', 'Song')
-            .attr('font-size', '72')
-            .attr('text-anchor', 'middle')
-            .move(layoutInfo.size.width / 2, 0)
+            .font({ family: 'Song', size: 72, anchor: 'middle' })
+            .cx(layoutInfo.size.width / 2).y(0)
             .attr('dx', '0' + repeat(' 24', title.length - 1))
             .transform({ scaleX: 1.4 });
         curY += text.bbox().height;
@@ -172,10 +162,9 @@ var drawTitle = function(canvas, layoutInfo, opts) {
     if (subtitle && (!opts || opts.drawSubtitle === undefined || opts.drawSubtitle)) {
         var subtitle = canvas
             .text(subtitle)
-            .attr('font-family', 'Hei')
-            .attr('font-size', '24')
-            .attr('text-anchor', 'middle')
-            .move(layoutInfo.size.width / 2, curY);
+            .font({ family: 'Hei', size: 24, anchor: 'middle' })
+            .cx(layoutInfo.size.width / 2)
+            .y(curY);
     }
 };
 
@@ -197,10 +186,10 @@ var drawToolbar = function(canvas, layoutInfo, opts) {
             var url = links[id].url;
             var link = canvas.link(url).attr('xlink:href', url);
             var g = link.group();
-            g.move(curX, 0);
-            var text = canvas.text(text).attr('font-family', 'Hei').attr('font-size', '20').attr('text-anchor', 'middle');
+            g.transform({ translateX: curX, translateY: 0 });
+            var text = canvas.text(text).font({ family: 'Hei', size: 20 });
             var bbox = text.bbox();
-            text.move(bbox.width / 2 + 5, 5);
+            text.cx(bbox.width / 2 + 5).y(5);
             var rect = g.rect(bbox.width + 10, bbox.height + 10).attr('stroke', 'black').attr('stroke-width', '3').attr('fill', 'white');
             g.add(text);
             curX += bbox.width + 20;
@@ -232,16 +221,16 @@ var drawAncestors = function(canvas, layoutInfo, opts, fulltree) {
                     y: curY,
                     data: curNode
                 }, layoutInfo);
-                var gen = canvas.text(util.zhGeneration(curNode.depth)).attr('font-family', 'Hei').attr('font-size', '14').attr('text-anchor', 'right');
+                var gen = canvas.text(zhGeneration(curNode.depth)).font({ family: 'Hei', size: 14, anchor: 'right' });
                 gen.move(-maxWidth / 2 - curNode.width / 2 - gen.bbox().width - 10, curY + curNode.height / 2 - gen.bbox().height / 2);
                 if (curNode.parentId === null) break;
-                curY -= vars.siblingGap + parentNode.height;
+                curY -= siblingGap + parentNode.height;
             }
         }
     }
 }
 
-var drawLayout = function(canvas, layoutInfo, opts, fulltree) {
+export function drawLayout(canvas, layoutInfo, opts, fulltree) {
     var titleBar = canvas.group();
     drawTitle(titleBar, layoutInfo, opts);
     var titleBBox = titleBar.rbox();
@@ -255,7 +244,10 @@ var drawLayout = function(canvas, layoutInfo, opts, fulltree) {
     var ancestors = content.group();
     drawAncestors(ancestors, layoutInfo, opts, fulltree); 
     var ancestorsBBox = ancestors.rbox();
-    content.move(ancestorsBBox.width, titleBBox.height + toolBBox.height + 50 + Math.max(50, -ancestorsBBox.y));
+    content.transform({
+        translateX: ancestorsBBox.width,
+        translateY: titleBBox.height + toolBBox.height + 50 + Math.max(50, -ancestorsBBox.y)
+    });
     layoutInfo.forEach(node => {
         drawNode(content, node, layoutInfo);
         drawChildrenLink(content, node, layoutInfo);
@@ -265,10 +257,4 @@ var drawLayout = function(canvas, layoutInfo, opts, fulltree) {
 
     canvas.attr("width", Math.max(layoutInfo.size.width + ancestorsBBox.width, titleBBox.width, toolBBox.width));
     canvas.attr("height", layoutInfo.size.height + titleBBox.height + toolBBox.height + 50 + Math.max(50, -ancestorsBBox.y));
-};
-
-module.exports = {
-    createCanvas,
-    deleteCanvas,
-    drawLayout
 };

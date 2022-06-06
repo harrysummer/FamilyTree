@@ -5381,7 +5381,7 @@ Family:
   - { Id: 321 , Name: "雨婷"   , Parent: 311 }
 
   - { Id: 75  , Name: "廷瑄"   , Parent: 42, Note: "下有三女" }
-  - { Id: 76  , Name: "廷瑞"   , Gender: 'M' , Dead: true , Married: true , Spouse: ~ ,      , Parent: 42, Note: "下有一女" }
+  - { Id: 76  , Name: "廷瑞"   , Gender: 'M' , Dead: true , Married: true , Spouse: ~ , Parent: 42, Note: "下有一女" }
 
   - { Id: 201 , Name: "作宾" , Gender: 'M' , Dead: true , Married: true , Spouse: ["赵志英", "陈素华"] , Parent: 76  , Order: 1 , Comment: "重庆" }
   - { Id: 202 , Name: "作弼" , Gender: 'M' , Dead: true , Married: true , Spouse: "张祖青" , Parent: 76  , Order: 2 }

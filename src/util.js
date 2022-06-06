@@ -1,4 +1,4 @@
-var zhNumber = function(number) {
+export function zhNumber(number) {
     var base = "零一二三四五六七八九";
     var exp10 = "十百千";
     var exp1000 = "万亿";
@@ -11,11 +11,6 @@ var zhNumber = function(number) {
     } else return "ERR";
 };
 
-var zhGeneration = function(generation) {
+export function zhGeneration(generation) {
     return generation === 0 ? '始祖' : zhNumber(generation + 1) + '世';
-};
-
-module.exports = {
-    zhNumber,
-    zhGeneration
 };

@@ -1,19 +1,22 @@
-var express = require('express');
-var Tree = require('./src/tree');
-var layout = require('./src/layout');
-var svg = require('./src/svg');
-var util = require('./src/util');
+import express from 'express';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { parseDataFile, subtree as _subtree } from './src/tree.js';
+import { prepareTree, layoutTree } from './src/layout.js';
+import { createCanvas, drawLayout } from './src/svg.js';
+import { zhGeneration, zhNumber } from './src/util.js';
 
-var tree = Tree.parseDataFile(__dirname + '/data/hong.yaml');
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
-var canvas = svg.createCanvas();
-layout.prepareTree(canvas, tree);
+var tree = parseDataFile(__dirname + '/data/hong.yaml');
 
-var layoutInfo = layout.layoutTree(canvas, tree);
+var canvas = createCanvas();
+prepareTree(canvas, tree);
 
-svg.drawLayout(canvas, layoutInfo);
+var layoutInfo = layoutTree(canvas, tree);
+
+drawLayout(canvas, layoutInfo);
 var svgStr = canvas.svg();
-svg.deleteCanvas(canvas);
 
 var app = express();
 app.set('views', __dirname + '/src/views');
@@ -27,40 +30,38 @@ app.get('/', function(req, res) {
 });
 
 app.get('/tree/:id', function(req, res, next) {
-    var subtree = Tree.subtree(tree, parseInt(req.params.id));
-    var canvas = svg.createCanvas();
-    var layoutInfo = layout.layoutTree(canvas, subtree);
-    svg.drawLayout(canvas, layoutInfo, {
+    var subtree = _subtree(tree, parseInt(req.params.id));
+    var canvas = createCanvas();
+    var layoutInfo = layoutTree(canvas, subtree);
+    drawLayout(canvas, layoutInfo, {
         drawTitle: false,
         drawSubtitle: false,
         drawToolbar: true,
         drawAncestors: true
     }, tree);
     var svgStr = canvas.svg();
-    svg.deleteCanvas(canvas);
 
     res.render('index', {
-        title:  util.zhGeneration(subtree.getRoot().depth) + subtree.getRoot().name + "公后代 - " + tree.data.Family.Title,
+        title:  zhGeneration(subtree.getRoot().depth) + subtree.getRoot().name + "公后代 - " + tree.data.Family.Title,
         svg: svgStr
     });
 });
 
 app.get('/tree/:id/depth/:depth', function(req, res, next) {
-    var subtree = Tree.subtree(tree, parseInt(req.params.id), parseInt(req.params.depth));
-    var canvas = svg.createCanvas();
-    var layoutInfo = layout.layoutTree(canvas, subtree);
+    var subtree = _subtree(tree, parseInt(req.params.id), parseInt(req.params.depth));
+    var canvas = createCanvas();
+    var layoutInfo = layoutTree(canvas, subtree);
     layoutInfo.depthLimit = parseInt(req.params.depth);
-    svg.drawLayout(canvas, layoutInfo, {
+    drawLayout(canvas, layoutInfo, {
         drawTitle: false,
         drawSubtitle: false,
         drawToolbar: true,
         drawAncestors: true
     }, tree);
     var svgStr = canvas.svg();
-    svg.deleteCanvas(canvas);
 
     res.render('index', {
-        title:  util.zhGeneration(subtree.getRoot().depth) + subtree.getRoot().name + "公后代（" + util.zhNumber(parseInt(req.params.depth)) + "代以内） - " + tree.data.Family.Title,
+        title:  zhGeneration(subtree.getRoot().depth) + subtree.getRoot().name + "公后代（" + zhNumber(parseInt(req.params.depth)) + "代以内） - " + tree.data.Family.Title,
         svg: svgStr
     });
 });

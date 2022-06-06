@@ -1,4 +1,4 @@
-const vars = require('./variables');
+import { nodePaddingLeft, nodePaddingRight, nodePaddingTop, nodePaddingBottom, siblingGap, cousinGap, generationGap } from './variables.js';
 
 var measureNode = function(canvas, node) {
     var ret = { width: 0, height: 0 };
@@ -7,14 +7,14 @@ var measureNode = function(canvas, node) {
     let width = 0;
     let height = 0;
     if (node.name) {
-        var text = g.text(node.name).attr('font-family', 'Kai').attr('font-size', '24');
+        var text = g.text(node.name).font({ family: 'Kai', size: 24 });
         var bbox = text.bbox();
         width = Math.max(width, bbox.width);
         height += bbox.height;
     }
     if (node.note) {
         for (var i = 0; i < node.note.length; i++) {
-            var text = g.text(node.note[i]).attr('font-family', 'Hei').attr('font-size', '10');
+            var text = g.text(node.note[i]).font({ family: 'Hei', size: 10 });
             var bbox = text.bbox();
             width = Math.max(width, bbox.width);
             height += bbox.height;
@@ -23,12 +23,12 @@ var measureNode = function(canvas, node) {
 
     g.remove();
     return {
-        width: width + vars.nodePaddingLeft + vars.nodePaddingRight,
-        height: height + vars.nodePaddingTop + vars.nodePaddingBottom
+        width: width + nodePaddingLeft + nodePaddingRight,
+        height: height + nodePaddingTop + nodePaddingBottom
     }
 };
 
-var prepareTree = function(canvas, tree) {
+export function prepareTree(canvas, tree) {
     tree.forEach(node => {
         var size = measureNode(canvas, node);
         node.width = size.width;
@@ -36,7 +36,7 @@ var prepareTree = function(canvas, tree) {
     });
 };
 
-var layoutTree = function(canvas, tree) {
+export function layoutTree(canvas, tree) {
     var baseDepth = tree.getRoot().depth;
     var genWidth = [];
     for (var i = 0; i <= tree.depth; ++i) {
@@ -49,7 +49,7 @@ var layoutTree = function(canvas, tree) {
 
     var genOffset = [ 0 ];
     for (var i = 0; i < genWidth.length; i++) {
-        genOffset.push(genOffset[genOffset.length - 1] + genWidth[i] + vars.generationGap);
+        genOffset.push(genOffset[genOffset.length - 1] + genWidth[i] + generationGap);
     }
 
     var layout = {};
@@ -143,9 +143,9 @@ var layoutTree = function(canvas, tree) {
             for (var i = 0; i < minLength; i++) {
                 var minTop = lastRange[i].bottom;
                 if (node.data.parentId == lastNode.data.parentId)
-                    minTop += vars.siblingGap;
+                    minTop += siblingGap;
                 else
-                    minTop += vars.cousinGap;
+                    minTop += cousinGap;
                 dy = Math.max(dy, minTop - thisRange[i].top);
             }
         } else {
@@ -180,8 +180,3 @@ var layoutTree = function(canvas, tree) {
         tree: tree
     };
 }
-
-module.exports = {
-    prepareTree,
-    layoutTree
-};

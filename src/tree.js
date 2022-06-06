@@ -1,5 +1,5 @@
-const yaml = require('js-yaml');
-const fs = require('fs');
+import yaml from 'js-yaml';
+import { readFileSync } from 'fs';
 
 var nodesToTree = function(arr, id_, parentId_, name_, adopted_, note_) {
     if (id_ === undefined)
@@ -82,10 +82,10 @@ var nodesToTree = function(arr, id_, parentId_, name_, adopted_, note_) {
     };
 };
 
-var parseDataFile = function(fileName) {
+export function parseDataFile(fileName) {
     var data;
     try {
-        data = yaml.safeLoad(fs.readFileSync(fileName, 'utf8'));
+        data = yaml.load(readFileSync(fileName, 'utf8'));
     } catch(e) {
         console.log(e);
         process.exit(-1);
@@ -97,7 +97,7 @@ var parseDataFile = function(fileName) {
     return treeInfo;
 }
 
-var subtree = function(tree, rootId, maxDepth) {
+export function subtree(tree, rootId, maxDepth) {
     var root;
     if (rootId === undefined) {
         root = tree.getRoot();
@@ -137,8 +137,3 @@ var subtree = function(tree, rootId, maxDepth) {
         }
     };
 }
-
-module.exports = {
-    parseDataFile,
-    subtree
-};

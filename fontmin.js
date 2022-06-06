@@ -1,16 +1,19 @@
-const yaml = require('js-yaml');
-const path = require('path');
-const fs = require('fs');
-const cp = require('child_process');
-const mkdirp = require('mkdirp');
-var Promise = require("bluebird");
+import yaml from 'js-yaml';
+import { join, basename, extname } from 'path';
+import { existsSync, renameSync, readFileSync } from 'fs';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { spawn } from 'child_process';
+import mkdirp from 'mkdirp';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 function subset(input, text, outputPath, fmt) {
     return new Promise(function (resolve, reject) {
-        if (!fs.existsSync(outputPath)) {
-            mkdirp.sync(outputPath);
+        if (!existsSync(outputPath)) {
+            mkdirp(outputPath);
         }
-        let output = path.join(outputPath, path.basename(input, path.extname(input)) + '.' + fmt);
+        let output = join(outputPath, basename(input, extname(input)) + '.' + fmt);
         let cmd = 'pyftsubset';
         let args = [
             input,
@@ -24,7 +27,7 @@ function subset(input, text, outputPath, fmt) {
             args.push('--flavor=woff2');
             args.push('--with-zopfli');
         }
-        let process = cp.spawn(cmd, args, {cwd: __dirname});
+        let process = spawn(cmd, args, {cwd: __dirname});
         process.stdout.on('data', (data)=>console.log(data.toString('utf8')));
         process.stderr.on('data', (data)=>console.error(data.toString('utf8')));
         process.on('exit', (code) => {
@@ -40,7 +43,7 @@ function subset(input, text, outputPath, fmt) {
 
 function OTF2TTF(input, output) {
     return new Promise(function (resolve, reject) {
-        let process = cp.spawn('python', [
+        let process = spawn('python', [
             'otf2ttf.py',
             '-o', output,
             '--overwrite',
@@ -59,45 +62,39 @@ function OTF2TTF(input, output) {
     });
 }
 
-function makeFont(text, fontName, outputPath) {
+async function makeFont(text, fontName, outputPath) {
     const inputFile = `${__dirname}/data/${fontName}`;
-    const ext = path.extname(fontName);
-    const baseName = path.basename(fontName, ext);
-    const outputFile = path.join(outputPath,  baseName + '.ttf');
+    const ext = extname(fontName);
+    const baseName = basename(fontName, ext);
 
-    var p = Promise.resolve();
     if (ext === '.otf' || ext === '.OTF') {
-        p = p
-            .then(() => subset(inputFile, text, outputPath, 'otf'))
-            .then(() => OTF2TTF(path.join(outputPath, baseName + '.otf'), path.join(outputPath, baseName + '.ttf')));
+        await subset(inputFile, text, outputPath, 'otf');
+        await OTF2TTF(join(outputPath, baseName + '.otf'), join(outputPath, baseName + '.ttf'));
     } else {
-        p = p.then(() => subset(inputFile, text, outputPath, 'ttf'));
+        await subset(inputFile, text, outputPath, 'ttf');
     }
-    return p
-        .then(() => subset(path.join(outputPath, baseName + '.ttf'), text, outputPath, 'woff'))
-        .then(() => subset(path.join(outputPath, baseName + '.ttf'), text, outputPath, 'woff2'));
+    await subset(join(outputPath, baseName + '.ttf'), text, outputPath, 'woff');
+    await subset(join(outputPath, baseName + '.ttf'), text, outputPath, 'woff2');
 }
 
-function mergeAndMakeFont(text, fontNames, outputPath, outputName) {
-    return Promise.mapSeries(fontNames, fontName => {
+async function mergeAndMakeFont(text, fontNames, outputPath, outputName) {
+    const files = await Promise.all(fontNames.map(async fontName => {
         const inputFile = `${__dirname}/data/${fontName}`;
-        const ext = path.extname(fontName);
-        const baseName = path.basename(fontName, ext);
-        const outputFile = path.join(outputPath,  baseName + '.ttf');
-        var p = Promise.resolve();
+        const ext = extname(fontName);
+        const baseName = basename(fontName, ext);
+        const outputFile = join(outputPath, baseName + '.ttf');
         if (ext === '.otf' || ext === '.OTF') {
-            p = p
-                .then(() => subset(inputFile, text, outputPath, 'otf'))
-                .then(() => OTF2TTF(path.join(outputPath, baseName + '.otf'), path.join(outputPath, baseName + '.ttf')));
+            await subset(inputFile, text, outputPath, 'otf');
+            await OTF2TTF(join(outputPath, baseName + '.otf'), join(outputPath, baseName + '.ttf'));
         } else {
-            p = p.then(() => subset(inputFile, text, outputPath, 'ttf'));
+            await subset(inputFile, text, outputPath, 'ttf');
         }
-        return p.then(() => path.join(outputPath, baseName + '.ttf'));
-    })
-    .then(files => new Promise((resolve, reject) => {
-        let process = cp.spawn('pyftmerge', files, {cwd: __dirname});
-        process.stdout.on('data', (data)=>console.log(data.toString('utf8')));
-        process.stderr.on('data', (data)=>console.error(data.toString('utf8')));
+        return join(outputPath, baseName + '.ttf');
+    }));
+    await new Promise((resolve, reject) => {
+        let process = spawn('pyftmerge', files, { cwd: __dirname });
+        process.stdout.on('data', (data) => console.log(data.toString('utf8')));
+        process.stderr.on('data', (data_1) => console.error(data_1.toString('utf8')));
         process.on('exit', (code) => {
             if (code == 0) {
                 console.log(`font merge successfully`);
@@ -106,10 +103,10 @@ function mergeAndMakeFont(text, fontNames, outputPath, outputName) {
                 reject(`font merge failed`);
             }
         });
-    }))
-    .then(() => fs.renameSync(path.join(__dirname, 'merged.ttf'), path.join(outputPath, outputName + '.ttf')))
-    .then(() => subset(path.join(outputPath, outputName + '.ttf'), text, outputPath, 'woff'))
-    .then(() => subset(path.join(outputPath, outputName + '.ttf'), text, outputPath, 'woff2'));
+    });
+    renameSync(join(__dirname, 'merged.ttf'), join(outputPath, outputName + '.ttf'));
+    await subset(join(outputPath, outputName + '.ttf'), text, outputPath, 'woff');
+    await subset(join(outputPath, outputName + '.ttf'), text, outputPath, 'woff2');
 }
 
 function addStringToSet(S, str) {
@@ -133,7 +130,7 @@ function uniqueString(str) {
 
 let data = null;
 try {
-    data = yaml.safeLoad(fs.readFileSync(__dirname + '/data/hong.yaml', 'utf8'));
+    data = yaml.load(readFileSync(__dirname + '/data/hong.yaml', 'utf8'));
 } catch(e) {
     console.log(e);
     process.exit(-1);
