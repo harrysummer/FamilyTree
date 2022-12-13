@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: family-tree
+  labels:
+    app: family-tree
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: family-tree
+  template:
+    metadata:
+      labels:
+        app: family-tree
+    spec:
+      containers:
+      - name: server
+        image: ghcr.io/harrysummer/familytree
+        ports:
+        - containerPort: 3333
+          name: ft-web-port
+      imagePullSecrets:
+      - name: family-tree-k8s-secret

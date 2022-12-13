@@ -1,0 +1,77 @@
+name: AKS auto-deployment for family-tree
+
+on:
+  push:
+    branches: 
+      [ master ]
+    paths:
+    - '**'
+    - '.github/workflows/main.yml'     
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Log in to container registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ secrets.FAMILYTREE_REGISTRY_USERNAME }}
+          password: ${{ secrets.FAMILYTREE_REGISTRY_PASSWORD }}
+
+      - name: Build and push container image to registry
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ghcr.io/harrysummer/familytree:${{ github.sha }}
+          file: ./Dockerfile
+          context: ./
+
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.FAMILYTREE_AZURE_CREDENTIALS }}
+
+      - name: Set AKS context
+        id: set-context
+        uses: azure/aks-set-context@v3
+        with:
+          resource-group: '${{ secrets.FAMILYTREE_K8S_RESOURCE_GROUP }}' 
+          cluster-name: '${{ secrets.FAMILYTREE_K8S_CLUSTER_NAME }}'
+
+      - name: Setup kubectl
+        id: install-kubectl
+        uses: azure/setup-kubectl@v3
+
+      - name: Set imagePullSecret
+        id: create-secret
+        uses: Azure/k8s-create-secret@v4
+        with:
+          container-registry-url: ghcr.io
+          container-registry-username: ${{ secrets.FAMILYTREE_REGISTRY_USERNAME }}
+          container-registry-password: ${{ secrets.FAMILYTREE_REGISTRY_PASSWORD }}
+          secret-name: family-tree-k8s-secret
+
+      - name: Deploy to AKS
+        id: deploy-aks
+        uses: Azure/k8s-deploy@v4
+        with:
+          manifests: |
+            manifests/family-tree-deployment.yaml
+            manifests/family-tree-service.yaml
+            manifests/family-tree-ingress.yaml
+          images: |
+            ghcr.io/harrysummer/familytree:${{ github.sha }}
