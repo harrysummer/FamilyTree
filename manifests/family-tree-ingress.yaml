@@ -5,7 +5,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - http:
+  - host: jiazu.xiarui.net
+    http:
       paths:
       - path: /
         pathType: Prefix
