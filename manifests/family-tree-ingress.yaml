@@ -2,8 +2,16 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: family-tree
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    cert-manager.io/cluster-issuer: letsencrypt
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - jiazu.xiarui.net
+    secretName: jiazu-secret
   rules:
   - host: jiazu.xiarui.net
     http:
@@ -14,4 +22,29 @@ spec:
           service:
             name: family-tree
             port:
+              number: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: family-tree-static
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: /static/$2
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - jiazu.xiarui.net
+    secretName: jiazu-secret
+  rules:
+  - host: jiazu.xiarui.net
+    http:
+      paths:
+      - path: /static(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: family-tree
+            port: 
               number: 80
