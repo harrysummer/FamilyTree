@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: family-tree
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt
+    cert-manager.io/cluster-issuer: letsencrypt-staging
 spec:
   ingressClassName: nginx
   tls:
